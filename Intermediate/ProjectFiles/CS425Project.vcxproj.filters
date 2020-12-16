@@ -1,0 +1,45 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="15.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <ItemGroup>
+    <None Include="..\..\CS425Project.uproject" />
+    <Filter Include="Source">
+      <UniqueIdentifier>{10FC271C-116D-4CD4-AFAF-DB2CDE4E4ED8}</UniqueIdentifier>
+    </Filter>
+    <None Include="..\..\Source\CS425Project.Target.cs">
+      <Filter>Source</Filter>
+    </None>
+    <None Include="..\..\Source\CS425ProjectEditor.Target.cs">
+      <Filter>Source</Filter>
+    </None>
+    <Filter Include="Config">
+      <UniqueIdentifier>{A3F624E2-985C-4109-A095-65CE16FE209D}</UniqueIdentifier>
+    </Filter>
+    <None Include="..\..\Config\DefaultEditor.ini">
+      <Filter>Config</Filter>
+    </None>
+    <None Include="..\..\Config\DefaultEngine.ini">
+      <Filter>Config</Filter>
+    </None>
+    <None Include="..\..\Config\DefaultGame.ini">
+      <Filter>Config</Filter>
+    </None>
+    <Filter Include="Source\CS425Project">
+      <UniqueIdentifier>{34001A61-20AC-488A-B34C-A80B3961212D}</UniqueIdentifier>
+    </Filter>
+    <None Include="..\..\Source\CS425Project\CS425Project.Build.cs">
+      <Filter>Source\CS425Project</Filter>
+    </None>
+    <ClCompile Include="..\..\Source\CS425Project\CS425Project.cpp">
+      <Filter>Source\CS425Project</Filter>
+    </ClCompile>
+    <ClInclude Include="..\..\Source\CS425Project\CS425Project.h">
+      <Filter>Source\CS425Project</Filter>
+    </ClInclude>
+    <ClCompile Include="..\..\Source\CS425Project\CS425ProjectGameModeBase.cpp">
+      <Filter>Source\CS425Project</Filter>
+    </ClCompile>
+    <ClInclude Include="..\..\Source\CS425Project\CS425ProjectGameModeBase.h">
+      <Filter>Source\CS425Project</Filter>
+    </ClInclude>
+  </ItemGroup>
+</Project>
