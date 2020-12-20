@@ -1,0 +1,5 @@
+E:/CS425Project/DesktopInterface/out/build/x64-Debug (default)/CMakeFiles/DesktopInterface.dir
+E:/CS425Project/DesktopInterface/out/build/x64-Debug (default)/CMakeFiles/edit_cache.dir
+E:/CS425Project/DesktopInterface/out/build/x64-Debug (default)/CMakeFiles/rebuild_cache.dir
+E:/CS425Project/DesktopInterface/out/build/x64-Debug (default)/CMakeFiles/DesktopInterface_autogen_timestamp_deps.dir
+E:/CS425Project/DesktopInterface/out/build/x64-Debug (default)/CMakeFiles/DesktopInterface_autogen.dir
