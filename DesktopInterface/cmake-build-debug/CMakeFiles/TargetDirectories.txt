@@ -1,0 +1,4 @@
+E:/CS425Project/DesktopInterface/cmake-build-debug/CMakeFiles/DesktopInterface.dir
+E:/CS425Project/DesktopInterface/cmake-build-debug/CMakeFiles/edit_cache.dir
+E:/CS425Project/DesktopInterface/cmake-build-debug/CMakeFiles/rebuild_cache.dir
+E:/CS425Project/DesktopInterface/cmake-build-debug/CMakeFiles/DesktopInterface_autogen.dir

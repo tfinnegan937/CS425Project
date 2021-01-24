@@ -3,7 +3,7 @@
   <ItemGroup>
     <None Include="..\..\CS425Project.uproject" />
     <Filter Include="Source">
-      <UniqueIdentifier>{775E25D8-1AF7-4086-9C46-974CD48992CD}</UniqueIdentifier>
+      <UniqueIdentifier>{98227E1B-30D1-467C-B497-5C69D31B2664}</UniqueIdentifier>
     </Filter>
     <None Include="..\..\Source\CS425Project.Target.cs">
       <Filter>Source</Filter>
@@ -14,7 +14,7 @@
     <None Include="..\..\.gitattributes" />
     <None Include="..\..\.gitignore" />
     <Filter Include="Config">
-      <UniqueIdentifier>{0F143FC8-EF0C-44E4-B228-808AFB4E38BC}</UniqueIdentifier>
+      <UniqueIdentifier>{497886E6-7BC4-4F9F-ACC9-45E73A003BA0}</UniqueIdentifier>
     </Filter>
     <None Include="..\..\Config\DefaultEditor.ini">
       <Filter>Config</Filter>
@@ -29,7 +29,7 @@
       <Filter>Config</Filter>
     </None>
     <Filter Include="Config\SteamVRBindings">
-      <UniqueIdentifier>{BB0CB32E-7973-4083-8B66-7E9FC4A274F8}</UniqueIdentifier>
+      <UniqueIdentifier>{EAAE5C05-9C51-47F0-9F27-B57CEDE4A000}</UniqueIdentifier>
     </Filter>
     <None Include="..\..\Config\SteamVRBindings\gamepad.json">
       <Filter>Config\SteamVRBindings</Filter>
@@ -110,14 +110,8 @@
       <Filter>Config\SteamVRBindings</Filter>
     </None>
     <Filter Include="Source\CS425Project">
-      <UniqueIdentifier>{8907FE44-CB45-4B15-AA1A-166EEF42E406}</UniqueIdentifier>
+      <UniqueIdentifier>{CED1E532-CFB5-4F81-94D4-B15810B4B58C}</UniqueIdentifier>
     </Filter>
-    <ClCompile Include="..\..\Source\CS425Project\AInterfaceNetworkHandler.cpp">
-      <Filter>Source\CS425Project</Filter>
-    </ClCompile>
-    <ClInclude Include="..\..\Source\CS425Project\AInterfaceNetworkHandler.h">
-      <Filter>Source\CS425Project</Filter>
-    </ClInclude>
     <None Include="..\..\Source\CS425Project\CS425Project.Build.cs">
       <Filter>Source\CS425Project</Filter>
     </None>

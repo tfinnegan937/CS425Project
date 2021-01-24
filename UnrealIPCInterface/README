@@ -1,0 +1,4 @@
+Instructions on how to use this library are included in UnrealIPCController.h
+
+libUnrealIPCInterface.a must be linked to the UI and the UnrealEngine project, and UnrealIPCController.h must be
+included in any file that wishes to access the communication channel.

@@ -1,0 +1,14 @@
+#IncludeRegexLine: ^[ 	]*[#%][ 	]*(include|import)[ 	]*[<"]([^">]+)([">])
+
+#IncludeRegexScan: ^.*$
+
+#IncludeRegexComplain: ^$
+
+#IncludeRegexTransform: 
+
+E:/UnrealIPCInterface/UnrealIPCController.cpp
+UnrealIPCController.h
+E:/UnrealIPCInterface/UnrealIPCController.h
+
+E:/UnrealIPCInterface/UnrealIPCController.h
+
