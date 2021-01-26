@@ -28,6 +28,7 @@
 					<Add option="-DQT_GUI_LIB"/>
 					<Add option="-DQT_CORE_LIB"/>
 					<Add directory="E:/CS425Project/DesktopInterface/cmake-build-debug/DesktopInterface_autogen/include"/>
+					<Add directory="E:/CS425Project/DesktopInterface/../shared_include"/>
 					<Add directory="C:/Qt/5.15.2/mingw81_64/include"/>
 					<Add directory="C:/Qt/5.15.2/mingw81_64/include/QtWidgets"/>
 					<Add directory="C:/Qt/5.15.2/mingw81_64/include/QtGui"/>
@@ -59,6 +60,7 @@
 					<Add option="-DQT_GUI_LIB"/>
 					<Add option="-DQT_CORE_LIB"/>
 					<Add directory="E:/CS425Project/DesktopInterface/cmake-build-debug/DesktopInterface_autogen/include"/>
+					<Add directory="E:/CS425Project/DesktopInterface/../shared_include"/>
 					<Add directory="C:/Qt/5.15.2/mingw81_64/include"/>
 					<Add directory="C:/Qt/5.15.2/mingw81_64/include/QtWidgets"/>
 					<Add directory="C:/Qt/5.15.2/mingw81_64/include/QtGui"/>

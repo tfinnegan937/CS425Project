@@ -702,6 +702,6 @@ CMakeFiles/UnrealIPCInterface.dir/UnrealIPCController.cpp.obj
  ../include/boost-1_64/boost/utility/enable_if.hpp
  ../include/boost-1_64/boost/utility/swap.hpp
  ../include/boost-1_64/boost/version.hpp
- E:/UnrealIPCInterface/SharedMemoryBuffer.h
- E:/UnrealIPCInterface/UnrealIPCController.cpp
- E:/UnrealIPCInterface/UnrealIPCController.h
+ E:/CS425Project/UnrealIPCInterface/SharedMemoryBuffer.h
+ E:/CS425Project/UnrealIPCInterface/UnrealIPCController.cpp
+ E:/CS425Project/UnrealIPCInterface/UnrealIPCController.h

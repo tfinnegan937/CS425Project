@@ -1,3 +1,3 @@
 file(REMOVE_RECURSE
-  "libUnrealIPCInterface.a"
+  "E:/CS425Project/shared_lib/libUnrealIPCInterface.a"
 )

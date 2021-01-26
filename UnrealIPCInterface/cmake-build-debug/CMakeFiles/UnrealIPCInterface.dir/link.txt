@@ -1,2 +1,2 @@
-C:\mingw-w64\mingw64\bin\ar.exe qc libUnrealIPCInterface.a  CMakeFiles/UnrealIPCInterface.dir/UnrealIPCController.cpp.obj
-C:\mingw-w64\mingw64\bin\ranlib.exe libUnrealIPCInterface.a
+C:\mingw-w64\mingw64\bin\ar.exe qc E:\CS425Project\shared_lib\libUnrealIPCInterface.a  CMakeFiles/UnrealIPCInterface.dir/UnrealIPCController.cpp.obj
+C:\mingw-w64\mingw64\bin\ranlib.exe E:\CS425Project\shared_lib\libUnrealIPCInterface.a

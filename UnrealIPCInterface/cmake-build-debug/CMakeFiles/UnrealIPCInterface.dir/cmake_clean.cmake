@@ -1,7 +1,7 @@
 file(REMOVE_RECURSE
   "CMakeFiles/UnrealIPCInterface.dir/UnrealIPCController.cpp.obj"
-  "libUnrealIPCInterface.a"
-  "libUnrealIPCInterface.pdb"
+  "E:/CS425Project/shared_lib/libUnrealIPCInterface.a"
+  "E:/CS425Project/shared_lib/libUnrealIPCInterface.pdb"
 )
 
 # Per-language clean rules from dependency scanning.
