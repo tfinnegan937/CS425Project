@@ -1,5 +1,8 @@
 # The VOMS Protocol VR Project
-
+Team #3
+Ryan Gorman,
+Timothy Finnegan, and
+Isak Ohman
 ## Welcome to GitHub Pages
 
 You can use the [editor on GitHub](https://github.com/tfinnegan937/CS425Project/edit/gh-pages/index.md) to maintain and preview the content for your website in Markdown files.
