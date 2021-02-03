@@ -1,11 +1,20 @@
 # The VOMS Protocol VR Project
-Team #3
 
- Ryan Gorman
+__For CS 426 Senior Projects__
+
+__University of Nevada, Reno__
+
+__Computer Science and Engineering Department__
+
+__Spring 2021__
+
+__Team #3__
+
+- Ryan Gorman
  
- Timothy Finnegan
+- Timothy Finnegan
  
- Isak Ohman
+- Isak Ohman
 
 ## External Advisors
 - Dr. Alireza Tavakkoli -- Professor of Computer Science and Engineering at the University of Nevada, Reno
@@ -18,40 +27,41 @@ The VOMS Protocol VR project is a system that seeks to be the first step in brin
 The goal of VPVR is to create a platform that can be used to both clinically diagnose concussions, and generate the necessary data with which future projects can train artificial intelligence for automated diagnosis. While the VPVR system administers the VOMS protocol automatically to the patient (with guidance from an attending physician), the eye-tracking sensors within the Vive Pro-Eye headset collect and record information on the patient's eye movements. As eye movement is often noticeably impaired by the presence of a concussion, it is the hope of the VPVR team that this data can be used to train a model that can automatically and accurately detect a concussion at the site in which a concussion has occurred. 
 
 
-## Welcome to GitHub Pages
+## Project Resources and Related Information
 
-You can use the [editor on GitHub](https://github.com/tfinnegan937/CS425Project/edit/gh-pages/index.md) to maintain and preview the content for your website in Markdown files.
+### Problem Domain Book
 
-Whenever you commit to this repository, GitHub Pages will run [Jekyll](https://jekyllrb.com/) to rebuild the pages in your site, from the content in your Markdown files.
+_Is Soccer Bad for Children’s Heads?_ by Margie Patlak, 2002.  
+- While focused on the effect of soccer on children, it does detail some of the problems with detecting and diagnosing concussions.
 
-### Markdown
+Sports-Related Concussions in Youth: Improving the Science, Changing the Culture by the Committee on Sports-Related Concussions in Youth; Board on Children, Youth, and Families; Institute of Medicine; National Research Council; Graham R, Rivara FP, Ford MA, et al., 2014.  
+[Link to book online](https://www.ncbi.nlm.nih.gov/books/NBK185340/)  
+- An overview of concussions, methods of detection, and the consequences of concussions on youth.
 
-Markdown is a lightweight and easy-to-use syntax for styling your writing. It includes conventions for
+### Related Websites
 
-```markdown
-Syntax highlighted code block
+[The Center for Disease Control: Concussion Signs and Symptoms](https://www.cdc.gov/headsup/basics/concussion_symptoms.html)  
+- General overview on concussions.
 
-# Header 1
-## Header 2
-### Header 3
+[The Vive Eye Pro Home Page](https://enterprise.vive.com/us/product/vive-pro-eye-office/)  
+- The headset we are developing the project for. 
 
-- Bulleted
-- List
+### Academic Resources
 
-1. Numbered
-2. List
+“Concussions and their Consequences” by Charles H. Tator  
+doi:10.1503/cmaj.120039  
+[Link to paper online](https://www.cmaj.ca/content/185/11/975)  
+- Overview of current concussion detection methods and possibilities for improvement.
 
-**Bold** and _Italic_ and `Code` text
+"Head-Impact-Measurement Devices: A Systematic Review" by Kathryn L O'Conner, et al.  
+doi:10.4085/1062-6050.52.2.05  
+[Link to paper online](https://meridian.allenpress.com/jat/article/52/3/206/191408/Head-Impact-Measurement-Devices-A-Systematic)  
+- Study of existing concussion detection devices for state-of-field analysis.
 
-[Link](url) and ![Image](src)
-```
+"Concussion Evaluation and Management: An Osteopathic Perspective" by Hallie Zwibel, et al.  
+doi:10.7556/jaoa.2018.144
+[Link to paper online](https://jaoa.org/article.aspx?articleid=2703382)  
+- Possible alternative to the VOMS test, however not one that can be implemented with head-mounted VR or eye-tracking.
 
-For more details see [GitHub Flavored Markdown](https://guides.github.com/features/mastering-markdown/).
 
-### Jekyll Themes
-
-Your Pages site will use the layout and styles from the Jekyll theme you have selected in your [repository settings](https://github.com/tfinnegan937/CS425Project/settings). The name of this theme is saved in the Jekyll `_config.yml` configuration file.
-
-### Support or Contact
-
-Having trouble with Pages? Check out our [documentation](https://docs.github.com/categories/github-pages-basics/) or [contact support](https://support.github.com/contact) and we’ll help you sort it out.
+### Related News
