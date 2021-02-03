@@ -65,3 +65,12 @@ doi:10.7556/jaoa.2018.144
 
 
 ### Related News
+
+[Sony Patent Reveals Asymmetric VR Gameplay Concept](https://uploadvr.com/sony-asymmetric-vr-patent/) by Harry Baker  
+- Directly relates to how we plan to model our own project: the subject inside VR while the physician controls it. This shows similar approaches in the entertainment field.
+
+[Photonics research makes smaller, more efficient VR, augmented reality tech possible](https://www.sciencedaily.com/releases/2021/02/210201115943.htm) by North Carolina State University  
+- Better display technology to possibly reduce weight, electrical consumption, and cost of VR headsets in the future. This would in turn make our project more affordable if re-implemented.
+
+[Virtual Reality (VR) Headsets Market Size To Reach $19.78 Billion By 2025, Owing To High Demand For Smartphone-Enabled & PC-Enabled VR Headsets](https://finance.yahoo.com/news/virtual-reality-vr-headsets-market-101000618.html) by Million Insights  
+- Overview of the growth and future prospects of the VR headset sector. As this grows, the cost of our project should decrease.
