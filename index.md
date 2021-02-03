@@ -43,7 +43,7 @@ Sports-Related Concussions in Youth: Improving the Science, Changing the Culture
 [The Center for Disease Control: Concussion Signs and Symptoms](https://www.cdc.gov/headsup/basics/concussion_symptoms.html)  
 - General overview on concussions.
 
-[The Vive Eye Pro Home Page](https://enterprise.vive.com/us/product/vive-pro-eye-office/)  
+[The Vive Pro Eye Home Page](https://enterprise.vive.com/us/product/vive-pro-eye-office/)  
 - The headset we are developing the project for. 
 
 ### Academic Resources
