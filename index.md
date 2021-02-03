@@ -59,7 +59,7 @@ doi:10.4085/1062-6050.52.2.05
 - Study of existing concussion detection devices for state-of-field analysis.
 
 "Concussion Evaluation and Management: An Osteopathic Perspective" by Hallie Zwibel, et al.  
-doi:10.7556/jaoa.2018.144
+doi:10.7556/jaoa.2018.144  
 [Link to paper online](https://jaoa.org/article.aspx?articleid=2703382)  
 - Possible alternative to the VOMS test, however not one that can be implemented with head-mounted VR or eye-tracking.
 
