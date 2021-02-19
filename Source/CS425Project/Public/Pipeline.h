@@ -11,6 +11,7 @@
 
 #include "CoreMinimal.h"
 #include "Components/ActorComponent.h"
+#include "FCreatePipeWorker.h"
 #include <string.h>
 #include <codecvt>
 #include <locale>
@@ -39,6 +40,8 @@ public:
 	void CreatePipe(const LPCWSTR pipeName);
 	void ClosePipe();
 
+	bool IsPipeReady();
+
 protected:
 	// Called when the game starts
 	virtual void BeginPlay() override;
@@ -49,5 +52,6 @@ public:
 
 private:
 	HANDLE Pipe;
-		
+	FCreatePipeWorker* PipeWorker;
+	FRunnableThread* PipeWorkerThread;
 };

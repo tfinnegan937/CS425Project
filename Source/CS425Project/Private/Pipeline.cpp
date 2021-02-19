@@ -50,36 +50,20 @@ void UPipeline::BeginPlay()
 #if ISWINDOWS
 void UPipeline::CreatePipe(const LPCWSTR pipeName)
 {
-    const int INSTANCES = 1;
-    const int BUFFERINSIZE = 512;
-    const int BUFFEROUTSIZE = 512;
-    const int TIMEOUTTIME = 0;
+    if (FPlatformProcess::SupportsMultithreading()) {
+        PipeWorker = new FCreatePipeWorker(pipeName);
+        PipeWorkerThread = FRunnableThread::Create(PipeWorker, TEXT("Pipe Opening Thread"));
+    }
+}
 
-    
-
-    HANDLE pipe = CreateNamedPipe(
-        pipeName,
-        PIPE_ACCESS_OUTBOUND,
-        PIPE_TYPE_MESSAGE,
-        INSTANCES,
-        BUFFERINSIZE,
-        BUFFEROUTSIZE,
-        TIMEOUTTIME,
-        NULL //No security
-    );
-
-    ensureAlways(pipe == NULL || pipe == INVALID_HANDLE_VALUE);
-
-    bool pipe_connected_successfully = ConnectNamedPipe(pipe, NULL);
-    ensureAlways(pipe_connected_successfully);
-    if (!pipe_connected_successfully) CloseHandle(pipe);
-
-    Pipe = pipe;
-    if (GEngine) GEngine->AddOnScreenDebugMessage(-1, 15.0f, FColor::Yellow, TEXT("Pipe created!"));
+bool UPipeline::IsPipeReady()
+{
+    return PipeWorker->CheckCompletion();
 }
 
 void UPipeline::SendData(EyeDataFrame frame)
 {
+    if (IsPipeReady()) {
         DWORD bytesWritten = 0;
         bool result = WriteFile(
             Pipe,
@@ -90,6 +74,10 @@ void UPipeline::SendData(EyeDataFrame frame)
         );
         if (GEngine) GEngine->AddOnScreenDebugMessage(-1, 15.0f, FColor::Yellow, FString::Printf(TEXT("%d"), sizeof(frame)));
         ensureAlways(result);
+    }
+    else {
+        if (GEngine) GEngine->AddOnScreenDebugMessage(-1, 15.0f, FColor::Yellow, FString::Printf(TEXT("Voiding data!")));
+    }
 }
 
 void UPipeline::ClosePipe()
