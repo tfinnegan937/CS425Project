@@ -25,10 +25,17 @@ void UPipeline::BeginPlay()
 
 	CreatePipe(L"\\\\.\\pipe\\test");
 
-    /*
-    EyeDataFrame testFrame1;
-    EyeDataFrame testFrame2;
-    EyeDataFrame testFrame3;
+    //Starts a send test on the pipeline 10 seconds after the pipe creation is triggered.
+    FTimerHandle UnusedHandle;
+    GetWorld()->GetTimerManager().SetTimer(UnusedHandle, this, &UPipeline::SendTest, 10, false);
+
+}
+
+void UPipeline::SendTest()
+{
+    EyeFrameData testFrame1;
+    EyeFrameData testFrame2;
+    EyeFrameData testFrame3;
 
     testFrame1.x = 5;
     testFrame1.y = 10;
@@ -44,7 +51,6 @@ void UPipeline::BeginPlay()
     SendData(testFrame1);
     SendData(testFrame2);
     SendData(testFrame3);
-    */
 }
 
 #if ISWINDOWS
@@ -58,26 +64,20 @@ void UPipeline::CreatePipe(const LPCWSTR pipeName)
 
 bool UPipeline::IsPipeReady()
 {
+    if (!PipeWorker) return false;
     return PipeWorker->CheckCompletion();
 }
 
-void UPipeline::SendData(EyeDataFrame frame)
+void UPipeline::SendData(EyeFrameData frame)
 {
-    if (IsPipeReady()) {
-        DWORD bytesWritten = 0;
-        bool result = WriteFile(
-            Pipe,
-            &frame,
-            sizeof(frame),
-            &bytesWritten,
-            NULL
-        );
-        if (GEngine) GEngine->AddOnScreenDebugMessage(-1, 15.0f, FColor::Yellow, FString::Printf(TEXT("%d"), sizeof(frame)));
-        ensureAlways(result);
+    if (PipeWorker->CheckCompletion()) {
+        PipeWorker->SendData(frame);
+        if (GEngine) GEngine->AddOnScreenDebugMessage(-1, 15.0f, FColor::Yellow, FString::Printf(TEXT("Sending data!")));
     }
     else {
         if (GEngine) GEngine->AddOnScreenDebugMessage(-1, 15.0f, FColor::Yellow, FString::Printf(TEXT("Voiding data!")));
     }
+   
 }
 
 void UPipeline::ClosePipe()

@@ -12,17 +12,11 @@
 #include "CoreMinimal.h"
 #include "Components/ActorComponent.h"
 #include "FCreatePipeWorker.h"
+#include "EyeFrameData.h"
 #include <string.h>
 #include <codecvt>
 #include <locale>
 #include "Pipeline.generated.h"
-
-struct EyeDataFrame
-{
-	__int32 x;
-	__int32 y;
-	__int16 timestamp;
-};
 
 UCLASS( ClassGroup=(Custom), meta=(BlueprintSpawnableComponent) )
 class CS425PROJECT_API UPipeline : public UActorComponent
@@ -35,12 +29,15 @@ public:
 	~UPipeline();
 
 	// Sends a data frame along pipe
-	void SendData(EyeDataFrame frame);
+	void SendData(EyeFrameData frame);
 
 	void CreatePipe(const LPCWSTR pipeName);
 	void ClosePipe();
 
 	bool IsPipeReady();
+
+	UFUNCTION()
+	void SendTest();
 
 protected:
 	// Called when the game starts

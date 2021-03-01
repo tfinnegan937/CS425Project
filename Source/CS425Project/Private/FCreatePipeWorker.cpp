@@ -4,8 +4,9 @@
 #include "FCreatePipeWorker.h"
 
 FCreatePipeWorker* FCreatePipeWorker::instance;
-bool FCreatePipeWorker::isComplete;
+bool FCreatePipeWorker::isOpen;
 HANDLE FCreatePipeWorker::Pipe;
+std::queue<EyeFrameData> FCreatePipeWorker::localBuffer;
 
 
 FCreatePipeWorker::~FCreatePipeWorker()
@@ -17,7 +18,7 @@ FCreatePipeWorker::FCreatePipeWorker(const LPCWSTR pipeName)
 {
     instance = this;
 	localPipeName = pipeName;
-    isComplete = false;
+    isOpen = false;
 }
 
 FCreatePipeWorker* FCreatePipeWorker::getInstance()
@@ -25,7 +26,42 @@ FCreatePipeWorker* FCreatePipeWorker::getInstance()
 	return instance;
 }
 
+
 uint32 FCreatePipeWorker::Run()
+{
+    while (true) {
+        if (!isOpen) {
+            isOpen = openPipe();
+        }
+        else {
+            if (!localBuffer.empty()) {
+                sendFrame(localBuffer.front());
+                localBuffer.pop();
+            }
+        }
+    }
+    return 0;
+}
+
+
+bool FCreatePipeWorker::CheckCompletion()
+{
+	return isOpen;
+}
+
+HANDLE FCreatePipeWorker::RetrievePipeHandle()
+{
+    return Pipe;
+}
+
+void FCreatePipeWorker::SendData(EyeFrameData frame)
+{
+    if (GEngine) GEngine->AddOnScreenDebugMessage(-1, 15.0f, FColor::Yellow, TEXT("Sending data!"));
+    localBuffer.push(frame);
+}
+
+// TODO: Add code to handle failed opening.
+bool FCreatePipeWorker::openPipe()
 {
     const int INSTANCES = 1;
     const int BUFFERINSIZE = 512;
@@ -52,17 +88,24 @@ uint32 FCreatePipeWorker::Run()
     Pipe = pipe;
     if (GEngine) GEngine->AddOnScreenDebugMessage(-1, 15.0f, FColor::Yellow, TEXT("Pipe created!"));
 
-    isComplete = true;
-    return 0;
+    return true;
 }
 
-
-bool FCreatePipeWorker::CheckCompletion()
+void FCreatePipeWorker::sendFrame(EyeFrameData frame)
 {
-	return isComplete;
-}
-
-HANDLE FCreatePipeWorker::RetrievePipeHandle()
-{
-    return Pipe;
+    if ( isOpen ) {
+        DWORD bytesWritten = 0;
+        bool result = WriteFile(
+            Pipe,
+            &frame,
+            sizeof(frame),
+            &bytesWritten,
+            NULL
+        );
+        if (GEngine) GEngine->AddOnScreenDebugMessage(-1, 15.0f, FColor::Yellow, FString::Printf(TEXT("%d"), sizeof(frame)));
+        ensureAlways(result);
+    }
+    else {
+        if (GEngine) GEngine->AddOnScreenDebugMessage(-1, 15.0f, FColor::Yellow, FString::Printf(TEXT("Voiding data!")));
+    }
 }

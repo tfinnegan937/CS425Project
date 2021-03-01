@@ -7,9 +7,11 @@
 /**
  * 
  */
-class CS425PROJECT_API FEyeFramePipeWorker : public FRunnable
+struct EyeFrameData
 {
-public:
-	FEyeFramePipeWorker();
-	~FEyeFramePipeWorker();
+	EyeFrameData();
+	~EyeFrameData();
+	__int32 x;
+	__int32 y;
+	__int16 timestamp;
 };
