@@ -15,5 +15,31 @@ link_directories(${dir}/../shared_lib)
 include_directories(${dir}/../shared_include)
 #THIS BUILDS TO THE UNREALENGINE GAME BINARY DIRECTORY
 set(CMAKE_RUNTIME_OUTPUT_DIRECTORY ${dir}/../Binaries/Win64/)
-add_executable(DesktopInterface main.cpp DesktopInterface.cpp QDataControlWidget.cpp QHomeWindow.cpp QVRControlWidget.cpp)
+
+set ( SOURCES
+main.cpp
+DesktopInterface.cpp
+QDataControlWidget.cpp
+QHomeWindow.cpp
+QResultsWindow.cpp
+QVRControlWidget.cpp
+)
+
+set ( MAIN_HEADERS
+DesktopInterface.h
+QDataControlWidget.h
+QHomeWindow.h
+QResultsWindow.h
+QVRControlWidget.h
+)
+
+set ( EXTRA_HEADERS
+APPLICATION_CONSTANTS.h
+)
+
+set ( UI_HEADERS
+QResultsWindow.ui
+)
+
+add_executable(DesktopInterface ${SOURCES} ${MAIN_HEADERS} ${EXTRA_HEADERS} ${UI_HEADERS})
 target_link_libraries(DesktopInterface Qt5::Widgets libUnrealIPCInterface.a)

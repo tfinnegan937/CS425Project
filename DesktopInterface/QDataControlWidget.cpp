@@ -20,12 +20,15 @@ QDataControlWidget::QDataControlWidget(QWidget *parent) {
     widget_label->setText("Data Controls");
     widget_label->setAlignment(Qt::AlignCenter);
 
+    results_window = new QResultsWindow;
+
     main_layout->addWidget(widget_label);
 
     //Establish the layout for column 1
     but_view_results = new QPushButton("View Results", this);
     but_view_results->setSizePolicy(QSizePolicy::Expanding, QSizePolicy::Expanding);
     button_col_1->addWidget(but_view_results);
+    connect(but_view_results, &QPushButton::released, this, &QDataControlWidget::OpenResultsWindow);
 
     but_load_results = new QPushButton("Load Results", this);
     but_load_results->setSizePolicy(QSizePolicy::Expanding, QSizePolicy::Expanding);
@@ -68,4 +71,9 @@ QDataControlWidget::QDataControlWidget(QWidget *parent) {
     main_layout->addWidget(but_box);
 
     setLayout(main_layout);
+}
+
+void QDataControlWidget::OpenResultsWindow()
+{
+    results_window->show();
 }

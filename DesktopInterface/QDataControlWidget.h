@@ -11,6 +11,7 @@
 #include <QPushButton>
 #include <QFrame>
 #include <QGroupBox>
+#include "QResultsWindow.h"
 class QDataControlWidget : public QWidget{
 Q_OBJECT
 private:
@@ -37,6 +38,10 @@ private:
     QPushButton * but_calculate;
 
     QFrame * frame;
+
+    QWidget * results_window;
+
+    void OpenResultsWindow();
 
 public:
     QDataControlWidget(QWidget * parent = 0);
