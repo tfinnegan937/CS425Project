@@ -8,8 +8,40 @@
 #include <queue>
 
 //Below are all of the defined message types. Currently placeholders for testing. All flags must be a power of 2
+
+//Shared Flags
 #define IPC_INITIALIZED 0x01
 
+//Interface Outbound Flags
+#define QUEUE_SP 0x02
+#define QUEUE_SH 0x04
+#define QUEUE_SV 0x08
+#define QUEUE_CON 0x10
+#define QUEUE_VORH 0x20
+#define QUEUE_VORV 0x40
+#define QUEUE_VORV 0x80
+#define BEGIN_ALL 0x100
+#define STOP_ALL 0x200
+#define DATA_RECEIVED 0x400
+#define REQ_SHUTDOWN 0x800
+#define SHUTDOWN 0x1000
+
+//UnrealEngine Outbound Flags
+
+#define TESTS_STARTED 0x02
+#define SP_STARTED 0x04
+#define SP_COMPLETED 0x08
+#define SH_STARTED 0x10
+#define SH_COMPLETED 0x20
+#define SV_STARTED 0x40
+#define SV_COMPLETED 0x80
+#define CON_STARTED 0x100
+#define CON_COMPLETED 0x200
+#define VORH_STARTED 0x400
+#define VORH_COMPLETED 0x800
+#define TESTS_COMPLETED 0x1000
+#define CONF_SHUTDOWN 0x2000
+#define SHUTDOWN 0x4000
 
 //LIBRARY INSTRUCTIONS:
 //On UnrealEngine:
@@ -37,6 +69,6 @@ std::string debug_output();
 
 
 
-//NOTE: The designated shared memory tag is unreal_memory_buff
+
 
 #endif //UNREALIPCINTERFACE_UNREALIPCCONTROLLER_H
