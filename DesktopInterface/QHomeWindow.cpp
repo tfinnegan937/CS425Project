@@ -5,6 +5,7 @@
 #include "QHomeWindow.h"
 #include "UnrealIPCController.h"
 #include <iostream> //For debug purposes
+#include <Python.h>
 QHomeWindow::QHomeWindow(QWidget *parent) {
     home_page_layout = new QHBoxLayout(this);
     home_page_layout->setSpacing(1);

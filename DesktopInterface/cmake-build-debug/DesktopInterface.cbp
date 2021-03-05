@@ -5,7 +5,7 @@
 		<Option title="DesktopInterface"/>
 		<Option makefile_is_custom="1"/>
 		<Option compiler="gcc"/>
-		<Option virtualFolders="CMake Files\;CMake Files\Qt\;CMake Files\Qt\5.15.2\;CMake Files\Qt\5.15.2\mingw81_64\;CMake Files\Qt\5.15.2\mingw81_64\lib\;CMake Files\Qt\5.15.2\mingw81_64\lib\cmake\;CMake Files\Qt\5.15.2\mingw81_64\lib\cmake\Qt5Widgets\;CMake Files\Qt\5.15.2\mingw81_64\lib\cmake\Qt5Gui\;CMake Files\Qt\5.15.2\mingw81_64\lib\cmake\Qt5Core\;"/>
+		<Option virtualFolders="CMake Files\;CMake Files\Qt\;CMake Files\Qt\5.15.2\;CMake Files\Qt\5.15.2\mingw81_64\;CMake Files\Qt\5.15.2\mingw81_64\lib\;CMake Files\Qt\5.15.2\mingw81_64\lib\cmake\;CMake Files\Qt\5.15.2\mingw81_64\lib\cmake\Qt5Widgets\;CMake Files\Qt\5.15.2\mingw81_64\lib\cmake\Qt5Gui\;CMake Files\Qt\5.15.2\mingw81_64\lib\cmake\Qt5Core\;CMake Files\Qt\5.15.2\mingw81_64\lib\cmake\Qt5\;"/>
 		<Build>
 			<Target title="all">
 				<Option working_dir="E:/CS425Project/DesktopInterface/cmake-build-debug"/>
@@ -29,6 +29,7 @@
 					<Add option="-DQT_CORE_LIB"/>
 					<Add directory="E:/CS425Project/DesktopInterface/cmake-build-debug/DesktopInterface_autogen/include"/>
 					<Add directory="E:/CS425Project/DesktopInterface/../shared_include"/>
+					<Add directory="C:/Users/plays/AppData/Local/Programs/Python/Python39/include"/>
 					<Add directory="C:/Qt/5.15.2/mingw81_64/include"/>
 					<Add directory="C:/Qt/5.15.2/mingw81_64/include/QtWidgets"/>
 					<Add directory="C:/Qt/5.15.2/mingw81_64/include/QtGui"/>
@@ -61,6 +62,7 @@
 					<Add option="-DQT_CORE_LIB"/>
 					<Add directory="E:/CS425Project/DesktopInterface/cmake-build-debug/DesktopInterface_autogen/include"/>
 					<Add directory="E:/CS425Project/DesktopInterface/../shared_include"/>
+					<Add directory="C:/Users/plays/AppData/Local/Programs/Python/Python39/include"/>
 					<Add directory="C:/Qt/5.15.2/mingw81_64/include"/>
 					<Add directory="C:/Qt/5.15.2/mingw81_64/include/QtWidgets"/>
 					<Add directory="C:/Qt/5.15.2/mingw81_64/include/QtGui"/>
@@ -243,6 +245,15 @@
 		</Unit>
 		<Unit filename="E:/CS425Project/DesktopInterface/Qt/5.15.2/mingw81_64/lib/cmake/Qt5Core/Qt5CoreMacros.cmake">
 			<Option virtualFolder="CMake Files\Qt\5.15.2\mingw81_64\lib\cmake\Qt5Core\"/>
+		</Unit>
+		<Unit filename="E:/CS425Project/DesktopInterface/Qt/5.15.2/mingw81_64/lib/cmake/Qt5/Qt5Config.cmake">
+			<Option virtualFolder="CMake Files\Qt\5.15.2\mingw81_64\lib\cmake\Qt5\"/>
+		</Unit>
+		<Unit filename="E:/CS425Project/DesktopInterface/Qt/5.15.2/mingw81_64/lib/cmake/Qt5/Qt5ConfigVersion.cmake">
+			<Option virtualFolder="CMake Files\Qt\5.15.2\mingw81_64\lib\cmake\Qt5\"/>
+		</Unit>
+		<Unit filename="E:/CS425Project/DesktopInterface/Qt/5.15.2/mingw81_64/lib/cmake/Qt5/Qt5ModuleLocation.cmake">
+			<Option virtualFolder="CMake Files\Qt\5.15.2\mingw81_64\lib\cmake\Qt5\"/>
 		</Unit>
 	</Project>
 </CodeBlocks_project_file>

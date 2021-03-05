@@ -195,7 +195,9 @@ E:/CS425Project/Binaries/Win64/DesktopInterface.exe: CMakeFiles/DesktopInterface
 E:/CS425Project/Binaries/Win64/DesktopInterface.exe: CMakeFiles/DesktopInterface.dir/QResultsWindow.cpp.obj
 E:/CS425Project/Binaries/Win64/DesktopInterface.exe: CMakeFiles/DesktopInterface.dir/QVRControlWidget.cpp.obj
 E:/CS425Project/Binaries/Win64/DesktopInterface.exe: CMakeFiles/DesktopInterface.dir/build.make
+E:/CS425Project/Binaries/Win64/DesktopInterface.exe: C:/Users/plays/AppData/Local/Programs/Python/Python39/libs/python39.lib
 E:/CS425Project/Binaries/Win64/DesktopInterface.exe: C:/Qt/5.15.2/mingw81_64/lib/libQt5Widgets.a
+E:/CS425Project/Binaries/Win64/DesktopInterface.exe: C:/Users/plays/AppData/Local/Programs/Python/Python39/libs/python39.lib
 E:/CS425Project/Binaries/Win64/DesktopInterface.exe: C:/Qt/5.15.2/mingw81_64/lib/libQt5Gui.a
 E:/CS425Project/Binaries/Win64/DesktopInterface.exe: C:/Qt/5.15.2/mingw81_64/lib/libQt5Core.a
 E:/CS425Project/Binaries/Win64/DesktopInterface.exe: CMakeFiles/DesktopInterface.dir/linklibs.rsp

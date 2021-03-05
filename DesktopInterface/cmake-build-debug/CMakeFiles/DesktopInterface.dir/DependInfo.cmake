@@ -25,6 +25,7 @@ set(CMAKE_TARGET_DEFINITIONS_CXX
 set(CMAKE_CXX_TARGET_INCLUDE_PATH
   "DesktopInterface_autogen/include"
   "../../shared_include"
+  "C:/Users/plays/AppData/Local/Programs/Python/Python39/include"
   "C:/Qt/5.15.2/mingw81_64/include"
   "C:/Qt/5.15.2/mingw81_64/include/QtWidgets"
   "C:/Qt/5.15.2/mingw81_64/include/QtGui"

@@ -17,9 +17,9 @@ link_directories(${dir}/../shared_lib)
 include_directories(${dir}/../shared_include)
 #THIS BUILDS TO THE UNREALENGINE GAME BINARY DIRECTORY
 set(CMAKE_RUNTIME_OUTPUT_DIRECTORY ${dir}/../Binaries/Win64/)
-#set(PYTHON_LIBRARIES C:/Program\ Files/Python39/libs/python39.lib)
-#set(PYTHON_DEBUG_LIBRARIES C:/Program\ Files/Python39/libs/python39_d.lib)
-#set(PYTHON_INCLUDE_DIRS C:/Program\ Files/Python39/include)
+set(PYTHON_LIBRARIES C:/Users/$ENV{USERNAME}/AppData/Local/Programs/Python/Python39/libs/python39.lib)
+set(PYTHON_DEBUG_LIBRARIES C:/Users/plays/AppData/Local/Programs/Python/Python39/libs/python39_d.lib)
+set(PYTHON_INCLUDE_DIRS C:/Users/$ENV{USERNAME}/AppData/Local/Programs/Python/Python39/include)
 
 link_libraries(${PYTHON_LIBRARIES})
 include_directories(${PYTHON_INCLUDE_DIRS})
