@@ -55,7 +55,7 @@ void QHomeWindow::ipcTick() {
     //TODO: Ryan places the code for handling the data pipeline here
 }
 
-bool QHomeWindow::initializeIPC(QString shared_mem_name) {
+bool QHomeWindow::initializeIPC(const QString& shared_mem_name) {
     //Initialize the timer for communication with UnrealEngine
     ipc_callback_timer = new QTimer(this);
     //Connect to the appropriate signals and slots here
@@ -84,7 +84,55 @@ bool QHomeWindow::initializeIPC(QString shared_mem_name) {
 
 bool QHomeWindow::handleIPCMessages(uint16_t message_buffer) {
     //TODO: Handle Received Messages
-    //std::cout << "received_message: " << message_buffer << std::endl;
+    if(message_buffer & IPC_INITIALIZED){
+
+    }
+    if(message_buffer & SP_STARTED){
+
+    }
+    if(message_buffer & SH_STARTED){
+
+    }
+    if(message_buffer & SV_STARTED){
+
+    }
+    if(message_buffer & CON_STARTED){
+
+    }
+    if(message_buffer & VORH_STARTED){
+
+    }
+    if(message_buffer & VORV_STARTED){
+
+    }
+    if(message_buffer & SP_COMPLETED){
+
+    }
+    if(message_buffer & SH_COMPLETED){
+
+    }
+    if(message_buffer & SV_COMPLETED){
+
+    }
+    if(message_buffer & CON_COMPLETED){
+
+    }
+    if(message_buffer & VORH_COMPLETED){
+
+    }
+    if(message_buffer & VORV_COMPLETED){
+
+    }
+    if(message_buffer & TESTS_COMPLETED){
+
+    }
+    if(message_buffer & CONF_SHUTDOWN){
+
+    }
+
+    if(message_buffer){
+        return true;
+    }
     return false;
 }
 

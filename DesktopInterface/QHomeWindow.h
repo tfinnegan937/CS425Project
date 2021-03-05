@@ -21,7 +21,7 @@ private:
 
     QTimer * ipc_callback_timer;
 
-    bool initializeIPC(QString shared_mem_name); //initialize IPC communication
+    bool initializeIPC(const QString& shared_mem_name); //initialize IPC communication
 
     bool handleIPCMessages(uint16_t message_buffer); //Take received message buffer and handle each received
     bool shared_mem_initialized = false;
