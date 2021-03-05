@@ -6,6 +6,12 @@
 
 #IncludeRegexTransform: 
 
+../../shared_include/UnrealIPCController.h
+string
+-
+queue
+-
+
 ../include/boost-1_64/boost/assert.hpp
 boost/config.hpp
 -
@@ -7752,11 +7758,5 @@ boost/interprocess/sync/scoped_lock.hpp
 SharedMemoryBuffer.h
 E:/CS425Project/UnrealIPCInterface/SharedMemoryBuffer.h
 iostream
--
-
-E:/CS425Project/UnrealIPCInterface/UnrealIPCController.h
-string
--
-queue
 -
 

@@ -19,12 +19,11 @@
 #define QUEUE_CON 0x10
 #define QUEUE_VORH 0x20
 #define QUEUE_VORV 0x40
-#define QUEUE_VORV 0x80
-#define BEGIN_ALL 0x100
-#define STOP_ALL 0x200
-#define DATA_RECEIVED 0x400
-#define REQ_SHUTDOWN 0x800
-#define SHUTDOWN 0x1000
+#define BEGIN_ALL 0x80
+#define STOP_ALL 0x100
+#define DATA_RECEIVED 0x200
+#define REQ_SHUTDOWN 0x400
+#define SHUTDOWN 0x800
 
 //UnrealEngine Outbound Flags
 
