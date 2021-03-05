@@ -1,3 +1,4 @@
+#include <Python.h>
 #include <QApplication>
 #include "DesktopInterface.h"
 int main(int argc, char * argv[]) {
