@@ -95,21 +95,25 @@ void send_message(uint16_t message) {
 
 uint16_t receive_message() {
     scoped_lock<interprocess_mutex> lock(((SharedMemoryBuffer*)shared_memory_buffer)->mutex); //Lock the object
+    uint16_t buffer_output;
+
     if(isMemoryOwner){
         shared_memory_buffer->unreal_buffer_modified = false; //Indicate that the buffer is ready again
+        buffer_output = shared_memory_buffer->unreal_buffer_in;
 
-        return shared_memory_buffer->unreal_buffer_in; //Return the message to the program
+        shared_memory_buffer->unreal_buffer_in = 0x00;
     }else{
         shared_memory_buffer->interface_buffer_modified = false; //Indicate that the buffer is ready again
-
-        return shared_memory_buffer->interface_buffer_in; //Return the message to the program
+        buffer_output = shared_memory_buffer->interface_buffer_in; //Return the message to the program
+        shared_memory_buffer->interface_buffer_in= 0x00;
     }
+
+    return buffer_output;
 }
 
 bool message_received() {
     scoped_lock<interprocess_mutex> lock(((SharedMemoryBuffer*)shared_memory_buffer)->mutex); //Lock the object
     SharedMemoryBuffer * buffer_pointer = (SharedMemoryBuffer*)shared_memory_buffer;
-
     if(isMemoryOwner){
         return buffer_pointer->unreal_buffer_modified;
     }else{
