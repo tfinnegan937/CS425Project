@@ -74,8 +74,12 @@ bool QHomeWindow::initializeIPC(QString shared_mem_name) {
         }
     } catch(std::runtime_error& generic_error){
         //TODO: Handle errors
+
+        return false;
     }
-    return false;
+
+    //TODO: Ryan places pipeline initialization code here
+    return true;
 }
 
 bool QHomeWindow::handleIPCMessages(uint16_t message_buffer) {
