@@ -112,6 +112,9 @@
 				</MakeCommands>
 			</Target>
 		</Build>
+		<Unit filename="E:/CS425Project/DesktopInterface/APPLICATION_CONSTANTS.h">
+			<Option target="DesktopInterface"/>
+		</Unit>
 		<Unit filename="E:/CS425Project/DesktopInterface/DesktopInterface.cpp">
 			<Option target="DesktopInterface"/>
 		</Unit>
@@ -128,6 +131,15 @@
 			<Option target="DesktopInterface"/>
 		</Unit>
 		<Unit filename="E:/CS425Project/DesktopInterface/QHomeWindow.h">
+			<Option target="DesktopInterface"/>
+		</Unit>
+		<Unit filename="E:/CS425Project/DesktopInterface/QResultsWindow.cpp">
+			<Option target="DesktopInterface"/>
+		</Unit>
+		<Unit filename="E:/CS425Project/DesktopInterface/QResultsWindow.h">
+			<Option target="DesktopInterface"/>
+		</Unit>
+		<Unit filename="E:/CS425Project/DesktopInterface/QResultsWindow.ui">
 			<Option target="DesktopInterface"/>
 		</Unit>
 		<Unit filename="E:/CS425Project/DesktopInterface/QVRControlWidget.cpp">

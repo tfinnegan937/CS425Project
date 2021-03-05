@@ -3,6 +3,7 @@ file(REMOVE_RECURSE
   "CMakeFiles/DesktopInterface.dir/DesktopInterface_autogen/mocs_compilation.cpp.obj"
   "CMakeFiles/DesktopInterface.dir/QDataControlWidget.cpp.obj"
   "CMakeFiles/DesktopInterface.dir/QHomeWindow.cpp.obj"
+  "CMakeFiles/DesktopInterface.dir/QResultsWindow.cpp.obj"
   "CMakeFiles/DesktopInterface.dir/QVRControlWidget.cpp.obj"
   "CMakeFiles/DesktopInterface.dir/main.cpp.obj"
   "E:/CS425Project/Binaries/Win64/DesktopInterface.exe"

@@ -8,11 +8,8 @@
 #include <queue>
 
 //Below are all of the defined message types. Currently placeholders for testing. All flags must be a power of 2
-#define MESSAGE_ONE 0x01
-#define MESSAGE_TWO 0x02
-#define MESSAGE_THREE 0x04
-#define MESSAGE_FOUR 0x08
-#define MESSAGE_FIVE 0x10
+#define IPC_INITIALIZED 0x01
+
 
 //LIBRARY INSTRUCTIONS:
 //On UnrealEngine:
@@ -40,6 +37,6 @@ std::string debug_output();
 
 
 
-
+//NOTE: The designated shared memory tag is unreal_memory_buff
 
 #endif //UNREALIPCINTERFACE_UNREALIPCCONTROLLER_H

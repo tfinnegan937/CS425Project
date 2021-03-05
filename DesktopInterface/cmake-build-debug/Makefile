@@ -263,6 +263,33 @@ QHomeWindow.cpp.s:
 	$(MAKE) $(MAKESILENT) -f CMakeFiles\DesktopInterface.dir\build.make CMakeFiles/DesktopInterface.dir/QHomeWindow.cpp.s
 .PHONY : QHomeWindow.cpp.s
 
+QResultsWindow.obj: QResultsWindow.cpp.obj
+
+.PHONY : QResultsWindow.obj
+
+# target to build an object file
+QResultsWindow.cpp.obj:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles\DesktopInterface.dir\build.make CMakeFiles/DesktopInterface.dir/QResultsWindow.cpp.obj
+.PHONY : QResultsWindow.cpp.obj
+
+QResultsWindow.i: QResultsWindow.cpp.i
+
+.PHONY : QResultsWindow.i
+
+# target to preprocess a source file
+QResultsWindow.cpp.i:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles\DesktopInterface.dir\build.make CMakeFiles/DesktopInterface.dir/QResultsWindow.cpp.i
+.PHONY : QResultsWindow.cpp.i
+
+QResultsWindow.s: QResultsWindow.cpp.s
+
+.PHONY : QResultsWindow.s
+
+# target to generate assembly for a file
+QResultsWindow.cpp.s:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles\DesktopInterface.dir\build.make CMakeFiles/DesktopInterface.dir/QResultsWindow.cpp.s
+.PHONY : QResultsWindow.cpp.s
+
 QVRControlWidget.obj: QVRControlWidget.cpp.obj
 
 .PHONY : QVRControlWidget.obj
@@ -339,6 +366,9 @@ help:
 	@echo ... QHomeWindow.obj
 	@echo ... QHomeWindow.i
 	@echo ... QHomeWindow.s
+	@echo ... QResultsWindow.obj
+	@echo ... QResultsWindow.i
+	@echo ... QResultsWindow.s
 	@echo ... QVRControlWidget.obj
 	@echo ... QVRControlWidget.i
 	@echo ... QVRControlWidget.s

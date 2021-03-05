@@ -8,6 +8,7 @@ set(CMAKE_DEPENDS_CHECK_CXX
   "E:/CS425Project/DesktopInterface/cmake-build-debug/DesktopInterface_autogen/mocs_compilation.cpp" "E:/CS425Project/DesktopInterface/cmake-build-debug/CMakeFiles/DesktopInterface.dir/DesktopInterface_autogen/mocs_compilation.cpp.obj"
   "E:/CS425Project/DesktopInterface/QDataControlWidget.cpp" "E:/CS425Project/DesktopInterface/cmake-build-debug/CMakeFiles/DesktopInterface.dir/QDataControlWidget.cpp.obj"
   "E:/CS425Project/DesktopInterface/QHomeWindow.cpp" "E:/CS425Project/DesktopInterface/cmake-build-debug/CMakeFiles/DesktopInterface.dir/QHomeWindow.cpp.obj"
+  "E:/CS425Project/DesktopInterface/QResultsWindow.cpp" "E:/CS425Project/DesktopInterface/cmake-build-debug/CMakeFiles/DesktopInterface.dir/QResultsWindow.cpp.obj"
   "E:/CS425Project/DesktopInterface/QVRControlWidget.cpp" "E:/CS425Project/DesktopInterface/cmake-build-debug/CMakeFiles/DesktopInterface.dir/QVRControlWidget.cpp.obj"
   "E:/CS425Project/DesktopInterface/main.cpp" "E:/CS425Project/DesktopInterface/cmake-build-debug/CMakeFiles/DesktopInterface.dir/main.cpp.obj"
   )

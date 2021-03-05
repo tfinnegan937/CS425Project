@@ -58,19 +58,23 @@ bool access_shared_mem(string memID_in){
 if(is_instantiated){
     return false;
 }else{
-    isMemoryOwner = false;
-    is_instantiated = true;
-    memID = memID_in;
-    //Instantiate the shared memory object
-    shm = new shared_memory_object(open_only, memID_in.c_str(), read_write);
+    try {
+        isMemoryOwner = false;
+        is_instantiated = true;
+        memID = memID_in;
+        //Instantiate the shared memory object
+        shm = new shared_memory_object(open_only, memID_in.c_str(), read_write);
 
-    //Map the region and get its address
-    region = new mapped_region((*shm), read_write);
-    transmission_address = (region)->get_address();
+        //Map the region and get its address
+        region = new mapped_region((*shm), read_write);
+        transmission_address = (region)->get_address();
 
-    //Construct the shared structure in memory, using the shared address.
-    ;
-    shared_memory_buffer = static_cast<SharedMemoryBuffer*>(transmission_address);
+        //Construct the shared structure in memory, using the shared address.
+        ;
+        shared_memory_buffer = static_cast<SharedMemoryBuffer *>(transmission_address);
+    }catch(boost::interprocess::interprocess_exception& e){
+        return false;
+    }
     return true;
 }
 
@@ -79,18 +83,25 @@ if(is_instantiated){
 
 
 void send_message(uint16_t message) {
-    if(isMemoryOwner){
-        //This object belongs to UnrealEngine
-        scoped_lock<interprocess_mutex> lock(((SharedMemoryBuffer*)shared_memory_buffer)->mutex); //Lock the buffer
-        shared_memory_buffer->interface_buffer_in = shared_memory_buffer->interface_buffer_in | message; //Add the flag to the outbound message
-        shared_memory_buffer->interface_buffer_modified = true;
-    }else{
-        //This object belongs to the Desktop Interface
-        scoped_lock<interprocess_mutex> lock(((SharedMemoryBuffer*)shared_memory_buffer)->mutex); //Lock the buffer
-        shared_memory_buffer->unreal_buffer_in = shared_memory_buffer->unreal_buffer_in | message; //Add the flag to the outbound message
-        shared_memory_buffer->unreal_buffer_modified = true;
+    try {
+        if (isMemoryOwner) {
+            //This object belongs to UnrealEngine
+            scoped_lock<interprocess_mutex> lock(
+                    ((SharedMemoryBuffer *) shared_memory_buffer)->mutex); //Lock the buffer
+            shared_memory_buffer->interface_buffer_in =
+                    shared_memory_buffer->interface_buffer_in | message; //Add the flag to the outbound message
+            shared_memory_buffer->interface_buffer_modified = true;
+        } else {
+            //This object belongs to the Desktop Interface
+            scoped_lock<interprocess_mutex> lock(
+                    ((SharedMemoryBuffer *) shared_memory_buffer)->mutex); //Lock the buffer
+            shared_memory_buffer->unreal_buffer_in =
+                    shared_memory_buffer->unreal_buffer_in | message; //Add the flag to the outbound message
+            shared_memory_buffer->unreal_buffer_modified = true;
+        }
+    }catch(std::exception& e){
+        //TODO: Handle Exception
     }
-
 }
 
 uint16_t receive_message() {
@@ -101,23 +112,28 @@ uint16_t receive_message() {
         shared_memory_buffer->unreal_buffer_modified = false; //Indicate that the buffer is ready again
         buffer_output = shared_memory_buffer->unreal_buffer_in;
 
-        shared_memory_buffer->unreal_buffer_in = 0x00;
+        //shared_memory_buffer->unreal_buffer_in = 0x00;
     }else{
         shared_memory_buffer->interface_buffer_modified = false; //Indicate that the buffer is ready again
         buffer_output = shared_memory_buffer->interface_buffer_in; //Return the message to the program
-        shared_memory_buffer->interface_buffer_in= 0x00;
+        //shared_memory_buffer->interface_buffer_in= 0x00;
     }
 
     return buffer_output;
 }
 
 bool message_received() {
-    scoped_lock<interprocess_mutex> lock(((SharedMemoryBuffer*)shared_memory_buffer)->mutex); //Lock the object
-    SharedMemoryBuffer * buffer_pointer = (SharedMemoryBuffer*)shared_memory_buffer;
-    if(isMemoryOwner){
-        return buffer_pointer->unreal_buffer_modified;
-    }else{
-        return buffer_pointer->interface_buffer_modified;
+    try {
+        scoped_lock<interprocess_mutex> lock(((SharedMemoryBuffer *) shared_memory_buffer)->mutex); //Lock the object
+        SharedMemoryBuffer *buffer_pointer = (SharedMemoryBuffer *) shared_memory_buffer;
+        if (isMemoryOwner) {
+            return buffer_pointer->unreal_buffer_modified;
+        } else {
+            return buffer_pointer->interface_buffer_modified;
+        }
+    }catch(std::exception & e){
+        //TODO: Handle Exception
+        return false;
     }
 }
 

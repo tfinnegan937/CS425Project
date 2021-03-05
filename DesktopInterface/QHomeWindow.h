@@ -7,6 +7,8 @@
 #include <QWidget>
 #include <QHBoxLayout>
 #include <QPushButton>
+#include <QTimer>
+#include <QString>
 #include "QVRControlWidget.h"
 #include "QDataControlWidget.h"
 class QHomeWindow : public QWidget {
@@ -16,8 +18,20 @@ private:
     QDataControlWidget * data_controls; //Widget containing the Data controls
 
     QHBoxLayout * home_page_layout; //Horizontal Box Layout for the main window
+
+    QTimer * ipc_callback_timer;
+
+    bool initializeIPC(QString shared_mem_name); //initialize IPC communication
+
+    bool handleIPCMessages(uint16_t message_buffer); //Take received message buffer and handle each received
+    bool shared_mem_initialized = false;
+
+public slots:
+    void ipcTick(); //One tick of the IPC communication loop;
+signals:
+    //TODO
 public:
-    QHomeWindow(QWidget * parent = nullptr);
+    explicit QHomeWindow(QWidget * parent = nullptr);
 };
 
 
