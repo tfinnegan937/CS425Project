@@ -129,10 +129,22 @@
 		<Unit filename="E:/CS425Project/DesktopInterface/QDataControlWidget.h">
 			<Option target="DesktopInterface"/>
 		</Unit>
+		<Unit filename="E:/CS425Project/DesktopInterface/QDataPane.cpp">
+			<Option target="DesktopInterface"/>
+		</Unit>
+		<Unit filename="E:/CS425Project/DesktopInterface/QDataPane.h">
+			<Option target="DesktopInterface"/>
+		</Unit>
 		<Unit filename="E:/CS425Project/DesktopInterface/QHomeWindow.cpp">
 			<Option target="DesktopInterface"/>
 		</Unit>
 		<Unit filename="E:/CS425Project/DesktopInterface/QHomeWindow.h">
+			<Option target="DesktopInterface"/>
+		</Unit>
+		<Unit filename="E:/CS425Project/DesktopInterface/QPatientDataPane.cpp">
+			<Option target="DesktopInterface"/>
+		</Unit>
+		<Unit filename="E:/CS425Project/DesktopInterface/QPatientDataPane.h">
 			<Option target="DesktopInterface"/>
 		</Unit>
 		<Unit filename="E:/CS425Project/DesktopInterface/QResultsWindow.cpp">
@@ -142,6 +154,18 @@
 			<Option target="DesktopInterface"/>
 		</Unit>
 		<Unit filename="E:/CS425Project/DesktopInterface/QResultsWindow.ui">
+			<Option target="DesktopInterface"/>
+		</Unit>
+		<Unit filename="E:/CS425Project/DesktopInterface/QSimulationControlPane.cpp">
+			<Option target="DesktopInterface"/>
+		</Unit>
+		<Unit filename="E:/CS425Project/DesktopInterface/QSimulationControlPane.h">
+			<Option target="DesktopInterface"/>
+		</Unit>
+		<Unit filename="E:/CS425Project/DesktopInterface/QSimulationControls.cpp">
+			<Option target="DesktopInterface"/>
+		</Unit>
+		<Unit filename="E:/CS425Project/DesktopInterface/QSimulationControls.h">
 			<Option target="DesktopInterface"/>
 		</Unit>
 		<Unit filename="E:/CS425Project/DesktopInterface/QVRControlWidget.cpp">

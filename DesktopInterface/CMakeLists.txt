@@ -31,7 +31,7 @@ QDataControlWidget.cpp
 QHomeWindow.cpp
 QResultsWindow.cpp
 QVRControlWidget.cpp
-)
+        QSimulationControlPane.cpp QPatientDataPane.cpp QDataPane.cpp QSimulationControls.cpp)
 
 set ( MAIN_HEADERS
 DesktopInterface.h
@@ -39,7 +39,7 @@ QDataControlWidget.h
 QHomeWindow.h
 QResultsWindow.h
 QVRControlWidget.h
-)
+        QSimulationControlPane.h QPatientDataPane.h QDataPane.h QSimulationControls.h)
 
 set ( EXTRA_HEADERS
 APPLICATION_CONSTANTS.h

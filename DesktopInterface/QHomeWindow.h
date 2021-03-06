@@ -11,13 +11,16 @@
 #include <QString>
 #include "QVRControlWidget.h"
 #include "QDataControlWidget.h"
+#include "QSimulationControlPane.h"
+#include "QPatientDataPane.h"
+#include "QDataPane.h"
 class QHomeWindow : public QWidget {
 Q_OBJECT
 private:
-    QVRControlWidget * vr_controls; //Widget containing the VR controls
-    QDataControlWidget * data_controls; //Widget containing the Data controls
-
-    QHBoxLayout * home_page_layout; //Horizontal Box Layout for the main window
+    QHBoxLayout * panel_layout;
+    QSimulationControlPane * simulation_pane;
+    QPatientDataPane * patient_pane;
+    QDataPane * data_pane;
 
     QTimer * ipc_callback_timer;
 

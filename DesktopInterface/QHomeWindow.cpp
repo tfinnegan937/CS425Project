@@ -4,20 +4,20 @@
 
 #include "QHomeWindow.h"
 #include "UnrealIPCController.h"
-#include <iostream> //For debug purposes
-#include <Python.h>
-QHomeWindow::QHomeWindow(QWidget *parent) {
-    home_page_layout = new QHBoxLayout(this);
-    home_page_layout->setSpacing(1);
-    //Add VR controls
-    vr_controls = new QVRControlWidget(this);
-    home_page_layout->addWidget(vr_controls);
 
-    //Add Data Controls
-    data_controls = new QDataControlWidget(this);
-    home_page_layout->addWidget(data_controls);
-    setLayout(home_page_layout);
+QHomeWindow::QHomeWindow(QWidget *parent) : QWidget(parent) {
 
+    simulation_pane = new QSimulationControlPane(this);
+    patient_pane = new QPatientDataPane(this);
+    data_pane = new QDataPane(this);
+
+    panel_layout = new QHBoxLayout();
+
+    panel_layout->insertWidget(0, simulation_pane);
+    panel_layout->insertWidget(1, patient_pane);
+    panel_layout->insertWidget(2, data_pane);
+
+    this->setLayout(panel_layout);
     //Initialize IPC communication
     initializeIPC("unreal_memory_buff");
 
