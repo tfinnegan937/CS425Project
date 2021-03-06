@@ -10,6 +10,7 @@
 #include <QHBoxLayout>
 #include <QPushButton>
 #include <QGroupBox>
+#include <QLabel>
 class QSimulationControlButtonWidget : public QWidget{
     Q_OBJECT
 private:
@@ -40,7 +41,7 @@ private:
     QCheckBox * con_check;
     QCheckBox * vms_check;
     QCheckBox * select_all;
-
+    QLabel * status_message;
     QSimulationControlButtonWidget * control_buttons;
 
     QVBoxLayout * layout;

@@ -20,11 +20,6 @@
 			"EWIEGA46WW/moc_DesktopInterface.cpp"
 		],
 		[
-			"E:/CS425Project/DesktopInterface/QDataControlWidget.h",
-			"MU",
-			"EWIEGA46WW/moc_QDataControlWidget.cpp"
-		],
-		[
 			"E:/CS425Project/DesktopInterface/QDataPane.h",
 			"MU",
 			"EWIEGA46WW/moc_QDataPane.cpp"
@@ -40,11 +35,6 @@
 			"EWIEGA46WW/moc_QPatientDataPane.cpp"
 		],
 		[
-			"E:/CS425Project/DesktopInterface/QResultsWindow.h",
-			"MU",
-			"EWIEGA46WW/moc_QResultsWindow.cpp"
-		],
-		[
 			"E:/CS425Project/DesktopInterface/QSimulationControlPane.h",
 			"MU",
 			"EWIEGA46WW/moc_QSimulationControlPane.cpp"
@@ -53,11 +43,6 @@
 			"E:/CS425Project/DesktopInterface/QSimulationControls.h",
 			"MU",
 			"EWIEGA46WW/moc_QSimulationControls.cpp"
-		],
-		[
-			"E:/CS425Project/DesktopInterface/QVRControlWidget.h",
-			"MU",
-			"EWIEGA46WW/moc_QVRControlWidget.cpp"
 		]
 	],
 	"HEADER_EXTENSIONS" : [ "h", "hh", "h++", "hm", "hpp", "hxx", "in", "txx" ],
@@ -113,14 +98,11 @@
 	"SOURCES" : 
 	[
 		[ "E:/CS425Project/DesktopInterface/DesktopInterface.cpp", "MU" ],
-		[ "E:/CS425Project/DesktopInterface/QDataControlWidget.cpp", "MU" ],
 		[ "E:/CS425Project/DesktopInterface/QDataPane.cpp", "MU" ],
 		[ "E:/CS425Project/DesktopInterface/QHomeWindow.cpp", "MU" ],
 		[ "E:/CS425Project/DesktopInterface/QPatientDataPane.cpp", "MU" ],
-		[ "E:/CS425Project/DesktopInterface/QResultsWindow.cpp", "MU" ],
 		[ "E:/CS425Project/DesktopInterface/QSimulationControlPane.cpp", "MU" ],
 		[ "E:/CS425Project/DesktopInterface/QSimulationControls.cpp", "MU" ],
-		[ "E:/CS425Project/DesktopInterface/QVRControlWidget.cpp", "MU" ],
 		[ "E:/CS425Project/DesktopInterface/main.cpp", "MU" ]
 	],
 	"UIC_OPTIONS" : [],

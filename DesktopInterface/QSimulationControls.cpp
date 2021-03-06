@@ -42,8 +42,8 @@ QSimulationControls::QSimulationControls(QWidget *parent) : QWidget(parent){
     con_check = new QCheckBox("Near Point Convergence", this);
     vms_check = new QCheckBox("Visual Motion Sensitivity Test", this);
     select_all = new QCheckBox("Select All", this);
-
     control_buttons = new QSimulationControlButtonWidget(this);
+    status_message = new QLabel("Status: Ready", this);
 
     layout = new QVBoxLayout(this);
     layout->insertWidget(0, sp_check);
@@ -53,8 +53,10 @@ QSimulationControls::QSimulationControls(QWidget *parent) : QWidget(parent){
     layout->insertWidget(4, vorv_check);
     layout->insertWidget(5, con_check);
     layout->insertWidget(6, vms_check);
-    layout->insertWidget(7, control_buttons);
     layout->insertWidget(7, select_all);
+    layout->insertWidget(9, control_buttons);
+    layout->insertWidget(8, status_message);
+
 
 
     group_box = new QGroupBox("Simulation Controls");

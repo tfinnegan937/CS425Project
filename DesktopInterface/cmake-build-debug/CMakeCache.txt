@@ -445,9 +445,9 @@ CMAKE_STRIP-ADVANCED:INTERNAL=1
 //ADVANCED property for variable: CMAKE_VERBOSE_MAKEFILE
 CMAKE_VERBOSE_MAKEFILE-ADVANCED:INTERNAL=1
 //Details about finding Python3
-FIND_PACKAGE_MESSAGE_DETAILS_Python3:INTERNAL=[C:/Users/plays/AppData/Local/Programs/Python/Python39/python.exe][cfound components: Interpreter ][v3.9.2()]
+FIND_PACKAGE_MESSAGE_DETAILS_Python3:INTERNAL=[C:/Users/plays/AppData/Local/Programs/Python/Python39/python.exe][cfound components: Interpreter ][v3.9.2(3.9)]
 //Details about finding PythonLibs
-FIND_PACKAGE_MESSAGE_DETAILS_PythonLibs:INTERNAL=[C:/Users/plays/AppData/Local/Programs/Python/Python39/libs/python39.lib][C:/Users/plays/AppData/Local/Programs/Python/Python39/include][v3.9.2(3.8)]
+FIND_PACKAGE_MESSAGE_DETAILS_PythonLibs:INTERNAL=[C:/Users/plays/AppData/Local/Programs/Python/Python39/libs/python39.lib][C:/Users/plays/AppData/Local/Programs/Python/Python39/include][v3.9.2(3.9)]
 //ADVANCED property for variable: PYTHON_DEBUG_LIBRARY
 PYTHON_DEBUG_LIBRARY-ADVANCED:INTERNAL=1
 //ADVANCED property for variable: PYTHON_INCLUDE_DIR

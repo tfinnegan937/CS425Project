@@ -118,24 +118,10 @@ CMakeFiles/DesktopInterface.dir/DesktopInterface.cpp.s: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/DesktopInterface.dir/DesktopInterface.cpp.s"
 	C:\mingw-w64\mingw64\bin\g++.exe $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S E:\CS425Project\DesktopInterface\DesktopInterface.cpp -o CMakeFiles\DesktopInterface.dir\DesktopInterface.cpp.s
 
-CMakeFiles/DesktopInterface.dir/QDataControlWidget.cpp.obj: CMakeFiles/DesktopInterface.dir/flags.make
-CMakeFiles/DesktopInterface.dir/QDataControlWidget.cpp.obj: CMakeFiles/DesktopInterface.dir/includes_CXX.rsp
-CMakeFiles/DesktopInterface.dir/QDataControlWidget.cpp.obj: ../QDataControlWidget.cpp
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=E:\CS425Project\DesktopInterface\cmake-build-debug\CMakeFiles --progress-num=$(CMAKE_PROGRESS_4) "Building CXX object CMakeFiles/DesktopInterface.dir/QDataControlWidget.cpp.obj"
-	C:\mingw-w64\mingw64\bin\g++.exe  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles\DesktopInterface.dir\QDataControlWidget.cpp.obj -c E:\CS425Project\DesktopInterface\QDataControlWidget.cpp
-
-CMakeFiles/DesktopInterface.dir/QDataControlWidget.cpp.i: cmake_force
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing CXX source to CMakeFiles/DesktopInterface.dir/QDataControlWidget.cpp.i"
-	C:\mingw-w64\mingw64\bin\g++.exe $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E E:\CS425Project\DesktopInterface\QDataControlWidget.cpp > CMakeFiles\DesktopInterface.dir\QDataControlWidget.cpp.i
-
-CMakeFiles/DesktopInterface.dir/QDataControlWidget.cpp.s: cmake_force
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/DesktopInterface.dir/QDataControlWidget.cpp.s"
-	C:\mingw-w64\mingw64\bin\g++.exe $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S E:\CS425Project\DesktopInterface\QDataControlWidget.cpp -o CMakeFiles\DesktopInterface.dir\QDataControlWidget.cpp.s
-
 CMakeFiles/DesktopInterface.dir/QHomeWindow.cpp.obj: CMakeFiles/DesktopInterface.dir/flags.make
 CMakeFiles/DesktopInterface.dir/QHomeWindow.cpp.obj: CMakeFiles/DesktopInterface.dir/includes_CXX.rsp
 CMakeFiles/DesktopInterface.dir/QHomeWindow.cpp.obj: ../QHomeWindow.cpp
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=E:\CS425Project\DesktopInterface\cmake-build-debug\CMakeFiles --progress-num=$(CMAKE_PROGRESS_5) "Building CXX object CMakeFiles/DesktopInterface.dir/QHomeWindow.cpp.obj"
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=E:\CS425Project\DesktopInterface\cmake-build-debug\CMakeFiles --progress-num=$(CMAKE_PROGRESS_4) "Building CXX object CMakeFiles/DesktopInterface.dir/QHomeWindow.cpp.obj"
 	C:\mingw-w64\mingw64\bin\g++.exe  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles\DesktopInterface.dir\QHomeWindow.cpp.obj -c E:\CS425Project\DesktopInterface\QHomeWindow.cpp
 
 CMakeFiles/DesktopInterface.dir/QHomeWindow.cpp.i: cmake_force
@@ -146,38 +132,10 @@ CMakeFiles/DesktopInterface.dir/QHomeWindow.cpp.s: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/DesktopInterface.dir/QHomeWindow.cpp.s"
 	C:\mingw-w64\mingw64\bin\g++.exe $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S E:\CS425Project\DesktopInterface\QHomeWindow.cpp -o CMakeFiles\DesktopInterface.dir\QHomeWindow.cpp.s
 
-CMakeFiles/DesktopInterface.dir/QResultsWindow.cpp.obj: CMakeFiles/DesktopInterface.dir/flags.make
-CMakeFiles/DesktopInterface.dir/QResultsWindow.cpp.obj: CMakeFiles/DesktopInterface.dir/includes_CXX.rsp
-CMakeFiles/DesktopInterface.dir/QResultsWindow.cpp.obj: ../QResultsWindow.cpp
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=E:\CS425Project\DesktopInterface\cmake-build-debug\CMakeFiles --progress-num=$(CMAKE_PROGRESS_6) "Building CXX object CMakeFiles/DesktopInterface.dir/QResultsWindow.cpp.obj"
-	C:\mingw-w64\mingw64\bin\g++.exe  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles\DesktopInterface.dir\QResultsWindow.cpp.obj -c E:\CS425Project\DesktopInterface\QResultsWindow.cpp
-
-CMakeFiles/DesktopInterface.dir/QResultsWindow.cpp.i: cmake_force
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing CXX source to CMakeFiles/DesktopInterface.dir/QResultsWindow.cpp.i"
-	C:\mingw-w64\mingw64\bin\g++.exe $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E E:\CS425Project\DesktopInterface\QResultsWindow.cpp > CMakeFiles\DesktopInterface.dir\QResultsWindow.cpp.i
-
-CMakeFiles/DesktopInterface.dir/QResultsWindow.cpp.s: cmake_force
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/DesktopInterface.dir/QResultsWindow.cpp.s"
-	C:\mingw-w64\mingw64\bin\g++.exe $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S E:\CS425Project\DesktopInterface\QResultsWindow.cpp -o CMakeFiles\DesktopInterface.dir\QResultsWindow.cpp.s
-
-CMakeFiles/DesktopInterface.dir/QVRControlWidget.cpp.obj: CMakeFiles/DesktopInterface.dir/flags.make
-CMakeFiles/DesktopInterface.dir/QVRControlWidget.cpp.obj: CMakeFiles/DesktopInterface.dir/includes_CXX.rsp
-CMakeFiles/DesktopInterface.dir/QVRControlWidget.cpp.obj: ../QVRControlWidget.cpp
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=E:\CS425Project\DesktopInterface\cmake-build-debug\CMakeFiles --progress-num=$(CMAKE_PROGRESS_7) "Building CXX object CMakeFiles/DesktopInterface.dir/QVRControlWidget.cpp.obj"
-	C:\mingw-w64\mingw64\bin\g++.exe  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles\DesktopInterface.dir\QVRControlWidget.cpp.obj -c E:\CS425Project\DesktopInterface\QVRControlWidget.cpp
-
-CMakeFiles/DesktopInterface.dir/QVRControlWidget.cpp.i: cmake_force
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing CXX source to CMakeFiles/DesktopInterface.dir/QVRControlWidget.cpp.i"
-	C:\mingw-w64\mingw64\bin\g++.exe $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E E:\CS425Project\DesktopInterface\QVRControlWidget.cpp > CMakeFiles\DesktopInterface.dir\QVRControlWidget.cpp.i
-
-CMakeFiles/DesktopInterface.dir/QVRControlWidget.cpp.s: cmake_force
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/DesktopInterface.dir/QVRControlWidget.cpp.s"
-	C:\mingw-w64\mingw64\bin\g++.exe $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S E:\CS425Project\DesktopInterface\QVRControlWidget.cpp -o CMakeFiles\DesktopInterface.dir\QVRControlWidget.cpp.s
-
 CMakeFiles/DesktopInterface.dir/QSimulationControlPane.cpp.obj: CMakeFiles/DesktopInterface.dir/flags.make
 CMakeFiles/DesktopInterface.dir/QSimulationControlPane.cpp.obj: CMakeFiles/DesktopInterface.dir/includes_CXX.rsp
 CMakeFiles/DesktopInterface.dir/QSimulationControlPane.cpp.obj: ../QSimulationControlPane.cpp
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=E:\CS425Project\DesktopInterface\cmake-build-debug\CMakeFiles --progress-num=$(CMAKE_PROGRESS_8) "Building CXX object CMakeFiles/DesktopInterface.dir/QSimulationControlPane.cpp.obj"
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=E:\CS425Project\DesktopInterface\cmake-build-debug\CMakeFiles --progress-num=$(CMAKE_PROGRESS_5) "Building CXX object CMakeFiles/DesktopInterface.dir/QSimulationControlPane.cpp.obj"
 	C:\mingw-w64\mingw64\bin\g++.exe  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles\DesktopInterface.dir\QSimulationControlPane.cpp.obj -c E:\CS425Project\DesktopInterface\QSimulationControlPane.cpp
 
 CMakeFiles/DesktopInterface.dir/QSimulationControlPane.cpp.i: cmake_force
@@ -191,7 +149,7 @@ CMakeFiles/DesktopInterface.dir/QSimulationControlPane.cpp.s: cmake_force
 CMakeFiles/DesktopInterface.dir/QPatientDataPane.cpp.obj: CMakeFiles/DesktopInterface.dir/flags.make
 CMakeFiles/DesktopInterface.dir/QPatientDataPane.cpp.obj: CMakeFiles/DesktopInterface.dir/includes_CXX.rsp
 CMakeFiles/DesktopInterface.dir/QPatientDataPane.cpp.obj: ../QPatientDataPane.cpp
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=E:\CS425Project\DesktopInterface\cmake-build-debug\CMakeFiles --progress-num=$(CMAKE_PROGRESS_9) "Building CXX object CMakeFiles/DesktopInterface.dir/QPatientDataPane.cpp.obj"
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=E:\CS425Project\DesktopInterface\cmake-build-debug\CMakeFiles --progress-num=$(CMAKE_PROGRESS_6) "Building CXX object CMakeFiles/DesktopInterface.dir/QPatientDataPane.cpp.obj"
 	C:\mingw-w64\mingw64\bin\g++.exe  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles\DesktopInterface.dir\QPatientDataPane.cpp.obj -c E:\CS425Project\DesktopInterface\QPatientDataPane.cpp
 
 CMakeFiles/DesktopInterface.dir/QPatientDataPane.cpp.i: cmake_force
@@ -205,7 +163,7 @@ CMakeFiles/DesktopInterface.dir/QPatientDataPane.cpp.s: cmake_force
 CMakeFiles/DesktopInterface.dir/QDataPane.cpp.obj: CMakeFiles/DesktopInterface.dir/flags.make
 CMakeFiles/DesktopInterface.dir/QDataPane.cpp.obj: CMakeFiles/DesktopInterface.dir/includes_CXX.rsp
 CMakeFiles/DesktopInterface.dir/QDataPane.cpp.obj: ../QDataPane.cpp
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=E:\CS425Project\DesktopInterface\cmake-build-debug\CMakeFiles --progress-num=$(CMAKE_PROGRESS_10) "Building CXX object CMakeFiles/DesktopInterface.dir/QDataPane.cpp.obj"
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=E:\CS425Project\DesktopInterface\cmake-build-debug\CMakeFiles --progress-num=$(CMAKE_PROGRESS_7) "Building CXX object CMakeFiles/DesktopInterface.dir/QDataPane.cpp.obj"
 	C:\mingw-w64\mingw64\bin\g++.exe  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles\DesktopInterface.dir\QDataPane.cpp.obj -c E:\CS425Project\DesktopInterface\QDataPane.cpp
 
 CMakeFiles/DesktopInterface.dir/QDataPane.cpp.i: cmake_force
@@ -219,7 +177,7 @@ CMakeFiles/DesktopInterface.dir/QDataPane.cpp.s: cmake_force
 CMakeFiles/DesktopInterface.dir/QSimulationControls.cpp.obj: CMakeFiles/DesktopInterface.dir/flags.make
 CMakeFiles/DesktopInterface.dir/QSimulationControls.cpp.obj: CMakeFiles/DesktopInterface.dir/includes_CXX.rsp
 CMakeFiles/DesktopInterface.dir/QSimulationControls.cpp.obj: ../QSimulationControls.cpp
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=E:\CS425Project\DesktopInterface\cmake-build-debug\CMakeFiles --progress-num=$(CMAKE_PROGRESS_11) "Building CXX object CMakeFiles/DesktopInterface.dir/QSimulationControls.cpp.obj"
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=E:\CS425Project\DesktopInterface\cmake-build-debug\CMakeFiles --progress-num=$(CMAKE_PROGRESS_8) "Building CXX object CMakeFiles/DesktopInterface.dir/QSimulationControls.cpp.obj"
 	C:\mingw-w64\mingw64\bin\g++.exe  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles\DesktopInterface.dir\QSimulationControls.cpp.obj -c E:\CS425Project\DesktopInterface\QSimulationControls.cpp
 
 CMakeFiles/DesktopInterface.dir/QSimulationControls.cpp.i: cmake_force
@@ -235,10 +193,7 @@ DesktopInterface_OBJECTS = \
 "CMakeFiles/DesktopInterface.dir/DesktopInterface_autogen/mocs_compilation.cpp.obj" \
 "CMakeFiles/DesktopInterface.dir/main.cpp.obj" \
 "CMakeFiles/DesktopInterface.dir/DesktopInterface.cpp.obj" \
-"CMakeFiles/DesktopInterface.dir/QDataControlWidget.cpp.obj" \
 "CMakeFiles/DesktopInterface.dir/QHomeWindow.cpp.obj" \
-"CMakeFiles/DesktopInterface.dir/QResultsWindow.cpp.obj" \
-"CMakeFiles/DesktopInterface.dir/QVRControlWidget.cpp.obj" \
 "CMakeFiles/DesktopInterface.dir/QSimulationControlPane.cpp.obj" \
 "CMakeFiles/DesktopInterface.dir/QPatientDataPane.cpp.obj" \
 "CMakeFiles/DesktopInterface.dir/QDataPane.cpp.obj" \
@@ -250,10 +205,7 @@ DesktopInterface_EXTERNAL_OBJECTS =
 E:/CS425Project/Binaries/Win64/DesktopInterface.exe: CMakeFiles/DesktopInterface.dir/DesktopInterface_autogen/mocs_compilation.cpp.obj
 E:/CS425Project/Binaries/Win64/DesktopInterface.exe: CMakeFiles/DesktopInterface.dir/main.cpp.obj
 E:/CS425Project/Binaries/Win64/DesktopInterface.exe: CMakeFiles/DesktopInterface.dir/DesktopInterface.cpp.obj
-E:/CS425Project/Binaries/Win64/DesktopInterface.exe: CMakeFiles/DesktopInterface.dir/QDataControlWidget.cpp.obj
 E:/CS425Project/Binaries/Win64/DesktopInterface.exe: CMakeFiles/DesktopInterface.dir/QHomeWindow.cpp.obj
-E:/CS425Project/Binaries/Win64/DesktopInterface.exe: CMakeFiles/DesktopInterface.dir/QResultsWindow.cpp.obj
-E:/CS425Project/Binaries/Win64/DesktopInterface.exe: CMakeFiles/DesktopInterface.dir/QVRControlWidget.cpp.obj
 E:/CS425Project/Binaries/Win64/DesktopInterface.exe: CMakeFiles/DesktopInterface.dir/QSimulationControlPane.cpp.obj
 E:/CS425Project/Binaries/Win64/DesktopInterface.exe: CMakeFiles/DesktopInterface.dir/QPatientDataPane.cpp.obj
 E:/CS425Project/Binaries/Win64/DesktopInterface.exe: CMakeFiles/DesktopInterface.dir/QDataPane.cpp.obj
@@ -267,7 +219,7 @@ E:/CS425Project/Binaries/Win64/DesktopInterface.exe: C:/Qt/5.15.2/mingw81_64/lib
 E:/CS425Project/Binaries/Win64/DesktopInterface.exe: CMakeFiles/DesktopInterface.dir/linklibs.rsp
 E:/CS425Project/Binaries/Win64/DesktopInterface.exe: CMakeFiles/DesktopInterface.dir/objects1.rsp
 E:/CS425Project/Binaries/Win64/DesktopInterface.exe: CMakeFiles/DesktopInterface.dir/link.txt
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --bold --progress-dir=E:\CS425Project\DesktopInterface\cmake-build-debug\CMakeFiles --progress-num=$(CMAKE_PROGRESS_12) "Linking CXX executable E:\CS425Project\Binaries\Win64\DesktopInterface.exe"
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --bold --progress-dir=E:\CS425Project\DesktopInterface\cmake-build-debug\CMakeFiles --progress-num=$(CMAKE_PROGRESS_9) "Linking CXX executable E:\CS425Project\Binaries\Win64\DesktopInterface.exe"
 	$(CMAKE_COMMAND) -E cmake_link_script CMakeFiles\DesktopInterface.dir\link.txt --verbose=$(VERBOSE)
 
 # Rule to build all files generated by this target.

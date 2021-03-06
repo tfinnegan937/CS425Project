@@ -123,12 +123,6 @@
 		<Unit filename="E:/CS425Project/DesktopInterface/DesktopInterface.h">
 			<Option target="DesktopInterface"/>
 		</Unit>
-		<Unit filename="E:/CS425Project/DesktopInterface/QDataControlWidget.cpp">
-			<Option target="DesktopInterface"/>
-		</Unit>
-		<Unit filename="E:/CS425Project/DesktopInterface/QDataControlWidget.h">
-			<Option target="DesktopInterface"/>
-		</Unit>
 		<Unit filename="E:/CS425Project/DesktopInterface/QDataPane.cpp">
 			<Option target="DesktopInterface"/>
 		</Unit>
@@ -147,12 +141,6 @@
 		<Unit filename="E:/CS425Project/DesktopInterface/QPatientDataPane.h">
 			<Option target="DesktopInterface"/>
 		</Unit>
-		<Unit filename="E:/CS425Project/DesktopInterface/QResultsWindow.cpp">
-			<Option target="DesktopInterface"/>
-		</Unit>
-		<Unit filename="E:/CS425Project/DesktopInterface/QResultsWindow.h">
-			<Option target="DesktopInterface"/>
-		</Unit>
 		<Unit filename="E:/CS425Project/DesktopInterface/QResultsWindow.ui">
 			<Option target="DesktopInterface"/>
 		</Unit>
@@ -168,12 +156,6 @@
 		<Unit filename="E:/CS425Project/DesktopInterface/QSimulationControls.h">
 			<Option target="DesktopInterface"/>
 		</Unit>
-		<Unit filename="E:/CS425Project/DesktopInterface/QVRControlWidget.cpp">
-			<Option target="DesktopInterface"/>
-		</Unit>
-		<Unit filename="E:/CS425Project/DesktopInterface/QVRControlWidget.h">
-			<Option target="DesktopInterface"/>
-		</Unit>
 		<Unit filename="E:/CS425Project/DesktopInterface/cmake-build-debug/DesktopInterface_autogen/mocs_compilation.cpp">
 			<Option target="DesktopInterface"/>
 		</Unit>
@@ -181,6 +163,9 @@
 			<Option target="DesktopInterface"/>
 		</Unit>
 		<Unit filename="E:/CS425Project/DesktopInterface/CMakeLists.txt">
+			<Option virtualFolder="CMake Files\"/>
+		</Unit>
+		<Unit filename="E:/CS425Project/DesktopInterface/eye_chart.py">
 			<Option virtualFolder="CMake Files\"/>
 		</Unit>
 		<Unit filename="E:/CS425Project/DesktopInterface/Qt/5.15.2/mingw81_64/lib/cmake/Qt5Widgets/Qt5WidgetsConfig.cmake">

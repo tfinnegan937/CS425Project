@@ -209,33 +209,6 @@ DesktopInterface_autogen/mocs_compilation.cpp.s:
 	$(MAKE) $(MAKESILENT) -f CMakeFiles\DesktopInterface.dir\build.make CMakeFiles/DesktopInterface.dir/DesktopInterface_autogen/mocs_compilation.cpp.s
 .PHONY : DesktopInterface_autogen/mocs_compilation.cpp.s
 
-QDataControlWidget.obj: QDataControlWidget.cpp.obj
-
-.PHONY : QDataControlWidget.obj
-
-# target to build an object file
-QDataControlWidget.cpp.obj:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles\DesktopInterface.dir\build.make CMakeFiles/DesktopInterface.dir/QDataControlWidget.cpp.obj
-.PHONY : QDataControlWidget.cpp.obj
-
-QDataControlWidget.i: QDataControlWidget.cpp.i
-
-.PHONY : QDataControlWidget.i
-
-# target to preprocess a source file
-QDataControlWidget.cpp.i:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles\DesktopInterface.dir\build.make CMakeFiles/DesktopInterface.dir/QDataControlWidget.cpp.i
-.PHONY : QDataControlWidget.cpp.i
-
-QDataControlWidget.s: QDataControlWidget.cpp.s
-
-.PHONY : QDataControlWidget.s
-
-# target to generate assembly for a file
-QDataControlWidget.cpp.s:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles\DesktopInterface.dir\build.make CMakeFiles/DesktopInterface.dir/QDataControlWidget.cpp.s
-.PHONY : QDataControlWidget.cpp.s
-
 QDataPane.obj: QDataPane.cpp.obj
 
 .PHONY : QDataPane.obj
@@ -317,33 +290,6 @@ QPatientDataPane.cpp.s:
 	$(MAKE) $(MAKESILENT) -f CMakeFiles\DesktopInterface.dir\build.make CMakeFiles/DesktopInterface.dir/QPatientDataPane.cpp.s
 .PHONY : QPatientDataPane.cpp.s
 
-QResultsWindow.obj: QResultsWindow.cpp.obj
-
-.PHONY : QResultsWindow.obj
-
-# target to build an object file
-QResultsWindow.cpp.obj:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles\DesktopInterface.dir\build.make CMakeFiles/DesktopInterface.dir/QResultsWindow.cpp.obj
-.PHONY : QResultsWindow.cpp.obj
-
-QResultsWindow.i: QResultsWindow.cpp.i
-
-.PHONY : QResultsWindow.i
-
-# target to preprocess a source file
-QResultsWindow.cpp.i:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles\DesktopInterface.dir\build.make CMakeFiles/DesktopInterface.dir/QResultsWindow.cpp.i
-.PHONY : QResultsWindow.cpp.i
-
-QResultsWindow.s: QResultsWindow.cpp.s
-
-.PHONY : QResultsWindow.s
-
-# target to generate assembly for a file
-QResultsWindow.cpp.s:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles\DesktopInterface.dir\build.make CMakeFiles/DesktopInterface.dir/QResultsWindow.cpp.s
-.PHONY : QResultsWindow.cpp.s
-
 QSimulationControlPane.obj: QSimulationControlPane.cpp.obj
 
 .PHONY : QSimulationControlPane.obj
@@ -398,33 +344,6 @@ QSimulationControls.cpp.s:
 	$(MAKE) $(MAKESILENT) -f CMakeFiles\DesktopInterface.dir\build.make CMakeFiles/DesktopInterface.dir/QSimulationControls.cpp.s
 .PHONY : QSimulationControls.cpp.s
 
-QVRControlWidget.obj: QVRControlWidget.cpp.obj
-
-.PHONY : QVRControlWidget.obj
-
-# target to build an object file
-QVRControlWidget.cpp.obj:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles\DesktopInterface.dir\build.make CMakeFiles/DesktopInterface.dir/QVRControlWidget.cpp.obj
-.PHONY : QVRControlWidget.cpp.obj
-
-QVRControlWidget.i: QVRControlWidget.cpp.i
-
-.PHONY : QVRControlWidget.i
-
-# target to preprocess a source file
-QVRControlWidget.cpp.i:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles\DesktopInterface.dir\build.make CMakeFiles/DesktopInterface.dir/QVRControlWidget.cpp.i
-.PHONY : QVRControlWidget.cpp.i
-
-QVRControlWidget.s: QVRControlWidget.cpp.s
-
-.PHONY : QVRControlWidget.s
-
-# target to generate assembly for a file
-QVRControlWidget.cpp.s:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles\DesktopInterface.dir\build.make CMakeFiles/DesktopInterface.dir/QVRControlWidget.cpp.s
-.PHONY : QVRControlWidget.cpp.s
-
 main.obj: main.cpp.obj
 
 .PHONY : main.obj
@@ -468,9 +387,6 @@ help:
 	@echo ... DesktopInterface_autogen/mocs_compilation.obj
 	@echo ... DesktopInterface_autogen/mocs_compilation.i
 	@echo ... DesktopInterface_autogen/mocs_compilation.s
-	@echo ... QDataControlWidget.obj
-	@echo ... QDataControlWidget.i
-	@echo ... QDataControlWidget.s
 	@echo ... QDataPane.obj
 	@echo ... QDataPane.i
 	@echo ... QDataPane.s
@@ -480,18 +396,12 @@ help:
 	@echo ... QPatientDataPane.obj
 	@echo ... QPatientDataPane.i
 	@echo ... QPatientDataPane.s
-	@echo ... QResultsWindow.obj
-	@echo ... QResultsWindow.i
-	@echo ... QResultsWindow.s
 	@echo ... QSimulationControlPane.obj
 	@echo ... QSimulationControlPane.i
 	@echo ... QSimulationControlPane.s
 	@echo ... QSimulationControls.obj
 	@echo ... QSimulationControls.i
 	@echo ... QSimulationControls.s
-	@echo ... QVRControlWidget.obj
-	@echo ... QVRControlWidget.i
-	@echo ... QVRControlWidget.s
 	@echo ... main.obj
 	@echo ... main.i
 	@echo ... main.s

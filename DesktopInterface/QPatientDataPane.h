@@ -16,6 +16,7 @@
 #include <QTextEdit>
 #include <QLineEdit>
 #include <QDateTime>
+#include <QCalendarWidget>
 class QGenderPicker : public QWidget{
 Q_OBJECT
 private:
@@ -27,25 +28,36 @@ private:
     QHBoxLayout * groupbox_container;
 public:
     QGenderPicker(QWidget * parent = nullptr);
+    QString getGender() const;
 };
 
 class QDatePicker : public QWidget{
 Q_OBJECT
 private:
     QString picker_label;
-    QWindow * date_picker_window;
+    QWidget * date_picker_window;
     QPushButton * select_date;
     QPushButton * confirm;
     QLineEdit * text_input;
 
-    QDateTime * selected_time;
+    QVBoxLayout * selector_layout;
+    QDate * selected_date;
+    QCalendarWidget * selector_calendar;
 
     QHBoxLayout * layout;
 
     QGroupBox * groupbox;
     QVBoxLayout * groupbox_container;
+    bool selectorOpen = false;
+signals:
+    void confirmDate(QDate);
+public slots:
+    void updateDate(QDate date);
+    void openSelector();
+    void passDateSignal();
 public:
     QDatePicker(QWidget * parent = nullptr, const QString& label = "");
+    QString getDate() const;
 };
 
 class QConcussSelector : public QWidget{
@@ -59,6 +71,7 @@ private:
     QHBoxLayout * groupbox_container;
 public:
     QConcussSelector(QWidget * parent = nullptr);
+    QString getConcussStatus() const;
 };
 class QPatientDataPane : public QWidget{
 Q_OBJECT
