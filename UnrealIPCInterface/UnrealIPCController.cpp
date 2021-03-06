@@ -112,11 +112,11 @@ uint16_t receive_message() {
         shared_memory_buffer->unreal_buffer_modified = false; //Indicate that the buffer is ready again
         buffer_output = shared_memory_buffer->unreal_buffer_in;
 
-        //shared_memory_buffer->unreal_buffer_in = 0x00;
+        shared_memory_buffer->unreal_buffer_in = 0x00;
     }else{
         shared_memory_buffer->interface_buffer_modified = false; //Indicate that the buffer is ready again
         buffer_output = shared_memory_buffer->interface_buffer_in; //Return the message to the program
-        //shared_memory_buffer->interface_buffer_in= 0x00;
+        shared_memory_buffer->interface_buffer_in= 0x00;
     }
 
     return buffer_output;

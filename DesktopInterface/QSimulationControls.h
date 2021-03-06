@@ -16,6 +16,13 @@ private:
     QHBoxLayout * layout;
     QPushButton * begin_button;
     QPushButton * cancel_button;
+signals:
+    void beginSignal();
+public slots:
+    void beginPressed();
+    void cancelPressed();
+
+    void toggleButtons();
 public:
     QSimulationControlButtonWidget(QWidget * parent);
 };
@@ -38,8 +45,18 @@ private:
 
     QVBoxLayout * layout;
 
+    bool isSimActive = false;
+signals:
+    void simActive(); //Passed to control_buttons when the matching signal is received from the parent
+    void simFinished(); //Passed to control_buttons when the matching signal is received from the parent
+public slots:
+    void lockPane(); //Locks all checkboxes upon receiving simActive from its parent widget. Also toggles the "Begin" and "Cancel" buttons
+    void unlockPane();//Locks all checkboxes upon receiving simFinished from its parent widget. Also toggles the "Begin" and "Cancel" buttons
+    void selectAll(int state);
+    void passBeginSignalToIPC();
 public:
     QSimulationControls(QWidget * parent = nullptr);
+    uint16_t getButtonStatesAsIPCBuff() const;
 };
 
 

@@ -4,7 +4,7 @@
 
 #include "QHomeWindow.h"
 #include "UnrealIPCController.h"
-
+#include <iostream>
 QHomeWindow::QHomeWindow(QWidget *parent) : QWidget(parent) {
 
     simulation_pane = new QSimulationControlPane(this);
@@ -21,6 +21,7 @@ QHomeWindow::QHomeWindow(QWidget *parent) : QWidget(parent) {
     //Initialize IPC communication
     initializeIPC("unreal_memory_buff");
 
+    connectSimPaneSignals();
     //Generate all other windows here
 }
 
@@ -52,6 +53,7 @@ void QHomeWindow::ipcTick() {
                 //TODO: handle exception
             }
         }
+        std::cout << "here" << std::endl;
     }
     //TODO: Ryan places the code for handling the data pipeline here
 }
@@ -78,33 +80,32 @@ bool QHomeWindow::initializeIPC(const QString& shared_mem_name) {
 
         return false;
     }
-
     //TODO: Ryan places pipeline initialization code here
     return true;
 }
 
 bool QHomeWindow::handleIPCMessages(uint16_t message_buffer) {
     //TODO: Handle Received Messages
-    if(message_buffer & IPC_INITIALIZED){
-
-    }
     if(message_buffer & SP_STARTED){
-
+        simActive();
     }
     if(message_buffer & SH_STARTED){
-
+        simActive();
     }
     if(message_buffer & SV_STARTED){
-
+        simActive();
     }
     if(message_buffer & CON_STARTED){
-
+        simActive();
     }
     if(message_buffer & VORH_STARTED){
-
+        simActive();
     }
     if(message_buffer & VORV_STARTED){
-
+        simActive();
+    }
+    if(message_buffer & VMS_STARTED){
+        simActive();
     }
     if(message_buffer & SP_COMPLETED){
 
@@ -124,11 +125,14 @@ bool QHomeWindow::handleIPCMessages(uint16_t message_buffer) {
     if(message_buffer & VORV_COMPLETED){
 
     }
-    if(message_buffer & TESTS_COMPLETED){
+    if(message_buffer & VMS_COMPLETED){
 
     }
+    if(message_buffer & TESTS_COMPLETED){
+        simFinished();
+    }
     if(message_buffer & CONF_SHUTDOWN){
-
+        exit(EXIT_SUCCESS);
     }
 
     if(message_buffer){
@@ -136,4 +140,11 @@ bool QHomeWindow::handleIPCMessages(uint16_t message_buffer) {
     }
     return false;
 }
+
+void QHomeWindow::connectSimPaneSignals() {
+    connect(this, &QHomeWindow::simActive, simulation_pane, &QSimulationControlPane::lockPane);
+    connect(this, &QHomeWindow::simFinished, simulation_pane, &QSimulationControlPane::unlockPane);
+}
+
+
 

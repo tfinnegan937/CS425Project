@@ -27,12 +27,16 @@ private:
     bool initializeIPC(const QString& shared_mem_name); //initialize IPC communication
 
     bool handleIPCMessages(uint16_t message_buffer); //Take received message buffer and handle each received
+
+    void connectSimPaneSignals();
     bool shared_mem_initialized = false;
 
 public slots:
     void ipcTick(); //One tick of the IPC communication loop;
 signals:
     //TODO
+    void simActive();
+    void simFinished();
 public:
     explicit QHomeWindow(QWidget * parent = nullptr);
 };
