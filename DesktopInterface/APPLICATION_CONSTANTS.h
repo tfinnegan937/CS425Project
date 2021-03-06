@@ -7,6 +7,6 @@
 
 #define APP_WIDTH 900
 #define APP_HEIGHT 720
-#define WINDOW_TITLE "Physician's Desktop Interface"
+#define WINDOW_TITLE "VPVR Desktop Interface"
 
 #endif //DESKTOPINTERFACE_APPLICATION_CONSTANTS_H

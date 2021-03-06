@@ -32,6 +32,7 @@ private:
     QCheckBox * vorv_check;
     QCheckBox * con_check;
     QCheckBox * vms_check;
+    QCheckBox * select_all;
 
     QSimulationControlButtonWidget * control_buttons;
 
