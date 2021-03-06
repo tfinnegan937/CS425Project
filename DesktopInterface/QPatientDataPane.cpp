@@ -71,7 +71,7 @@ QDatePicker::QDatePicker(QWidget *parent, const QString& label) : QWidget(parent
     date_picker_window = new QWidget();
 
     date_picker_window->hide();
-
+    date_picker_window->setWindowTitle(label);
     selector_calendar = new QCalendarWidget(date_picker_window);
 
     selector_layout = new QVBoxLayout(date_picker_window);
