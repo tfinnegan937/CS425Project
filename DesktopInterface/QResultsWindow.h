@@ -23,7 +23,6 @@ public:
 
 private:
     Ui::QResultsWindow *ui;
-    QPlainTextEdit* patientNameText;
     QThread* chart_thread;
 
     const char* eye_tracking_code;
