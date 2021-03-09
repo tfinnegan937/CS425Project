@@ -9,19 +9,38 @@
 #include <QPushButton>
 #include <QTimer>
 #include <QString>
+#include <QMenuBar>
+#include <QAction>
 #include "QVRControlWidget.h"
 #include "QSimulationControlPane.h"
 #include "QPatientDataPane.h"
 #include "QResultsPane.h"
+
 class QHomeWindow : public QWidget {
 Q_OBJECT
 private:
+    //UI panels
     QHBoxLayout * QHBx_panelLayout;
     QSimulationControlPane * QPane_simCtrlPane; //The third of the UI containing the simulation controls, a logo, and misc. buttons.
     QPatientDataPane * QPane_patientDataPane; //The third of the UI containing the fields for patient information input
     QResultsPane * QPane_simResultsPane; //The third of the UI containing charts and data
 
+    //IPC Loop Items
     QTimer * QTmr_ipcCallbackTimer; //This timer provides a callback ever 100 ms that checks the ipc buffer
+
+    //Menu Items
+    QMenuBar * QMenBar_menuBar;
+    QMenu * QMen_file;
+    QAction * QMenAct_fileOpen;
+    QAction * QMenAct_fileSave;
+    QAction * QMenAct_fileSaveAs;
+    QAction * QMenAct_fileExit;
+    QAction * QMenAct_fileExportData;
+
+    QMenu * QMen_help;
+    QAction * QMenAct_helpAbout;
+
+    void setupMenuBar();
 
     bool initializeIPC(const QString& shared_mem_name); //initialize IPC communication
 

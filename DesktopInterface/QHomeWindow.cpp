@@ -11,7 +11,9 @@ QHomeWindow::QHomeWindow(QWidget *parent) : QWidget(parent) {
     QPane_patientDataPane = new QPatientDataPane(this);
     QPane_simResultsPane = new QResultsPane(this);
 
-    QHBx_panelLayout = new QHBoxLayout();
+    QHBx_panelLayout = new QHBoxLayout(this);
+
+    setupMenuBar();
 
     QHBx_panelLayout->insertWidget(0, QPane_simCtrlPane);
     QHBx_panelLayout->insertWidget(1, QPane_patientDataPane);
@@ -144,6 +146,36 @@ bool QHomeWindow::handleIPCMessages(uint16_t message_buffer) {
 void QHomeWindow::connectSimPaneSignals() {
     connect(this, &QHomeWindow::simActive, QPane_simCtrlPane, &QSimulationControlPane::lockPane);
     connect(this, &QHomeWindow::simFinished, QPane_simCtrlPane, &QSimulationControlPane::unlockPane);
+}
+
+void QHomeWindow::setupMenuBar() {
+    QMenBar_menuBar = new QMenuBar(this);
+
+    QMen_file = new QMenu("File", QMenBar_menuBar);
+
+    QMenAct_fileOpen = new QAction("Open...", QMen_file);
+    QMen_file->addAction(QMenAct_fileOpen);
+    QMenAct_fileSave = new QAction("Save", QMen_file);
+    QMen_file->addAction(QMenAct_fileSave);
+    QMenAct_fileSaveAs = new QAction("Save As...", QMen_file);
+    QMen_file->addAction(QMenAct_fileSaveAs);
+    QMenAct_fileExportData = new QAction("Export...", QMen_file);
+    QMen_file->addAction(QMenAct_fileExportData);
+    QMenAct_fileExit = new QAction("Exit", QMen_file);
+    QMen_file->addAction(QMenAct_fileExit);
+
+    //TODO connect file actions to appropriate signals
+    QMenBar_menuBar->addMenu(QMen_file);
+
+    QMen_help = new QMenu("Help", QMenBar_menuBar);
+
+    QMenAct_helpAbout = new QAction("About", QMen_help);
+    QMen_help->addAction(QMenAct_helpAbout);
+
+    //TODO connect help actions to appropriate signals
+    QMenBar_menuBar->addMenu(QMen_help);
+
+
 }
 
 

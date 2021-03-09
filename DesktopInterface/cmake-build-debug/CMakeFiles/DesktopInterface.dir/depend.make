@@ -127,6 +127,7 @@ CMakeFiles/DesktopInterface.dir/DesktopInterface.cpp.obj: C:/Qt/5.15.2/mingw81_6
 CMakeFiles/DesktopInterface.dir/DesktopInterface.cpp.obj: C:/Qt/5.15.2/mingw81_64/include/QtGui/qwindow.h
 CMakeFiles/DesktopInterface.dir/DesktopInterface.cpp.obj: C:/Qt/5.15.2/mingw81_64/include/QtGui/qwindowdefs.h
 CMakeFiles/DesktopInterface.dir/DesktopInterface.cpp.obj: C:/Qt/5.15.2/mingw81_64/include/QtGui/qwindowdefs_win.h
+CMakeFiles/DesktopInterface.dir/DesktopInterface.cpp.obj: C:/Qt/5.15.2/mingw81_64/include/QtWidgets/QAction
 CMakeFiles/DesktopInterface.dir/DesktopInterface.cpp.obj: C:/Qt/5.15.2/mingw81_64/include/QtWidgets/QApplication
 CMakeFiles/DesktopInterface.dir/DesktopInterface.cpp.obj: C:/Qt/5.15.2/mingw81_64/include/QtWidgets/QCalendarWidget
 CMakeFiles/DesktopInterface.dir/DesktopInterface.cpp.obj: C:/Qt/5.15.2/mingw81_64/include/QtWidgets/QCheckBox
@@ -139,6 +140,7 @@ CMakeFiles/DesktopInterface.dir/DesktopInterface.cpp.obj: C:/Qt/5.15.2/mingw81_6
 CMakeFiles/DesktopInterface.dir/DesktopInterface.cpp.obj: C:/Qt/5.15.2/mingw81_64/include/QtWidgets/QLabel
 CMakeFiles/DesktopInterface.dir/DesktopInterface.cpp.obj: C:/Qt/5.15.2/mingw81_64/include/QtWidgets/QLineEdit
 CMakeFiles/DesktopInterface.dir/DesktopInterface.cpp.obj: C:/Qt/5.15.2/mingw81_64/include/QtWidgets/QMainWindow
+CMakeFiles/DesktopInterface.dir/DesktopInterface.cpp.obj: C:/Qt/5.15.2/mingw81_64/include/QtWidgets/QMenuBar
 CMakeFiles/DesktopInterface.dir/DesktopInterface.cpp.obj: C:/Qt/5.15.2/mingw81_64/include/QtWidgets/QPushButton
 CMakeFiles/DesktopInterface.dir/DesktopInterface.cpp.obj: C:/Qt/5.15.2/mingw81_64/include/QtWidgets/QRadioButton
 CMakeFiles/DesktopInterface.dir/DesktopInterface.cpp.obj: C:/Qt/5.15.2/mingw81_64/include/QtWidgets/QStyle
@@ -150,6 +152,8 @@ CMakeFiles/DesktopInterface.dir/DesktopInterface.cpp.obj: C:/Qt/5.15.2/mingw81_6
 CMakeFiles/DesktopInterface.dir/DesktopInterface.cpp.obj: C:/Qt/5.15.2/mingw81_64/include/QtWidgets/qabstractscrollarea.h
 CMakeFiles/DesktopInterface.dir/DesktopInterface.cpp.obj: C:/Qt/5.15.2/mingw81_64/include/QtWidgets/qabstractslider.h
 CMakeFiles/DesktopInterface.dir/DesktopInterface.cpp.obj: C:/Qt/5.15.2/mingw81_64/include/QtWidgets/qabstractspinbox.h
+CMakeFiles/DesktopInterface.dir/DesktopInterface.cpp.obj: C:/Qt/5.15.2/mingw81_64/include/QtWidgets/qaction.h
+CMakeFiles/DesktopInterface.dir/DesktopInterface.cpp.obj: C:/Qt/5.15.2/mingw81_64/include/QtWidgets/qactiongroup.h
 CMakeFiles/DesktopInterface.dir/DesktopInterface.cpp.obj: C:/Qt/5.15.2/mingw81_64/include/QtWidgets/qapplication.h
 CMakeFiles/DesktopInterface.dir/DesktopInterface.cpp.obj: C:/Qt/5.15.2/mingw81_64/include/QtWidgets/qboxlayout.h
 CMakeFiles/DesktopInterface.dir/DesktopInterface.cpp.obj: C:/Qt/5.15.2/mingw81_64/include/QtWidgets/qcalendarwidget.h
@@ -164,6 +168,8 @@ CMakeFiles/DesktopInterface.dir/DesktopInterface.cpp.obj: C:/Qt/5.15.2/mingw81_6
 CMakeFiles/DesktopInterface.dir/DesktopInterface.cpp.obj: C:/Qt/5.15.2/mingw81_64/include/QtWidgets/qlayoutitem.h
 CMakeFiles/DesktopInterface.dir/DesktopInterface.cpp.obj: C:/Qt/5.15.2/mingw81_64/include/QtWidgets/qlineedit.h
 CMakeFiles/DesktopInterface.dir/DesktopInterface.cpp.obj: C:/Qt/5.15.2/mingw81_64/include/QtWidgets/qmainwindow.h
+CMakeFiles/DesktopInterface.dir/DesktopInterface.cpp.obj: C:/Qt/5.15.2/mingw81_64/include/QtWidgets/qmenu.h
+CMakeFiles/DesktopInterface.dir/DesktopInterface.cpp.obj: C:/Qt/5.15.2/mingw81_64/include/QtWidgets/qmenubar.h
 CMakeFiles/DesktopInterface.dir/DesktopInterface.cpp.obj: C:/Qt/5.15.2/mingw81_64/include/QtWidgets/qpushbutton.h
 CMakeFiles/DesktopInterface.dir/DesktopInterface.cpp.obj: C:/Qt/5.15.2/mingw81_64/include/QtWidgets/qradiobutton.h
 CMakeFiles/DesktopInterface.dir/DesktopInterface.cpp.obj: C:/Qt/5.15.2/mingw81_64/include/QtWidgets/qrubberband.h
@@ -309,6 +315,7 @@ CMakeFiles/DesktopInterface.dir/DesktopInterface_autogen/mocs_compilation.cpp.ob
 CMakeFiles/DesktopInterface.dir/DesktopInterface_autogen/mocs_compilation.cpp.obj: C:/Qt/5.15.2/mingw81_64/include/QtGui/qwindow.h
 CMakeFiles/DesktopInterface.dir/DesktopInterface_autogen/mocs_compilation.cpp.obj: C:/Qt/5.15.2/mingw81_64/include/QtGui/qwindowdefs.h
 CMakeFiles/DesktopInterface.dir/DesktopInterface_autogen/mocs_compilation.cpp.obj: C:/Qt/5.15.2/mingw81_64/include/QtGui/qwindowdefs_win.h
+CMakeFiles/DesktopInterface.dir/DesktopInterface_autogen/mocs_compilation.cpp.obj: C:/Qt/5.15.2/mingw81_64/include/QtWidgets/QAction
 CMakeFiles/DesktopInterface.dir/DesktopInterface_autogen/mocs_compilation.cpp.obj: C:/Qt/5.15.2/mingw81_64/include/QtWidgets/QCalendarWidget
 CMakeFiles/DesktopInterface.dir/DesktopInterface_autogen/mocs_compilation.cpp.obj: C:/Qt/5.15.2/mingw81_64/include/QtWidgets/QCheckBox
 CMakeFiles/DesktopInterface.dir/DesktopInterface_autogen/mocs_compilation.cpp.obj: C:/Qt/5.15.2/mingw81_64/include/QtWidgets/QComboBox
@@ -318,6 +325,7 @@ CMakeFiles/DesktopInterface.dir/DesktopInterface_autogen/mocs_compilation.cpp.ob
 CMakeFiles/DesktopInterface.dir/DesktopInterface_autogen/mocs_compilation.cpp.obj: C:/Qt/5.15.2/mingw81_64/include/QtWidgets/QHBoxLayout
 CMakeFiles/DesktopInterface.dir/DesktopInterface_autogen/mocs_compilation.cpp.obj: C:/Qt/5.15.2/mingw81_64/include/QtWidgets/QLabel
 CMakeFiles/DesktopInterface.dir/DesktopInterface_autogen/mocs_compilation.cpp.obj: C:/Qt/5.15.2/mingw81_64/include/QtWidgets/QLineEdit
+CMakeFiles/DesktopInterface.dir/DesktopInterface_autogen/mocs_compilation.cpp.obj: C:/Qt/5.15.2/mingw81_64/include/QtWidgets/QMenuBar
 CMakeFiles/DesktopInterface.dir/DesktopInterface_autogen/mocs_compilation.cpp.obj: C:/Qt/5.15.2/mingw81_64/include/QtWidgets/QPushButton
 CMakeFiles/DesktopInterface.dir/DesktopInterface_autogen/mocs_compilation.cpp.obj: C:/Qt/5.15.2/mingw81_64/include/QtWidgets/QRadioButton
 CMakeFiles/DesktopInterface.dir/DesktopInterface_autogen/mocs_compilation.cpp.obj: C:/Qt/5.15.2/mingw81_64/include/QtWidgets/QTextEdit
@@ -328,6 +336,8 @@ CMakeFiles/DesktopInterface.dir/DesktopInterface_autogen/mocs_compilation.cpp.ob
 CMakeFiles/DesktopInterface.dir/DesktopInterface_autogen/mocs_compilation.cpp.obj: C:/Qt/5.15.2/mingw81_64/include/QtWidgets/qabstractscrollarea.h
 CMakeFiles/DesktopInterface.dir/DesktopInterface_autogen/mocs_compilation.cpp.obj: C:/Qt/5.15.2/mingw81_64/include/QtWidgets/qabstractslider.h
 CMakeFiles/DesktopInterface.dir/DesktopInterface_autogen/mocs_compilation.cpp.obj: C:/Qt/5.15.2/mingw81_64/include/QtWidgets/qabstractspinbox.h
+CMakeFiles/DesktopInterface.dir/DesktopInterface_autogen/mocs_compilation.cpp.obj: C:/Qt/5.15.2/mingw81_64/include/QtWidgets/qaction.h
+CMakeFiles/DesktopInterface.dir/DesktopInterface_autogen/mocs_compilation.cpp.obj: C:/Qt/5.15.2/mingw81_64/include/QtWidgets/qactiongroup.h
 CMakeFiles/DesktopInterface.dir/DesktopInterface_autogen/mocs_compilation.cpp.obj: C:/Qt/5.15.2/mingw81_64/include/QtWidgets/qboxlayout.h
 CMakeFiles/DesktopInterface.dir/DesktopInterface_autogen/mocs_compilation.cpp.obj: C:/Qt/5.15.2/mingw81_64/include/QtWidgets/qcalendarwidget.h
 CMakeFiles/DesktopInterface.dir/DesktopInterface_autogen/mocs_compilation.cpp.obj: C:/Qt/5.15.2/mingw81_64/include/QtWidgets/qcheckbox.h
@@ -339,6 +349,8 @@ CMakeFiles/DesktopInterface.dir/DesktopInterface_autogen/mocs_compilation.cpp.ob
 CMakeFiles/DesktopInterface.dir/DesktopInterface_autogen/mocs_compilation.cpp.obj: C:/Qt/5.15.2/mingw81_64/include/QtWidgets/qlayout.h
 CMakeFiles/DesktopInterface.dir/DesktopInterface_autogen/mocs_compilation.cpp.obj: C:/Qt/5.15.2/mingw81_64/include/QtWidgets/qlayoutitem.h
 CMakeFiles/DesktopInterface.dir/DesktopInterface_autogen/mocs_compilation.cpp.obj: C:/Qt/5.15.2/mingw81_64/include/QtWidgets/qlineedit.h
+CMakeFiles/DesktopInterface.dir/DesktopInterface_autogen/mocs_compilation.cpp.obj: C:/Qt/5.15.2/mingw81_64/include/QtWidgets/qmenu.h
+CMakeFiles/DesktopInterface.dir/DesktopInterface_autogen/mocs_compilation.cpp.obj: C:/Qt/5.15.2/mingw81_64/include/QtWidgets/qmenubar.h
 CMakeFiles/DesktopInterface.dir/DesktopInterface_autogen/mocs_compilation.cpp.obj: C:/Qt/5.15.2/mingw81_64/include/QtWidgets/qpushbutton.h
 CMakeFiles/DesktopInterface.dir/DesktopInterface_autogen/mocs_compilation.cpp.obj: C:/Qt/5.15.2/mingw81_64/include/QtWidgets/qradiobutton.h
 CMakeFiles/DesktopInterface.dir/DesktopInterface_autogen/mocs_compilation.cpp.obj: C:/Qt/5.15.2/mingw81_64/include/QtWidgets/qrubberband.h
@@ -488,6 +500,7 @@ CMakeFiles/DesktopInterface.dir/QHomeWindow.cpp.obj: C:/Qt/5.15.2/mingw81_64/inc
 CMakeFiles/DesktopInterface.dir/QHomeWindow.cpp.obj: C:/Qt/5.15.2/mingw81_64/include/QtGui/qwindow.h
 CMakeFiles/DesktopInterface.dir/QHomeWindow.cpp.obj: C:/Qt/5.15.2/mingw81_64/include/QtGui/qwindowdefs.h
 CMakeFiles/DesktopInterface.dir/QHomeWindow.cpp.obj: C:/Qt/5.15.2/mingw81_64/include/QtGui/qwindowdefs_win.h
+CMakeFiles/DesktopInterface.dir/QHomeWindow.cpp.obj: C:/Qt/5.15.2/mingw81_64/include/QtWidgets/QAction
 CMakeFiles/DesktopInterface.dir/QHomeWindow.cpp.obj: C:/Qt/5.15.2/mingw81_64/include/QtWidgets/QCalendarWidget
 CMakeFiles/DesktopInterface.dir/QHomeWindow.cpp.obj: C:/Qt/5.15.2/mingw81_64/include/QtWidgets/QCheckBox
 CMakeFiles/DesktopInterface.dir/QHomeWindow.cpp.obj: C:/Qt/5.15.2/mingw81_64/include/QtWidgets/QComboBox
@@ -497,6 +510,7 @@ CMakeFiles/DesktopInterface.dir/QHomeWindow.cpp.obj: C:/Qt/5.15.2/mingw81_64/inc
 CMakeFiles/DesktopInterface.dir/QHomeWindow.cpp.obj: C:/Qt/5.15.2/mingw81_64/include/QtWidgets/QHBoxLayout
 CMakeFiles/DesktopInterface.dir/QHomeWindow.cpp.obj: C:/Qt/5.15.2/mingw81_64/include/QtWidgets/QLabel
 CMakeFiles/DesktopInterface.dir/QHomeWindow.cpp.obj: C:/Qt/5.15.2/mingw81_64/include/QtWidgets/QLineEdit
+CMakeFiles/DesktopInterface.dir/QHomeWindow.cpp.obj: C:/Qt/5.15.2/mingw81_64/include/QtWidgets/QMenuBar
 CMakeFiles/DesktopInterface.dir/QHomeWindow.cpp.obj: C:/Qt/5.15.2/mingw81_64/include/QtWidgets/QPushButton
 CMakeFiles/DesktopInterface.dir/QHomeWindow.cpp.obj: C:/Qt/5.15.2/mingw81_64/include/QtWidgets/QRadioButton
 CMakeFiles/DesktopInterface.dir/QHomeWindow.cpp.obj: C:/Qt/5.15.2/mingw81_64/include/QtWidgets/QTextEdit
@@ -507,6 +521,8 @@ CMakeFiles/DesktopInterface.dir/QHomeWindow.cpp.obj: C:/Qt/5.15.2/mingw81_64/inc
 CMakeFiles/DesktopInterface.dir/QHomeWindow.cpp.obj: C:/Qt/5.15.2/mingw81_64/include/QtWidgets/qabstractscrollarea.h
 CMakeFiles/DesktopInterface.dir/QHomeWindow.cpp.obj: C:/Qt/5.15.2/mingw81_64/include/QtWidgets/qabstractslider.h
 CMakeFiles/DesktopInterface.dir/QHomeWindow.cpp.obj: C:/Qt/5.15.2/mingw81_64/include/QtWidgets/qabstractspinbox.h
+CMakeFiles/DesktopInterface.dir/QHomeWindow.cpp.obj: C:/Qt/5.15.2/mingw81_64/include/QtWidgets/qaction.h
+CMakeFiles/DesktopInterface.dir/QHomeWindow.cpp.obj: C:/Qt/5.15.2/mingw81_64/include/QtWidgets/qactiongroup.h
 CMakeFiles/DesktopInterface.dir/QHomeWindow.cpp.obj: C:/Qt/5.15.2/mingw81_64/include/QtWidgets/qboxlayout.h
 CMakeFiles/DesktopInterface.dir/QHomeWindow.cpp.obj: C:/Qt/5.15.2/mingw81_64/include/QtWidgets/qcalendarwidget.h
 CMakeFiles/DesktopInterface.dir/QHomeWindow.cpp.obj: C:/Qt/5.15.2/mingw81_64/include/QtWidgets/qcheckbox.h
@@ -518,6 +534,8 @@ CMakeFiles/DesktopInterface.dir/QHomeWindow.cpp.obj: C:/Qt/5.15.2/mingw81_64/inc
 CMakeFiles/DesktopInterface.dir/QHomeWindow.cpp.obj: C:/Qt/5.15.2/mingw81_64/include/QtWidgets/qlayout.h
 CMakeFiles/DesktopInterface.dir/QHomeWindow.cpp.obj: C:/Qt/5.15.2/mingw81_64/include/QtWidgets/qlayoutitem.h
 CMakeFiles/DesktopInterface.dir/QHomeWindow.cpp.obj: C:/Qt/5.15.2/mingw81_64/include/QtWidgets/qlineedit.h
+CMakeFiles/DesktopInterface.dir/QHomeWindow.cpp.obj: C:/Qt/5.15.2/mingw81_64/include/QtWidgets/qmenu.h
+CMakeFiles/DesktopInterface.dir/QHomeWindow.cpp.obj: C:/Qt/5.15.2/mingw81_64/include/QtWidgets/qmenubar.h
 CMakeFiles/DesktopInterface.dir/QHomeWindow.cpp.obj: C:/Qt/5.15.2/mingw81_64/include/QtWidgets/qpushbutton.h
 CMakeFiles/DesktopInterface.dir/QHomeWindow.cpp.obj: C:/Qt/5.15.2/mingw81_64/include/QtWidgets/qradiobutton.h
 CMakeFiles/DesktopInterface.dir/QHomeWindow.cpp.obj: C:/Qt/5.15.2/mingw81_64/include/QtWidgets/qrubberband.h
@@ -1189,6 +1207,7 @@ CMakeFiles/DesktopInterface.dir/main.cpp.obj: C:/Qt/5.15.2/mingw81_64/include/Qt
 CMakeFiles/DesktopInterface.dir/main.cpp.obj: C:/Qt/5.15.2/mingw81_64/include/QtGui/qwindow.h
 CMakeFiles/DesktopInterface.dir/main.cpp.obj: C:/Qt/5.15.2/mingw81_64/include/QtGui/qwindowdefs.h
 CMakeFiles/DesktopInterface.dir/main.cpp.obj: C:/Qt/5.15.2/mingw81_64/include/QtGui/qwindowdefs_win.h
+CMakeFiles/DesktopInterface.dir/main.cpp.obj: C:/Qt/5.15.2/mingw81_64/include/QtWidgets/QAction
 CMakeFiles/DesktopInterface.dir/main.cpp.obj: C:/Qt/5.15.2/mingw81_64/include/QtWidgets/QApplication
 CMakeFiles/DesktopInterface.dir/main.cpp.obj: C:/Qt/5.15.2/mingw81_64/include/QtWidgets/QCalendarWidget
 CMakeFiles/DesktopInterface.dir/main.cpp.obj: C:/Qt/5.15.2/mingw81_64/include/QtWidgets/QCheckBox
@@ -1200,6 +1219,7 @@ CMakeFiles/DesktopInterface.dir/main.cpp.obj: C:/Qt/5.15.2/mingw81_64/include/Qt
 CMakeFiles/DesktopInterface.dir/main.cpp.obj: C:/Qt/5.15.2/mingw81_64/include/QtWidgets/QLabel
 CMakeFiles/DesktopInterface.dir/main.cpp.obj: C:/Qt/5.15.2/mingw81_64/include/QtWidgets/QLineEdit
 CMakeFiles/DesktopInterface.dir/main.cpp.obj: C:/Qt/5.15.2/mingw81_64/include/QtWidgets/QMainWindow
+CMakeFiles/DesktopInterface.dir/main.cpp.obj: C:/Qt/5.15.2/mingw81_64/include/QtWidgets/QMenuBar
 CMakeFiles/DesktopInterface.dir/main.cpp.obj: C:/Qt/5.15.2/mingw81_64/include/QtWidgets/QPushButton
 CMakeFiles/DesktopInterface.dir/main.cpp.obj: C:/Qt/5.15.2/mingw81_64/include/QtWidgets/QRadioButton
 CMakeFiles/DesktopInterface.dir/main.cpp.obj: C:/Qt/5.15.2/mingw81_64/include/QtWidgets/QTextEdit
@@ -1210,6 +1230,8 @@ CMakeFiles/DesktopInterface.dir/main.cpp.obj: C:/Qt/5.15.2/mingw81_64/include/Qt
 CMakeFiles/DesktopInterface.dir/main.cpp.obj: C:/Qt/5.15.2/mingw81_64/include/QtWidgets/qabstractscrollarea.h
 CMakeFiles/DesktopInterface.dir/main.cpp.obj: C:/Qt/5.15.2/mingw81_64/include/QtWidgets/qabstractslider.h
 CMakeFiles/DesktopInterface.dir/main.cpp.obj: C:/Qt/5.15.2/mingw81_64/include/QtWidgets/qabstractspinbox.h
+CMakeFiles/DesktopInterface.dir/main.cpp.obj: C:/Qt/5.15.2/mingw81_64/include/QtWidgets/qaction.h
+CMakeFiles/DesktopInterface.dir/main.cpp.obj: C:/Qt/5.15.2/mingw81_64/include/QtWidgets/qactiongroup.h
 CMakeFiles/DesktopInterface.dir/main.cpp.obj: C:/Qt/5.15.2/mingw81_64/include/QtWidgets/qapplication.h
 CMakeFiles/DesktopInterface.dir/main.cpp.obj: C:/Qt/5.15.2/mingw81_64/include/QtWidgets/qboxlayout.h
 CMakeFiles/DesktopInterface.dir/main.cpp.obj: C:/Qt/5.15.2/mingw81_64/include/QtWidgets/qcalendarwidget.h
@@ -1224,6 +1246,8 @@ CMakeFiles/DesktopInterface.dir/main.cpp.obj: C:/Qt/5.15.2/mingw81_64/include/Qt
 CMakeFiles/DesktopInterface.dir/main.cpp.obj: C:/Qt/5.15.2/mingw81_64/include/QtWidgets/qlayoutitem.h
 CMakeFiles/DesktopInterface.dir/main.cpp.obj: C:/Qt/5.15.2/mingw81_64/include/QtWidgets/qlineedit.h
 CMakeFiles/DesktopInterface.dir/main.cpp.obj: C:/Qt/5.15.2/mingw81_64/include/QtWidgets/qmainwindow.h
+CMakeFiles/DesktopInterface.dir/main.cpp.obj: C:/Qt/5.15.2/mingw81_64/include/QtWidgets/qmenu.h
+CMakeFiles/DesktopInterface.dir/main.cpp.obj: C:/Qt/5.15.2/mingw81_64/include/QtWidgets/qmenubar.h
 CMakeFiles/DesktopInterface.dir/main.cpp.obj: C:/Qt/5.15.2/mingw81_64/include/QtWidgets/qpushbutton.h
 CMakeFiles/DesktopInterface.dir/main.cpp.obj: C:/Qt/5.15.2/mingw81_64/include/QtWidgets/qradiobutton.h
 CMakeFiles/DesktopInterface.dir/main.cpp.obj: C:/Qt/5.15.2/mingw81_64/include/QtWidgets/qrubberband.h
