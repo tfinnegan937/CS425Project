@@ -14,9 +14,9 @@ DesktopInterface::DesktopInterface() {
 }
 
 DesktopInterface::DesktopInterface(QApplication *app) {
-    home_window = new QHomeWindow();
-    home_window->resize(APP_WIDTH, APP_HEIGHT);
-    home_window->setWindowTitle(WINDOW_TITLE);
+    homeWindow = new QHomeWindow();
+    homeWindow->resize(APP_WIDTH, APP_HEIGHT);
+    homeWindow->setWindowTitle(WINDOW_TITLE);
 
     //Get the desktop boundaries
     QRect desktop_bounds = app->desktop()->availableGeometry();
@@ -24,9 +24,9 @@ DesktopInterface::DesktopInterface(QApplication *app) {
     QPoint screen_center = desktop_bounds.center();
 
     //Move the window to the screen center
-    home_window->move(screen_center.x() - home_window->width() * 0.5,
-                      screen_center.y() - home_window->height() * 0.5);
-    home_window->show();
+    homeWindow->move(screen_center.x() - homeWindow->width() * 0.5,
+                     screen_center.y() - homeWindow->height() * 0.5);
+    homeWindow->show();
 }
 
 int DesktopInterface::run() {

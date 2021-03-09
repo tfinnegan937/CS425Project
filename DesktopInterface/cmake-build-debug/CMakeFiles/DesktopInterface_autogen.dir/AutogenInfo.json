@@ -20,11 +20,6 @@
 			"EWIEGA46WW/moc_DesktopInterface.cpp"
 		],
 		[
-			"E:/CS425Project/DesktopInterface/QDataPane.h",
-			"MU",
-			"EWIEGA46WW/moc_QDataPane.cpp"
-		],
-		[
 			"E:/CS425Project/DesktopInterface/QHomeWindow.h",
 			"MU",
 			"EWIEGA46WW/moc_QHomeWindow.cpp"
@@ -33,6 +28,11 @@
 			"E:/CS425Project/DesktopInterface/QPatientDataPane.h",
 			"MU",
 			"EWIEGA46WW/moc_QPatientDataPane.cpp"
+		],
+		[
+			"E:/CS425Project/DesktopInterface/QResultsPane.h",
+			"MU",
+			"EWIEGA46WW/moc_QResultsPane.cpp"
 		],
 		[
 			"E:/CS425Project/DesktopInterface/QSimulationControlPane.h",
@@ -98,9 +98,9 @@
 	"SOURCES" : 
 	[
 		[ "E:/CS425Project/DesktopInterface/DesktopInterface.cpp", "MU" ],
-		[ "E:/CS425Project/DesktopInterface/QDataPane.cpp", "MU" ],
 		[ "E:/CS425Project/DesktopInterface/QHomeWindow.cpp", "MU" ],
 		[ "E:/CS425Project/DesktopInterface/QPatientDataPane.cpp", "MU" ],
+		[ "E:/CS425Project/DesktopInterface/QResultsPane.cpp", "MU" ],
 		[ "E:/CS425Project/DesktopInterface/QSimulationControlPane.cpp", "MU" ],
 		[ "E:/CS425Project/DesktopInterface/QSimulationControls.cpp", "MU" ],
 		[ "E:/CS425Project/DesktopInterface/main.cpp", "MU" ]

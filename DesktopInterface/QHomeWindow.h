@@ -9,34 +9,52 @@
 #include <QPushButton>
 #include <QTimer>
 #include <QString>
+#include <QMenuBar>
+#include <QAction>
 #include "QVRControlWidget.h"
-#include "QDataControlWidget.h"
 #include "QSimulationControlPane.h"
 #include "QPatientDataPane.h"
-#include "QDataPane.h"
+#include "QResultsPane.h"
+
 class QHomeWindow : public QWidget {
 Q_OBJECT
 private:
-    QHBoxLayout * panel_layout;
-    QSimulationControlPane * simulation_pane;
-    QPatientDataPane * patient_pane;
-    QDataPane * data_pane;
+    //UI panels
+    QHBoxLayout * QHBx_panelLayout;
+    QSimulationControlPane * QPane_simCtrlPane; //The third of the UI containing the simulation controls, a logo, and misc. buttons.
+    QPatientDataPane * QPane_patientDataPane; //The third of the UI containing the fields for patient information input
+    QResultsPane * QPane_simResultsPane; //The third of the UI containing charts and data
 
-    QTimer * ipc_callback_timer;
+    //IPC Loop Items
+    QTimer * QTmr_ipcCallbackTimer; //This timer provides a callback ever 100 ms that checks the ipc buffer
+
+    //Menu Items
+    QMenuBar * QMenBar_menuBar;
+    QMenu * QMen_file;
+    QAction * QMenAct_fileOpen;
+    QAction * QMenAct_fileSave;
+    QAction * QMenAct_fileSaveAs;
+    QAction * QMenAct_fileExit;
+    QAction * QMenAct_fileExportData;
+
+    QMenu * QMen_help;
+    QAction * QMenAct_helpAbout;
+
+    void setupMenuBar();
 
     bool initializeIPC(const QString& shared_mem_name); //initialize IPC communication
 
     bool handleIPCMessages(uint16_t message_buffer); //Take received message buffer and handle each received
 
-    void connectSimPaneSignals();
-    bool shared_mem_initialized = false;
+    void connectSimPaneSignals(); //Connects all of the appropriate ipc signals to the simulator control pane
+    bool isSharedMemInitialized = false;
 
 public slots:
-    void ipcTick(); //One tick of the IPC communication loop;
+    void ipcTick(); //One tick of the IPC communication loop. Executed when a timeout() signal is called from QTmr_ipcCallbackTimer
 signals:
     //TODO
-    void simActive();
-    void simFinished();
+    void simActive(); //This signal is called any time a VOMS test begins, and is passed down to the sim control UI to indicate that it should be locked
+    void simFinished(); //This signal is called when all tests are completed and is passed down to the sim control UI to indicate that it should be unlocked
 public:
     explicit QHomeWindow(QWidget * parent = nullptr);
 };
