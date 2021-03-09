@@ -2,9 +2,9 @@
 // Created by plays on 3/5/2021.
 //
 
-#include "QDataPane.h"
+#include "QResultsPane.h"
 
-QDataPane::QDataPane(QWidget *parent) : QWidget(parent){
+QResultsPane::QResultsPane(QWidget *parent) : QWidget(parent){
     placeholder = new QLabel("Placeholder", this);
 
     layout = new QVBoxLayout(this);

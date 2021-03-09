@@ -12,7 +12,7 @@
 class DesktopInterface {
 private:
     QApplication * app;
-    QHomeWindow * home_window;
+    QHomeWindow * homeWindow;
 public:
     DesktopInterface();
     DesktopInterface(QApplication * app);

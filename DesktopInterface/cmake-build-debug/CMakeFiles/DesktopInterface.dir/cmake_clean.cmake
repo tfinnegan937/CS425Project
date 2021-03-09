@@ -1,9 +1,9 @@
 file(REMOVE_RECURSE
   "CMakeFiles/DesktopInterface.dir/DesktopInterface.cpp.obj"
   "CMakeFiles/DesktopInterface.dir/DesktopInterface_autogen/mocs_compilation.cpp.obj"
-  "CMakeFiles/DesktopInterface.dir/QDataPane.cpp.obj"
   "CMakeFiles/DesktopInterface.dir/QHomeWindow.cpp.obj"
   "CMakeFiles/DesktopInterface.dir/QPatientDataPane.cpp.obj"
+  "CMakeFiles/DesktopInterface.dir/QResultsPane.cpp.obj"
   "CMakeFiles/DesktopInterface.dir/QSimulationControlPane.cpp.obj"
   "CMakeFiles/DesktopInterface.dir/QSimulationControls.cpp.obj"
   "CMakeFiles/DesktopInterface.dir/main.cpp.obj"

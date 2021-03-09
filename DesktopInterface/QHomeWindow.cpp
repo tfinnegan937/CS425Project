@@ -7,22 +7,22 @@
 #include <iostream>
 QHomeWindow::QHomeWindow(QWidget *parent) : QWidget(parent) {
 
-    simulation_pane = new QSimulationControlPane(this);
-    patient_pane = new QPatientDataPane(this);
-    data_pane = new QDataPane(this);
+    QPane_simCtrlPane = new QSimulationControlPane(this);
+    QPane_patientDataPane = new QPatientDataPane(this);
+    QPane_simResultsPane = new QResultsPane(this);
 
-    panel_layout = new QHBoxLayout();
+    QHBx_panelLayout = new QHBoxLayout();
 
-    panel_layout->insertWidget(0, simulation_pane);
-    panel_layout->insertWidget(1, patient_pane);
-    panel_layout->insertWidget(2, data_pane);
+    QHBx_panelLayout->insertWidget(0, QPane_simCtrlPane);
+    QHBx_panelLayout->insertWidget(1, QPane_patientDataPane);
+    QHBx_panelLayout->insertWidget(2, QPane_simResultsPane);
 
-    this->setLayout(panel_layout);
+    this->setLayout(QHBx_panelLayout);
     //Initialize IPC communication
     initializeIPC("unreal_memory_buff");
 
     connectSimPaneSignals();
-    //Generate all other windows here
+    //Generate all QRadBtn_other windows here
 }
 
 
@@ -32,7 +32,7 @@ QHomeWindow::QHomeWindow(QWidget *parent) : QWidget(parent) {
 // 2. Check to see if a message has been received (message_received())
 // 3. If a message has been received, handle that message and send the appropriate signals to UI elements.
 //
-//Step 1 is implicit as no actual message queue exists. The messages are implemented as an unsigned integer buffer.
+//Step 1 is implicit as QRadBtn_no actual message queue exists. The messages are implemented as an unsigned integer buffer.
 //Messages are single-bit Macros that are anded to that buffer. When read from, the buffer is zeroed.
 //The buffer is global in scope, but can only be accessed by send_message(). A message can be queued from various UI
 //elements anywhere in the program.
@@ -60,11 +60,11 @@ void QHomeWindow::ipcTick() {
 
 bool QHomeWindow::initializeIPC(const QString& shared_mem_name) {
     //Initialize the timer for communication with UnrealEngine
-    ipc_callback_timer = new QTimer(this);
+    QTmr_ipcCallbackTimer = new QTimer(this);
     //Connect to the appropriate signals and slots here
-    connect(ipc_callback_timer, &QTimer::timeout, this, &QHomeWindow::ipcTick);
-    ipc_callback_timer->setInterval(100); //Time interval between calls in milliseconds. May need to be adjusted.
-    ipc_callback_timer->start();
+    connect(QTmr_ipcCallbackTimer, &QTimer::timeout, this, &QHomeWindow::ipcTick);
+    QTmr_ipcCallbackTimer->setInterval(100); //Time interval between calls in milliseconds. May need to be adjusted.
+    QTmr_ipcCallbackTimer->start();
     try {
         shared_mem_initialized = access_shared_mem(shared_mem_name.toStdString());
         if (shared_mem_initialized) {
@@ -142,8 +142,8 @@ bool QHomeWindow::handleIPCMessages(uint16_t message_buffer) {
 }
 
 void QHomeWindow::connectSimPaneSignals() {
-    connect(this, &QHomeWindow::simActive, simulation_pane, &QSimulationControlPane::lockPane);
-    connect(this, &QHomeWindow::simFinished, simulation_pane, &QSimulationControlPane::unlockPane);
+    connect(this, &QHomeWindow::simActive, QPane_simCtrlPane, &QSimulationControlPane::lockPane);
+    connect(this, &QHomeWindow::simFinished, QPane_simCtrlPane, &QSimulationControlPane::unlockPane);
 }
 
 

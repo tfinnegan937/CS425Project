@@ -5,13 +5,13 @@
 #include "QSimulationControlPane.h"
 #include <iostream>
 QSimulationControlPane::QSimulationControlPane(QWidget *parent) : QWidget(parent){
-    sim_controls = new QSimulationControls(this);
-    export_data_butt = new QPushButton("Export Data...", this);
-    layout = new QVBoxLayout(this);
+    QSimCtrls_simulationControls = new QSimulationControls(this);
+    QBtn_exportSimData = new QPushButton("Export Data...", this);
+    QVbx_mainLayout = new QVBoxLayout(this);
 
-    layout->insertWidget(0, sim_controls);
-    layout->insertWidget(1, export_data_butt);
-    this->setLayout(layout);
+    QVbx_mainLayout->insertWidget(0, QSimCtrls_simulationControls);
+    QVbx_mainLayout->insertWidget(1, QBtn_exportSimData);
+    this->setLayout(QVbx_mainLayout);
     connectControlSignals();
     isSimActive = false;
 }
@@ -33,8 +33,8 @@ void QSimulationControlPane::unlockPane() {
 }
 
 void QSimulationControlPane::connectControlSignals() {
-    connect(this, &QSimulationControlPane::simActive, sim_controls, &QSimulationControls::lockPane);
-    connect(this, &QSimulationControlPane::simFinished, sim_controls, &QSimulationControls::unlockPane);
+    connect(this, &QSimulationControlPane::simActive, QSimCtrls_simulationControls, &QSimulationControls::lockPane);
+    connect(this, &QSimulationControlPane::simFinished, QSimCtrls_simulationControls, &QSimulationControls::unlockPane);
 }
 
 

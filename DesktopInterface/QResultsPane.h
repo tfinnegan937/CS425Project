@@ -2,13 +2,13 @@
 // Created by plays on 3/5/2021.
 //
 
-#ifndef DESKTOPINTERFACE_QDATAPANE_H
-#define DESKTOPINTERFACE_QDATAPANE_H
+#ifndef DESKTOPINTERFACE_QRESULTSPANE_H
+#define DESKTOPINTERFACE_QRESULTSPANE_H
 #include <QWidget>
 #include <QVboxLayout>
 #include <QLabel>
 #include <QGroupBox>
-class QDataPane : public QWidget{
+class QResultsPane : public QWidget{
 Q_OBJECT
 private:
     QVBoxLayout * layout;
@@ -16,8 +16,8 @@ private:
     QGroupBox * groupbox;
     QVBoxLayout * groupbox_container;
 public:
-    QDataPane(QWidget * parent);
+    QResultsPane(QWidget * parent);
 };
 
 
-#endif //DESKTOPINTERFACE_QDATAPANE_H
+#endif //DESKTOPINTERFACE_QRESULTSPANE_H

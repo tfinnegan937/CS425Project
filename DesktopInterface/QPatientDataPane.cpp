@@ -5,140 +5,140 @@
 #include "QPatientDataPane.h"
 #include <iostream>
 QPatientDataPane::QPatientDataPane(QWidget *parent) : QWidget(parent) {
-    first_name = new QLineEdit("First Name", this);
-    last_name = new QLineEdit("Last Name", this);
+    QLineEdt_firstNameField = new QLineEdit("First Name", this);
+    QLineEdt_lastNameField = new QLineEdit("Last Name", this);
 
-    gender_picker = new QGenderPicker(this);
+    QGenPckr_genderPicker = new QGenderPicker(this);
 
-    date_seen_picker = new QDatePicker(this, "Date Seen");
-    dob_picker = new QDatePicker(this, "DOB");
+    QDatePckr_daySeenPicker = new QDatePicker(this, "Date Seen");
+    QDatePckr_dobPicker = new QDatePicker(this, "DOB");
 
-    comments = new QTextEdit("Description of Incident", this);
+    QTxtEdt_commentsField = new QTextEdit("Description of Incident", this);
 
-    concussion_selector = new QConcussSelector(this);
+    QCssPckr_concussionSelector = new QConcussionPicker(this);
 
-    layout = new QGridLayout();
+    QGrd_mainLayout = new QGridLayout();
 
-    layout->addWidget(first_name, 0, 0);
-    layout->addWidget(last_name, 0, 1);
-    layout->addWidget(gender_picker, 1, 0);
-    layout->addWidget(date_seen_picker, 1, 1);
-    layout->addWidget(dob_picker, 2, 0);
-    layout->addWidget(comments, 3, 0);
-    layout->addWidget(concussion_selector, 4, 0);
+    QGrd_mainLayout->addWidget(QLineEdt_firstNameField, 0, 0);
+    QGrd_mainLayout->addWidget(QLineEdt_lastNameField, 0, 1);
+    QGrd_mainLayout->addWidget(QGenPckr_genderPicker, 1, 0);
+    QGrd_mainLayout->addWidget(QDatePckr_daySeenPicker, 1, 1);
+    QGrd_mainLayout->addWidget(QDatePckr_dobPicker, 2, 0);
+    QGrd_mainLayout->addWidget(QTxtEdt_commentsField, 3, 0);
+    QGrd_mainLayout->addWidget(QCssPckr_concussionSelector, 4, 0);
 
-    groupbox = new QGroupBox("Patient Information", this);
-    groupbox->setLayout(layout);
+    QGrpBx_paneBox = new QGroupBox("Patient Information", this);
+    QGrpBx_paneBox->setLayout(QGrd_mainLayout);
 
-    groupbox_container = new QVBoxLayout(this);
-    groupbox_container->addWidget(groupbox);
+    QVbx_paneBoxContainer = new QVBoxLayout(this);
+    QVbx_paneBoxContainer->addWidget(QGrpBx_paneBox);
 
-    this->setLayout(groupbox_container);
+    this->setLayout(QVbx_paneBoxContainer);
 
 }
 
 
 QGenderPicker::QGenderPicker(QWidget *parent) : QWidget(parent){
-    male = new QRadioButton("M", this);
-    female = new QRadioButton("F", this);
-    other = new QRadioButton("Other", this);
-    male->setChecked(true);
-    layout = new QHBoxLayout(this);
-    layout->insertWidget(0, male);
-    layout->insertWidget(1, female);
-    layout->insertWidget(2, other);
+    QRadBtn_male = new QRadioButton("M", this);
+    QRadBtn_female = new QRadioButton("F", this);
+    QRadBtn_other = new QRadioButton("Other", this);
+    QRadBtn_male->setChecked(true);
+    QHbx_mainLayout = new QHBoxLayout(this);
+    QHbx_mainLayout->insertWidget(0, QRadBtn_male);
+    QHbx_mainLayout->insertWidget(1, QRadBtn_female);
+    QHbx_mainLayout->insertWidget(2, QRadBtn_other);
 
-    groupbox = new QGroupBox("Gender", this);
-    groupbox->setLayout(layout);
+    QGrpBx_widgetBox = new QGroupBox("Gender", this);
+    QGrpBx_widgetBox->setLayout(QHbx_mainLayout);
 
-    groupbox_container = new QHBoxLayout(this);
-    groupbox_container->insertWidget(0, groupbox);
-    this->setLayout(groupbox_container);
+    QHbx_widgetBoxContainer = new QHBoxLayout(this);
+    QHbx_widgetBoxContainer->insertWidget(0, QGrpBx_widgetBox);
+    this->setLayout(QHbx_widgetBoxContainer);
 }
 
 QDatePicker::QDatePicker(QWidget *parent, const QString& label) : QWidget(parent) {
-    picker_label = label;
-    text_input = new QLineEdit("mm/dd/yyyy", this);
-    text_input->setReadOnly(true);
+    QLbl_pickerLabel = label;
+    QLineEdt_dateField = new QLineEdit("mm/dd/yyyy", this);
+    QLineEdt_dateField->setReadOnly(true);
 
-    select_date = new QPushButton("Select", this);
+    QBtn_selectDate = new QPushButton("Select", this);
 
-    layout = new QHBoxLayout(this);
+    QHbx_mainLayout = new QHBoxLayout(this);
 
-    layout->insertWidget(0, text_input);
-    layout->insertWidget(1, select_date);
+    QHbx_mainLayout->insertWidget(0, QLineEdt_dateField);
+    QHbx_mainLayout->insertWidget(1, QBtn_selectDate);
 
-    date_picker_window = new QWidget();
+    QWin_datePickerWindow = new QWidget();
 
-    date_picker_window->hide();
-    date_picker_window->setWindowTitle(label);
-    selector_calendar = new QCalendarWidget(date_picker_window);
+    QWin_datePickerWindow->hide();
+    QWin_datePickerWindow->setWindowTitle(label);
+    QCalendar_selectorCalendar = new QCalendarWidget(QWin_datePickerWindow);
 
-    selector_layout = new QVBoxLayout(date_picker_window);
+    QVBx_selectorLayout = new QVBoxLayout(QWin_datePickerWindow);
 
-    date_picker_window->setLayout(selector_layout);
-    confirm = new QPushButton("Confirm", date_picker_window);
-    selected_date = new QDate();
-    *selected_date = selector_calendar->selectedDate();
-    selector_layout->addWidget(selector_calendar);
-    selector_layout->addWidget(confirm);
-    groupbox = new QGroupBox(label, this);
-    groupbox->setLayout(layout);
-    groupbox_container = new QVBoxLayout(this);
+    QWin_datePickerWindow->setLayout(QVBx_selectorLayout);
+    QBtn_confirm = new QPushButton("Confirm", QWin_datePickerWindow);
+    QDate_selectedDate = new QDate();
+    *QDate_selectedDate = QCalendar_selectorCalendar->selectedDate();
+    QVBx_selectorLayout->addWidget(QCalendar_selectorCalendar);
+    QVBx_selectorLayout->addWidget(QBtn_confirm);
+    QGrpBx_widgetBox = new QGroupBox(label, this);
+    QGrpBx_widgetBox->setLayout(QHbx_mainLayout);
+    QVbx_widgetBoxContainer = new QVBoxLayout(this);
 
-    groupbox_container->insertWidget(0, groupbox);
-    this->setLayout(groupbox_container);
+    QVbx_widgetBoxContainer->insertWidget(0, QGrpBx_widgetBox);
+    this->setLayout(QVbx_widgetBoxContainer);
 
     connect(this, &QDatePicker::confirmDate, this, &QDatePicker::updateDate);
-    connect(confirm, &QPushButton::clicked, this, &QDatePicker::passDateSignal);
-    connect(select_date, &QPushButton::clicked, this, &QDatePicker::openSelector);
+    connect(QBtn_confirm, &QPushButton::clicked, this, &QDatePicker::passDateSignal);
+    connect(QBtn_selectDate, &QPushButton::clicked, this, &QDatePicker::openSelector);
 
 }
 
 void QDatePicker::passDateSignal() {
-    QDate selectedTime = selector_calendar->selectedDate();
+    QDate selectedTime = QCalendar_selectorCalendar->selectedDate();
     confirmDate(selectedTime);
-    date_picker_window->hide();
+    QWin_datePickerWindow->hide();
 }
 
 void QDatePicker::updateDate(QDate date) {
-    *selected_date = date;
-    text_input->setText(getDate());
+    *QDate_selectedDate = date;
+    QLineEdt_dateField->setText(getDate());
 }
 
 void QDatePicker::openSelector() {
     if(!selectorOpen) {
         std::cout << std::endl << "Here" << std::endl;
-        date_picker_window->show();
+        QWin_datePickerWindow->show();
         selectorOpen = true;
     }else{
-        if(!(date_picker_window->isVisible())){
+        if(!(QWin_datePickerWindow->isVisible())){
             selectorOpen = false;
         }
     }
 }
 
 QString QDatePicker::getDate() const {
-    QString date = (std::to_string(selected_date->month()) +  "/" + std::to_string(selected_date->day()) +
-            "/" + std::to_string(selected_date->year())).c_str();
+    QString date = (std::to_string(QDate_selectedDate->month()) + "/" + std::to_string(QDate_selectedDate->day()) +
+                    "/" + std::to_string(QDate_selectedDate->year())).c_str();
     return date;
 }
 
 
-QConcussSelector::QConcussSelector(QWidget *parent) : QWidget(parent) {
-    yes = new QRadioButton("Yes", this);
-    no = new QRadioButton("No", this);
-    no->setChecked(true);
-    layout = new QHBoxLayout(this);
+QConcussionPicker::QConcussionPicker(QWidget *parent) : QWidget(parent) {
+    QRadBtn_yes = new QRadioButton("Yes", this);
+    QRadBtn_no = new QRadioButton("No", this);
+    QRadBtn_no->setChecked(true);
+    QHbx_mainLayout = new QHBoxLayout(this);
 
-    layout->insertWidget(0, yes);
-    layout->insertWidget(1, no);
-    groupbox = new QGroupBox("Concussed?", this);
-    groupbox->setLayout(layout);
-    groupbox_container = new QHBoxLayout(this);
+    QHbx_mainLayout->insertWidget(0, QRadBtn_yes);
+    QHbx_mainLayout->insertWidget(1, QRadBtn_no);
+    QGrbBx_widgetBox = new QGroupBox("Concussed?", this);
+    QGrbBx_widgetBox->setLayout(QHbx_mainLayout);
+    QHbx_widgetBoxContainer = new QHBoxLayout(this);
 
-    groupbox_container->insertWidget(0, groupbox);
+    QHbx_widgetBoxContainer->insertWidget(0, QGrbBx_widgetBox);
 
-    this->setLayout(groupbox_container);
+    this->setLayout(QHbx_widgetBoxContainer);
 
 }

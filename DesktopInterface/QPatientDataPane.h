@@ -20,12 +20,12 @@
 class QGenderPicker : public QWidget{
 Q_OBJECT
 private:
-    QRadioButton * male;
-    QRadioButton * female;
-    QRadioButton * other;
-    QGroupBox * groupbox;
-    QHBoxLayout * layout;
-    QHBoxLayout * groupbox_container;
+    QRadioButton * QRadBtn_male;
+    QRadioButton * QRadBtn_female;
+    QRadioButton * QRadBtn_other;
+    QGroupBox * QGrpBx_widgetBox;
+    QHBoxLayout * QHbx_mainLayout;
+    QHBoxLayout * QHbx_widgetBoxContainer;
 public:
     QGenderPicker(QWidget * parent = nullptr);
     QString getGender() const;
@@ -34,20 +34,20 @@ public:
 class QDatePicker : public QWidget{
 Q_OBJECT
 private:
-    QString picker_label;
-    QWidget * date_picker_window;
-    QPushButton * select_date;
-    QPushButton * confirm;
-    QLineEdit * text_input;
+    QString QLbl_pickerLabel;
+    QWidget * QWin_datePickerWindow;
+    QPushButton * QBtn_selectDate;
+    QPushButton * QBtn_confirm;
+    QLineEdit * QLineEdt_dateField;
 
-    QVBoxLayout * selector_layout;
-    QDate * selected_date;
-    QCalendarWidget * selector_calendar;
+    QVBoxLayout * QVBx_selectorLayout;
+    QDate * QDate_selectedDate;
+    QCalendarWidget * QCalendar_selectorCalendar;
 
-    QHBoxLayout * layout;
+    QHBoxLayout * QHbx_mainLayout;
 
-    QGroupBox * groupbox;
-    QVBoxLayout * groupbox_container;
+    QGroupBox * QGrpBx_widgetBox;
+    QVBoxLayout * QVbx_widgetBoxContainer;
     bool selectorOpen = false;
 signals:
     void confirmDate(QDate);
@@ -60,37 +60,38 @@ public:
     QString getDate() const;
 };
 
-class QConcussSelector : public QWidget{
+class QConcussionPicker : public QWidget{
 Q_OBJECT
 private:
     bool concussed = false;
-    QHBoxLayout * layout;
-    QRadioButton * yes;
-    QRadioButton * no;
-    QGroupBox * groupbox;
-    QHBoxLayout * groupbox_container;
+    QHBoxLayout * QHbx_mainLayout;
+    QRadioButton * QRadBtn_yes;
+    QRadioButton * QRadBtn_no;
+    QGroupBox * QGrbBx_widgetBox;
+    QHBoxLayout * QHbx_widgetBoxContainer;
 public:
-    QConcussSelector(QWidget * parent = nullptr);
+    QConcussionPicker(QWidget * parent = nullptr);
     QString getConcussStatus() const;
 };
+
 class QPatientDataPane : public QWidget{
 Q_OBJECT
 private:
-    QDatePicker * date_seen_picker;
-    QDatePicker * dob_picker;
+    QDatePicker * QDatePckr_daySeenPicker;
+    QDatePicker * QDatePckr_dobPicker;
 
-    QGenderPicker * gender_picker;
+    QGenderPicker * QGenPckr_genderPicker;
 
-    QLineEdit * first_name;
-    QLineEdit * last_name;
+    QLineEdit * QLineEdt_firstNameField;
+    QLineEdit * QLineEdt_lastNameField;
 
-    QTextEdit * comments;
+    QTextEdit * QTxtEdt_commentsField;
 
-    QConcussSelector * concussion_selector;
+    QConcussionPicker * QCssPckr_concussionSelector;
 
-    QGridLayout * layout;
-    QGroupBox * groupbox;
-    QVBoxLayout * groupbox_container;
+    QGridLayout * QGrd_mainLayout;
+    QGroupBox * QGrpBx_paneBox;
+    QVBoxLayout * QVbx_paneBoxContainer;
 public:
     QPatientDataPane(QWidget * parent = nullptr);
 };

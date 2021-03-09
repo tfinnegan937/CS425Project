@@ -10,19 +10,18 @@
 #include <QTimer>
 #include <QString>
 #include "QVRControlWidget.h"
-#include "QDataControlWidget.h"
 #include "QSimulationControlPane.h"
 #include "QPatientDataPane.h"
-#include "QDataPane.h"
+#include "QResultsPane.h"
 class QHomeWindow : public QWidget {
 Q_OBJECT
 private:
-    QHBoxLayout * panel_layout;
-    QSimulationControlPane * simulation_pane;
-    QPatientDataPane * patient_pane;
-    QDataPane * data_pane;
+    QHBoxLayout * QHBx_panelLayout;
+    QSimulationControlPane * QPane_simCtrlPane;
+    QPatientDataPane * QPane_patientDataPane;
+    QResultsPane * QPane_simResultsPane;
 
-    QTimer * ipc_callback_timer;
+    QTimer * QTmr_ipcCallbackTimer;
 
     bool initializeIPC(const QString& shared_mem_name); //initialize IPC communication
 

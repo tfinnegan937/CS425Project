@@ -209,33 +209,6 @@ DesktopInterface_autogen/mocs_compilation.cpp.s:
 	$(MAKE) $(MAKESILENT) -f CMakeFiles\DesktopInterface.dir\build.make CMakeFiles/DesktopInterface.dir/DesktopInterface_autogen/mocs_compilation.cpp.s
 .PHONY : DesktopInterface_autogen/mocs_compilation.cpp.s
 
-QDataPane.obj: QDataPane.cpp.obj
-
-.PHONY : QDataPane.obj
-
-# target to build an object file
-QDataPane.cpp.obj:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles\DesktopInterface.dir\build.make CMakeFiles/DesktopInterface.dir/QDataPane.cpp.obj
-.PHONY : QDataPane.cpp.obj
-
-QDataPane.i: QDataPane.cpp.i
-
-.PHONY : QDataPane.i
-
-# target to preprocess a source file
-QDataPane.cpp.i:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles\DesktopInterface.dir\build.make CMakeFiles/DesktopInterface.dir/QDataPane.cpp.i
-.PHONY : QDataPane.cpp.i
-
-QDataPane.s: QDataPane.cpp.s
-
-.PHONY : QDataPane.s
-
-# target to generate assembly for a file
-QDataPane.cpp.s:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles\DesktopInterface.dir\build.make CMakeFiles/DesktopInterface.dir/QDataPane.cpp.s
-.PHONY : QDataPane.cpp.s
-
 QHomeWindow.obj: QHomeWindow.cpp.obj
 
 .PHONY : QHomeWindow.obj
@@ -289,6 +262,33 @@ QPatientDataPane.s: QPatientDataPane.cpp.s
 QPatientDataPane.cpp.s:
 	$(MAKE) $(MAKESILENT) -f CMakeFiles\DesktopInterface.dir\build.make CMakeFiles/DesktopInterface.dir/QPatientDataPane.cpp.s
 .PHONY : QPatientDataPane.cpp.s
+
+QResultsPane.obj: QResultsPane.cpp.obj
+
+.PHONY : QResultsPane.obj
+
+# target to build an object file
+QResultsPane.cpp.obj:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles\DesktopInterface.dir\build.make CMakeFiles/DesktopInterface.dir/QResultsPane.cpp.obj
+.PHONY : QResultsPane.cpp.obj
+
+QResultsPane.i: QResultsPane.cpp.i
+
+.PHONY : QResultsPane.i
+
+# target to preprocess a source file
+QResultsPane.cpp.i:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles\DesktopInterface.dir\build.make CMakeFiles/DesktopInterface.dir/QResultsPane.cpp.i
+.PHONY : QResultsPane.cpp.i
+
+QResultsPane.s: QResultsPane.cpp.s
+
+.PHONY : QResultsPane.s
+
+# target to generate assembly for a file
+QResultsPane.cpp.s:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles\DesktopInterface.dir\build.make CMakeFiles/DesktopInterface.dir/QResultsPane.cpp.s
+.PHONY : QResultsPane.cpp.s
 
 QSimulationControlPane.obj: QSimulationControlPane.cpp.obj
 
@@ -387,15 +387,15 @@ help:
 	@echo ... DesktopInterface_autogen/mocs_compilation.obj
 	@echo ... DesktopInterface_autogen/mocs_compilation.i
 	@echo ... DesktopInterface_autogen/mocs_compilation.s
-	@echo ... QDataPane.obj
-	@echo ... QDataPane.i
-	@echo ... QDataPane.s
 	@echo ... QHomeWindow.obj
 	@echo ... QHomeWindow.i
 	@echo ... QHomeWindow.s
 	@echo ... QPatientDataPane.obj
 	@echo ... QPatientDataPane.i
 	@echo ... QPatientDataPane.s
+	@echo ... QResultsPane.obj
+	@echo ... QResultsPane.i
+	@echo ... QResultsPane.s
 	@echo ... QSimulationControlPane.obj
 	@echo ... QSimulationControlPane.i
 	@echo ... QSimulationControlPane.s
