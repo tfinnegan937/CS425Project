@@ -43,7 +43,7 @@ QHomeWindow::QHomeWindow(QWidget *parent) : QWidget(parent) {
 void QHomeWindow::ipcTick() {
     //Handle UnrealEngine signals
 
-    if(shared_mem_initialized) { //Error handling seems to fail when the shared memory isn't initialized
+    if(isSharedMemInitialized) { //Error handling seems to fail when the shared memory isn't initialized
         //std::cout << std::endl << "Reached Message Loop" << std::endl;
         if (message_received()) {
             try {
@@ -66,13 +66,13 @@ bool QHomeWindow::initializeIPC(const QString& shared_mem_name) {
     QTmr_ipcCallbackTimer->setInterval(100); //Time interval between calls in milliseconds. May need to be adjusted.
     QTmr_ipcCallbackTimer->start();
     try {
-        shared_mem_initialized = access_shared_mem(shared_mem_name.toStdString());
-        if (shared_mem_initialized) {
+        isSharedMemInitialized = access_shared_mem(shared_mem_name.toStdString());
+        if (isSharedMemInitialized) {
             send_message(IPC_INITIALIZED);
         }
         else{
             //TODO: Replace with permanent error type
-            shared_mem_initialized = false;
+            isSharedMemInitialized = false;
             throw(std::runtime_error("PLACEHOLDER_ERROR_IPC_INIT"));
         }
     } catch(std::runtime_error& generic_error){

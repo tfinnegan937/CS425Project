@@ -28,7 +28,7 @@ private:
     bool handleIPCMessages(uint16_t message_buffer); //Take received message buffer and handle each received
 
     void connectSimPaneSignals(); //Connects all of the appropriate ipc signals to the simulator control pane
-    bool shared_mem_initialized = false;
+    bool isSharedMemInitialized = false;
 
 public slots:
     void ipcTick(); //One tick of the IPC communication loop. Executed when a timeout() signal is called from QTmr_ipcCallbackTimer
