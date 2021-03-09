@@ -18,6 +18,8 @@
 #include <QDateTime>
 #include <QCalendarWidget>
 
+//All of the additional classes in this header are components of QPatientDataPane and will not be used elsewhere.
+
 //This widget contains the radio buttons for selecting the patient's gender
 class QGenderPicker : public QWidget{
 Q_OBJECT
