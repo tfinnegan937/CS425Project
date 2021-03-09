@@ -1,0 +1,15 @@
+{
+	"RemapUnityFiles": 
+	{
+		"Module.SRanipal.cpp.obj": [
+			"SRanipal.cpp.obj",
+			"SRanipalSettings.cpp.obj"
+		],
+		"Module.SRanipal.gen.cpp.obj": [
+			"SRanipal.init.gen.cpp.obj",
+			"SRanipal_Eyes_Enums.gen.cpp.obj",
+			"SRanipal_Lip_Enums.gen.cpp.obj",
+			"SRanipalSettings.gen.cpp.obj"
+		]
+	}
+}

@@ -1,0 +1,14 @@
+{
+	"RemapUnityFiles": 
+	{
+		"Module.SRanipalEditor.cpp.obj": [
+			"SRanipalEditor.cpp.obj",
+			"SRanipalEditorSettings.cpp.obj",
+			"SRanipalSettingsCustomization.cpp.obj"
+		],
+		"Module.SRanipalEditor.gen.cpp.obj": [
+			"SRanipalEditor.init.gen.cpp.obj",
+			"SRanipalEditorSettings.gen.cpp.obj"
+		]
+	}
+}

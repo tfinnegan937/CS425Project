@@ -1,0 +1,14 @@
+/NOLOGO
+/errorReport:prompt
+/MACHINE:x64
+/SUBSYSTEM:WINDOWS
+/DEF
+/NAME:"UE4Editor-SRanipalEye-0002.dll"
+/IGNORE:4221
+/NODEFAULTLIB
+"C:\Users\Isak\Documents\Unreal Projects\MyProject6\Intermediate\Build\Win64\MyProject6Editor\Development\Engine\SharedPCH.Engine.h.obj"
+"C:\Users\Isak\Documents\Unreal Projects\MyProject6\Plugins\SRanipal\Intermediate\Build\Win64\UE4Editor\Development\SRanipalEye\Module.SRanipalEye.cpp.obj"
+"C:\Users\Isak\Documents\Unreal Projects\MyProject6\Plugins\SRanipal\Intermediate\Build\Win64\UE4Editor\Development\SRanipalEye\Module.SRanipalEye.gen.cpp.obj"
+"C:\Users\Isak\Documents\Unreal Projects\MyProject6\Plugins\SRanipal\Intermediate\Build\Win64\UE4Editor\Development\SRanipalEye\Default.rc2.res"
+/OUT:"C:\Users\Isak\Documents\Unreal Projects\MyProject6\Plugins\SRanipal\Intermediate\Build\Win64\UE4Editor\Development\SRanipalEye\UE4Editor-SRanipalEye-0002.lib"
+/INCLUDE:IMPLEMENT_MODULE_SRanipalEye

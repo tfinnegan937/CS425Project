@@ -1,0 +1,11 @@
+{
+	"BuildId": "8386587",
+	"Modules": 
+	{
+		"SRanipal": "UE4Editor-SRanipal-0002.dll",
+		"SRanipalEditor": "UE4Editor-SRanipalEditor-0002.dll",
+		"SRanipalEye": "UE4Editor-SRanipalEye-0002.dll",
+		"SRanipalEyeTracker": "UE4Editor-SRanipalEyeTracker-0002.dll",
+		"SRanipalLip": "UE4Editor-SRanipalLip-0002.dll"
+	}
+}
