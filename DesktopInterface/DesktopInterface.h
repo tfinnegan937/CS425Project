@@ -9,6 +9,8 @@
 #include <QMainWindow>
 #include "QHomeWindow.h"
 
+//This is the root class of the application. Its constructor sets up Qt5, and then the run() function begins
+//The Qt5 main loop.
 class DesktopInterface {
 private:
     QApplication * app;

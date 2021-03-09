@@ -17,6 +17,8 @@
 #include <QLineEdit>
 #include <QDateTime>
 #include <QCalendarWidget>
+
+//This widget contains the radio buttons for selecting the patient's gender
 class QGenderPicker : public QWidget{
 Q_OBJECT
 private:
@@ -31,6 +33,7 @@ public:
     QString getGender() const;
 };
 
+//This is a fancy date selection widget class. A QCalendarWidget pops up in a new window and allows one to select the appropriate date
 class QDatePicker : public QWidget{
 Q_OBJECT
 private:
@@ -60,6 +63,7 @@ public:
     QString getDate() const;
 };
 
+//This widget simply contains the two radio buttons that are used to make a concussion diagnosis
 class QConcussionPicker : public QWidget{
 Q_OBJECT
 private:
@@ -74,6 +78,7 @@ public:
     QString getConcussStatus() const;
 };
 
+//This is the outermost widget containing all of the above widgets, and all input fields for the patient UI.
 class QPatientDataPane : public QWidget{
 Q_OBJECT
 private:

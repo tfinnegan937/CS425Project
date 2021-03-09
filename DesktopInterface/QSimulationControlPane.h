@@ -14,8 +14,8 @@ Q_OBJECT
 private:
     QVBoxLayout * QVbx_mainLayout;
     QImage * QImg_unrLogo;
-    QPushButton * QBtn_exportSimData;
-    QSimulationControls * QSimCtrls_simulationControls;
+    QPushButton * QBtn_exportSimData; //This button exports the collected eye tracking data to the collected dataset
+    QSimulationControls * QSimCtrls_simulationControls; //This widget contains all of the controls for selecting and starting tests.
 
     bool isSimActive = false;
 
