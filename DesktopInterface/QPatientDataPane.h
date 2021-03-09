@@ -27,7 +27,9 @@ private:
     QRadioButton * QRadBtn_other;
     QGroupBox * QGrpBx_widgetBox;
     QHBoxLayout * QHbx_mainLayout;
-    QHBoxLayout * QHbx_widgetBoxContainer;
+    QHBoxLayout * QHbx_widgetBoxContainer;//This is required to display the group box and its contents. A group box cannot
+                                            //Be a layout, and it cannot be displayed on its own. As such, it needs to be
+                                            //added to another layout, which is then set as the outermost layout for the widget
 public:
     QGenderPicker(QWidget * parent = nullptr);
     QString getGender() const;
@@ -50,7 +52,9 @@ private:
     QHBoxLayout * QHbx_mainLayout;
 
     QGroupBox * QGrpBx_widgetBox;
-    QVBoxLayout * QVbx_widgetBoxContainer;
+    QVBoxLayout * QVbx_widgetBoxContainer;//This is required to display the group box and its contents. A group box cannot
+                                            //Be a layout, and it cannot be displayed on its own. As such, it needs to be
+                                            //added to another layout, which is then set as the outermost layout for the widget
     bool selectorOpen = false;
 signals:
     void confirmDate(QDate);
@@ -72,7 +76,9 @@ private:
     QRadioButton * QRadBtn_yes;
     QRadioButton * QRadBtn_no;
     QGroupBox * QGrbBx_widgetBox;
-    QHBoxLayout * QHbx_widgetBoxContainer;
+    QHBoxLayout * QHbx_widgetBoxContainer;//This is required to display the group box and its contents. A group box cannot
+                                            //Be a layout, and it cannot be displayed on its own. As such, it needs to be
+                                            //added to another layout, which is then set as the outermost layout for the widget
 public:
     QConcussionPicker(QWidget * parent = nullptr);
     QString getConcussStatus() const;
@@ -96,7 +102,9 @@ private:
 
     QGridLayout * QGrd_mainLayout;
     QGroupBox * QGrpBx_paneBox;
-    QVBoxLayout * QVbx_paneBoxContainer;
+    QVBoxLayout * QVbx_paneBoxContainer; //This is required to display the group box and its contents. A group box cannot
+                                         //Be a layout, and it cannot be displayed on its own. As such, it needs to be
+                                         //added to another layout, which is then set as the outermost layout for the widget
 public:
     QPatientDataPane(QWidget * parent = nullptr);
 };
