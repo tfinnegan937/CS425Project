@@ -28,12 +28,12 @@ set ( SOURCES
 main.cpp
 DesktopInterface.cpp
 QHomeWindow.cpp
-        QSimulationControlPane.cpp QPatientDataPane.cpp QResultsPane.cpp QSimulationControls.cpp)
+        QSimulationControlPane.cpp QPatientDataPane.cpp QResultsPane.cpp QSimulationControls.cpp QResultsWindow.cpp)
 
 set ( MAIN_HEADERS
 DesktopInterface.h
 QHomeWindow.h
-        QSimulationControlPane.h QPatientDataPane.h QResultsPane.h QSimulationControls.h)
+        QSimulationControlPane.h QPatientDataPane.h QResultsPane.h QSimulationControls.h QResultsWindow.h)
 
 set ( EXTRA_HEADERS
 APPLICATION_CONSTANTS.h
