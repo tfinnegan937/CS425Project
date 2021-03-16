@@ -3,8 +3,10 @@
 //
 
 #include "QHomeWindow.h"
+#include "QResultsWindow.h"
 #include "UnrealIPCController.h"
 #include <iostream>
+QResultsWindow *wdg;
 QHomeWindow::QHomeWindow(QWidget *parent) : QWidget(parent) {
 
     QPane_simCtrlPane = new QSimulationControlPane(this);
@@ -23,6 +25,8 @@ QHomeWindow::QHomeWindow(QWidget *parent) : QWidget(parent) {
     initializeIPC("unreal_memory_buff");
 
     connectSimPaneSignals();
+
+
 }
 
 
@@ -40,6 +44,7 @@ QHomeWindow::QHomeWindow(QWidget *parent) : QWidget(parent) {
 //Step 2 is handled by message_received() which returns true if the inbound buffer is non-zero.
 //Step 3 is handled by QHomeWindow::handleMessages() which calls the appropriate signals to change the state
 //of the rest of the UI. These signals are defined in QHomeWindow::initializeIPC();
+int loop_counter = 0; //Temporary counter to increase alternating graphs to every second.
 void QHomeWindow::ipcTick() {
     //Handle UnrealEngine signals
 
@@ -56,6 +61,11 @@ void QHomeWindow::ipcTick() {
         std::cout << "here" << std::endl;
     }
     //TODO: Ryan places the code for handling the data pipeline here
+    loop_counter++;
+    if (loop_counter >= 10) {
+        wdg->AlternateGraph();
+        loop_counter = 0;
+    }
 }
 
 bool QHomeWindow::initializeIPC(const QString& shared_mem_name) {
@@ -174,7 +184,8 @@ void QHomeWindow::setupMenuBar() {
     //TODO connect help actions to appropriate signals
     QMenBar_menuBar->addMenu(QMen_help);
 
-
+    wdg = new QResultsWindow(this);
+    wdg->show();
 }
 
 

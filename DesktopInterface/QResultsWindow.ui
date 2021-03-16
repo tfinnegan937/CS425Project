@@ -45,14 +45,17 @@
     <property name="frameShadow">
      <enum>QFrame::Raised</enum>
     </property>
-    <widget class="QOpenGLWidget" name="EyeGraph">
+    <widget class="QLabel" name="EyeGraph">
      <property name="geometry">
       <rect>
-       <x>10</x>
-       <y>10</y>
-       <width>300</width>
+       <x>6</x>
+       <y>12</y>
+       <width>301</width>
        <height>251</height>
       </rect>
+     </property>
+     <property name="text">
+      <string/>
      </property>
     </widget>
    </widget>

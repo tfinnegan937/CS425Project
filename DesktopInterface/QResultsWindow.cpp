@@ -1,14 +1,13 @@
 #include "QResultsWindow.h"
 #include "ui_QResultsWindow.h"
-#include <iostream>
+
 
 QResultsWindow::QResultsWindow(QWidget *parent) :
     QMainWindow(parent),
     ui(new Ui::QResultsWindow)
 {
     ui->setupUi(this);
-    eye_tracking_code = "eye_chart";
-    GetEyeTrackingGraph();
+    StartGraphThread();
 }
 
 QResultsWindow::~QResultsWindow()
@@ -16,45 +15,40 @@ QResultsWindow::~QResultsWindow()
     delete ui;
 }
 
+int QResultsWindow::current_graph = 0;
+void QResultsWindow::AlternateGraph()
+{
+    if (current_graph == 0) {
+        workerThread->SetData("10 11 12 13 14 15 16 17 18 19 20");
+        workerThread->start();
+        current_graph = 1;
+    } else {
+        workerThread->SetData("20 19 18 17 16 15 14 13 12 11 10");
+        workerThread->start();
+        current_graph = 0;
+    }
+}
+
 typedef struct{
     PyObject_HEAD
     int (*ptr)(int, int);
 } MyFuncPtr;
 
-void QResultsWindow::GetEyeTrackingGraph()
+void QResultsWindow::StartGraphThread()
 {
-    Py_Initialize();
+    workerThread = new GraphWorker();
+    connect(workerThread, &GraphWorker::GraphReady, this, &QResultsWindow::DisplayGraph);
+    workerThread->setup();
+}
 
-    PyObject* pName = PyUnicode_FromString(eye_tracking_code);
-    PyObject* pModule = PyImport_Import(pName);
-    if(pModule) {
-        PyObject* pEyeTrackingFunc = PyObject_GetAttrString(pModule, "plotEye");
-        if (pEyeTrackingFunc && PyCallable_Check(pEyeTrackingFunc)) {
-            PyObject* args = PyTuple_Pack(0);
-            PyObject* res = PyObject_CallObject(pEyeTrackingFunc, args);
-
-            PyObject* test_1 = PyObject_Str(res);
-            PyObject* test_2 = PyUnicode_AsUTF8String(test_1);
-            std::string test = PyBytes_AsString(test_2);
-            char* x = &test[0];
-
-
-            QByteArray ba(x);
-            std::cout << ba[1];
-
-
-            QPixmap image;
-
-            if (!image.loadFromData(ba, "PNG")) {
-                std::cout << "Help";
-            }
-            //ui->EyeTrackingFrame->findChild<QLabel*>("EyeGraph")->setPixmap(QPixmap::(*image));
-            //PyObject* resRep = PyObject_Repr(res);
-            //const char* s = PyUnicode_AsUTF8(resRep);
-            //ui->patientNameText->setPlainText(s);
+void QResultsWindow::DisplayGraph(const QByteArray graph_in_base_64)
+{
+    if(!graph_in_base_64.isNull()) {
+        QPixmap image;
+        image.loadFromData(QByteArray::fromBase64(graph_in_base_64), "PNG");
+        if (image.isNull()) {
+            std::cout << "Help";
         }
-    } else {
-        PyErr_Print();
+        ui->EyeTrackingFrame->findChild<QLabel*>("EyeGraph")->setPixmap(image.scaled(ui->EyeTrackingFrame->findChild<QLabel*>("EyeGraph")->size(), Qt::KeepAspectRatio, Qt::SmoothTransformation));
     }
-    Py_Finalize();
 }
