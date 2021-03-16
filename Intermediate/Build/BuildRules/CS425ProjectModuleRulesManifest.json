@@ -1,6 +1,11 @@
 {
 	"SourceFiles": [
 		"E:\\CS425Project\\Source\\CS425Project\\CS425Project.Build.cs",
+		"E:\\CS425Project\\Plugins\\SRanipal\\Source\\SRanipal\\SRanipal.Build.cs",
+		"E:\\CS425Project\\Plugins\\SRanipal\\Source\\SRanipalEyeTracker\\SRanipalEyeTracker.Build.cs",
+		"E:\\CS425Project\\Plugins\\SRanipal\\Source\\SRanipalEye\\SRanipalEye.Build.cs",
+		"E:\\CS425Project\\Plugins\\SRanipal\\Source\\SRanipalEditor\\SRanipalEditor.Build.cs",
+		"E:\\CS425Project\\Plugins\\SRanipal\\Source\\SRanipalLip\\SRanipalLip.Build.cs",
 		"E:\\CS425Project\\Source\\CS425Project.Target.cs",
 		"E:\\CS425Project\\Source\\CS425ProjectEditor.Target.cs"
 	],

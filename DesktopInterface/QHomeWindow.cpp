@@ -12,7 +12,6 @@ QHomeWindow::QHomeWindow(QWidget *parent) : QWidget(parent) {
     QPane_simResultsPane = new QResultsPane(this);
 
     QHBx_panelLayout = new QHBoxLayout(this);
-
     setupMenuBar();
 
     QHBx_panelLayout->insertWidget(0, QPane_simCtrlPane);
@@ -24,7 +23,6 @@ QHomeWindow::QHomeWindow(QWidget *parent) : QWidget(parent) {
     initializeIPC("unreal_memory_buff");
 
     connectSimPaneSignals();
-    //Generate all QRadBtn_other windows here
 }
 
 
@@ -161,6 +159,7 @@ void QHomeWindow::setupMenuBar() {
     QMen_file->addAction(QMenAct_fileSaveAs);
     QMenAct_fileExportData = new QAction("Export...", QMen_file);
     QMen_file->addAction(QMenAct_fileExportData);
+    QMen_file->addSeparator();
     QMenAct_fileExit = new QAction("Exit", QMen_file);
     QMen_file->addAction(QMenAct_fileExit);
 

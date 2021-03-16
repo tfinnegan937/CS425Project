@@ -1,93 +1,95 @@
-C:\Users\Isak\Documents\Unreal Projects\MyProject6\Plugins\SRanipal\Intermediate\Build\Win64\UE4Editor\Development\SRanipalLip\Definitions.SRanipalLip.h
-C:/Users/Isak/Documents/Unreal Projects/MyProject6/Plugins/SRanipal/Source/SRanipalLip/Private/SRanipal_AvatarLipSample.cpp
-C:\Users\Isak\Documents\Unreal Projects\MyProject6\Plugins\SRanipal\Source\SRanipalLip\Public\SRanipal_AvatarLipSample.h
-C:\Users\Isak\Documents\Unreal Projects\MyProject6\Plugins\SRanipal\Source\SRanipalLip\Public\SRanipalLip_Core.h
-C:\Users\Isak\Documents\Unreal Projects\MyProject6\Plugins\SRanipal\Source\SRanipal\Public\ViveSR_Enums.h
-C:\Users\Isak\Documents\Unreal Projects\MyProject6\Plugins\SRanipal\Source\SRanipal\Public\Lip\SRanipal_Lip_Enums.h
-C:\Program Files\Epic Games\UE_4.23\Engine\Source\Runtime\Core\Public\Core.h
-C:\Program Files\Epic Games\UE_4.23\Engine\Source\Runtime\Core\Public\Misc/MonolithicHeaderBoilerplate.h
-C:\Program Files\Epic Games\UE_4.23\Engine\Source\Runtime\Core\Public\GenericPlatform/GenericPlatformNamedPipe.h
-C:\Program Files\Epic Games\UE_4.23\Engine\Source\Runtime\Core\Public\HAL/PlatformNamedPipe.h
-C:\Program Files\Epic Games\UE_4.23\Engine\Source\Runtime\Core\Public\Windows/WindowsPlatformNamedPipe.h
-C:\Program Files\Epic Games\UE_4.23\Engine\Source\Runtime\Core\Public\GenericPlatform/GenericPlatformCriticalSection.h
-C:\Program Files\Epic Games\UE_4.23\Engine\Source\Runtime\Core\Public\HAL/PlatformFile.h
-C:\Program Files\Epic Games\UE_4.23\Engine\Source\Runtime\Core\Public\Windows/WindowsPlatformFile.h
-C:\Program Files\Epic Games\UE_4.23\Engine\Source\Runtime\Core\Public\HAL/PlatformIncludes.h
-C:\Program Files\Epic Games\UE_4.23\Engine\Source\Runtime\Core\Public\Misc/MonolithicHeaderBoilerplate.h
-C:\Program Files\Epic Games\UE_4.23\Engine\Source\Runtime\Core\Public\Misc/MessageDialog.h
-C:\Program Files\Epic Games\UE_4.23\Engine\Source\Runtime\Core\Public\ProfilingDebugging/ScopedDebugInfo.h
-C:\Program Files\Epic Games\UE_4.23\Engine\Source\Runtime\Core\Public\ProfilingDebugging/ExternalProfiler.h
-C:\Program Files\Epic Games\UE_4.23\Engine\Source\Runtime\Core\Public\Misc/StringUtility.h
-C:\Program Files\Epic Games\UE_4.23\Engine\Source\Runtime\Core\Public\Serialization/NameAsStringProxyArchive.h
-C:\Program Files\Epic Games\UE_4.23\Engine\Source\Runtime\Core\Public\Containers/MRUArray.h
-C:\Program Files\Epic Games\UE_4.23\Engine\Source\Runtime\Core\Public\Containers/TransArray.h
-C:\Program Files\Epic Games\UE_4.23\Engine\Source\Runtime\Core\Public\Containers/ArrayBuilder.h
-C:\Program Files\Epic Games\UE_4.23\Engine\Source\Runtime\Core\Public\Misc/SingleThreadEvent.h
-C:\Program Files\Epic Games\UE_4.23\Engine\Source\Runtime\Core\Public\HAL/ThreadManager.h
-C:\Program Files\Epic Games\UE_4.23\Engine\Source\Runtime\Core\Public\Containers/StaticBitArray.h
-C:\Program Files\Epic Games\UE_4.23\Engine\Source\Runtime\Core\Public\Containers/MapBuilder.h
-C:\Program Files\Epic Games\UE_4.23\Engine\Source\Runtime\Core\Public\HAL/ThreadingBase.h
-C:\Program Files\Epic Games\UE_4.23\Engine\Source\Runtime\Core\Public\Internationalization/TextLocalizationManagerGlobals.h
-C:\Program Files\Epic Games\UE_4.23\Engine\Source\Runtime\Core\Public\Internationalization/Culture.h
-C:\Program Files\Epic Games\UE_4.23\Engine\Source\Runtime\Core\Public\Logging/LogSuppressionInterface.h
-C:\Program Files\Epic Games\UE_4.23\Engine\Source\Runtime\Core\Public\HAL/OutputDevices.h
-C:\Program Files\Epic Games\UE_4.23\Engine\Source\Runtime\Core\Public\Logging/LogScopedVerbosityOverride.h
-C:\Program Files\Epic Games\UE_4.23\Engine\Source\Runtime\Core\Public\Misc/OutputDeviceNull.h
-C:\Program Files\Epic Games\UE_4.23\Engine\Source\Runtime\Core\Public\Misc/OutputDeviceMemory.h
-C:\Program Files\Epic Games\UE_4.23\Engine\Source\Runtime\Core\Public\Misc/OutputDeviceFile.h
-C:\Program Files\Epic Games\UE_4.23\Engine\Source\Runtime\Core\Public\Misc/OutputDeviceDebug.h
-C:\Program Files\Epic Games\UE_4.23\Engine\Source\Runtime\Core\Public\Misc/OutputDeviceArchiveWrapper.h
-C:\Program Files\Epic Games\UE_4.23\Engine\Source\Runtime\Core\Public\Misc/OutputDeviceAnsiError.h
-C:\Program Files\Epic Games\UE_4.23\Engine\Source\Runtime\Core\Public\Misc/TimeGuard.h
-C:\Program Files\Epic Games\UE_4.23\Engine\Source\Runtime\Core\Public\Serialization/LargeMemoryWriter.h
-C:\Program Files\Epic Games\UE_4.23\Engine\Source\Runtime\Core\Public\Serialization/LargeMemoryData.h
-C:\Program Files\Epic Games\UE_4.23\Engine\Source\Runtime\Core\Public\Serialization/LargeMemoryReader.h
-C:\Program Files\Epic Games\UE_4.23\Engine\Source\Runtime\Core\Public\Serialization/BufferArchive.h
-C:\Program Files\Epic Games\UE_4.23\Engine\Source\Runtime\Core\Public\Serialization/ArrayReader.h
-C:\Program Files\Epic Games\UE_4.23\Engine\Source\Runtime\Core\Public\Serialization/ArrayWriter.h
-C:\Program Files\Epic Games\UE_4.23\Engine\Source\Runtime\Core\Public\Serialization/BufferWriter.h
-C:\Program Files\Epic Games\UE_4.23\Engine\Source\Runtime\Core\Public\Misc/WildcardString.h
-C:\Program Files\Epic Games\UE_4.23\Engine\Source\Runtime\Core\Public\Containers/CircularQueue.h
-C:\Program Files\Epic Games\UE_4.23\Engine\Source\Runtime\Core\Public\Misc/OutputDeviceHelper.h
-C:\Program Files\Epic Games\UE_4.23\Engine\Source\Runtime\Core\Public\Misc/ScopedSlowTask.h
-C:\Program Files\Epic Games\UE_4.23\Engine\Source\Runtime\Core\Public\Misc/CallbackDevice.h
-C:\Program Files\Epic Games\UE_4.23\Engine\Source\Runtime\Core\Public\Misc/LocalTimestampDirectoryVisitor.h
-C:\Program Files\Epic Games\UE_4.23\Engine\Source\Runtime\Core\Public\UObject/BlueprintsObjectVersion.h
-C:\Program Files\Epic Games\UE_4.23\Engine\Source\Runtime\Core\Public\UObject/BuildObjectVersion.h
-C:\Program Files\Epic Games\UE_4.23\Engine\Source\Runtime\Core\Public\UObject/CoreObjectVersion.h
-C:\Program Files\Epic Games\UE_4.23\Engine\Source\Runtime\Core\Public\UObject/FrameworkObjectVersion.h
-C:\Program Files\Epic Games\UE_4.23\Engine\Source\Runtime\Core\Public\UObject/MobileObjectVersion.h
-C:\Program Files\Epic Games\UE_4.23\Engine\Source\Runtime\Core\Public\UObject/NetworkingObjectVersion.h
-C:\Program Files\Epic Games\UE_4.23\Engine\Source\Runtime\Core\Public\UObject/OnlineObjectVersion.h
-C:\Program Files\Epic Games\UE_4.23\Engine\Source\Runtime\Core\Public\UObject/PhysicsObjectVersion.h
-C:\Program Files\Epic Games\UE_4.23\Engine\Source\Runtime\Core\Public\UObject/PlatformObjectVersion.h
-C:\Program Files\Epic Games\UE_4.23\Engine\Source\Runtime\Core\Public\UObject/SequencerObjectVersion.h
-C:\Program Files\Epic Games\UE_4.23\Engine\Source\Runtime\Core\Public\UObject/VRObjectVersion.h
-C:\Program Files\Epic Games\UE_4.23\Engine\Source\Runtime\Core\Public\Misc/OutputDeviceConsole.h
-C:\Program Files\Epic Games\UE_4.23\Engine\Source\Runtime\Core\Public\Misc/MonitoredProcess.h
-C:\Users\Isak\Documents\Unreal Projects\MyProject6\Plugins\SRanipal\Intermediate\Build\Win64\UE4Editor\Inc\SRanipalLip\SRanipal_AvatarLipSample.generated.h
-C:\Users\Isak\Documents\Unreal Projects\MyProject6\Plugins\SRanipal\Source\SRanipalLip\Public\SRanipalLip.h
-C:\Users\Isak\Documents\Unreal Projects\MyProject6\Plugins\SRanipal\Source\SRanipalLip\Public\SRanipalLip_FunctionLibrary.h
-C:\Users\Isak\Documents\Unreal Projects\MyProject6\Plugins\SRanipal\Intermediate\Build\Win64\UE4Editor\Inc\SRanipalLip\SRanipalLip_FunctionLibrary.generated.h
-C:\Users\Isak\Documents\Unreal Projects\MyProject6\Plugins\SRanipal\Source\SRanipalLip/Public/SRanipalLip_Framework.h
-C:\Program Files\Epic Games\UE_4.23\Engine\Source\Runtime\Engine/Public/DrawDebugHelpers.h
-C:\Program Files\Epic Games\UE_4.23\Engine\Source\Runtime\Engine/Classes/Kismet/KismetMathLibrary.h
-C:\Program Files\Epic Games\UE_4.23\Engine\Source\Runtime\Core\Public\Misc/QualifiedFrameTime.h
-C:\Program Files\Epic Games\UE_4.23\Engine\Intermediate\Build\Win64\UE4Editor\Inc\Engine\KismetMathLibrary.generated.h
-C:\Program Files\Epic Games\UE_4.23\Engine\Source\Runtime\Engine\Classes\Kismet\KismetMathLibrary.inl
-C:\Program Files\Epic Games\UE_4.23\Engine\Source\Runtime\Engine\Public\EngineUtils.h
-C:/Users/Isak/Documents/Unreal Projects/MyProject6/Plugins/SRanipal/Source/SRanipalLip/Private/SRanipalLip.cpp
-C:\Users\Isak\Documents\Unreal Projects\MyProject6\Plugins\SRanipal\Source\SRanipal\Private\SRanipalSettings.h
-C:\Program Files\Epic Games\UE_4.23\Engine\Source\Runtime\CoreUObject\Public\UObject/NoExportTypes.h
-C:\Program Files\Epic Games\UE_4.23\Engine\Source\Runtime\Core\Public\Math/UnitConversion.h
-C:\Program Files\Epic Games\UE_4.23\Engine\Source\Runtime\Core\Public\Math/UnitConversion.inl
-C:\Program Files\Epic Games\UE_4.23\Engine\Source\Runtime\Core\Public\Internationalization/PolyglotTextData.h
-C:\Users\Isak\Documents\Unreal Projects\MyProject6\Plugins\SRanipal\Source\SRanipal\Public\Eye\SRanipal_Eyes_Enums.h
-C:\Users\Isak\Documents\Unreal Projects\MyProject6\Plugins\SRanipal\Intermediate\Build\Win64\UE4Editor\Inc\SRanipal\SRanipal_Eyes_Enums.generated.h
-C:\Users\Isak\Documents\Unreal Projects\MyProject6\Plugins\SRanipal\Intermediate\Build\Win64\UE4Editor\Inc\SRanipal\SRanipalSettings.generated.h
-C:/Users/Isak/Documents/Unreal Projects/MyProject6/Plugins/SRanipal/Source/SRanipalLip/Private/SRanipalLip_Core.cpp
-C:\Users\Isak\Documents\Unreal Projects\MyProject6\Plugins\SRanipal\Source\SRanipal\Public\Lip\SRanipal_API_Lip.h
-C:\Users\Isak\Documents\Unreal Projects\MyProject6\Plugins\SRanipal\Source\SRanipal\Public\SRanipal_Enums.h
-C:/Users/Isak/Documents/Unreal Projects/MyProject6/Plugins/SRanipal/Source/SRanipalLip/Private/SRanipalLip_Framework.cpp
-C:\Users\Isak\Documents\Unreal Projects\MyProject6\Plugins\SRanipal\Source\SRanipal\Public\SRanipal_API.h
-C:/Users/Isak/Documents/Unreal Projects/MyProject6/Plugins/SRanipal/Source/SRanipalLip/Private/SRanipalLip_FunctionLibrary.cpp
+E:\CS425Project\Plugins\SRanipal\Intermediate\Build\Win64\UE4Editor\Development\SRanipalLip\Definitions.SRanipalLip.h
+E:/CS425Project/Plugins/SRanipal/Source/SRanipalLip/Private/SRanipal_AvatarLipSample.cpp
+E:\CS425Project\Plugins\SRanipal\Source\SRanipalLip\Public\SRanipal_AvatarLipSample.h
+E:\CS425Project\Plugins\SRanipal\Source\SRanipalLip\Public\SRanipalLip_Core.h
+E:\CS425Project\Plugins\SRanipal\Source\SRanipal\Public\ViveSR_Enums.h
+E:\CS425Project\Plugins\SRanipal\Source\SRanipal\Public\Lip\SRanipal_Lip_Enums.h
+E:\UE_4.26\Engine\Source\Runtime\Core\Public\Core.h
+E:\UE_4.26\Engine\Source\Runtime\Core\Public\Misc/MonolithicHeaderBoilerplate.h
+E:\UE_4.26\Engine\Source\Runtime\Core\Public\GenericPlatform/GenericPlatformNamedPipe.h
+E:\UE_4.26\Engine\Source\Runtime\Core\Public\HAL/PlatformNamedPipe.h
+E:\UE_4.26\Engine\Source\Runtime\Core\Public\Windows/WindowsPlatformNamedPipe.h
+E:\UE_4.26\Engine\Source\Runtime\Core\Public\GenericPlatform/GenericPlatformCriticalSection.h
+E:\UE_4.26\Engine\Source\Runtime\Core\Public\HAL/PlatformFile.h
+E:\UE_4.26\Engine\Source\Runtime\Core\Public\Windows/WindowsPlatformFile.h
+E:\UE_4.26\Engine\Source\Runtime\Core\Public\HAL/PlatformIncludes.h
+E:\UE_4.26\Engine\Source\Runtime\Core\Public\Misc/MonolithicHeaderBoilerplate.h
+E:\UE_4.26\Engine\Source\Runtime\Core\Public\Misc/MessageDialog.h
+E:\UE_4.26\Engine\Source\Runtime\Core\Public\ProfilingDebugging/ScopedDebugInfo.h
+E:\UE_4.26\Engine\Source\Runtime\Core\Public\ProfilingDebugging/ExternalProfiler.h
+E:\UE_4.26\Engine\Source\Runtime\Core\Public\Misc/StringUtility.h
+E:\UE_4.26\Engine\Source\Runtime\Core\Public\Serialization/NameAsStringProxyArchive.h
+E:\UE_4.26\Engine\Source\Runtime\Core\Public\Containers/MRUArray.h
+E:\UE_4.26\Engine\Source\Runtime\Core\Public\Containers/TransArray.h
+E:\UE_4.26\Engine\Source\Runtime\Core\Public\Containers/ArrayBuilder.h
+E:\UE_4.26\Engine\Source\Runtime\Core\Public\Misc/SingleThreadEvent.h
+E:\UE_4.26\Engine\Source\Runtime\Core\Public\HAL/ThreadManager.h
+E:\UE_4.26\Engine\Source\Runtime\Core\Public\Containers/StaticBitArray.h
+E:\UE_4.26\Engine\Source\Runtime\Core\Public\Containers/MapBuilder.h
+E:\UE_4.26\Engine\Source\Runtime\Core\Public\HAL/ThreadingBase.h
+E:\UE_4.26\Engine\Source\Runtime\Core\Public\Internationalization/TextLocalizationManagerGlobals.h
+E:\UE_4.26\Engine\Source\Runtime\Core\Public\Internationalization/Culture.h
+E:\UE_4.26\Engine\Source\Runtime\Core\Public\Logging/LogSuppressionInterface.h
+E:\UE_4.26\Engine\Source\Runtime\Core\Public\HAL/OutputDevices.h
+E:\UE_4.26\Engine\Source\Runtime\Core\Public\Logging/LogScopedVerbosityOverride.h
+E:\UE_4.26\Engine\Source\Runtime\Core\Public\Misc/OutputDeviceNull.h
+E:\UE_4.26\Engine\Source\Runtime\Core\Public\Misc/OutputDeviceMemory.h
+E:\UE_4.26\Engine\Source\Runtime\Core\Public\Misc/OutputDeviceFile.h
+E:\UE_4.26\Engine\Source\Runtime\Core\Public\Misc/OutputDeviceDebug.h
+E:\UE_4.26\Engine\Source\Runtime\Core\Public\Misc/OutputDeviceArchiveWrapper.h
+E:\UE_4.26\Engine\Source\Runtime\Core\Public\Misc/OutputDeviceAnsiError.h
+E:\UE_4.26\Engine\Source\Runtime\Core\Public\Misc/TimeGuard.h
+E:\UE_4.26\Engine\Source\Runtime\Core\Public\Serialization/LargeMemoryWriter.h
+E:\UE_4.26\Engine\Source\Runtime\Core\Public\Serialization/LargeMemoryData.h
+E:\UE_4.26\Engine\Source\Runtime\Core\Public\Serialization/LargeMemoryReader.h
+E:\UE_4.26\Engine\Source\Runtime\Core\Public\Serialization/BufferArchive.h
+E:\UE_4.26\Engine\Source\Runtime\Core\Public\Serialization/ArrayReader.h
+E:\UE_4.26\Engine\Source\Runtime\Core\Public\Serialization/ArrayWriter.h
+E:\UE_4.26\Engine\Source\Runtime\Core\Public\Serialization/BufferWriter.h
+E:\UE_4.26\Engine\Source\Runtime\Core\Public\Misc/WildcardString.h
+E:\UE_4.26\Engine\Source\Runtime\Core\Public\Containers/CircularQueue.h
+E:\UE_4.26\Engine\Source\Runtime\Core\Public\Misc/OutputDeviceHelper.h
+E:\UE_4.26\Engine\Source\Runtime\Core\Public\Misc/ScopedSlowTask.h
+E:\UE_4.26\Engine\Source\Runtime\Core\Public\Misc/CallbackDevice.h
+E:\UE_4.26\Engine\Source\Runtime\Core\Public\Misc/LocalTimestampDirectoryVisitor.h
+E:\UE_4.26\Engine\Source\Runtime\Core\Public\UObject/BlueprintsObjectVersion.h
+E:\UE_4.26\Engine\Source\Runtime\Core\Public\UObject/BuildObjectVersion.h
+E:\UE_4.26\Engine\Source\Runtime\Core\Public\UObject/CoreObjectVersion.h
+E:\UE_4.26\Engine\Source\Runtime\Core\Public\UObject/EditorObjectVersion.h
+E:\UE_4.26\Engine\Source\Runtime\Core\Public\UObject/FrameworkObjectVersion.h
+E:\UE_4.26\Engine\Source\Runtime\Core\Public\UObject/MobileObjectVersion.h
+E:\UE_4.26\Engine\Source\Runtime\Core\Public\UObject/NetworkingObjectVersion.h
+E:\UE_4.26\Engine\Source\Runtime\Core\Public\UObject/OnlineObjectVersion.h
+E:\UE_4.26\Engine\Source\Runtime\Core\Public\UObject/PhysicsObjectVersion.h
+E:\UE_4.26\Engine\Source\Runtime\Core\Public\UObject/PlatformObjectVersion.h
+E:\UE_4.26\Engine\Source\Runtime\Core\Public\UObject/SequencerObjectVersion.h
+E:\UE_4.26\Engine\Source\Runtime\Core\Public\UObject/VRObjectVersion.h
+E:\UE_4.26\Engine\Source\Runtime\Core\Public\Misc/OutputDeviceConsole.h
+E:\UE_4.26\Engine\Source\Runtime\Core\Public\Misc/MonitoredProcess.h
+E:\CS425Project\Plugins\SRanipal\Intermediate\Build\Win64\UE4Editor\Inc\SRanipalLip\SRanipal_AvatarLipSample.generated.h
+E:\CS425Project\Plugins\SRanipal\Source\SRanipalLip\Public\SRanipalLip.h
+E:\CS425Project\Plugins\SRanipal\Source\SRanipalLip\Public\SRanipalLip_FunctionLibrary.h
+E:\CS425Project\Plugins\SRanipal\Intermediate\Build\Win64\UE4Editor\Inc\SRanipalLip\SRanipalLip_FunctionLibrary.generated.h
+E:\CS425Project\Plugins\SRanipal\Source\SRanipalLip/Public/SRanipalLip_Framework.h
+E:\UE_4.26\Engine\Source\Runtime\Engine/Public/DrawDebugHelpers.h
+E:\UE_4.26\Engine\Source\Runtime\Engine/Classes/Kismet/KismetMathLibrary.h
+E:\UE_4.26\Engine\Intermediate\Build\Win64\UE4Editor\Inc\Engine\KismetMathLibrary.generated.h
+E:\UE_4.26\Engine\Source\Runtime\Engine\Classes\Kismet\KismetMathLibrary.inl
+E:\UE_4.26\Engine\Source\Runtime\Engine\Public\EngineUtils.h
+E:/CS425Project/Plugins/SRanipal/Source/SRanipalLip/Private/SRanipalLip.cpp
+E:\CS425Project\Plugins\SRanipal\Source\SRanipal\Private\SRanipalSettings.h
+E:\UE_4.26\Engine\Source\Runtime\CoreUObject\Public\UObject/NoExportTypes.h
+E:\UE_4.26\Engine\Source\Runtime\CoreUObject\Public\UObject/PropertyAccessUtil.h
+E:\UE_4.26\Engine\Source\Runtime\Core\Public\Math/UnitConversion.h
+E:\UE_4.26\Engine\Source\Runtime\Core\Public\Math/UnitConversion.inl
+E:\UE_4.26\Engine\Source\Runtime\Core\Public\Internationalization/PolyglotTextData.h
+E:\UE_4.26\Engine\Source\Runtime\CoreUObject\Public\AssetRegistry/ARFilter.h
+E:\CS425Project\Plugins\SRanipal\Source\SRanipal\Public\Eye\SRanipal_Eyes_Enums.h
+E:\CS425Project\Plugins\SRanipal\Intermediate\Build\Win64\UE4Editor\Inc\SRanipal\SRanipal_Eyes_Enums.generated.h
+E:\CS425Project\Plugins\SRanipal\Intermediate\Build\Win64\UE4Editor\Inc\SRanipal\SRanipalSettings.generated.h
+E:/CS425Project/Plugins/SRanipal/Source/SRanipalLip/Private/SRanipalLip_Core.cpp
+E:\CS425Project\Plugins\SRanipal\Source\SRanipal\Public\Lip\SRanipal_API_Lip.h
+E:\CS425Project\Plugins\SRanipal\Source\SRanipal\Public\SRanipal_Enums.h
+E:/CS425Project/Plugins/SRanipal/Source/SRanipalLip/Private/SRanipalLip_Framework.cpp
+E:\CS425Project\Plugins\SRanipal\Source\SRanipal\Public\SRanipal_API.h
+E:/CS425Project/Plugins/SRanipal/Source/SRanipalLip/Private/SRanipalLip_FunctionLibrary.cpp

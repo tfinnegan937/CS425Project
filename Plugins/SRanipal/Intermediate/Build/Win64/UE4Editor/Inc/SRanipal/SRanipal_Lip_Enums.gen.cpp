@@ -1,4 +1,4 @@
-// Copyright 1998-2019 Epic Games, Inc. All Rights Reserved.
+// Copyright Epic Games, Inc. All Rights Reserved.
 /*===========================================================================
 	Generated code exported from UnrealHeaderTool.
 	DO NOT modify this manually! Edit the corresponding .h files instead!
@@ -30,7 +30,7 @@ void EmptyLinkFunctionForGeneratedCodeSRanipal_Lip_Enums() {}
 		return SupportedLipVersion_StaticEnum();
 	}
 	static FCompiledInDeferEnum Z_CompiledInDeferEnum_UEnum_SupportedLipVersion(SupportedLipVersion_StaticEnum, TEXT("/Script/SRanipal"), TEXT("SupportedLipVersion"), false, nullptr, nullptr);
-	uint32 Get_Z_Construct_UEnum_SRanipal_SupportedLipVersion_Hash() { return 1435462179U; }
+	uint32 Get_Z_Construct_UEnum_SRanipal_SupportedLipVersion_Hash() { return 2211228445U; }
 	UEnum* Z_Construct_UEnum_SRanipal_SupportedLipVersion()
 	{
 #if WITH_HOT_RELOAD
@@ -59,11 +59,12 @@ void EmptyLinkFunctionForGeneratedCodeSRanipal_Lip_Enums() {}
 				"SupportedLipVersion",
 				"SupportedLipVersion",
 				Enumerators,
-				ARRAY_COUNT(Enumerators),
+				UE_ARRAY_COUNT(Enumerators),
 				RF_Public|RF_Transient|RF_MarkAsNative,
+				EEnumFlags::None,
 				UE4CodeGen_Private::EDynamicType::NotDynamic,
 				(uint8)UEnum::ECppForm::EnumClass,
-				METADATA_PARAMS(Enum_MetaDataParams, ARRAY_COUNT(Enum_MetaDataParams))
+				METADATA_PARAMS(Enum_MetaDataParams, UE_ARRAY_COUNT(Enum_MetaDataParams))
 			};
 			UE4CodeGen_Private::ConstructUEnum(ReturnEnum, EnumParams);
 		}

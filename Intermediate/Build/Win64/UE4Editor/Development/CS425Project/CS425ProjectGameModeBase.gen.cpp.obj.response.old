@@ -268,12 +268,12 @@
 /I "D:\Windows Kits\10\include\10.0.18362.0\shared"
 /I "D:\Windows Kits\10\include\10.0.18362.0\um"
 /I "D:\Windows Kits\10\include\10.0.18362.0\winrt"
-/FI"E:\CS425Project\Intermediate\Build\Win64\CS425ProjectEditor\Development\Engine\SharedPCH.Engine.ShadowErrors.h"
-/Yu"E:\CS425Project\Intermediate\Build\Win64\CS425ProjectEditor\Development\Engine\SharedPCH.Engine.ShadowErrors.h"
-/Fp"E:\CS425Project\Intermediate\Build\Win64\CS425ProjectEditor\Development\Engine\SharedPCH.Engine.ShadowErrors.h.pch"
+/FI"E:\CS425Project\Intermediate\Build\Win64\CS425ProjectEditor\Development\Engine\SharedPCH.Engine.RTTI.ShadowErrors.h"
+/Yu"E:\CS425Project\Intermediate\Build\Win64\CS425ProjectEditor\Development\Engine\SharedPCH.Engine.RTTI.ShadowErrors.h"
+/Fp"E:\CS425Project\Intermediate\Build\Win64\CS425ProjectEditor\Development\Engine\SharedPCH.Engine.RTTI.ShadowErrors.h.pch"
 "E:\CS425Project\Intermediate\Build\Win64\UE4Editor\Inc\CS425Project\CS425ProjectGameModeBase.gen.cpp"
 /FI"E:\CS425Project\Intermediate\Build\Win64\UE4Editor\Development\CS425Project\Definitions.CS425Project.h"
 /Fo"E:\CS425Project\Intermediate\Build\Win64\UE4Editor\Development\CS425Project\CS425ProjectGameModeBase.gen.cpp.obj"
 /TP
-/GR-
+/GR
 /W4

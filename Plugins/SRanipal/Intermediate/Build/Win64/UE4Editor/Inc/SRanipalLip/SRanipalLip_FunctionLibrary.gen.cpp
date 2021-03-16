@@ -1,4 +1,4 @@
-// Copyright 1998-2019 Epic Games, Inc. All Rights Reserved.
+// Copyright Epic Games, Inc. All Rights Reserved.
 /*===========================================================================
 	Generated code exported from UnrealHeaderTool.
 	DO NOT modify this manually! Edit the corresponding .h files instead!
@@ -17,16 +17,50 @@ void EmptyLinkFunctionForGeneratedCodeSRanipalLip_FunctionLibrary() {}
 	SRANIPALLIP_API UClass* Z_Construct_UClass_USRanipalLip_FunctionLibrary();
 	ENGINE_API UClass* Z_Construct_UClass_UBlueprintFunctionLibrary();
 	UPackage* Z_Construct_UPackage__Script_SRanipalLip();
-	SRANIPALLIP_API UFunction* Z_Construct_UFunction_USRanipalLip_FunctionLibrary_GetLipWeightings();
 	SRANIPALLIP_API UEnum* Z_Construct_UEnum_SRanipalLip_LipShapeEnum();
-	SRANIPALLIP_API UFunction* Z_Construct_UFunction_USRanipalLip_FunctionLibrary_GetLipWeightings_v2();
 	SRANIPALLIP_API UEnum* Z_Construct_UEnum_SRanipalLip_LipShapeEnum_v2();
-	SRANIPALLIP_API UFunction* Z_Construct_UFunction_USRanipalLip_FunctionLibrary_StartLipFramework();
 	SRANIPAL_API UEnum* Z_Construct_UEnum_SRanipal_SupportedLipVersion();
-	SRANIPALLIP_API UFunction* Z_Construct_UFunction_USRanipalLip_FunctionLibrary_StopLipFramework();
-	SRANIPALLIP_API UFunction* Z_Construct_UFunction_USRanipalLip_FunctionLibrary_UpdateTexture();
 	ENGINE_API UClass* Z_Construct_UClass_UTexture2D_NoRegister();
 // End Cross Module References
+	DEFINE_FUNCTION(USRanipalLip_FunctionLibrary::execUpdateTexture)
+	{
+		P_GET_OBJECT_REF(UTexture2D,Z_Param_Out_texture);
+		P_FINISH;
+		P_NATIVE_BEGIN;
+		USRanipalLip_FunctionLibrary::UpdateTexture(Z_Param_Out_texture);
+		P_NATIVE_END;
+	}
+	DEFINE_FUNCTION(USRanipalLip_FunctionLibrary::execGetLipWeightings_v2)
+	{
+		P_GET_TMAP_REF(LipShapeEnum_v2,float,Z_Param_Out_shapes);
+		P_FINISH;
+		P_NATIVE_BEGIN;
+		USRanipalLip_FunctionLibrary::GetLipWeightings_v2(Z_Param_Out_shapes);
+		P_NATIVE_END;
+	}
+	DEFINE_FUNCTION(USRanipalLip_FunctionLibrary::execGetLipWeightings)
+	{
+		P_GET_TMAP_REF(LipShapeEnum,float,Z_Param_Out_shapes);
+		P_FINISH;
+		P_NATIVE_BEGIN;
+		USRanipalLip_FunctionLibrary::GetLipWeightings(Z_Param_Out_shapes);
+		P_NATIVE_END;
+	}
+	DEFINE_FUNCTION(USRanipalLip_FunctionLibrary::execStopLipFramework)
+	{
+		P_FINISH;
+		P_NATIVE_BEGIN;
+		USRanipalLip_FunctionLibrary::StopLipFramework();
+		P_NATIVE_END;
+	}
+	DEFINE_FUNCTION(USRanipalLip_FunctionLibrary::execStartLipFramework)
+	{
+		P_GET_ENUM(SupportedLipVersion,Z_Param_version);
+		P_FINISH;
+		P_NATIVE_BEGIN;
+		USRanipalLip_FunctionLibrary::StartLipFramework(SupportedLipVersion(Z_Param_version));
+		P_NATIVE_END;
+	}
 	void USRanipalLip_FunctionLibrary::StaticRegisterNativesUSRanipalLip_FunctionLibrary()
 	{
 		UClass* Class = USRanipalLip_FunctionLibrary::StaticClass();
@@ -37,7 +71,7 @@ void EmptyLinkFunctionForGeneratedCodeSRanipalLip_FunctionLibrary() {}
 			{ "StopLipFramework", &USRanipalLip_FunctionLibrary::execStopLipFramework },
 			{ "UpdateTexture", &USRanipalLip_FunctionLibrary::execUpdateTexture },
 		};
-		FNativeFunctionRegistrar::RegisterFunctions(Class, Funcs, ARRAY_COUNT(Funcs));
+		FNativeFunctionRegistrar::RegisterFunctions(Class, Funcs, UE_ARRAY_COUNT(Funcs));
 	}
 	struct Z_Construct_UFunction_USRanipalLip_FunctionLibrary_GetLipWeightings_Statics
 	{
@@ -45,25 +79,25 @@ void EmptyLinkFunctionForGeneratedCodeSRanipalLip_FunctionLibrary() {}
 		{
 			TMap<LipShapeEnum,float> shapes;
 		};
-		static const UE4CodeGen_Private::FMapPropertyParams NewProp_shapes;
-		static const UE4CodeGen_Private::FEnumPropertyParams NewProp_shapes_Key_KeyProp;
-		static const UE4CodeGen_Private::FBytePropertyParams NewProp_shapes_Key_KeyProp_Underlying;
 		static const UE4CodeGen_Private::FFloatPropertyParams NewProp_shapes_ValueProp;
+		static const UE4CodeGen_Private::FBytePropertyParams NewProp_shapes_Key_KeyProp_Underlying;
+		static const UE4CodeGen_Private::FEnumPropertyParams NewProp_shapes_Key_KeyProp;
+		static const UE4CodeGen_Private::FMapPropertyParams NewProp_shapes;
 		static const UE4CodeGen_Private::FPropertyParamsBase* const PropPointers[];
 #if WITH_METADATA
 		static const UE4CodeGen_Private::FMetaDataPairParam Function_MetaDataParams[];
 #endif
 		static const UE4CodeGen_Private::FFunctionParams FuncParams;
 	};
-	const UE4CodeGen_Private::FMapPropertyParams Z_Construct_UFunction_USRanipalLip_FunctionLibrary_GetLipWeightings_Statics::NewProp_shapes = { "shapes", nullptr, (EPropertyFlags)0x0010000000000180, UE4CodeGen_Private::EPropertyGenFlags::Map, RF_Public|RF_Transient|RF_MarkAsNative, 1, STRUCT_OFFSET(SRanipalLip_FunctionLibrary_eventGetLipWeightings_Parms, shapes), METADATA_PARAMS(nullptr, 0) };
-	const UE4CodeGen_Private::FEnumPropertyParams Z_Construct_UFunction_USRanipalLip_FunctionLibrary_GetLipWeightings_Statics::NewProp_shapes_Key_KeyProp = { "shapes_Key", nullptr, (EPropertyFlags)0x0000000000000000, UE4CodeGen_Private::EPropertyGenFlags::Enum, RF_Public|RF_Transient|RF_MarkAsNative, 1, 0, Z_Construct_UEnum_SRanipalLip_LipShapeEnum, METADATA_PARAMS(nullptr, 0) };
-	const UE4CodeGen_Private::FBytePropertyParams Z_Construct_UFunction_USRanipalLip_FunctionLibrary_GetLipWeightings_Statics::NewProp_shapes_Key_KeyProp_Underlying = { "UnderlyingType", nullptr, (EPropertyFlags)0x0000000000000000, UE4CodeGen_Private::EPropertyGenFlags::Byte, RF_Public|RF_Transient|RF_MarkAsNative, 1, 0, nullptr, METADATA_PARAMS(nullptr, 0) };
 	const UE4CodeGen_Private::FFloatPropertyParams Z_Construct_UFunction_USRanipalLip_FunctionLibrary_GetLipWeightings_Statics::NewProp_shapes_ValueProp = { "shapes", nullptr, (EPropertyFlags)0x0000000000000000, UE4CodeGen_Private::EPropertyGenFlags::Float, RF_Public|RF_Transient|RF_MarkAsNative, 1, 1, METADATA_PARAMS(nullptr, 0) };
+	const UE4CodeGen_Private::FBytePropertyParams Z_Construct_UFunction_USRanipalLip_FunctionLibrary_GetLipWeightings_Statics::NewProp_shapes_Key_KeyProp_Underlying = { "UnderlyingType", nullptr, (EPropertyFlags)0x0000000000000000, UE4CodeGen_Private::EPropertyGenFlags::Byte, RF_Public|RF_Transient|RF_MarkAsNative, 1, 0, nullptr, METADATA_PARAMS(nullptr, 0) };
+	const UE4CodeGen_Private::FEnumPropertyParams Z_Construct_UFunction_USRanipalLip_FunctionLibrary_GetLipWeightings_Statics::NewProp_shapes_Key_KeyProp = { "shapes_Key", nullptr, (EPropertyFlags)0x0000000000000000, UE4CodeGen_Private::EPropertyGenFlags::Enum, RF_Public|RF_Transient|RF_MarkAsNative, 1, 0, Z_Construct_UEnum_SRanipalLip_LipShapeEnum, METADATA_PARAMS(nullptr, 0) };
+	const UE4CodeGen_Private::FMapPropertyParams Z_Construct_UFunction_USRanipalLip_FunctionLibrary_GetLipWeightings_Statics::NewProp_shapes = { "shapes", nullptr, (EPropertyFlags)0x0010000000000180, UE4CodeGen_Private::EPropertyGenFlags::Map, RF_Public|RF_Transient|RF_MarkAsNative, 1, STRUCT_OFFSET(SRanipalLip_FunctionLibrary_eventGetLipWeightings_Parms, shapes), EMapPropertyFlags::None, METADATA_PARAMS(nullptr, 0) };
 	const UE4CodeGen_Private::FPropertyParamsBase* const Z_Construct_UFunction_USRanipalLip_FunctionLibrary_GetLipWeightings_Statics::PropPointers[] = {
-		(const UE4CodeGen_Private::FPropertyParamsBase*)&Z_Construct_UFunction_USRanipalLip_FunctionLibrary_GetLipWeightings_Statics::NewProp_shapes,
-		(const UE4CodeGen_Private::FPropertyParamsBase*)&Z_Construct_UFunction_USRanipalLip_FunctionLibrary_GetLipWeightings_Statics::NewProp_shapes_Key_KeyProp,
-		(const UE4CodeGen_Private::FPropertyParamsBase*)&Z_Construct_UFunction_USRanipalLip_FunctionLibrary_GetLipWeightings_Statics::NewProp_shapes_Key_KeyProp_Underlying,
 		(const UE4CodeGen_Private::FPropertyParamsBase*)&Z_Construct_UFunction_USRanipalLip_FunctionLibrary_GetLipWeightings_Statics::NewProp_shapes_ValueProp,
+		(const UE4CodeGen_Private::FPropertyParamsBase*)&Z_Construct_UFunction_USRanipalLip_FunctionLibrary_GetLipWeightings_Statics::NewProp_shapes_Key_KeyProp_Underlying,
+		(const UE4CodeGen_Private::FPropertyParamsBase*)&Z_Construct_UFunction_USRanipalLip_FunctionLibrary_GetLipWeightings_Statics::NewProp_shapes_Key_KeyProp,
+		(const UE4CodeGen_Private::FPropertyParamsBase*)&Z_Construct_UFunction_USRanipalLip_FunctionLibrary_GetLipWeightings_Statics::NewProp_shapes,
 	};
 #if WITH_METADATA
 	const UE4CodeGen_Private::FMetaDataPairParam Z_Construct_UFunction_USRanipalLip_FunctionLibrary_GetLipWeightings_Statics::Function_MetaDataParams[] = {
@@ -73,7 +107,7 @@ void EmptyLinkFunctionForGeneratedCodeSRanipalLip_FunctionLibrary() {}
 		{ "ToolTip", "@summary Get a TArray that stores weighting with respect to LipShape.\n@param[out] weightings A TArray that stores individual weighting with respect to LipShape" },
 	};
 #endif
-	const UE4CodeGen_Private::FFunctionParams Z_Construct_UFunction_USRanipalLip_FunctionLibrary_GetLipWeightings_Statics::FuncParams = { (UObject*(*)())Z_Construct_UClass_USRanipalLip_FunctionLibrary, nullptr, "GetLipWeightings", nullptr, nullptr, sizeof(SRanipalLip_FunctionLibrary_eventGetLipWeightings_Parms), Z_Construct_UFunction_USRanipalLip_FunctionLibrary_GetLipWeightings_Statics::PropPointers, ARRAY_COUNT(Z_Construct_UFunction_USRanipalLip_FunctionLibrary_GetLipWeightings_Statics::PropPointers), RF_Public|RF_Transient|RF_MarkAsNative, (EFunctionFlags)0x04422401, 0, 0, METADATA_PARAMS(Z_Construct_UFunction_USRanipalLip_FunctionLibrary_GetLipWeightings_Statics::Function_MetaDataParams, ARRAY_COUNT(Z_Construct_UFunction_USRanipalLip_FunctionLibrary_GetLipWeightings_Statics::Function_MetaDataParams)) };
+	const UE4CodeGen_Private::FFunctionParams Z_Construct_UFunction_USRanipalLip_FunctionLibrary_GetLipWeightings_Statics::FuncParams = { (UObject*(*)())Z_Construct_UClass_USRanipalLip_FunctionLibrary, nullptr, "GetLipWeightings", nullptr, nullptr, sizeof(SRanipalLip_FunctionLibrary_eventGetLipWeightings_Parms), Z_Construct_UFunction_USRanipalLip_FunctionLibrary_GetLipWeightings_Statics::PropPointers, UE_ARRAY_COUNT(Z_Construct_UFunction_USRanipalLip_FunctionLibrary_GetLipWeightings_Statics::PropPointers), RF_Public|RF_Transient|RF_MarkAsNative, (EFunctionFlags)0x04422401, 0, 0, METADATA_PARAMS(Z_Construct_UFunction_USRanipalLip_FunctionLibrary_GetLipWeightings_Statics::Function_MetaDataParams, UE_ARRAY_COUNT(Z_Construct_UFunction_USRanipalLip_FunctionLibrary_GetLipWeightings_Statics::Function_MetaDataParams)) };
 	UFunction* Z_Construct_UFunction_USRanipalLip_FunctionLibrary_GetLipWeightings()
 	{
 		static UFunction* ReturnFunction = nullptr;
@@ -89,25 +123,25 @@ void EmptyLinkFunctionForGeneratedCodeSRanipalLip_FunctionLibrary() {}
 		{
 			TMap<LipShapeEnum_v2,float> shapes;
 		};
-		static const UE4CodeGen_Private::FMapPropertyParams NewProp_shapes;
-		static const UE4CodeGen_Private::FEnumPropertyParams NewProp_shapes_Key_KeyProp;
-		static const UE4CodeGen_Private::FBytePropertyParams NewProp_shapes_Key_KeyProp_Underlying;
 		static const UE4CodeGen_Private::FFloatPropertyParams NewProp_shapes_ValueProp;
+		static const UE4CodeGen_Private::FBytePropertyParams NewProp_shapes_Key_KeyProp_Underlying;
+		static const UE4CodeGen_Private::FEnumPropertyParams NewProp_shapes_Key_KeyProp;
+		static const UE4CodeGen_Private::FMapPropertyParams NewProp_shapes;
 		static const UE4CodeGen_Private::FPropertyParamsBase* const PropPointers[];
 #if WITH_METADATA
 		static const UE4CodeGen_Private::FMetaDataPairParam Function_MetaDataParams[];
 #endif
 		static const UE4CodeGen_Private::FFunctionParams FuncParams;
 	};
-	const UE4CodeGen_Private::FMapPropertyParams Z_Construct_UFunction_USRanipalLip_FunctionLibrary_GetLipWeightings_v2_Statics::NewProp_shapes = { "shapes", nullptr, (EPropertyFlags)0x0010000000000180, UE4CodeGen_Private::EPropertyGenFlags::Map, RF_Public|RF_Transient|RF_MarkAsNative, 1, STRUCT_OFFSET(SRanipalLip_FunctionLibrary_eventGetLipWeightings_v2_Parms, shapes), METADATA_PARAMS(nullptr, 0) };
-	const UE4CodeGen_Private::FEnumPropertyParams Z_Construct_UFunction_USRanipalLip_FunctionLibrary_GetLipWeightings_v2_Statics::NewProp_shapes_Key_KeyProp = { "shapes_Key", nullptr, (EPropertyFlags)0x0000000000000000, UE4CodeGen_Private::EPropertyGenFlags::Enum, RF_Public|RF_Transient|RF_MarkAsNative, 1, 0, Z_Construct_UEnum_SRanipalLip_LipShapeEnum_v2, METADATA_PARAMS(nullptr, 0) };
-	const UE4CodeGen_Private::FBytePropertyParams Z_Construct_UFunction_USRanipalLip_FunctionLibrary_GetLipWeightings_v2_Statics::NewProp_shapes_Key_KeyProp_Underlying = { "UnderlyingType", nullptr, (EPropertyFlags)0x0000000000000000, UE4CodeGen_Private::EPropertyGenFlags::Byte, RF_Public|RF_Transient|RF_MarkAsNative, 1, 0, nullptr, METADATA_PARAMS(nullptr, 0) };
 	const UE4CodeGen_Private::FFloatPropertyParams Z_Construct_UFunction_USRanipalLip_FunctionLibrary_GetLipWeightings_v2_Statics::NewProp_shapes_ValueProp = { "shapes", nullptr, (EPropertyFlags)0x0000000000000000, UE4CodeGen_Private::EPropertyGenFlags::Float, RF_Public|RF_Transient|RF_MarkAsNative, 1, 1, METADATA_PARAMS(nullptr, 0) };
+	const UE4CodeGen_Private::FBytePropertyParams Z_Construct_UFunction_USRanipalLip_FunctionLibrary_GetLipWeightings_v2_Statics::NewProp_shapes_Key_KeyProp_Underlying = { "UnderlyingType", nullptr, (EPropertyFlags)0x0000000000000000, UE4CodeGen_Private::EPropertyGenFlags::Byte, RF_Public|RF_Transient|RF_MarkAsNative, 1, 0, nullptr, METADATA_PARAMS(nullptr, 0) };
+	const UE4CodeGen_Private::FEnumPropertyParams Z_Construct_UFunction_USRanipalLip_FunctionLibrary_GetLipWeightings_v2_Statics::NewProp_shapes_Key_KeyProp = { "shapes_Key", nullptr, (EPropertyFlags)0x0000000000000000, UE4CodeGen_Private::EPropertyGenFlags::Enum, RF_Public|RF_Transient|RF_MarkAsNative, 1, 0, Z_Construct_UEnum_SRanipalLip_LipShapeEnum_v2, METADATA_PARAMS(nullptr, 0) };
+	const UE4CodeGen_Private::FMapPropertyParams Z_Construct_UFunction_USRanipalLip_FunctionLibrary_GetLipWeightings_v2_Statics::NewProp_shapes = { "shapes", nullptr, (EPropertyFlags)0x0010000000000180, UE4CodeGen_Private::EPropertyGenFlags::Map, RF_Public|RF_Transient|RF_MarkAsNative, 1, STRUCT_OFFSET(SRanipalLip_FunctionLibrary_eventGetLipWeightings_v2_Parms, shapes), EMapPropertyFlags::None, METADATA_PARAMS(nullptr, 0) };
 	const UE4CodeGen_Private::FPropertyParamsBase* const Z_Construct_UFunction_USRanipalLip_FunctionLibrary_GetLipWeightings_v2_Statics::PropPointers[] = {
-		(const UE4CodeGen_Private::FPropertyParamsBase*)&Z_Construct_UFunction_USRanipalLip_FunctionLibrary_GetLipWeightings_v2_Statics::NewProp_shapes,
-		(const UE4CodeGen_Private::FPropertyParamsBase*)&Z_Construct_UFunction_USRanipalLip_FunctionLibrary_GetLipWeightings_v2_Statics::NewProp_shapes_Key_KeyProp,
-		(const UE4CodeGen_Private::FPropertyParamsBase*)&Z_Construct_UFunction_USRanipalLip_FunctionLibrary_GetLipWeightings_v2_Statics::NewProp_shapes_Key_KeyProp_Underlying,
 		(const UE4CodeGen_Private::FPropertyParamsBase*)&Z_Construct_UFunction_USRanipalLip_FunctionLibrary_GetLipWeightings_v2_Statics::NewProp_shapes_ValueProp,
+		(const UE4CodeGen_Private::FPropertyParamsBase*)&Z_Construct_UFunction_USRanipalLip_FunctionLibrary_GetLipWeightings_v2_Statics::NewProp_shapes_Key_KeyProp_Underlying,
+		(const UE4CodeGen_Private::FPropertyParamsBase*)&Z_Construct_UFunction_USRanipalLip_FunctionLibrary_GetLipWeightings_v2_Statics::NewProp_shapes_Key_KeyProp,
+		(const UE4CodeGen_Private::FPropertyParamsBase*)&Z_Construct_UFunction_USRanipalLip_FunctionLibrary_GetLipWeightings_v2_Statics::NewProp_shapes,
 	};
 #if WITH_METADATA
 	const UE4CodeGen_Private::FMetaDataPairParam Z_Construct_UFunction_USRanipalLip_FunctionLibrary_GetLipWeightings_v2_Statics::Function_MetaDataParams[] = {
@@ -117,7 +151,7 @@ void EmptyLinkFunctionForGeneratedCodeSRanipalLip_FunctionLibrary() {}
 		{ "ToolTip", "@summary Get a TArray that stores weighting with respect to LipShape.\n@param[out] weightings A TArray that stores individual weighting with respect to LipShape" },
 	};
 #endif
-	const UE4CodeGen_Private::FFunctionParams Z_Construct_UFunction_USRanipalLip_FunctionLibrary_GetLipWeightings_v2_Statics::FuncParams = { (UObject*(*)())Z_Construct_UClass_USRanipalLip_FunctionLibrary, nullptr, "GetLipWeightings_v2", nullptr, nullptr, sizeof(SRanipalLip_FunctionLibrary_eventGetLipWeightings_v2_Parms), Z_Construct_UFunction_USRanipalLip_FunctionLibrary_GetLipWeightings_v2_Statics::PropPointers, ARRAY_COUNT(Z_Construct_UFunction_USRanipalLip_FunctionLibrary_GetLipWeightings_v2_Statics::PropPointers), RF_Public|RF_Transient|RF_MarkAsNative, (EFunctionFlags)0x04422401, 0, 0, METADATA_PARAMS(Z_Construct_UFunction_USRanipalLip_FunctionLibrary_GetLipWeightings_v2_Statics::Function_MetaDataParams, ARRAY_COUNT(Z_Construct_UFunction_USRanipalLip_FunctionLibrary_GetLipWeightings_v2_Statics::Function_MetaDataParams)) };
+	const UE4CodeGen_Private::FFunctionParams Z_Construct_UFunction_USRanipalLip_FunctionLibrary_GetLipWeightings_v2_Statics::FuncParams = { (UObject*(*)())Z_Construct_UClass_USRanipalLip_FunctionLibrary, nullptr, "GetLipWeightings_v2", nullptr, nullptr, sizeof(SRanipalLip_FunctionLibrary_eventGetLipWeightings_v2_Parms), Z_Construct_UFunction_USRanipalLip_FunctionLibrary_GetLipWeightings_v2_Statics::PropPointers, UE_ARRAY_COUNT(Z_Construct_UFunction_USRanipalLip_FunctionLibrary_GetLipWeightings_v2_Statics::PropPointers), RF_Public|RF_Transient|RF_MarkAsNative, (EFunctionFlags)0x04422401, 0, 0, METADATA_PARAMS(Z_Construct_UFunction_USRanipalLip_FunctionLibrary_GetLipWeightings_v2_Statics::Function_MetaDataParams, UE_ARRAY_COUNT(Z_Construct_UFunction_USRanipalLip_FunctionLibrary_GetLipWeightings_v2_Statics::Function_MetaDataParams)) };
 	UFunction* Z_Construct_UFunction_USRanipalLip_FunctionLibrary_GetLipWeightings_v2()
 	{
 		static UFunction* ReturnFunction = nullptr;
@@ -133,19 +167,19 @@ void EmptyLinkFunctionForGeneratedCodeSRanipalLip_FunctionLibrary() {}
 		{
 			SupportedLipVersion version;
 		};
-		static const UE4CodeGen_Private::FEnumPropertyParams NewProp_version;
 		static const UE4CodeGen_Private::FBytePropertyParams NewProp_version_Underlying;
+		static const UE4CodeGen_Private::FEnumPropertyParams NewProp_version;
 		static const UE4CodeGen_Private::FPropertyParamsBase* const PropPointers[];
 #if WITH_METADATA
 		static const UE4CodeGen_Private::FMetaDataPairParam Function_MetaDataParams[];
 #endif
 		static const UE4CodeGen_Private::FFunctionParams FuncParams;
 	};
-	const UE4CodeGen_Private::FEnumPropertyParams Z_Construct_UFunction_USRanipalLip_FunctionLibrary_StartLipFramework_Statics::NewProp_version = { "version", nullptr, (EPropertyFlags)0x0010000000000080, UE4CodeGen_Private::EPropertyGenFlags::Enum, RF_Public|RF_Transient|RF_MarkAsNative, 1, STRUCT_OFFSET(SRanipalLip_FunctionLibrary_eventStartLipFramework_Parms, version), Z_Construct_UEnum_SRanipal_SupportedLipVersion, METADATA_PARAMS(nullptr, 0) };
 	const UE4CodeGen_Private::FBytePropertyParams Z_Construct_UFunction_USRanipalLip_FunctionLibrary_StartLipFramework_Statics::NewProp_version_Underlying = { "UnderlyingType", nullptr, (EPropertyFlags)0x0000000000000000, UE4CodeGen_Private::EPropertyGenFlags::Byte, RF_Public|RF_Transient|RF_MarkAsNative, 1, 0, nullptr, METADATA_PARAMS(nullptr, 0) };
+	const UE4CodeGen_Private::FEnumPropertyParams Z_Construct_UFunction_USRanipalLip_FunctionLibrary_StartLipFramework_Statics::NewProp_version = { "version", nullptr, (EPropertyFlags)0x0010000000000080, UE4CodeGen_Private::EPropertyGenFlags::Enum, RF_Public|RF_Transient|RF_MarkAsNative, 1, STRUCT_OFFSET(SRanipalLip_FunctionLibrary_eventStartLipFramework_Parms, version), Z_Construct_UEnum_SRanipal_SupportedLipVersion, METADATA_PARAMS(nullptr, 0) };
 	const UE4CodeGen_Private::FPropertyParamsBase* const Z_Construct_UFunction_USRanipalLip_FunctionLibrary_StartLipFramework_Statics::PropPointers[] = {
-		(const UE4CodeGen_Private::FPropertyParamsBase*)&Z_Construct_UFunction_USRanipalLip_FunctionLibrary_StartLipFramework_Statics::NewProp_version,
 		(const UE4CodeGen_Private::FPropertyParamsBase*)&Z_Construct_UFunction_USRanipalLip_FunctionLibrary_StartLipFramework_Statics::NewProp_version_Underlying,
+		(const UE4CodeGen_Private::FPropertyParamsBase*)&Z_Construct_UFunction_USRanipalLip_FunctionLibrary_StartLipFramework_Statics::NewProp_version,
 	};
 #if WITH_METADATA
 	const UE4CodeGen_Private::FMetaDataPairParam Z_Construct_UFunction_USRanipalLip_FunctionLibrary_StartLipFramework_Statics::Function_MetaDataParams[] = {
@@ -155,7 +189,7 @@ void EmptyLinkFunctionForGeneratedCodeSRanipalLip_FunctionLibrary() {}
 		{ "ToolTip", "@summary Start specific version of SRanipal lip framework.\nThis function blueprint will NOT work if the \"Enable Lip by Default\" is enabled in project settings." },
 	};
 #endif
-	const UE4CodeGen_Private::FFunctionParams Z_Construct_UFunction_USRanipalLip_FunctionLibrary_StartLipFramework_Statics::FuncParams = { (UObject*(*)())Z_Construct_UClass_USRanipalLip_FunctionLibrary, nullptr, "StartLipFramework", nullptr, nullptr, sizeof(SRanipalLip_FunctionLibrary_eventStartLipFramework_Parms), Z_Construct_UFunction_USRanipalLip_FunctionLibrary_StartLipFramework_Statics::PropPointers, ARRAY_COUNT(Z_Construct_UFunction_USRanipalLip_FunctionLibrary_StartLipFramework_Statics::PropPointers), RF_Public|RF_Transient|RF_MarkAsNative, (EFunctionFlags)0x04022401, 0, 0, METADATA_PARAMS(Z_Construct_UFunction_USRanipalLip_FunctionLibrary_StartLipFramework_Statics::Function_MetaDataParams, ARRAY_COUNT(Z_Construct_UFunction_USRanipalLip_FunctionLibrary_StartLipFramework_Statics::Function_MetaDataParams)) };
+	const UE4CodeGen_Private::FFunctionParams Z_Construct_UFunction_USRanipalLip_FunctionLibrary_StartLipFramework_Statics::FuncParams = { (UObject*(*)())Z_Construct_UClass_USRanipalLip_FunctionLibrary, nullptr, "StartLipFramework", nullptr, nullptr, sizeof(SRanipalLip_FunctionLibrary_eventStartLipFramework_Parms), Z_Construct_UFunction_USRanipalLip_FunctionLibrary_StartLipFramework_Statics::PropPointers, UE_ARRAY_COUNT(Z_Construct_UFunction_USRanipalLip_FunctionLibrary_StartLipFramework_Statics::PropPointers), RF_Public|RF_Transient|RF_MarkAsNative, (EFunctionFlags)0x04022401, 0, 0, METADATA_PARAMS(Z_Construct_UFunction_USRanipalLip_FunctionLibrary_StartLipFramework_Statics::Function_MetaDataParams, UE_ARRAY_COUNT(Z_Construct_UFunction_USRanipalLip_FunctionLibrary_StartLipFramework_Statics::Function_MetaDataParams)) };
 	UFunction* Z_Construct_UFunction_USRanipalLip_FunctionLibrary_StartLipFramework()
 	{
 		static UFunction* ReturnFunction = nullptr;
@@ -180,7 +214,7 @@ void EmptyLinkFunctionForGeneratedCodeSRanipalLip_FunctionLibrary() {}
 		{ "ToolTip", "@summary Stop SRanipal lip framework.\nThis function blueprint will NOT work if the \"Enable Lip by Default\" is enabled in project settings." },
 	};
 #endif
-	const UE4CodeGen_Private::FFunctionParams Z_Construct_UFunction_USRanipalLip_FunctionLibrary_StopLipFramework_Statics::FuncParams = { (UObject*(*)())Z_Construct_UClass_USRanipalLip_FunctionLibrary, nullptr, "StopLipFramework", nullptr, nullptr, 0, nullptr, 0, RF_Public|RF_Transient|RF_MarkAsNative, (EFunctionFlags)0x04022401, 0, 0, METADATA_PARAMS(Z_Construct_UFunction_USRanipalLip_FunctionLibrary_StopLipFramework_Statics::Function_MetaDataParams, ARRAY_COUNT(Z_Construct_UFunction_USRanipalLip_FunctionLibrary_StopLipFramework_Statics::Function_MetaDataParams)) };
+	const UE4CodeGen_Private::FFunctionParams Z_Construct_UFunction_USRanipalLip_FunctionLibrary_StopLipFramework_Statics::FuncParams = { (UObject*(*)())Z_Construct_UClass_USRanipalLip_FunctionLibrary, nullptr, "StopLipFramework", nullptr, nullptr, 0, nullptr, 0, RF_Public|RF_Transient|RF_MarkAsNative, (EFunctionFlags)0x04022401, 0, 0, METADATA_PARAMS(Z_Construct_UFunction_USRanipalLip_FunctionLibrary_StopLipFramework_Statics::Function_MetaDataParams, UE_ARRAY_COUNT(Z_Construct_UFunction_USRanipalLip_FunctionLibrary_StopLipFramework_Statics::Function_MetaDataParams)) };
 	UFunction* Z_Construct_UFunction_USRanipalLip_FunctionLibrary_StopLipFramework()
 	{
 		static UFunction* ReturnFunction = nullptr;
@@ -215,7 +249,7 @@ void EmptyLinkFunctionForGeneratedCodeSRanipalLip_FunctionLibrary() {}
 		{ "ToolTip", "@summary Update given texture2D with lip image.\n@param[out] texture Target texture." },
 	};
 #endif
-	const UE4CodeGen_Private::FFunctionParams Z_Construct_UFunction_USRanipalLip_FunctionLibrary_UpdateTexture_Statics::FuncParams = { (UObject*(*)())Z_Construct_UClass_USRanipalLip_FunctionLibrary, nullptr, "UpdateTexture", nullptr, nullptr, sizeof(SRanipalLip_FunctionLibrary_eventUpdateTexture_Parms), Z_Construct_UFunction_USRanipalLip_FunctionLibrary_UpdateTexture_Statics::PropPointers, ARRAY_COUNT(Z_Construct_UFunction_USRanipalLip_FunctionLibrary_UpdateTexture_Statics::PropPointers), RF_Public|RF_Transient|RF_MarkAsNative, (EFunctionFlags)0x04422401, 0, 0, METADATA_PARAMS(Z_Construct_UFunction_USRanipalLip_FunctionLibrary_UpdateTexture_Statics::Function_MetaDataParams, ARRAY_COUNT(Z_Construct_UFunction_USRanipalLip_FunctionLibrary_UpdateTexture_Statics::Function_MetaDataParams)) };
+	const UE4CodeGen_Private::FFunctionParams Z_Construct_UFunction_USRanipalLip_FunctionLibrary_UpdateTexture_Statics::FuncParams = { (UObject*(*)())Z_Construct_UClass_USRanipalLip_FunctionLibrary, nullptr, "UpdateTexture", nullptr, nullptr, sizeof(SRanipalLip_FunctionLibrary_eventUpdateTexture_Parms), Z_Construct_UFunction_USRanipalLip_FunctionLibrary_UpdateTexture_Statics::PropPointers, UE_ARRAY_COUNT(Z_Construct_UFunction_USRanipalLip_FunctionLibrary_UpdateTexture_Statics::PropPointers), RF_Public|RF_Transient|RF_MarkAsNative, (EFunctionFlags)0x04422401, 0, 0, METADATA_PARAMS(Z_Construct_UFunction_USRanipalLip_FunctionLibrary_UpdateTexture_Statics::Function_MetaDataParams, UE_ARRAY_COUNT(Z_Construct_UFunction_USRanipalLip_FunctionLibrary_UpdateTexture_Statics::Function_MetaDataParams)) };
 	UFunction* Z_Construct_UFunction_USRanipalLip_FunctionLibrary_UpdateTexture()
 	{
 		static UFunction* ReturnFunction = nullptr;
@@ -244,11 +278,11 @@ void EmptyLinkFunctionForGeneratedCodeSRanipalLip_FunctionLibrary() {}
 		(UObject* (*)())Z_Construct_UPackage__Script_SRanipalLip,
 	};
 	const FClassFunctionLinkInfo Z_Construct_UClass_USRanipalLip_FunctionLibrary_Statics::FuncInfo[] = {
-		{ &Z_Construct_UFunction_USRanipalLip_FunctionLibrary_GetLipWeightings, "GetLipWeightings" }, // 2445959089
-		{ &Z_Construct_UFunction_USRanipalLip_FunctionLibrary_GetLipWeightings_v2, "GetLipWeightings_v2" }, // 1749318755
-		{ &Z_Construct_UFunction_USRanipalLip_FunctionLibrary_StartLipFramework, "StartLipFramework" }, // 2537841286
-		{ &Z_Construct_UFunction_USRanipalLip_FunctionLibrary_StopLipFramework, "StopLipFramework" }, // 277850252
-		{ &Z_Construct_UFunction_USRanipalLip_FunctionLibrary_UpdateTexture, "UpdateTexture" }, // 987535525
+		{ &Z_Construct_UFunction_USRanipalLip_FunctionLibrary_GetLipWeightings, "GetLipWeightings" }, // 2317013521
+		{ &Z_Construct_UFunction_USRanipalLip_FunctionLibrary_GetLipWeightings_v2, "GetLipWeightings_v2" }, // 2703117564
+		{ &Z_Construct_UFunction_USRanipalLip_FunctionLibrary_StartLipFramework, "StartLipFramework" }, // 3615661867
+		{ &Z_Construct_UFunction_USRanipalLip_FunctionLibrary_StopLipFramework, "StopLipFramework" }, // 4163240675
+		{ &Z_Construct_UFunction_USRanipalLip_FunctionLibrary_UpdateTexture, "UpdateTexture" }, // 2947031061
 	};
 #if WITH_METADATA
 	const UE4CodeGen_Private::FMetaDataPairParam Z_Construct_UClass_USRanipalLip_FunctionLibrary_Statics::Class_MetaDataParams[] = {
@@ -269,12 +303,12 @@ void EmptyLinkFunctionForGeneratedCodeSRanipalLip_FunctionLibrary() {}
 		FuncInfo,
 		nullptr,
 		nullptr,
-		ARRAY_COUNT(DependentSingletons),
-		ARRAY_COUNT(FuncInfo),
+		UE_ARRAY_COUNT(DependentSingletons),
+		UE_ARRAY_COUNT(FuncInfo),
 		0,
 		0,
 		0x001000A0u,
-		METADATA_PARAMS(Z_Construct_UClass_USRanipalLip_FunctionLibrary_Statics::Class_MetaDataParams, ARRAY_COUNT(Z_Construct_UClass_USRanipalLip_FunctionLibrary_Statics::Class_MetaDataParams))
+		METADATA_PARAMS(Z_Construct_UClass_USRanipalLip_FunctionLibrary_Statics::Class_MetaDataParams, UE_ARRAY_COUNT(Z_Construct_UClass_USRanipalLip_FunctionLibrary_Statics::Class_MetaDataParams))
 	};
 	UClass* Z_Construct_UClass_USRanipalLip_FunctionLibrary()
 	{
@@ -285,7 +319,7 @@ void EmptyLinkFunctionForGeneratedCodeSRanipalLip_FunctionLibrary() {}
 		}
 		return OuterClass;
 	}
-	IMPLEMENT_CLASS(USRanipalLip_FunctionLibrary, 297154557);
+	IMPLEMENT_CLASS(USRanipalLip_FunctionLibrary, 1251736124);
 	template<> SRANIPALLIP_API UClass* StaticClass<USRanipalLip_FunctionLibrary>()
 	{
 		return USRanipalLip_FunctionLibrary::StaticClass();

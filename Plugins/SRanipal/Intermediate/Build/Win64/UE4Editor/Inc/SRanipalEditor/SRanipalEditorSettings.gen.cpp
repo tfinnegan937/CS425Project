@@ -1,4 +1,4 @@
-// Copyright 1998-2019 Epic Games, Inc. All Rights Reserved.
+// Copyright Epic Games, Inc. All Rights Reserved.
 /*===========================================================================
 	Generated code exported from UnrealHeaderTool.
 	DO NOT modify this manually! Edit the corresponding .h files instead!
@@ -57,12 +57,12 @@ void EmptyLinkFunctionForGeneratedCodeSRanipalEditorSettings() {}
 		nullptr,
 		nullptr,
 		nullptr,
-		ARRAY_COUNT(DependentSingletons),
+		UE_ARRAY_COUNT(DependentSingletons),
 		0,
 		0,
 		0,
 		0x001000A6u,
-		METADATA_PARAMS(Z_Construct_UClass_USRanipalEditorSettings_Statics::Class_MetaDataParams, ARRAY_COUNT(Z_Construct_UClass_USRanipalEditorSettings_Statics::Class_MetaDataParams))
+		METADATA_PARAMS(Z_Construct_UClass_USRanipalEditorSettings_Statics::Class_MetaDataParams, UE_ARRAY_COUNT(Z_Construct_UClass_USRanipalEditorSettings_Statics::Class_MetaDataParams))
 	};
 	UClass* Z_Construct_UClass_USRanipalEditorSettings()
 	{
@@ -73,7 +73,7 @@ void EmptyLinkFunctionForGeneratedCodeSRanipalEditorSettings() {}
 		}
 		return OuterClass;
 	}
-	IMPLEMENT_CLASS(USRanipalEditorSettings, 1267915806);
+	IMPLEMENT_CLASS(USRanipalEditorSettings, 2118339895);
 	template<> SRANIPALEDITOR_API UClass* StaticClass<USRanipalEditorSettings>()
 	{
 		return USRanipalEditorSettings::StaticClass();

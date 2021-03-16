@@ -1,4 +1,4 @@
-// Copyright 1998-2019 Epic Games, Inc. All Rights Reserved.
+// Copyright Epic Games, Inc. All Rights Reserved.
 /*===========================================================================
 	Generated code exported from UnrealHeaderTool.
 	DO NOT modify this manually! Edit the corresponding .h files instead!
@@ -17,101 +17,26 @@ enum class SupportedLipVersion : uint8;
 #endif
 #define SRANIPALLIP_SRanipalLip_FunctionLibrary_generated_h
 
-#define MyProject6_Plugins_SRanipal_Source_SRanipalLip_Public_SRanipalLip_FunctionLibrary_h_16_RPC_WRAPPERS \
+#define CS425Project_Plugins_SRanipal_Source_SRanipalLip_Public_SRanipalLip_FunctionLibrary_h_16_SPARSE_DATA
+#define CS425Project_Plugins_SRanipal_Source_SRanipalLip_Public_SRanipalLip_FunctionLibrary_h_16_RPC_WRAPPERS \
  \
-	DECLARE_FUNCTION(execUpdateTexture) \
-	{ \
-		P_GET_OBJECT_REF(UTexture2D,Z_Param_Out_texture); \
-		P_FINISH; \
-		P_NATIVE_BEGIN; \
-		USRanipalLip_FunctionLibrary::UpdateTexture(Z_Param_Out_texture); \
-		P_NATIVE_END; \
-	} \
- \
-	DECLARE_FUNCTION(execGetLipWeightings_v2) \
-	{ \
-		P_GET_TMAP_REF(LipShapeEnum_v2,float,Z_Param_Out_shapes); \
-		P_FINISH; \
-		P_NATIVE_BEGIN; \
-		USRanipalLip_FunctionLibrary::GetLipWeightings_v2(Z_Param_Out_shapes); \
-		P_NATIVE_END; \
-	} \
- \
-	DECLARE_FUNCTION(execGetLipWeightings) \
-	{ \
-		P_GET_TMAP_REF(LipShapeEnum,float,Z_Param_Out_shapes); \
-		P_FINISH; \
-		P_NATIVE_BEGIN; \
-		USRanipalLip_FunctionLibrary::GetLipWeightings(Z_Param_Out_shapes); \
-		P_NATIVE_END; \
-	} \
- \
-	DECLARE_FUNCTION(execStopLipFramework) \
-	{ \
-		P_FINISH; \
-		P_NATIVE_BEGIN; \
-		USRanipalLip_FunctionLibrary::StopLipFramework(); \
-		P_NATIVE_END; \
-	} \
- \
-	DECLARE_FUNCTION(execStartLipFramework) \
-	{ \
-		P_GET_ENUM(SupportedLipVersion,Z_Param_version); \
-		P_FINISH; \
-		P_NATIVE_BEGIN; \
-		USRanipalLip_FunctionLibrary::StartLipFramework(SupportedLipVersion(Z_Param_version)); \
-		P_NATIVE_END; \
-	}
+	DECLARE_FUNCTION(execUpdateTexture); \
+	DECLARE_FUNCTION(execGetLipWeightings_v2); \
+	DECLARE_FUNCTION(execGetLipWeightings); \
+	DECLARE_FUNCTION(execStopLipFramework); \
+	DECLARE_FUNCTION(execStartLipFramework);
 
 
-#define MyProject6_Plugins_SRanipal_Source_SRanipalLip_Public_SRanipalLip_FunctionLibrary_h_16_RPC_WRAPPERS_NO_PURE_DECLS \
+#define CS425Project_Plugins_SRanipal_Source_SRanipalLip_Public_SRanipalLip_FunctionLibrary_h_16_RPC_WRAPPERS_NO_PURE_DECLS \
  \
-	DECLARE_FUNCTION(execUpdateTexture) \
-	{ \
-		P_GET_OBJECT_REF(UTexture2D,Z_Param_Out_texture); \
-		P_FINISH; \
-		P_NATIVE_BEGIN; \
-		USRanipalLip_FunctionLibrary::UpdateTexture(Z_Param_Out_texture); \
-		P_NATIVE_END; \
-	} \
- \
-	DECLARE_FUNCTION(execGetLipWeightings_v2) \
-	{ \
-		P_GET_TMAP_REF(LipShapeEnum_v2,float,Z_Param_Out_shapes); \
-		P_FINISH; \
-		P_NATIVE_BEGIN; \
-		USRanipalLip_FunctionLibrary::GetLipWeightings_v2(Z_Param_Out_shapes); \
-		P_NATIVE_END; \
-	} \
- \
-	DECLARE_FUNCTION(execGetLipWeightings) \
-	{ \
-		P_GET_TMAP_REF(LipShapeEnum,float,Z_Param_Out_shapes); \
-		P_FINISH; \
-		P_NATIVE_BEGIN; \
-		USRanipalLip_FunctionLibrary::GetLipWeightings(Z_Param_Out_shapes); \
-		P_NATIVE_END; \
-	} \
- \
-	DECLARE_FUNCTION(execStopLipFramework) \
-	{ \
-		P_FINISH; \
-		P_NATIVE_BEGIN; \
-		USRanipalLip_FunctionLibrary::StopLipFramework(); \
-		P_NATIVE_END; \
-	} \
- \
-	DECLARE_FUNCTION(execStartLipFramework) \
-	{ \
-		P_GET_ENUM(SupportedLipVersion,Z_Param_version); \
-		P_FINISH; \
-		P_NATIVE_BEGIN; \
-		USRanipalLip_FunctionLibrary::StartLipFramework(SupportedLipVersion(Z_Param_version)); \
-		P_NATIVE_END; \
-	}
+	DECLARE_FUNCTION(execUpdateTexture); \
+	DECLARE_FUNCTION(execGetLipWeightings_v2); \
+	DECLARE_FUNCTION(execGetLipWeightings); \
+	DECLARE_FUNCTION(execStopLipFramework); \
+	DECLARE_FUNCTION(execStartLipFramework);
 
 
-#define MyProject6_Plugins_SRanipal_Source_SRanipalLip_Public_SRanipalLip_FunctionLibrary_h_16_INCLASS_NO_PURE_DECLS \
+#define CS425Project_Plugins_SRanipal_Source_SRanipalLip_Public_SRanipalLip_FunctionLibrary_h_16_INCLASS_NO_PURE_DECLS \
 private: \
 	static void StaticRegisterNativesUSRanipalLip_FunctionLibrary(); \
 	friend struct Z_Construct_UClass_USRanipalLip_FunctionLibrary_Statics; \
@@ -120,7 +45,7 @@ public: \
 	DECLARE_SERIALIZER(USRanipalLip_FunctionLibrary)
 
 
-#define MyProject6_Plugins_SRanipal_Source_SRanipalLip_Public_SRanipalLip_FunctionLibrary_h_16_INCLASS \
+#define CS425Project_Plugins_SRanipal_Source_SRanipalLip_Public_SRanipalLip_FunctionLibrary_h_16_INCLASS \
 private: \
 	static void StaticRegisterNativesUSRanipalLip_FunctionLibrary(); \
 	friend struct Z_Construct_UClass_USRanipalLip_FunctionLibrary_Statics; \
@@ -129,7 +54,7 @@ public: \
 	DECLARE_SERIALIZER(USRanipalLip_FunctionLibrary)
 
 
-#define MyProject6_Plugins_SRanipal_Source_SRanipalLip_Public_SRanipalLip_FunctionLibrary_h_16_STANDARD_CONSTRUCTORS \
+#define CS425Project_Plugins_SRanipal_Source_SRanipalLip_Public_SRanipalLip_FunctionLibrary_h_16_STANDARD_CONSTRUCTORS \
 	/** Standard constructor, called after all reflected properties have been initialized */ \
 	NO_API USRanipalLip_FunctionLibrary(const FObjectInitializer& ObjectInitializer = FObjectInitializer::Get()); \
 	DEFINE_DEFAULT_OBJECT_INITIALIZER_CONSTRUCTOR_CALL(USRanipalLip_FunctionLibrary) \
@@ -142,7 +67,7 @@ private: \
 public:
 
 
-#define MyProject6_Plugins_SRanipal_Source_SRanipalLip_Public_SRanipalLip_FunctionLibrary_h_16_ENHANCED_CONSTRUCTORS \
+#define CS425Project_Plugins_SRanipal_Source_SRanipalLip_Public_SRanipalLip_FunctionLibrary_h_16_ENHANCED_CONSTRUCTORS \
 	/** Standard constructor, called after all reflected properties have been initialized */ \
 	NO_API USRanipalLip_FunctionLibrary(const FObjectInitializer& ObjectInitializer = FObjectInitializer::Get()) : Super(ObjectInitializer) { }; \
 private: \
@@ -155,26 +80,28 @@ DEFINE_VTABLE_PTR_HELPER_CTOR_CALLER(USRanipalLip_FunctionLibrary); \
 	DEFINE_DEFAULT_OBJECT_INITIALIZER_CONSTRUCTOR_CALL(USRanipalLip_FunctionLibrary)
 
 
-#define MyProject6_Plugins_SRanipal_Source_SRanipalLip_Public_SRanipalLip_FunctionLibrary_h_16_PRIVATE_PROPERTY_OFFSET
-#define MyProject6_Plugins_SRanipal_Source_SRanipalLip_Public_SRanipalLip_FunctionLibrary_h_13_PROLOG
-#define MyProject6_Plugins_SRanipal_Source_SRanipalLip_Public_SRanipalLip_FunctionLibrary_h_16_GENERATED_BODY_LEGACY \
+#define CS425Project_Plugins_SRanipal_Source_SRanipalLip_Public_SRanipalLip_FunctionLibrary_h_16_PRIVATE_PROPERTY_OFFSET
+#define CS425Project_Plugins_SRanipal_Source_SRanipalLip_Public_SRanipalLip_FunctionLibrary_h_13_PROLOG
+#define CS425Project_Plugins_SRanipal_Source_SRanipalLip_Public_SRanipalLip_FunctionLibrary_h_16_GENERATED_BODY_LEGACY \
 PRAGMA_DISABLE_DEPRECATION_WARNINGS \
 public: \
-	MyProject6_Plugins_SRanipal_Source_SRanipalLip_Public_SRanipalLip_FunctionLibrary_h_16_PRIVATE_PROPERTY_OFFSET \
-	MyProject6_Plugins_SRanipal_Source_SRanipalLip_Public_SRanipalLip_FunctionLibrary_h_16_RPC_WRAPPERS \
-	MyProject6_Plugins_SRanipal_Source_SRanipalLip_Public_SRanipalLip_FunctionLibrary_h_16_INCLASS \
-	MyProject6_Plugins_SRanipal_Source_SRanipalLip_Public_SRanipalLip_FunctionLibrary_h_16_STANDARD_CONSTRUCTORS \
+	CS425Project_Plugins_SRanipal_Source_SRanipalLip_Public_SRanipalLip_FunctionLibrary_h_16_PRIVATE_PROPERTY_OFFSET \
+	CS425Project_Plugins_SRanipal_Source_SRanipalLip_Public_SRanipalLip_FunctionLibrary_h_16_SPARSE_DATA \
+	CS425Project_Plugins_SRanipal_Source_SRanipalLip_Public_SRanipalLip_FunctionLibrary_h_16_RPC_WRAPPERS \
+	CS425Project_Plugins_SRanipal_Source_SRanipalLip_Public_SRanipalLip_FunctionLibrary_h_16_INCLASS \
+	CS425Project_Plugins_SRanipal_Source_SRanipalLip_Public_SRanipalLip_FunctionLibrary_h_16_STANDARD_CONSTRUCTORS \
 public: \
 PRAGMA_ENABLE_DEPRECATION_WARNINGS
 
 
-#define MyProject6_Plugins_SRanipal_Source_SRanipalLip_Public_SRanipalLip_FunctionLibrary_h_16_GENERATED_BODY \
+#define CS425Project_Plugins_SRanipal_Source_SRanipalLip_Public_SRanipalLip_FunctionLibrary_h_16_GENERATED_BODY \
 PRAGMA_DISABLE_DEPRECATION_WARNINGS \
 public: \
-	MyProject6_Plugins_SRanipal_Source_SRanipalLip_Public_SRanipalLip_FunctionLibrary_h_16_PRIVATE_PROPERTY_OFFSET \
-	MyProject6_Plugins_SRanipal_Source_SRanipalLip_Public_SRanipalLip_FunctionLibrary_h_16_RPC_WRAPPERS_NO_PURE_DECLS \
-	MyProject6_Plugins_SRanipal_Source_SRanipalLip_Public_SRanipalLip_FunctionLibrary_h_16_INCLASS_NO_PURE_DECLS \
-	MyProject6_Plugins_SRanipal_Source_SRanipalLip_Public_SRanipalLip_FunctionLibrary_h_16_ENHANCED_CONSTRUCTORS \
+	CS425Project_Plugins_SRanipal_Source_SRanipalLip_Public_SRanipalLip_FunctionLibrary_h_16_PRIVATE_PROPERTY_OFFSET \
+	CS425Project_Plugins_SRanipal_Source_SRanipalLip_Public_SRanipalLip_FunctionLibrary_h_16_SPARSE_DATA \
+	CS425Project_Plugins_SRanipal_Source_SRanipalLip_Public_SRanipalLip_FunctionLibrary_h_16_RPC_WRAPPERS_NO_PURE_DECLS \
+	CS425Project_Plugins_SRanipal_Source_SRanipalLip_Public_SRanipalLip_FunctionLibrary_h_16_INCLASS_NO_PURE_DECLS \
+	CS425Project_Plugins_SRanipal_Source_SRanipalLip_Public_SRanipalLip_FunctionLibrary_h_16_ENHANCED_CONSTRUCTORS \
 private: \
 PRAGMA_ENABLE_DEPRECATION_WARNINGS
 
@@ -182,7 +109,7 @@ PRAGMA_ENABLE_DEPRECATION_WARNINGS
 template<> SRANIPALLIP_API UClass* StaticClass<class USRanipalLip_FunctionLibrary>();
 
 #undef CURRENT_FILE_ID
-#define CURRENT_FILE_ID MyProject6_Plugins_SRanipal_Source_SRanipalLip_Public_SRanipalLip_FunctionLibrary_h
+#define CURRENT_FILE_ID CS425Project_Plugins_SRanipal_Source_SRanipalLip_Public_SRanipalLip_FunctionLibrary_h
 
 
 PRAGMA_ENABLE_DEPRECATION_WARNINGS

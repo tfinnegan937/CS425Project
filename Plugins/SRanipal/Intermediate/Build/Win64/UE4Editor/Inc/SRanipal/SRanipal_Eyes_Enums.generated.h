@@ -1,4 +1,4 @@
-// Copyright 1998-2019 Epic Games, Inc. All Rights Reserved.
+// Copyright Epic Games, Inc. All Rights Reserved.
 /*===========================================================================
 	Generated code exported from UnrealHeaderTool.
 	DO NOT modify this manually! Edit the corresponding .h files instead!
@@ -13,7 +13,7 @@ PRAGMA_DISABLE_DEPRECATION_WARNINGS
 #endif
 #define SRANIPAL_SRanipal_Eyes_Enums_generated_h
 
-#define MyProject6_Plugins_SRanipal_Source_SRanipal_Public_Eye_SRanipal_Eyes_Enums_h_258_GENERATED_BODY \
+#define CS425Project_Plugins_SRanipal_Source_SRanipal_Public_Eye_SRanipal_Eyes_Enums_h_258_GENERATED_BODY \
 	friend struct Z_Construct_UScriptStruct_FFocusInfo_Statics; \
 	static class UScriptStruct* StaticStruct();
 
@@ -21,7 +21,7 @@ PRAGMA_DISABLE_DEPRECATION_WARNINGS
 template<> SRANIPAL_API UScriptStruct* StaticStruct<struct FFocusInfo>();
 
 #undef CURRENT_FILE_ID
-#define CURRENT_FILE_ID MyProject6_Plugins_SRanipal_Source_SRanipal_Public_Eye_SRanipal_Eyes_Enums_h
+#define CURRENT_FILE_ID CS425Project_Plugins_SRanipal_Source_SRanipal_Public_Eye_SRanipal_Eyes_Enums_h
 
 
 #define FOREACH_ENUM_CALIBRATIONRESULT(op) \

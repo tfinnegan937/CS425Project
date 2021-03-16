@@ -1,4 +1,4 @@
-// Copyright 1998-2019 Epic Games, Inc. All Rights Reserved.
+// Copyright Epic Games, Inc. All Rights Reserved.
 /*===========================================================================
 	Generated code exported from UnrealHeaderTool.
 	DO NOT modify this manually! Edit the corresponding .h files instead!
@@ -20,8 +20,8 @@ void EmptyLinkFunctionForGeneratedCodeSRanipal_Eyes_Enums() {}
 	SRANIPAL_API UEnum* Z_Construct_UEnum_SRanipal_EyeIndex();
 	SRANIPAL_API UEnum* Z_Construct_UEnum_SRanipal_SupportedEyeVersion();
 	SRANIPAL_API UScriptStruct* Z_Construct_UScriptStruct_FFocusInfo();
-	COREUOBJECT_API UScriptStruct* Z_Construct_UScriptStruct_FVector();
 	ENGINE_API UClass* Z_Construct_UClass_AActor_NoRegister();
+	COREUOBJECT_API UScriptStruct* Z_Construct_UScriptStruct_FVector();
 // End Cross Module References
 	static UEnum* CalibrationResult_StaticEnum()
 	{
@@ -37,7 +37,7 @@ void EmptyLinkFunctionForGeneratedCodeSRanipal_Eyes_Enums() {}
 		return CalibrationResult_StaticEnum();
 	}
 	static FCompiledInDeferEnum Z_CompiledInDeferEnum_UEnum_CalibrationResult(CalibrationResult_StaticEnum, TEXT("/Script/SRanipal"), TEXT("CalibrationResult"), false, nullptr, nullptr);
-	uint32 Get_Z_Construct_UEnum_SRanipal_CalibrationResult_Hash() { return 2167502908U; }
+	uint32 Get_Z_Construct_UEnum_SRanipal_CalibrationResult_Hash() { return 2960736279U; }
 	UEnum* Z_Construct_UEnum_SRanipal_CalibrationResult()
 	{
 #if WITH_HOT_RELOAD
@@ -71,11 +71,12 @@ void EmptyLinkFunctionForGeneratedCodeSRanipal_Eyes_Enums() {}
 				"CalibrationResult",
 				"CalibrationResult",
 				Enumerators,
-				ARRAY_COUNT(Enumerators),
+				UE_ARRAY_COUNT(Enumerators),
 				RF_Public|RF_Transient|RF_MarkAsNative,
+				EEnumFlags::None,
 				UE4CodeGen_Private::EDynamicType::NotDynamic,
 				(uint8)UEnum::ECppForm::EnumClass,
-				METADATA_PARAMS(Enum_MetaDataParams, ARRAY_COUNT(Enum_MetaDataParams))
+				METADATA_PARAMS(Enum_MetaDataParams, UE_ARRAY_COUNT(Enum_MetaDataParams))
 			};
 			UE4CodeGen_Private::ConstructUEnum(ReturnEnum, EnumParams);
 		}
@@ -95,7 +96,7 @@ void EmptyLinkFunctionForGeneratedCodeSRanipal_Eyes_Enums() {}
 		return EyeShape_StaticEnum();
 	}
 	static FCompiledInDeferEnum Z_CompiledInDeferEnum_UEnum_EyeShape(EyeShape_StaticEnum, TEXT("/Script/SRanipal"), TEXT("EyeShape"), false, nullptr, nullptr);
-	uint32 Get_Z_Construct_UEnum_SRanipal_EyeShape_Hash() { return 1477607842U; }
+	uint32 Get_Z_Construct_UEnum_SRanipal_EyeShape_Hash() { return 3203876084U; }
 	UEnum* Z_Construct_UEnum_SRanipal_EyeShape()
 	{
 #if WITH_HOT_RELOAD
@@ -173,11 +174,12 @@ void EmptyLinkFunctionForGeneratedCodeSRanipal_Eyes_Enums() {}
 				"EyeShape",
 				"EyeShape",
 				Enumerators,
-				ARRAY_COUNT(Enumerators),
+				UE_ARRAY_COUNT(Enumerators),
 				RF_Public|RF_Transient|RF_MarkAsNative,
+				EEnumFlags::None,
 				UE4CodeGen_Private::EDynamicType::NotDynamic,
 				(uint8)UEnum::ECppForm::EnumClass,
-				METADATA_PARAMS(Enum_MetaDataParams, ARRAY_COUNT(Enum_MetaDataParams))
+				METADATA_PARAMS(Enum_MetaDataParams, UE_ARRAY_COUNT(Enum_MetaDataParams))
 			};
 			UE4CodeGen_Private::ConstructUEnum(ReturnEnum, EnumParams);
 		}
@@ -197,7 +199,7 @@ void EmptyLinkFunctionForGeneratedCodeSRanipal_Eyes_Enums() {}
 		return GazeIndex_StaticEnum();
 	}
 	static FCompiledInDeferEnum Z_CompiledInDeferEnum_UEnum_GazeIndex(GazeIndex_StaticEnum, TEXT("/Script/SRanipal"), TEXT("GazeIndex"), false, nullptr, nullptr);
-	uint32 Get_Z_Construct_UEnum_SRanipal_GazeIndex_Hash() { return 2365418136U; }
+	uint32 Get_Z_Construct_UEnum_SRanipal_GazeIndex_Hash() { return 644052813U; }
 	UEnum* Z_Construct_UEnum_SRanipal_GazeIndex()
 	{
 #if WITH_HOT_RELOAD
@@ -233,11 +235,12 @@ void EmptyLinkFunctionForGeneratedCodeSRanipal_Eyes_Enums() {}
 				"GazeIndex",
 				"GazeIndex",
 				Enumerators,
-				ARRAY_COUNT(Enumerators),
+				UE_ARRAY_COUNT(Enumerators),
 				RF_Public|RF_Transient|RF_MarkAsNative,
+				EEnumFlags::None,
 				UE4CodeGen_Private::EDynamicType::NotDynamic,
 				(uint8)UEnum::ECppForm::EnumClass,
-				METADATA_PARAMS(Enum_MetaDataParams, ARRAY_COUNT(Enum_MetaDataParams))
+				METADATA_PARAMS(Enum_MetaDataParams, UE_ARRAY_COUNT(Enum_MetaDataParams))
 			};
 			UE4CodeGen_Private::ConstructUEnum(ReturnEnum, EnumParams);
 		}
@@ -257,7 +260,7 @@ void EmptyLinkFunctionForGeneratedCodeSRanipal_Eyes_Enums() {}
 		return EyeIndex_StaticEnum();
 	}
 	static FCompiledInDeferEnum Z_CompiledInDeferEnum_UEnum_EyeIndex(EyeIndex_StaticEnum, TEXT("/Script/SRanipal"), TEXT("EyeIndex"), false, nullptr, nullptr);
-	uint32 Get_Z_Construct_UEnum_SRanipal_EyeIndex_Hash() { return 1118416631U; }
+	uint32 Get_Z_Construct_UEnum_SRanipal_EyeIndex_Hash() { return 1876044287U; }
 	UEnum* Z_Construct_UEnum_SRanipal_EyeIndex()
 	{
 #if WITH_HOT_RELOAD
@@ -293,11 +296,12 @@ void EmptyLinkFunctionForGeneratedCodeSRanipal_Eyes_Enums() {}
 				"EyeIndex",
 				"EyeIndex",
 				Enumerators,
-				ARRAY_COUNT(Enumerators),
+				UE_ARRAY_COUNT(Enumerators),
 				RF_Public|RF_Transient|RF_MarkAsNative,
+				EEnumFlags::None,
 				UE4CodeGen_Private::EDynamicType::NotDynamic,
 				(uint8)UEnum::ECppForm::EnumClass,
-				METADATA_PARAMS(Enum_MetaDataParams, ARRAY_COUNT(Enum_MetaDataParams))
+				METADATA_PARAMS(Enum_MetaDataParams, UE_ARRAY_COUNT(Enum_MetaDataParams))
 			};
 			UE4CodeGen_Private::ConstructUEnum(ReturnEnum, EnumParams);
 		}
@@ -317,7 +321,7 @@ void EmptyLinkFunctionForGeneratedCodeSRanipal_Eyes_Enums() {}
 		return SupportedEyeVersion_StaticEnum();
 	}
 	static FCompiledInDeferEnum Z_CompiledInDeferEnum_UEnum_SupportedEyeVersion(SupportedEyeVersion_StaticEnum, TEXT("/Script/SRanipal"), TEXT("SupportedEyeVersion"), false, nullptr, nullptr);
-	uint32 Get_Z_Construct_UEnum_SRanipal_SupportedEyeVersion_Hash() { return 1323650856U; }
+	uint32 Get_Z_Construct_UEnum_SRanipal_SupportedEyeVersion_Hash() { return 2395102491U; }
 	UEnum* Z_Construct_UEnum_SRanipal_SupportedEyeVersion()
 	{
 #if WITH_HOT_RELOAD
@@ -346,11 +350,12 @@ void EmptyLinkFunctionForGeneratedCodeSRanipal_Eyes_Enums() {}
 				"SupportedEyeVersion",
 				"SupportedEyeVersion",
 				Enumerators,
-				ARRAY_COUNT(Enumerators),
+				UE_ARRAY_COUNT(Enumerators),
 				RF_Public|RF_Transient|RF_MarkAsNative,
+				EEnumFlags::None,
 				UE4CodeGen_Private::EDynamicType::NotDynamic,
 				(uint8)UEnum::ECppForm::EnumClass,
-				METADATA_PARAMS(Enum_MetaDataParams, ARRAY_COUNT(Enum_MetaDataParams))
+				METADATA_PARAMS(Enum_MetaDataParams, UE_ARRAY_COUNT(Enum_MetaDataParams))
 			};
 			UE4CodeGen_Private::ConstructUEnum(ReturnEnum, EnumParams);
 		}
@@ -385,21 +390,21 @@ static struct FScriptStruct_SRanipal_StaticRegisterNativesFFocusInfo
 #endif
 		static void* NewStructOps();
 #if WITH_METADATA
-		static const UE4CodeGen_Private::FMetaDataPairParam NewProp_distance_MetaData[];
+		static const UE4CodeGen_Private::FMetaDataPairParam NewProp_actor_MetaData[];
 #endif
-		static const UE4CodeGen_Private::FFloatPropertyParams NewProp_distance;
-#if WITH_METADATA
-		static const UE4CodeGen_Private::FMetaDataPairParam NewProp_normal_MetaData[];
-#endif
-		static const UE4CodeGen_Private::FStructPropertyParams NewProp_normal;
+		static const UE4CodeGen_Private::FWeakObjectPropertyParams NewProp_actor;
 #if WITH_METADATA
 		static const UE4CodeGen_Private::FMetaDataPairParam NewProp_point_MetaData[];
 #endif
 		static const UE4CodeGen_Private::FStructPropertyParams NewProp_point;
 #if WITH_METADATA
-		static const UE4CodeGen_Private::FMetaDataPairParam NewProp_actor_MetaData[];
+		static const UE4CodeGen_Private::FMetaDataPairParam NewProp_normal_MetaData[];
 #endif
-		static const UE4CodeGen_Private::FWeakObjectPropertyParams NewProp_actor;
+		static const UE4CodeGen_Private::FStructPropertyParams NewProp_normal;
+#if WITH_METADATA
+		static const UE4CodeGen_Private::FMetaDataPairParam NewProp_distance_MetaData[];
+#endif
+		static const UE4CodeGen_Private::FFloatPropertyParams NewProp_distance;
 		static const UE4CodeGen_Private::FPropertyParamsBase* const PropPointers[];
 		static const UE4CodeGen_Private::FStructParams ReturnStructParams;
 	};
@@ -416,23 +421,14 @@ static struct FScriptStruct_SRanipal_StaticRegisterNativesFFocusInfo
 		return (UScriptStruct::ICppStructOps*)new UScriptStruct::TCppStructOps<FFocusInfo>();
 	}
 #if WITH_METADATA
-	const UE4CodeGen_Private::FMetaDataPairParam Z_Construct_UScriptStruct_FFocusInfo_Statics::NewProp_distance_MetaData[] = {
+	const UE4CodeGen_Private::FMetaDataPairParam Z_Construct_UScriptStruct_FFocusInfo_Statics::NewProp_actor_MetaData[] = {
 		{ "Category", "SRanipal|Struct" },
-		{ "Comment", "/** The hit distance from gazeOrigin to gazeTarget */" },
+		{ "Comment", "/** Pointer to the actor which been looking at*/" },
 		{ "ModuleRelativePath", "Public/Eye/SRanipal_Eyes_Enums.h" },
-		{ "ToolTip", "The hit distance from gazeOrigin to gazeTarget" },
+		{ "ToolTip", "Pointer to the actor which been looking at" },
 	};
 #endif
-	const UE4CodeGen_Private::FFloatPropertyParams Z_Construct_UScriptStruct_FFocusInfo_Statics::NewProp_distance = { "distance", nullptr, (EPropertyFlags)0x0010000000000004, UE4CodeGen_Private::EPropertyGenFlags::Float, RF_Public|RF_Transient|RF_MarkAsNative, 1, STRUCT_OFFSET(FFocusInfo, distance), METADATA_PARAMS(Z_Construct_UScriptStruct_FFocusInfo_Statics::NewProp_distance_MetaData, ARRAY_COUNT(Z_Construct_UScriptStruct_FFocusInfo_Statics::NewProp_distance_MetaData)) };
-#if WITH_METADATA
-	const UE4CodeGen_Private::FMetaDataPairParam Z_Construct_UScriptStruct_FFocusInfo_Statics::NewProp_normal_MetaData[] = {
-		{ "Category", "SRanipal|Struct" },
-		{ "Comment", "/** The hit normal in world space. */" },
-		{ "ModuleRelativePath", "Public/Eye/SRanipal_Eyes_Enums.h" },
-		{ "ToolTip", "The hit normal in world space." },
-	};
-#endif
-	const UE4CodeGen_Private::FStructPropertyParams Z_Construct_UScriptStruct_FFocusInfo_Statics::NewProp_normal = { "normal", nullptr, (EPropertyFlags)0x0010000000000004, UE4CodeGen_Private::EPropertyGenFlags::Struct, RF_Public|RF_Transient|RF_MarkAsNative, 1, STRUCT_OFFSET(FFocusInfo, normal), Z_Construct_UScriptStruct_FVector, METADATA_PARAMS(Z_Construct_UScriptStruct_FFocusInfo_Statics::NewProp_normal_MetaData, ARRAY_COUNT(Z_Construct_UScriptStruct_FFocusInfo_Statics::NewProp_normal_MetaData)) };
+	const UE4CodeGen_Private::FWeakObjectPropertyParams Z_Construct_UScriptStruct_FFocusInfo_Statics::NewProp_actor = { "actor", nullptr, (EPropertyFlags)0x0014000000000004, UE4CodeGen_Private::EPropertyGenFlags::WeakObject, RF_Public|RF_Transient|RF_MarkAsNative, 1, STRUCT_OFFSET(FFocusInfo, actor), Z_Construct_UClass_AActor_NoRegister, METADATA_PARAMS(Z_Construct_UScriptStruct_FFocusInfo_Statics::NewProp_actor_MetaData, UE_ARRAY_COUNT(Z_Construct_UScriptStruct_FFocusInfo_Statics::NewProp_actor_MetaData)) };
 #if WITH_METADATA
 	const UE4CodeGen_Private::FMetaDataPairParam Z_Construct_UScriptStruct_FFocusInfo_Statics::NewProp_point_MetaData[] = {
 		{ "Category", "SRanipal|Struct" },
@@ -441,21 +437,30 @@ static struct FScriptStruct_SRanipal_StaticRegisterNativesFFocusInfo
 		{ "ToolTip", "The hit position in world space." },
 	};
 #endif
-	const UE4CodeGen_Private::FStructPropertyParams Z_Construct_UScriptStruct_FFocusInfo_Statics::NewProp_point = { "point", nullptr, (EPropertyFlags)0x0010000000000004, UE4CodeGen_Private::EPropertyGenFlags::Struct, RF_Public|RF_Transient|RF_MarkAsNative, 1, STRUCT_OFFSET(FFocusInfo, point), Z_Construct_UScriptStruct_FVector, METADATA_PARAMS(Z_Construct_UScriptStruct_FFocusInfo_Statics::NewProp_point_MetaData, ARRAY_COUNT(Z_Construct_UScriptStruct_FFocusInfo_Statics::NewProp_point_MetaData)) };
+	const UE4CodeGen_Private::FStructPropertyParams Z_Construct_UScriptStruct_FFocusInfo_Statics::NewProp_point = { "point", nullptr, (EPropertyFlags)0x0010000000000004, UE4CodeGen_Private::EPropertyGenFlags::Struct, RF_Public|RF_Transient|RF_MarkAsNative, 1, STRUCT_OFFSET(FFocusInfo, point), Z_Construct_UScriptStruct_FVector, METADATA_PARAMS(Z_Construct_UScriptStruct_FFocusInfo_Statics::NewProp_point_MetaData, UE_ARRAY_COUNT(Z_Construct_UScriptStruct_FFocusInfo_Statics::NewProp_point_MetaData)) };
 #if WITH_METADATA
-	const UE4CodeGen_Private::FMetaDataPairParam Z_Construct_UScriptStruct_FFocusInfo_Statics::NewProp_actor_MetaData[] = {
+	const UE4CodeGen_Private::FMetaDataPairParam Z_Construct_UScriptStruct_FFocusInfo_Statics::NewProp_normal_MetaData[] = {
 		{ "Category", "SRanipal|Struct" },
-		{ "Comment", "/** Pointer to the actor which been looking at*/" },
+		{ "Comment", "/** The hit normal in world space. */" },
 		{ "ModuleRelativePath", "Public/Eye/SRanipal_Eyes_Enums.h" },
-		{ "ToolTip", "Pointer to the actor which been looking at" },
+		{ "ToolTip", "The hit normal in world space." },
 	};
 #endif
-	const UE4CodeGen_Private::FWeakObjectPropertyParams Z_Construct_UScriptStruct_FFocusInfo_Statics::NewProp_actor = { "actor", nullptr, (EPropertyFlags)0x0014000000000004, UE4CodeGen_Private::EPropertyGenFlags::WeakObject, RF_Public|RF_Transient|RF_MarkAsNative, 1, STRUCT_OFFSET(FFocusInfo, actor), Z_Construct_UClass_AActor_NoRegister, METADATA_PARAMS(Z_Construct_UScriptStruct_FFocusInfo_Statics::NewProp_actor_MetaData, ARRAY_COUNT(Z_Construct_UScriptStruct_FFocusInfo_Statics::NewProp_actor_MetaData)) };
+	const UE4CodeGen_Private::FStructPropertyParams Z_Construct_UScriptStruct_FFocusInfo_Statics::NewProp_normal = { "normal", nullptr, (EPropertyFlags)0x0010000000000004, UE4CodeGen_Private::EPropertyGenFlags::Struct, RF_Public|RF_Transient|RF_MarkAsNative, 1, STRUCT_OFFSET(FFocusInfo, normal), Z_Construct_UScriptStruct_FVector, METADATA_PARAMS(Z_Construct_UScriptStruct_FFocusInfo_Statics::NewProp_normal_MetaData, UE_ARRAY_COUNT(Z_Construct_UScriptStruct_FFocusInfo_Statics::NewProp_normal_MetaData)) };
+#if WITH_METADATA
+	const UE4CodeGen_Private::FMetaDataPairParam Z_Construct_UScriptStruct_FFocusInfo_Statics::NewProp_distance_MetaData[] = {
+		{ "Category", "SRanipal|Struct" },
+		{ "Comment", "/** The hit distance from gazeOrigin to gazeTarget */" },
+		{ "ModuleRelativePath", "Public/Eye/SRanipal_Eyes_Enums.h" },
+		{ "ToolTip", "The hit distance from gazeOrigin to gazeTarget" },
+	};
+#endif
+	const UE4CodeGen_Private::FFloatPropertyParams Z_Construct_UScriptStruct_FFocusInfo_Statics::NewProp_distance = { "distance", nullptr, (EPropertyFlags)0x0010000000000004, UE4CodeGen_Private::EPropertyGenFlags::Float, RF_Public|RF_Transient|RF_MarkAsNative, 1, STRUCT_OFFSET(FFocusInfo, distance), METADATA_PARAMS(Z_Construct_UScriptStruct_FFocusInfo_Statics::NewProp_distance_MetaData, UE_ARRAY_COUNT(Z_Construct_UScriptStruct_FFocusInfo_Statics::NewProp_distance_MetaData)) };
 	const UE4CodeGen_Private::FPropertyParamsBase* const Z_Construct_UScriptStruct_FFocusInfo_Statics::PropPointers[] = {
-		(const UE4CodeGen_Private::FPropertyParamsBase*)&Z_Construct_UScriptStruct_FFocusInfo_Statics::NewProp_distance,
-		(const UE4CodeGen_Private::FPropertyParamsBase*)&Z_Construct_UScriptStruct_FFocusInfo_Statics::NewProp_normal,
-		(const UE4CodeGen_Private::FPropertyParamsBase*)&Z_Construct_UScriptStruct_FFocusInfo_Statics::NewProp_point,
 		(const UE4CodeGen_Private::FPropertyParamsBase*)&Z_Construct_UScriptStruct_FFocusInfo_Statics::NewProp_actor,
+		(const UE4CodeGen_Private::FPropertyParamsBase*)&Z_Construct_UScriptStruct_FFocusInfo_Statics::NewProp_point,
+		(const UE4CodeGen_Private::FPropertyParamsBase*)&Z_Construct_UScriptStruct_FFocusInfo_Statics::NewProp_normal,
+		(const UE4CodeGen_Private::FPropertyParamsBase*)&Z_Construct_UScriptStruct_FFocusInfo_Statics::NewProp_distance,
 	};
 	const UE4CodeGen_Private::FStructParams Z_Construct_UScriptStruct_FFocusInfo_Statics::ReturnStructParams = {
 		(UObject* (*)())Z_Construct_UPackage__Script_SRanipal,
@@ -465,10 +470,10 @@ static struct FScriptStruct_SRanipal_StaticRegisterNativesFFocusInfo
 		sizeof(FFocusInfo),
 		alignof(FFocusInfo),
 		Z_Construct_UScriptStruct_FFocusInfo_Statics::PropPointers,
-		ARRAY_COUNT(Z_Construct_UScriptStruct_FFocusInfo_Statics::PropPointers),
+		UE_ARRAY_COUNT(Z_Construct_UScriptStruct_FFocusInfo_Statics::PropPointers),
 		RF_Public|RF_Transient|RF_MarkAsNative,
 		EStructFlags(0x00000201),
-		METADATA_PARAMS(Z_Construct_UScriptStruct_FFocusInfo_Statics::Struct_MetaDataParams, ARRAY_COUNT(Z_Construct_UScriptStruct_FFocusInfo_Statics::Struct_MetaDataParams))
+		METADATA_PARAMS(Z_Construct_UScriptStruct_FFocusInfo_Statics::Struct_MetaDataParams, UE_ARRAY_COUNT(Z_Construct_UScriptStruct_FFocusInfo_Statics::Struct_MetaDataParams))
 	};
 	UScriptStruct* Z_Construct_UScriptStruct_FFocusInfo()
 	{
@@ -485,7 +490,7 @@ static struct FScriptStruct_SRanipal_StaticRegisterNativesFFocusInfo
 		}
 		return ReturnStruct;
 	}
-	uint32 Get_Z_Construct_UScriptStruct_FFocusInfo_Hash() { return 1471175651U; }
+	uint32 Get_Z_Construct_UScriptStruct_FFocusInfo_Hash() { return 3645362952U; }
 PRAGMA_ENABLE_DEPRECATION_WARNINGS
 #ifdef _MSC_VER
 #pragma warning (pop)

@@ -1,4 +1,4 @@
-// Copyright 1998-2019 Epic Games, Inc. All Rights Reserved.
+// Copyright Epic Games, Inc. All Rights Reserved.
 /*===========================================================================
 	Generated code exported from UnrealHeaderTool.
 	DO NOT modify this manually! Edit the corresponding .h files instead!
@@ -31,7 +31,7 @@ void EmptyLinkFunctionForGeneratedCodeSRanipalLip_Core() {}
 		return LipShapeEnum_v2_StaticEnum();
 	}
 	static FCompiledInDeferEnum Z_CompiledInDeferEnum_UEnum_LipShapeEnum_v2(LipShapeEnum_v2_StaticEnum, TEXT("/Script/SRanipalLip"), TEXT("LipShapeEnum_v2"), false, nullptr, nullptr);
-	uint32 Get_Z_Construct_UEnum_SRanipalLip_LipShapeEnum_v2_Hash() { return 586014913U; }
+	uint32 Get_Z_Construct_UEnum_SRanipalLip_LipShapeEnum_v2_Hash() { return 2390968326U; }
 	UEnum* Z_Construct_UEnum_SRanipalLip_LipShapeEnum_v2()
 	{
 #if WITH_HOT_RELOAD
@@ -175,11 +175,12 @@ void EmptyLinkFunctionForGeneratedCodeSRanipalLip_Core() {}
 				"LipShapeEnum_v2",
 				"LipShapeEnum_v2",
 				Enumerators,
-				ARRAY_COUNT(Enumerators),
+				UE_ARRAY_COUNT(Enumerators),
 				RF_Public|RF_Transient|RF_MarkAsNative,
+				EEnumFlags::None,
 				UE4CodeGen_Private::EDynamicType::NotDynamic,
 				(uint8)UEnum::ECppForm::EnumClass,
-				METADATA_PARAMS(Enum_MetaDataParams, ARRAY_COUNT(Enum_MetaDataParams))
+				METADATA_PARAMS(Enum_MetaDataParams, UE_ARRAY_COUNT(Enum_MetaDataParams))
 			};
 			UE4CodeGen_Private::ConstructUEnum(ReturnEnum, EnumParams);
 		}
@@ -199,7 +200,7 @@ void EmptyLinkFunctionForGeneratedCodeSRanipalLip_Core() {}
 		return LipShapeEnum_StaticEnum();
 	}
 	static FCompiledInDeferEnum Z_CompiledInDeferEnum_UEnum_LipShapeEnum(LipShapeEnum_StaticEnum, TEXT("/Script/SRanipalLip"), TEXT("LipShapeEnum"), false, nullptr, nullptr);
-	uint32 Get_Z_Construct_UEnum_SRanipalLip_LipShapeEnum_Hash() { return 2862971871U; }
+	uint32 Get_Z_Construct_UEnum_SRanipalLip_LipShapeEnum_Hash() { return 1419285602U; }
 	UEnum* Z_Construct_UEnum_SRanipalLip_LipShapeEnum()
 	{
 #if WITH_HOT_RELOAD
@@ -310,11 +311,12 @@ void EmptyLinkFunctionForGeneratedCodeSRanipalLip_Core() {}
 				"LipShapeEnum",
 				"LipShapeEnum",
 				Enumerators,
-				ARRAY_COUNT(Enumerators),
+				UE_ARRAY_COUNT(Enumerators),
 				RF_Public|RF_Transient|RF_MarkAsNative,
+				EEnumFlags::None,
 				UE4CodeGen_Private::EDynamicType::NotDynamic,
 				(uint8)UEnum::ECppForm::EnumClass,
-				METADATA_PARAMS(Enum_MetaDataParams, ARRAY_COUNT(Enum_MetaDataParams))
+				METADATA_PARAMS(Enum_MetaDataParams, UE_ARRAY_COUNT(Enum_MetaDataParams))
 			};
 			UE4CodeGen_Private::ConstructUEnum(ReturnEnum, EnumParams);
 		}

@@ -1,4 +1,4 @@
-// Copyright 1998-2019 Epic Games, Inc. All Rights Reserved.
+// Copyright Epic Games, Inc. All Rights Reserved.
 /*===========================================================================
 	Generated code exported from UnrealHeaderTool.
 	DO NOT modify this manually! Edit the corresponding .h files instead!
@@ -13,9 +13,10 @@ PRAGMA_DISABLE_DEPRECATION_WARNINGS
 #endif
 #define SRANIPAL_SRanipalSettings_generated_h
 
-#define MyProject6_Plugins_SRanipal_Source_SRanipal_Private_SRanipalSettings_h_17_RPC_WRAPPERS
-#define MyProject6_Plugins_SRanipal_Source_SRanipal_Private_SRanipalSettings_h_17_RPC_WRAPPERS_NO_PURE_DECLS
-#define MyProject6_Plugins_SRanipal_Source_SRanipal_Private_SRanipalSettings_h_17_INCLASS_NO_PURE_DECLS \
+#define CS425Project_Plugins_SRanipal_Source_SRanipal_Private_SRanipalSettings_h_17_SPARSE_DATA
+#define CS425Project_Plugins_SRanipal_Source_SRanipal_Private_SRanipalSettings_h_17_RPC_WRAPPERS
+#define CS425Project_Plugins_SRanipal_Source_SRanipal_Private_SRanipalSettings_h_17_RPC_WRAPPERS_NO_PURE_DECLS
+#define CS425Project_Plugins_SRanipal_Source_SRanipal_Private_SRanipalSettings_h_17_INCLASS_NO_PURE_DECLS \
 private: \
 	static void StaticRegisterNativesUSRanipalSettings(); \
 	friend struct Z_Construct_UClass_USRanipalSettings_Statics; \
@@ -26,7 +27,7 @@ public: \
 
 
 
-#define MyProject6_Plugins_SRanipal_Source_SRanipal_Private_SRanipalSettings_h_17_INCLASS \
+#define CS425Project_Plugins_SRanipal_Source_SRanipal_Private_SRanipalSettings_h_17_INCLASS \
 private: \
 	static void StaticRegisterNativesUSRanipalSettings(); \
 	friend struct Z_Construct_UClass_USRanipalSettings_Statics; \
@@ -37,7 +38,7 @@ public: \
 
 
 
-#define MyProject6_Plugins_SRanipal_Source_SRanipal_Private_SRanipalSettings_h_17_STANDARD_CONSTRUCTORS \
+#define CS425Project_Plugins_SRanipal_Source_SRanipal_Private_SRanipalSettings_h_17_STANDARD_CONSTRUCTORS \
 	/** Standard constructor, called after all reflected properties have been initialized */ \
 	NO_API USRanipalSettings(const FObjectInitializer& ObjectInitializer); \
 	DEFINE_DEFAULT_OBJECT_INITIALIZER_CONSTRUCTOR_CALL(USRanipalSettings) \
@@ -50,7 +51,7 @@ private: \
 public:
 
 
-#define MyProject6_Plugins_SRanipal_Source_SRanipal_Private_SRanipalSettings_h_17_ENHANCED_CONSTRUCTORS \
+#define CS425Project_Plugins_SRanipal_Source_SRanipal_Private_SRanipalSettings_h_17_ENHANCED_CONSTRUCTORS \
 private: \
 	/** Private move- and copy-constructors, should never be used */ \
 	NO_API USRanipalSettings(USRanipalSettings&&); \
@@ -61,26 +62,28 @@ DEFINE_VTABLE_PTR_HELPER_CTOR_CALLER(USRanipalSettings); \
 	DEFINE_DEFAULT_CONSTRUCTOR_CALL(USRanipalSettings)
 
 
-#define MyProject6_Plugins_SRanipal_Source_SRanipal_Private_SRanipalSettings_h_17_PRIVATE_PROPERTY_OFFSET
-#define MyProject6_Plugins_SRanipal_Source_SRanipal_Private_SRanipalSettings_h_14_PROLOG
-#define MyProject6_Plugins_SRanipal_Source_SRanipal_Private_SRanipalSettings_h_17_GENERATED_BODY_LEGACY \
+#define CS425Project_Plugins_SRanipal_Source_SRanipal_Private_SRanipalSettings_h_17_PRIVATE_PROPERTY_OFFSET
+#define CS425Project_Plugins_SRanipal_Source_SRanipal_Private_SRanipalSettings_h_14_PROLOG
+#define CS425Project_Plugins_SRanipal_Source_SRanipal_Private_SRanipalSettings_h_17_GENERATED_BODY_LEGACY \
 PRAGMA_DISABLE_DEPRECATION_WARNINGS \
 public: \
-	MyProject6_Plugins_SRanipal_Source_SRanipal_Private_SRanipalSettings_h_17_PRIVATE_PROPERTY_OFFSET \
-	MyProject6_Plugins_SRanipal_Source_SRanipal_Private_SRanipalSettings_h_17_RPC_WRAPPERS \
-	MyProject6_Plugins_SRanipal_Source_SRanipal_Private_SRanipalSettings_h_17_INCLASS \
-	MyProject6_Plugins_SRanipal_Source_SRanipal_Private_SRanipalSettings_h_17_STANDARD_CONSTRUCTORS \
+	CS425Project_Plugins_SRanipal_Source_SRanipal_Private_SRanipalSettings_h_17_PRIVATE_PROPERTY_OFFSET \
+	CS425Project_Plugins_SRanipal_Source_SRanipal_Private_SRanipalSettings_h_17_SPARSE_DATA \
+	CS425Project_Plugins_SRanipal_Source_SRanipal_Private_SRanipalSettings_h_17_RPC_WRAPPERS \
+	CS425Project_Plugins_SRanipal_Source_SRanipal_Private_SRanipalSettings_h_17_INCLASS \
+	CS425Project_Plugins_SRanipal_Source_SRanipal_Private_SRanipalSettings_h_17_STANDARD_CONSTRUCTORS \
 public: \
 PRAGMA_ENABLE_DEPRECATION_WARNINGS
 
 
-#define MyProject6_Plugins_SRanipal_Source_SRanipal_Private_SRanipalSettings_h_17_GENERATED_BODY \
+#define CS425Project_Plugins_SRanipal_Source_SRanipal_Private_SRanipalSettings_h_17_GENERATED_BODY \
 PRAGMA_DISABLE_DEPRECATION_WARNINGS \
 public: \
-	MyProject6_Plugins_SRanipal_Source_SRanipal_Private_SRanipalSettings_h_17_PRIVATE_PROPERTY_OFFSET \
-	MyProject6_Plugins_SRanipal_Source_SRanipal_Private_SRanipalSettings_h_17_RPC_WRAPPERS_NO_PURE_DECLS \
-	MyProject6_Plugins_SRanipal_Source_SRanipal_Private_SRanipalSettings_h_17_INCLASS_NO_PURE_DECLS \
-	MyProject6_Plugins_SRanipal_Source_SRanipal_Private_SRanipalSettings_h_17_ENHANCED_CONSTRUCTORS \
+	CS425Project_Plugins_SRanipal_Source_SRanipal_Private_SRanipalSettings_h_17_PRIVATE_PROPERTY_OFFSET \
+	CS425Project_Plugins_SRanipal_Source_SRanipal_Private_SRanipalSettings_h_17_SPARSE_DATA \
+	CS425Project_Plugins_SRanipal_Source_SRanipal_Private_SRanipalSettings_h_17_RPC_WRAPPERS_NO_PURE_DECLS \
+	CS425Project_Plugins_SRanipal_Source_SRanipal_Private_SRanipalSettings_h_17_INCLASS_NO_PURE_DECLS \
+	CS425Project_Plugins_SRanipal_Source_SRanipal_Private_SRanipalSettings_h_17_ENHANCED_CONSTRUCTORS \
 private: \
 PRAGMA_ENABLE_DEPRECATION_WARNINGS
 
@@ -88,7 +91,7 @@ PRAGMA_ENABLE_DEPRECATION_WARNINGS
 template<> SRANIPAL_API UClass* StaticClass<class USRanipalSettings>();
 
 #undef CURRENT_FILE_ID
-#define CURRENT_FILE_ID MyProject6_Plugins_SRanipal_Source_SRanipal_Private_SRanipalSettings_h
+#define CURRENT_FILE_ID CS425Project_Plugins_SRanipal_Source_SRanipal_Private_SRanipalSettings_h
 
 
 PRAGMA_ENABLE_DEPRECATION_WARNINGS

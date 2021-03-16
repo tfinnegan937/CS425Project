@@ -1,4 +1,4 @@
-// Copyright 1998-2019 Epic Games, Inc. All Rights Reserved.
+// Copyright Epic Games, Inc. All Rights Reserved.
 /*===========================================================================
 	Generated code exported from UnrealHeaderTool.
 	DO NOT modify this manually! Edit the corresponding .h files instead!
@@ -14,7 +14,7 @@ PRAGMA_DISABLE_DEPRECATION_WARNINGS
 #define SRANIPALLIP_SRanipalLip_Core_generated_h
 
 #undef CURRENT_FILE_ID
-#define CURRENT_FILE_ID MyProject6_Plugins_SRanipal_Source_SRanipalLip_Public_SRanipalLip_Core_h
+#define CURRENT_FILE_ID CS425Project_Plugins_SRanipal_Source_SRanipalLip_Public_SRanipalLip_Core_h
 
 
 #define FOREACH_ENUM_LIPSHAPEENUM_V2(op) \

@@ -1,4 +1,4 @@
-// Copyright 1998-2019 Epic Games, Inc. All Rights Reserved.
+// Copyright Epic Games, Inc. All Rights Reserved.
 /*===========================================================================
 	Generated code exported from UnrealHeaderTool.
 	DO NOT modify this manually! Edit the corresponding .h files instead!
@@ -17,9 +17,9 @@ void EmptyLinkFunctionForGeneratedCodeSRanipal_AvatarLipSample() {}
 	SRANIPALLIP_API UClass* Z_Construct_UClass_ASRanipal_AvatarLipSample();
 	ENGINE_API UClass* Z_Construct_UClass_AActor();
 	UPackage* Z_Construct_UPackage__Script_SRanipalLip();
-	ENGINE_API UClass* Z_Construct_UClass_USkeletalMeshComponent_NoRegister();
-	ENGINE_API UClass* Z_Construct_UClass_USceneComponent_NoRegister();
 	SRANIPAL_API UEnum* Z_Construct_UEnum_SRanipal_SupportedLipVersion();
+	ENGINE_API UClass* Z_Construct_UClass_USceneComponent_NoRegister();
+	ENGINE_API UClass* Z_Construct_UClass_USkeletalMeshComponent_NoRegister();
 // End Cross Module References
 	void ASRanipal_AvatarLipSample::StaticRegisterNativesASRanipal_AvatarLipSample()
 	{
@@ -34,27 +34,27 @@ void EmptyLinkFunctionForGeneratedCodeSRanipal_AvatarLipSample() {}
 #if WITH_METADATA
 		static const UE4CodeGen_Private::FMetaDataPairParam Class_MetaDataParams[];
 #endif
+		static const UE4CodeGen_Private::FBytePropertyParams NewProp_LipVersion_Underlying;
 #if WITH_METADATA
-		static const UE4CodeGen_Private::FMetaDataPairParam NewProp_EyeRight_MetaData[];
+		static const UE4CodeGen_Private::FMetaDataPairParam NewProp_LipVersion_MetaData[];
 #endif
-		static const UE4CodeGen_Private::FObjectPropertyParams NewProp_EyeRight;
-#if WITH_METADATA
-		static const UE4CodeGen_Private::FMetaDataPairParam NewProp_EyeLeft_MetaData[];
-#endif
-		static const UE4CodeGen_Private::FObjectPropertyParams NewProp_EyeLeft;
-#if WITH_METADATA
-		static const UE4CodeGen_Private::FMetaDataPairParam NewProp_HeadModel_MetaData[];
-#endif
-		static const UE4CodeGen_Private::FObjectPropertyParams NewProp_HeadModel;
+		static const UE4CodeGen_Private::FEnumPropertyParams NewProp_LipVersion;
 #if WITH_METADATA
 		static const UE4CodeGen_Private::FMetaDataPairParam NewProp_Root_MetaData[];
 #endif
 		static const UE4CodeGen_Private::FObjectPropertyParams NewProp_Root;
 #if WITH_METADATA
-		static const UE4CodeGen_Private::FMetaDataPairParam NewProp_LipVersion_MetaData[];
+		static const UE4CodeGen_Private::FMetaDataPairParam NewProp_HeadModel_MetaData[];
 #endif
-		static const UE4CodeGen_Private::FEnumPropertyParams NewProp_LipVersion;
-		static const UE4CodeGen_Private::FBytePropertyParams NewProp_LipVersion_Underlying;
+		static const UE4CodeGen_Private::FObjectPropertyParams NewProp_HeadModel;
+#if WITH_METADATA
+		static const UE4CodeGen_Private::FMetaDataPairParam NewProp_EyeLeft_MetaData[];
+#endif
+		static const UE4CodeGen_Private::FObjectPropertyParams NewProp_EyeLeft;
+#if WITH_METADATA
+		static const UE4CodeGen_Private::FMetaDataPairParam NewProp_EyeRight_MetaData[];
+#endif
+		static const UE4CodeGen_Private::FObjectPropertyParams NewProp_EyeRight;
 		static const UE4CodeGen_Private::FPropertyParamsBase* const PropPointers[];
 		static const FCppClassTypeInfoStatic StaticCppClassTypeInfo;
 		static const UE4CodeGen_Private::FClassParams ClassParams;
@@ -71,32 +71,16 @@ void EmptyLinkFunctionForGeneratedCodeSRanipal_AvatarLipSample() {}
 		{ "ToolTip", "This is the sample actor to make an avatar with skeletal mesh.\nIn this sample, demonstrate how to use SRanipal's Lip functions to achieve face expression animate." },
 	};
 #endif
+	const UE4CodeGen_Private::FBytePropertyParams Z_Construct_UClass_ASRanipal_AvatarLipSample_Statics::NewProp_LipVersion_Underlying = { "UnderlyingType", nullptr, (EPropertyFlags)0x0000000000000000, UE4CodeGen_Private::EPropertyGenFlags::Byte, RF_Public|RF_Transient|RF_MarkAsNative, 1, 0, nullptr, METADATA_PARAMS(nullptr, 0) };
 #if WITH_METADATA
-	const UE4CodeGen_Private::FMetaDataPairParam Z_Construct_UClass_ASRanipal_AvatarLipSample_Statics::NewProp_EyeRight_MetaData[] = {
+	const UE4CodeGen_Private::FMetaDataPairParam Z_Construct_UClass_ASRanipal_AvatarLipSample_Statics::NewProp_LipVersion_MetaData[] = {
 		{ "Category", "SRanipal_AvatarLipSample" },
-		{ "EditInline", "true" },
+		{ "Comment", "// Declare Lip version\n" },
 		{ "ModuleRelativePath", "Public/SRanipal_AvatarLipSample.h" },
+		{ "ToolTip", "Declare Lip version" },
 	};
 #endif
-	const UE4CodeGen_Private::FObjectPropertyParams Z_Construct_UClass_ASRanipal_AvatarLipSample_Statics::NewProp_EyeRight = { "EyeRight", nullptr, (EPropertyFlags)0x0010000000080009, UE4CodeGen_Private::EPropertyGenFlags::Object, RF_Public|RF_Transient|RF_MarkAsNative, 1, STRUCT_OFFSET(ASRanipal_AvatarLipSample, EyeRight), Z_Construct_UClass_USkeletalMeshComponent_NoRegister, METADATA_PARAMS(Z_Construct_UClass_ASRanipal_AvatarLipSample_Statics::NewProp_EyeRight_MetaData, ARRAY_COUNT(Z_Construct_UClass_ASRanipal_AvatarLipSample_Statics::NewProp_EyeRight_MetaData)) };
-#if WITH_METADATA
-	const UE4CodeGen_Private::FMetaDataPairParam Z_Construct_UClass_ASRanipal_AvatarLipSample_Statics::NewProp_EyeLeft_MetaData[] = {
-		{ "Category", "SRanipal_AvatarLipSample" },
-		{ "EditInline", "true" },
-		{ "ModuleRelativePath", "Public/SRanipal_AvatarLipSample.h" },
-	};
-#endif
-	const UE4CodeGen_Private::FObjectPropertyParams Z_Construct_UClass_ASRanipal_AvatarLipSample_Statics::NewProp_EyeLeft = { "EyeLeft", nullptr, (EPropertyFlags)0x0010000000080009, UE4CodeGen_Private::EPropertyGenFlags::Object, RF_Public|RF_Transient|RF_MarkAsNative, 1, STRUCT_OFFSET(ASRanipal_AvatarLipSample, EyeLeft), Z_Construct_UClass_USkeletalMeshComponent_NoRegister, METADATA_PARAMS(Z_Construct_UClass_ASRanipal_AvatarLipSample_Statics::NewProp_EyeLeft_MetaData, ARRAY_COUNT(Z_Construct_UClass_ASRanipal_AvatarLipSample_Statics::NewProp_EyeLeft_MetaData)) };
-#if WITH_METADATA
-	const UE4CodeGen_Private::FMetaDataPairParam Z_Construct_UClass_ASRanipal_AvatarLipSample_Statics::NewProp_HeadModel_MetaData[] = {
-		{ "Category", "SRanipal_AvatarLipSample" },
-		{ "Comment", "// The mesh components.\n" },
-		{ "EditInline", "true" },
-		{ "ModuleRelativePath", "Public/SRanipal_AvatarLipSample.h" },
-		{ "ToolTip", "The mesh components." },
-	};
-#endif
-	const UE4CodeGen_Private::FObjectPropertyParams Z_Construct_UClass_ASRanipal_AvatarLipSample_Statics::NewProp_HeadModel = { "HeadModel", nullptr, (EPropertyFlags)0x0010000000080009, UE4CodeGen_Private::EPropertyGenFlags::Object, RF_Public|RF_Transient|RF_MarkAsNative, 1, STRUCT_OFFSET(ASRanipal_AvatarLipSample, HeadModel), Z_Construct_UClass_USkeletalMeshComponent_NoRegister, METADATA_PARAMS(Z_Construct_UClass_ASRanipal_AvatarLipSample_Statics::NewProp_HeadModel_MetaData, ARRAY_COUNT(Z_Construct_UClass_ASRanipal_AvatarLipSample_Statics::NewProp_HeadModel_MetaData)) };
+	const UE4CodeGen_Private::FEnumPropertyParams Z_Construct_UClass_ASRanipal_AvatarLipSample_Statics::NewProp_LipVersion = { "LipVersion", nullptr, (EPropertyFlags)0x0010000000000001, UE4CodeGen_Private::EPropertyGenFlags::Enum, RF_Public|RF_Transient|RF_MarkAsNative, 1, STRUCT_OFFSET(ASRanipal_AvatarLipSample, LipVersion), Z_Construct_UEnum_SRanipal_SupportedLipVersion, METADATA_PARAMS(Z_Construct_UClass_ASRanipal_AvatarLipSample_Statics::NewProp_LipVersion_MetaData, UE_ARRAY_COUNT(Z_Construct_UClass_ASRanipal_AvatarLipSample_Statics::NewProp_LipVersion_MetaData)) };
 #if WITH_METADATA
 	const UE4CodeGen_Private::FMetaDataPairParam Z_Construct_UClass_ASRanipal_AvatarLipSample_Statics::NewProp_Root_MetaData[] = {
 		{ "Category", "SRanipal_AvatarLipSample" },
@@ -106,42 +90,58 @@ void EmptyLinkFunctionForGeneratedCodeSRanipal_AvatarLipSample() {}
 		{ "ToolTip", "Declare your avatar component here." },
 	};
 #endif
-	const UE4CodeGen_Private::FObjectPropertyParams Z_Construct_UClass_ASRanipal_AvatarLipSample_Statics::NewProp_Root = { "Root", nullptr, (EPropertyFlags)0x0010000000080009, UE4CodeGen_Private::EPropertyGenFlags::Object, RF_Public|RF_Transient|RF_MarkAsNative, 1, STRUCT_OFFSET(ASRanipal_AvatarLipSample, Root), Z_Construct_UClass_USceneComponent_NoRegister, METADATA_PARAMS(Z_Construct_UClass_ASRanipal_AvatarLipSample_Statics::NewProp_Root_MetaData, ARRAY_COUNT(Z_Construct_UClass_ASRanipal_AvatarLipSample_Statics::NewProp_Root_MetaData)) };
+	const UE4CodeGen_Private::FObjectPropertyParams Z_Construct_UClass_ASRanipal_AvatarLipSample_Statics::NewProp_Root = { "Root", nullptr, (EPropertyFlags)0x0010000000080009, UE4CodeGen_Private::EPropertyGenFlags::Object, RF_Public|RF_Transient|RF_MarkAsNative, 1, STRUCT_OFFSET(ASRanipal_AvatarLipSample, Root), Z_Construct_UClass_USceneComponent_NoRegister, METADATA_PARAMS(Z_Construct_UClass_ASRanipal_AvatarLipSample_Statics::NewProp_Root_MetaData, UE_ARRAY_COUNT(Z_Construct_UClass_ASRanipal_AvatarLipSample_Statics::NewProp_Root_MetaData)) };
 #if WITH_METADATA
-	const UE4CodeGen_Private::FMetaDataPairParam Z_Construct_UClass_ASRanipal_AvatarLipSample_Statics::NewProp_LipVersion_MetaData[] = {
+	const UE4CodeGen_Private::FMetaDataPairParam Z_Construct_UClass_ASRanipal_AvatarLipSample_Statics::NewProp_HeadModel_MetaData[] = {
 		{ "Category", "SRanipal_AvatarLipSample" },
-		{ "Comment", "// Declare Lip version\n" },
+		{ "Comment", "// The mesh components.\n" },
+		{ "EditInline", "true" },
 		{ "ModuleRelativePath", "Public/SRanipal_AvatarLipSample.h" },
-		{ "ToolTip", "Declare Lip version" },
+		{ "ToolTip", "The mesh components." },
 	};
 #endif
-	const UE4CodeGen_Private::FEnumPropertyParams Z_Construct_UClass_ASRanipal_AvatarLipSample_Statics::NewProp_LipVersion = { "LipVersion", nullptr, (EPropertyFlags)0x0010000000000001, UE4CodeGen_Private::EPropertyGenFlags::Enum, RF_Public|RF_Transient|RF_MarkAsNative, 1, STRUCT_OFFSET(ASRanipal_AvatarLipSample, LipVersion), Z_Construct_UEnum_SRanipal_SupportedLipVersion, METADATA_PARAMS(Z_Construct_UClass_ASRanipal_AvatarLipSample_Statics::NewProp_LipVersion_MetaData, ARRAY_COUNT(Z_Construct_UClass_ASRanipal_AvatarLipSample_Statics::NewProp_LipVersion_MetaData)) };
-	const UE4CodeGen_Private::FBytePropertyParams Z_Construct_UClass_ASRanipal_AvatarLipSample_Statics::NewProp_LipVersion_Underlying = { "UnderlyingType", nullptr, (EPropertyFlags)0x0000000000000000, UE4CodeGen_Private::EPropertyGenFlags::Byte, RF_Public|RF_Transient|RF_MarkAsNative, 1, 0, nullptr, METADATA_PARAMS(nullptr, 0) };
+	const UE4CodeGen_Private::FObjectPropertyParams Z_Construct_UClass_ASRanipal_AvatarLipSample_Statics::NewProp_HeadModel = { "HeadModel", nullptr, (EPropertyFlags)0x0010000000080009, UE4CodeGen_Private::EPropertyGenFlags::Object, RF_Public|RF_Transient|RF_MarkAsNative, 1, STRUCT_OFFSET(ASRanipal_AvatarLipSample, HeadModel), Z_Construct_UClass_USkeletalMeshComponent_NoRegister, METADATA_PARAMS(Z_Construct_UClass_ASRanipal_AvatarLipSample_Statics::NewProp_HeadModel_MetaData, UE_ARRAY_COUNT(Z_Construct_UClass_ASRanipal_AvatarLipSample_Statics::NewProp_HeadModel_MetaData)) };
+#if WITH_METADATA
+	const UE4CodeGen_Private::FMetaDataPairParam Z_Construct_UClass_ASRanipal_AvatarLipSample_Statics::NewProp_EyeLeft_MetaData[] = {
+		{ "Category", "SRanipal_AvatarLipSample" },
+		{ "EditInline", "true" },
+		{ "ModuleRelativePath", "Public/SRanipal_AvatarLipSample.h" },
+	};
+#endif
+	const UE4CodeGen_Private::FObjectPropertyParams Z_Construct_UClass_ASRanipal_AvatarLipSample_Statics::NewProp_EyeLeft = { "EyeLeft", nullptr, (EPropertyFlags)0x0010000000080009, UE4CodeGen_Private::EPropertyGenFlags::Object, RF_Public|RF_Transient|RF_MarkAsNative, 1, STRUCT_OFFSET(ASRanipal_AvatarLipSample, EyeLeft), Z_Construct_UClass_USkeletalMeshComponent_NoRegister, METADATA_PARAMS(Z_Construct_UClass_ASRanipal_AvatarLipSample_Statics::NewProp_EyeLeft_MetaData, UE_ARRAY_COUNT(Z_Construct_UClass_ASRanipal_AvatarLipSample_Statics::NewProp_EyeLeft_MetaData)) };
+#if WITH_METADATA
+	const UE4CodeGen_Private::FMetaDataPairParam Z_Construct_UClass_ASRanipal_AvatarLipSample_Statics::NewProp_EyeRight_MetaData[] = {
+		{ "Category", "SRanipal_AvatarLipSample" },
+		{ "EditInline", "true" },
+		{ "ModuleRelativePath", "Public/SRanipal_AvatarLipSample.h" },
+	};
+#endif
+	const UE4CodeGen_Private::FObjectPropertyParams Z_Construct_UClass_ASRanipal_AvatarLipSample_Statics::NewProp_EyeRight = { "EyeRight", nullptr, (EPropertyFlags)0x0010000000080009, UE4CodeGen_Private::EPropertyGenFlags::Object, RF_Public|RF_Transient|RF_MarkAsNative, 1, STRUCT_OFFSET(ASRanipal_AvatarLipSample, EyeRight), Z_Construct_UClass_USkeletalMeshComponent_NoRegister, METADATA_PARAMS(Z_Construct_UClass_ASRanipal_AvatarLipSample_Statics::NewProp_EyeRight_MetaData, UE_ARRAY_COUNT(Z_Construct_UClass_ASRanipal_AvatarLipSample_Statics::NewProp_EyeRight_MetaData)) };
 	const UE4CodeGen_Private::FPropertyParamsBase* const Z_Construct_UClass_ASRanipal_AvatarLipSample_Statics::PropPointers[] = {
-		(const UE4CodeGen_Private::FPropertyParamsBase*)&Z_Construct_UClass_ASRanipal_AvatarLipSample_Statics::NewProp_EyeRight,
-		(const UE4CodeGen_Private::FPropertyParamsBase*)&Z_Construct_UClass_ASRanipal_AvatarLipSample_Statics::NewProp_EyeLeft,
-		(const UE4CodeGen_Private::FPropertyParamsBase*)&Z_Construct_UClass_ASRanipal_AvatarLipSample_Statics::NewProp_HeadModel,
-		(const UE4CodeGen_Private::FPropertyParamsBase*)&Z_Construct_UClass_ASRanipal_AvatarLipSample_Statics::NewProp_Root,
-		(const UE4CodeGen_Private::FPropertyParamsBase*)&Z_Construct_UClass_ASRanipal_AvatarLipSample_Statics::NewProp_LipVersion,
 		(const UE4CodeGen_Private::FPropertyParamsBase*)&Z_Construct_UClass_ASRanipal_AvatarLipSample_Statics::NewProp_LipVersion_Underlying,
+		(const UE4CodeGen_Private::FPropertyParamsBase*)&Z_Construct_UClass_ASRanipal_AvatarLipSample_Statics::NewProp_LipVersion,
+		(const UE4CodeGen_Private::FPropertyParamsBase*)&Z_Construct_UClass_ASRanipal_AvatarLipSample_Statics::NewProp_Root,
+		(const UE4CodeGen_Private::FPropertyParamsBase*)&Z_Construct_UClass_ASRanipal_AvatarLipSample_Statics::NewProp_HeadModel,
+		(const UE4CodeGen_Private::FPropertyParamsBase*)&Z_Construct_UClass_ASRanipal_AvatarLipSample_Statics::NewProp_EyeLeft,
+		(const UE4CodeGen_Private::FPropertyParamsBase*)&Z_Construct_UClass_ASRanipal_AvatarLipSample_Statics::NewProp_EyeRight,
 	};
 	const FCppClassTypeInfoStatic Z_Construct_UClass_ASRanipal_AvatarLipSample_Statics::StaticCppClassTypeInfo = {
 		TCppClassTypeTraits<ASRanipal_AvatarLipSample>::IsAbstract,
 	};
 	const UE4CodeGen_Private::FClassParams Z_Construct_UClass_ASRanipal_AvatarLipSample_Statics::ClassParams = {
 		&ASRanipal_AvatarLipSample::StaticClass,
-		nullptr,
+		"Engine",
 		&StaticCppClassTypeInfo,
 		DependentSingletons,
 		nullptr,
 		Z_Construct_UClass_ASRanipal_AvatarLipSample_Statics::PropPointers,
 		nullptr,
-		ARRAY_COUNT(DependentSingletons),
+		UE_ARRAY_COUNT(DependentSingletons),
 		0,
-		ARRAY_COUNT(Z_Construct_UClass_ASRanipal_AvatarLipSample_Statics::PropPointers),
+		UE_ARRAY_COUNT(Z_Construct_UClass_ASRanipal_AvatarLipSample_Statics::PropPointers),
 		0,
-		0x009000A0u,
-		METADATA_PARAMS(Z_Construct_UClass_ASRanipal_AvatarLipSample_Statics::Class_MetaDataParams, ARRAY_COUNT(Z_Construct_UClass_ASRanipal_AvatarLipSample_Statics::Class_MetaDataParams))
+		0x009000A4u,
+		METADATA_PARAMS(Z_Construct_UClass_ASRanipal_AvatarLipSample_Statics::Class_MetaDataParams, UE_ARRAY_COUNT(Z_Construct_UClass_ASRanipal_AvatarLipSample_Statics::Class_MetaDataParams))
 	};
 	UClass* Z_Construct_UClass_ASRanipal_AvatarLipSample()
 	{
@@ -152,7 +152,7 @@ void EmptyLinkFunctionForGeneratedCodeSRanipal_AvatarLipSample() {}
 		}
 		return OuterClass;
 	}
-	IMPLEMENT_CLASS(ASRanipal_AvatarLipSample, 1621228829);
+	IMPLEMENT_CLASS(ASRanipal_AvatarLipSample, 2120078230);
 	template<> SRANIPALLIP_API UClass* StaticClass<ASRanipal_AvatarLipSample>()
 	{
 		return ASRanipal_AvatarLipSample::StaticClass();
