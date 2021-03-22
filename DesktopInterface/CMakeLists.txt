@@ -14,12 +14,13 @@ find_package(PythonLibs 3.9 REQUIRED)
 set(CMAKE_CXX_STANDARD 20)
 set(dir ${CMAKE_CURRENT_SOURCE_DIR})
 link_directories(${dir}/../shared_lib)
-include_directories(${dir}/../shared_include)
+get_filename_component(PARENT_DIRECTORY ../ ABSOLUTE)
+include_directories(${PARENT_DIRECTORY}/shared_include)
 #THIS BUILDS TO THE UNREALENGINE GAME BINARY DIRECTORY
 set(CMAKE_RUNTIME_OUTPUT_DIRECTORY ${dir}/../Binaries/Win64/)
-set(PYTHON_LIBRARIES C:/Users/$ENV{USERNAME}/AppData/Local/Programs/Python/Python39/libs/python39.lib)
-set(PYTHON_DEBUG_LIBRARIES C:/Users/plays/AppData/Local/Programs/Python/Python39/libs/python39_d.lib)
-set(PYTHON_INCLUDE_DIRS C:/Users/$ENV{USERNAME}/AppData/Local/Programs/Python/Python39/include)
+#set(PYTHON_LIBRARIES C:/Users/$ENV{USERNAME}/AppData/Local/Programs/Python/Python39/libs/python39.lib)
+#set(PYTHON_DEBUG_LIBRARIES C:/Users/plays/AppData/Local/Programs/Python/Python39/libs/python39_d.lib)
+#set(PYTHON_INCLUDE_DIRS C:/Users/$ENV{USERNAME}/AppData/Local/Programs/Python/Python39/include)
 
 link_libraries(${PYTHON_LIBRARIES})
 include_directories(${PYTHON_INCLUDE_DIRS})
@@ -28,15 +29,17 @@ set ( SOURCES
 main.cpp
 DesktopInterface.cpp
 QHomeWindow.cpp
-        QSimulationControlPane.cpp QPatientDataPane.cpp QResultsPane.cpp QSimulationControls.cpp QResultsWindow.cpp)
+        QSimulationControlPane.cpp QPatientDataPane.cpp QResultsPane.cpp QSimulationControls.cpp QResultsWindow.cpp csvsaveload.cpp)
 
 set ( MAIN_HEADERS
 DesktopInterface.h
 QHomeWindow.h
-        QSimulationControlPane.h QPatientDataPane.h QResultsPane.h QSimulationControls.h QResultsWindow.h)
+        QSimulationControlPane.h QPatientDataPane.h QResultsPane.h QSimulationControls.h QResultsWindow.h csvsaveload.h)
 
 set ( EXTRA_HEADERS
 APPLICATION_CONSTANTS.h
+${PARENT_DIRECTORY}/shared_include/EyeFrameData.h
+${PARENT_DIRECTORY}/shared_include/EyeSessionData.h
 )
 
 set ( UI_HEADERS

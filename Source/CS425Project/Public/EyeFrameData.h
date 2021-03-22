@@ -2,8 +2,6 @@
 
 #pragma once
 
-#include "CoreMinimal.h"
-
 /**
  * 
  */
@@ -11,7 +9,10 @@ struct EyeFrameData
 {
 	EyeFrameData();
 	~EyeFrameData();
-	__int32 x;
-	__int32 y;
+	float[3] fixation;
+	float[3] leftEyeDirection;
+	float[3] rightEyeDirection;
+	float[3] leftEyeOrigin;
+	float[3] leftEyeOrigin;
 	__int16 timestamp;
 };
