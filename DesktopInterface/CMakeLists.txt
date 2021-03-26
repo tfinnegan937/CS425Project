@@ -1,11 +1,15 @@
 # cmake_minimum_required(VERSION <specify CMake version here>)
 project(DesktopInterface)
 
+
+
 cmake_minimum_required(VERSION 3.17)
 
 set(CMAKE_AUTOMOC ON)
 set(CMAKE_AUTOUIC ON)
 set(CMAKE_AUTORCC ON)
+
+
 
 find_package(Qt5Widgets REQUIRED)
 find_package(Qt5 COMPONENTS Core REQUIRED)
@@ -24,9 +28,9 @@ set(CMAKE_RUNTIME_OUTPUT_DIRECTORY ${dir}/../Binaries/Win64/)
 
 link_libraries(${PYTHON_LIBRARIES})
 include_directories(${PYTHON_INCLUDE_DIRS})
+include_directories(unit_tests/)
 
 set ( SOURCES
-main.cpp
 DesktopInterface.cpp
 QHomeWindow.cpp
         QSimulationControlPane.cpp QPatientDataPane.cpp QResultsPane.cpp QSimulationControls.cpp QResultsWindow.cpp csvsaveload.cpp)
@@ -46,8 +50,22 @@ set ( UI_HEADERS
 QResultsWindow.ui
 )
 
-add_executable(DesktopInterface ${SOURCES} ${MAIN_HEADERS} ${EXTRA_HEADERS} ${UI_HEADERS})
+set ( UNIT_TESTS
+unit_tests/UnitTestMain.h
+unit_tests/TestCSVSaveLoad.cpp
+)
+
+add_executable(DesktopInterface main.cpp ${SOURCES} ${MAIN_HEADERS} ${EXTRA_HEADERS} ${UI_HEADERS})
 target_link_libraries(DesktopInterface Qt5::Widgets Qt5::Core libUnrealIPCInterface.a ${PYTHON_LIBRARIES})
 
 #Copies python files over to build
 configure_file(eye_chart.py ${CMAKE_RUNTIME_OUTPUT_DIRECTORY}/eye_chart.py COPYONLY)
+
+
+#Testing
+enable_testing(true)
+find_package(Qt5Test REQUIRED)
+
+add_executable(DesktopInterfaceTest ${SOURCES} ${UNIT_TESTS} ${MAIN_HEADERS} ${EXTRA_HEADERS} ${UI_HEADERS})
+add_test(NAME DesktopInterfaceTest COMMAND DesktopInterfaceTest)
+target_link_libraries(DesktopInterfaceTest PRIVATE Qt5::Test Qt5::Widgets Qt5::Core libUnrealIPCInterface.a ${PYTHON_LIBRARIES})
