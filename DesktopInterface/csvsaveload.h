@@ -15,6 +15,9 @@
 
 #include "../shared_include/EyeFrameData.h"
 #include "../shared_include/EyeSessionData.h"
+#include "../shared_include/FullPatientData.h"
+#include <QFile>
+#include <QJsonDocument>
 #include <fstream>
 #include <iostream>
 #include <string>
@@ -38,12 +41,12 @@ public:
      *
      * @pre Filename must refer to a valid place for a file in form of path/to/file.csv.
      *
-     * @param toSave EyeFrameData class to save.
+     * @param to_save EyeFrameData class to save.
      * @param filename Path + Filename to save data to.
      *
      * @return bool
      */
-    bool SaveData(const EyeFrameData& toSave, const char* filename);
+    bool SaveData(const EyeFrameData& to_save, const char* filename);
 
     /**
      * @brief Load EyeFrameData from CSV file.
@@ -51,12 +54,12 @@ public:
      *
      * @pre Filename must refer to a valid file in form of path/to/file.csv.
      *
-     * @param toLoad EyeFrameData class to load data into.
+     * @param to_load EyeFrameData class to load data into.
      * @param filename Path + Filename to load data from.
      *
      * @return bool
      */
-    bool LoadData(EyeFrameData& toLoad, const char* filename);
+    bool LoadData(EyeFrameData& to_load, const char* filename);
 
     /**
      * @brief Save EyeSessionData to CSV file.
@@ -64,12 +67,12 @@ public:
      *
      * @pre Filename must refer to a valid place for a file in form of path/to/file.csv.
      *
-     * @param toSave EyeSessionData class to save.
+     * @param to_save EyeSessionData class to save.
      * @param filename Path + Filename to save data to.
      *
      * @return bool
      */
-    bool SaveData(const EyeSessionData& toSave, const char* filename);
+    bool SaveData(const EyeSessionData& to_save, const char* filename);
 
     /**
      * @brief Load EyeSessionData from CSV file.
@@ -77,12 +80,12 @@ public:
      *
      * @pre Filename must refer to a valid file in form of path/to/file.csv.
      *
-     * @param toLoad EyeSessionData class to load data into.
+     * @param to_load EyeSessionData class to load data into.
      * @param filename Path + Filename to load data from.
      *
      * @return bool
      */
-    bool LoadData(EyeSessionData& toLoad, const char* filename);
+    bool LoadData(EyeSessionData& to_load, const char* filename);
 
     /**
      * @brief Save FullPatientData to two CSV files.
@@ -96,7 +99,7 @@ public:
      *
      * @return bool
      */
-    //bool SaveData(const FullPatientData& to_save, const char* filename_patient_data, const char* filename_eye_frames);
+    bool SaveData(const FullPatientData& to_save, const char* folder_to_save_to, const char* filename_patient_data, const char* filename_eye_frames);
 
     /**
      * @brief Load FullPatientData from two CSV files.
@@ -110,7 +113,7 @@ public:
      *
      * @return bool
      */
-    //bool LoadData(FullPatientData& toLoad, const char* filename);
+    bool LoadData(FullPatientData& toLoad, const char* folder_to_load_from, const char* filename_patient_data, const char* filename_eye_frames);
 
 private:
     /**

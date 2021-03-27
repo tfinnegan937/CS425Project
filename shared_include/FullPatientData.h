@@ -1,0 +1,53 @@
+// Fill out your copyright notice in the Description page of Project Settings.
+
+#pragma once
+
+#define NumOfPartsForDate 3
+#define NumOfTests 7
+
+#include <vector>
+#include <QString>
+#include <QJsonObject>
+#include <QJsonArray>
+#include "EyeSessionData.h"
+
+using namespace std;
+
+/**
+ * 
+ */
+struct FullPatientData
+{
+    FullPatientData(){
+        EyeSessionData empty;
+        test_data.resize(7, empty);
+    };
+    ~FullPatientData(){};
+    QString first_name;
+    QString last_name;
+
+    //3 parts of a data: month/day/year
+    enum DatePart { month, day, year};
+    int date_of_birth[NumOfPartsForDate] = {0};
+    int date_of_visit[NumOfPartsForDate] = {0};
+
+    QString description_of_incidence;
+
+    bool is_concussed = false;
+
+    enum Tests {
+        smooth_pursuits, saccades_horizontal, saccades_vertical,
+        vor_horizontal, vor_vertical, near_point_convergence,
+        visual_motion_sensitivity };
+
+    const static string test_names[NumOfTests];
+
+    bool tests_with_data[NumOfTests] = { false };
+
+    QJsonObject patient_data;
+    void readJSON(const QJsonObject& json);
+    void writeJSON(QJsonObject& json) const;
+
+
+    vector<EyeSessionData> test_data;
+};

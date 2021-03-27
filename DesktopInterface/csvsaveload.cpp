@@ -147,9 +147,9 @@ bool CSVSaveLoad::SaveData(const EyeSessionData& to_save, const char* filename)
         //If last entry, do not inlude newline character.
         for(auto it = to_save.eyeFrames.begin(); it !=to_save.eyeFrames.end(); it++) {
             if (it == to_save.eyeFrames.end()) {
-                SaveEyeFrameData(*it, output_file, false);
-            } else {
                 SaveEyeFrameData(*it, output_file, true);
+            } else {
+                SaveEyeFrameData(*it, output_file, false);
             }
         }
         output_file.close();
@@ -188,5 +188,50 @@ bool CSVSaveLoad::LoadData(EyeSessionData& to_load, const char* filename)
     }
 
 }
-//bool CSVSaveLoad::SaveData(const FullPatientData& to_save, const char* filename_patient_data, const char* filename_eye_frames);
-//bool CSVSaveLoad::LoadData(FullPatientData& to_load, const char* filename_patient_data, const char* filename_eye_frames);
+
+
+bool CSVSaveLoad::SaveData(const FullPatientData& to_save, const char* folder_to_save_to, const char* filename_patient_data, const char* filename_eye_frames)
+{
+
+    string filepath_patient_data = string(folder_to_save_to) + string(filename_patient_data) + ".dat";
+    QFile patient_data_file(QString::fromStdString(filepath_patient_data));
+    if (!patient_data_file.open(QIODevice::WriteOnly))
+        return false;
+
+    QJsonObject jsonObject;
+    to_save.writeJSON(jsonObject);
+    QJsonDocument patient_data_doc(jsonObject);
+    QByteArray byte_array_patient_data = patient_data_doc.toJson();
+    //EncryptByteArray(byte_array_patient_data);
+    patient_data_file.write(byte_array_patient_data);
+
+    for (size_t i = 0; i < NumOfTests; i++) {
+        string filepath_eye_data = string(folder_to_save_to) + string(filename_eye_frames) + to_save.test_names[i] + ".csv";
+        SaveData(to_save.test_data[i], filepath_eye_data.c_str());
+    }
+
+    return true;
+
+}
+
+bool CSVSaveLoad::LoadData(FullPatientData& to_load, const char* folder_to_load_from, const char* filename_patient_data, const char* filename_eye_frames)
+{
+
+    string filepath_patient_data = string(folder_to_load_from) + string(filename_patient_data) + ".dat";
+    QFile patient_data_file(QString::fromStdString(filepath_patient_data));
+    if (!patient_data_file.open(QIODevice::ReadOnly))
+        return false;
+
+    QByteArray byte_array_patient_data = patient_data_file.readAll();
+    //DecryptByteArray(byte_array_patient_data);
+    QJsonDocument patient_data_doc = QJsonDocument::fromJson(byte_array_patient_data);
+    QJsonObject jsonObject = patient_data_doc.object();
+    to_load.readJSON(jsonObject);
+
+    for (size_t i = 0; i < NumOfTests; i++) {
+        string filepath_eye_data = string(folder_to_load_from) + string(filename_eye_frames) + to_load.test_names[i] + ".csv";
+        LoadData(to_load.test_data[i], filepath_eye_data.c_str());
+    }
+
+    return true;
+}

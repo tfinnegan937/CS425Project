@@ -44,6 +44,8 @@ set ( EXTRA_HEADERS
 APPLICATION_CONSTANTS.h
 ${PARENT_DIRECTORY}/shared_include/EyeFrameData.h
 ${PARENT_DIRECTORY}/shared_include/EyeSessionData.h
+${PARENT_DIRECTORY}/shared_include/FullPatientData.h
+${PARENT_DIRECTORY}/shared_include/FullPatientData.cpp
 )
 
 set ( UI_HEADERS

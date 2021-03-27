@@ -1,6 +1,7 @@
 #include <QtTest/QtTest>
 #include "../../shared_include/EyeFrameData.h"
-
+#include "../../shared_include/EyeSessionData.h"
+#include "../../shared_include/FullPatientData.h"
 class TestCSVSaveLoad : public QObject
 {
     Q_OBJECT
@@ -12,6 +13,8 @@ private slots:
     void cleanFile(const char* filename);
 
     bool areEyeFramesEqual(const EyeFrameData& a, const EyeFrameData& b);
+    bool areEyeSessionsEqual(const EyeSessionData& a, const EyeSessionData& b);
+    bool arePatientDataEqual(const FullPatientData& a, const FullPatientData& b);
 
     void testSaveLoadEyeFrameDataEmpty();
     void testSaveLoadEyeFrameDataNormal();
@@ -22,22 +25,19 @@ private slots:
     void testLoadEyeFrameDataFileMalformed();
 
     void testSaveEyeSessionDataEmpty();
-    void testSaveEyeSessionDataNormal();
+    void testSaveLoadEyeSessionDataNormal();
     void testSaveEyeSessionDataFileAlreadyExists();
 
     void testLoadEyeSessionDataNoFileExists();
-    void testLoadEyeSessionDataNormal();
     void testLoadEyeSessionDataAlreadyFilled();
     void testLoadEyeSessionDataFileMalformed();
 
-    void testSaveFullPatientDataEmpty();
-    void testSaveFullPatientDataNormal();
+    void testSaveLoadFullPatientDataEmpty();
+    void testSaveLoadFullPatientDataNormal();
     void testSaveFullPatientDataFileAlreadyExists();
 
     void testLoadFullPatientDataNoFileExists();
-    void testLoadFullPatientDataNormal();
     void testLoadFullPatientDataAlreadyFilled();
-    void testLoadFullPatientDataFileMalformed();
 };
 
 
