@@ -357,3 +357,5 @@ DesktopInterface/CMakeFiles/3.19.1/CompilerIdC/a.exe
 DesktopInterface/CMakeFiles/3.19.1/CompilerIdC/CMakeCCompilerId.c
 DesktopInterface/CMakeFiles/3.19.1/CompilerIdCXX/CMakeCXXCompilerId.cpp
 DesktopInterface/CMakeFiles/3.19.1/CompilerIdCXX/CMakeCXXCompilerId.o
+Binaries/
+Binaries/*
