@@ -1,6 +1,11 @@
 # cmake_minimum_required(VERSION <specify CMake version here>)
 project(DesktopInterface)
 
+set ( COMPILE_FLAGS
+    "-Wall -Werror"
+    )
+
+set(CMAKE_CXX_FLAGS "${CMAKE_CXX_FLAGS} ${COMPILE_FLAGS}")
 
 
 cmake_minimum_required(VERSION 3.17)
@@ -8,7 +13,6 @@ cmake_minimum_required(VERSION 3.17)
 set(CMAKE_AUTOMOC ON)
 set(CMAKE_AUTOUIC ON)
 set(CMAKE_AUTORCC ON)
-
 
 
 find_package(Qt5Widgets REQUIRED)
@@ -59,6 +63,11 @@ unit_tests/TestCSVSaveLoad.cpp
 
 add_executable(DesktopInterface main.cpp ${SOURCES} ${MAIN_HEADERS} ${EXTRA_HEADERS} ${UI_HEADERS})
 target_link_libraries(DesktopInterface Qt5::Widgets Qt5::Core libUnrealIPCInterface.a ${PYTHON_LIBRARIES})
+add_custom_target(
+        TARGET DesktopInterface
+        POST_BUILD
+        COMMAND cmd //C InstallPythonDependencies.bat
+)
 
 #Copies python files over to build
 configure_file(eye_chart.py ${CMAKE_RUNTIME_OUTPUT_DIRECTORY}/eye_chart.py COPYONLY)

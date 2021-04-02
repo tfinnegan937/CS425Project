@@ -4,6 +4,8 @@
 #include <stdexcept>
 #include <QStyle>
 #include <QDesktopWidget>
+#include <QGuiApplication>
+#include <QScreen>
 #include "DesktopInterface.h"
 #include "APPLICATION_CONSTANTS.h"
 using namespace std;
@@ -19,7 +21,7 @@ DesktopInterface::DesktopInterface(QApplication *app) {
     homeWindow->setWindowTitle(WINDOW_TITLE);
 
     //Get the desktop boundaries
-    QRect desktop_bounds = app->desktop()->availableGeometry();
+    QRect desktop_bounds = QGuiApplication::primaryScreen()->geometry();
     //Get the screen center
     QPoint screen_center = desktop_bounds.center();
 
@@ -33,7 +35,7 @@ int DesktopInterface::run() {
     try{
         return app->exec();
     }
-    catch(std::exception any_exception){
+    catch(std::exception& any_exception){
         return EXIT_FAILURE;
     }
 }

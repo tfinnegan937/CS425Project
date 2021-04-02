@@ -18,220 +18,193 @@ CSVSaveLoad::CSVSaveLoad()
 
 void CSVSaveLoad::CreateEyeFrameHeader(ofstream& output_file)
 {
-    output_file << "Timestamp,"
-                   "FixationX,FixationY,FixationZ,"
-                   "LeftEyeDirectionX,LeftEyeDirectionY,LeftEyeDirectionZ,"
-                   "RightEyeDirectionX,RightEyeDirectionY,RightEyeDirectionZ,"
+    output_file << "ParticipantID,Experiment,ChangeOfSymptom,SymptomScore,Timestamp,"
+                   "LocalDotPositionX,LocalDotPositionY,LocalDotPositionZ,"
+                   "WorldDotPositionX,WorldDotPositionY,WorldDotPositionZ,"
+                   "HeadPositionX,HeadPositionY,HeadPositionZ,"
+                   "HeadOrientationX,HeadOrientationY,HeadOrientationZ,"
                    "LeftEyeOriginX,LeftEyeOriginY,LeftEyeOriginZ,"
-                   "RightEyeOriginX,RightEyeOriginY,RightEyeOriginZ" << std::endl;
+                   "LeftEyeDirectionX,LeftEyeDirectionY,LeftEyeDirectionZ,"
+                   "RightEyeOriginX,RightEyeOriginY,RightEyeOriginZ,"
+                   "RightEyeDirectionX,RightEyeDirectionY,RightEyeDirectionZ,"
+                   "CombinedEyeOriginX,CombinedEyeOriginY,CombinedEyeOriginZ,"
+                   "CombinedEyeDirectionX,CombinedEyeDirectionY,CombinedEyeDirectionZ,"
+                   "FixationX,FixationY,FixationZ,"
+                   "ChangeOfSymptom,SymptomScore,"
+                   "FirstName,LastName,DateOfInjury,DateSeen,Sport,Age,Gender" << std::endl;
 }
 
 
-void CSVSaveLoad::SaveEyeFrameData(const EyeFrameData& to_save, ofstream& output_file, bool last_record)
+inline void CSVSaveLoad::LoadEyeFrameFloat3Value(float* arrayBegin, stringstream& input_line_string, string& number)
 {
-    output_file << to_save.timestamp << ','
-                << to_save.fixation[0] << ','
-                << to_save.fixation[1] << ','
-                << to_save.fixation[2] << ','
-                << to_save.leftEyeDirection[0] << ','
-                << to_save.leftEyeDirection[1] << ','
-                << to_save.leftEyeDirection[2] << ','
-                << to_save.rightEyeDirection[0] << ','
-                << to_save.rightEyeDirection[1] << ','
-                << to_save.rightEyeDirection[2] << ','
-                << to_save.leftEyeOrigin[0] << ','
-                << to_save.leftEyeOrigin[1] << ','
-                << to_save.leftEyeOrigin[2] << ','
-                << to_save.rightEyeOrigin[0] << ','
-                << to_save.rightEyeOrigin[1] << ','
-                << to_save.rightEyeOrigin[2];
-    if (!last_record) output_file << '\n';
+    getline(input_line_string, number, ',');
+    arrayBegin[0] = stof(number);
+    getline(input_line_string, number, ',');
+    arrayBegin[1] = stof(number);
+    getline(input_line_string, number, ',');
+    arrayBegin[2] = stof(number);
 }
 
 
-void CSVSaveLoad::LoadEyeFrameData(EyeFrameData& to_load, stringstream& input_line_string)
+inline void CSVSaveLoad::LoadDateFromCSV(int* arrayBegin, stringstream& input_line_string, string& number)
 {
-    string number;
-    //Loads data from stream up to a ',' character.
+    getline(input_line_string, number, '/');
+    arrayBegin[0] = stof(number);
+    getline(input_line_string, number, '/');
+    arrayBegin[1] = stof(number);
     getline(input_line_string, number, ',');
-    to_load.timestamp = stoi(number);
-    getline(input_line_string, number, ',');
-    to_load.fixation[0] = stof(number);
-    getline(input_line_string, number, ',');
-    to_load.fixation[1] = stof(number);
-    getline(input_line_string, number, ',');
-    to_load.fixation[2] = stof(number);
-    getline(input_line_string, number, ',');
-    to_load.leftEyeDirection[0] = stof(number);
-    getline(input_line_string, number, ',');
-    to_load.leftEyeDirection[1] = stof(number);
-    getline(input_line_string, number, ',');
-    to_load.leftEyeDirection[2] = stof(number);
-    getline(input_line_string, number, ',');
-    to_load.rightEyeDirection[0] = stof(number);
-    getline(input_line_string, number, ',');
-    to_load.rightEyeDirection[1] = stof(number);
-    getline(input_line_string, number, ',');
-    to_load.rightEyeDirection[2] = stof(number);
-    getline(input_line_string, number, ',');
-    to_load.leftEyeOrigin[0] = stof(number);
-    getline(input_line_string, number, ',');
-    to_load.leftEyeOrigin[1] = stof(number);
-    getline(input_line_string, number, ',');
-    to_load.leftEyeOrigin[2] = stof(number);
-    getline(input_line_string, number, ',');
-    to_load.rightEyeOrigin[0] = stof(number);
-    getline(input_line_string, number, ',');
-    to_load.rightEyeOrigin[1] = stof(number);
-    getline(input_line_string, number, ',');
-    to_load.rightEyeOrigin[2] = stof(number);
+    arrayBegin[2] = stof(number);
 }
 
-bool CSVSaveLoad::SaveData(const EyeFrameData& to_save, const char* filename)
-{
-    ofstream output_file;
-    output_file.open(filename, ios::out);
 
-    if (output_file.is_open()) {
-        CreateEyeFrameHeader(output_file);
-        try {
-            SaveEyeFrameData(to_save, output_file, true);
+inline string CSVSaveLoad::DateToString(const int* a) const
+{
+    return to_string(a[0]) + "/" + to_string(a[1]) + "/" + to_string(a[2]);
+}
+
+void CSVSaveLoad::SaveEyeSessionData(const FullPatientData& to_save, const int current_test_to_save, ofstream& output_file)
+{
+    auto& current_test = to_save.test_data[current_test_to_save];
+    for(auto it = current_test.eyeFrames.begin(); it != current_test.eyeFrames.end(); it++) {
+        output_file << to_save.participantID.toStdString() << ','
+                    << FullPatientData::test_names[current_test_to_save] << ','
+                    << current_test.changeOfSymptoms << ','
+                    << current_test.symptomScore << ','
+                    << it->timestamp << ','
+                    << Serialize3Array(it->localDotPosition) << ','
+                    << Serialize3Array(it->worldDotPosition) << ','
+                    << Serialize3Array(it->headPosition) << ','
+                    << Serialize3Array(it->headOrientation) << ','
+                    << Serialize3Array(it->leftEyeOrigin) << ','
+                    << Serialize3Array(it->leftEyeDirection) << ','
+                    << Serialize3Array(it->rightEyeOrigin) << ','
+                    << Serialize3Array(it->rightEyeDirection) << ','
+                    << Serialize3Array(it->combinedEyeOrigin) << ','
+                    << Serialize3Array(it->combinedEyeDirection) << ','
+                    << Serialize3Array(it->fixation) << ','
+                    << current_test.changeOfSymptoms << ','
+                    << current_test.symptomScore << ','
+                    << to_save.first_name.toStdString() << ','
+                    << to_save.last_name.toStdString() << ','
+                    << DateToString(to_save.date_of_injury) << ','
+                    << DateToString(to_save.date_of_visit) << ','
+                    << to_save.sport_played.toStdString() << ','
+                    << to_save.age << ','
+                    << to_save.gender.toStdString();
+
+        if (current_test_to_save < NumOfTests - 1
+                || it + 1 != current_test.eyeFrames.end()) {
+            output_file << '\n';
         }
-        // If file is malformed, will catch it here.
-        catch (...) {
-            return false;
-        }
-        output_file.close();
-        return true;
-    } else {
-        return false;
     }
 }
 
 
-bool CSVSaveLoad::LoadData(EyeFrameData& to_load, const char* filename)
+void CSVSaveLoad::LoadEyeData(FullPatientData& to_load, ifstream& input_file)
 {
-    fstream input_file;
-    input_file.open(filename, ios::in);
+    bool first_data_line = true;
 
-    if (input_file.is_open()) {
-        //Skip header line by jumping past first newline character.
-        input_file.ignore(std::numeric_limits<std::streamsize>::max(), '\n');
+    //Skip header line by jumping past first newline character.
+    input_file.ignore(std::numeric_limits<std::streamsize>::max(), '\n');
 
-        string raw_line_data;
-
-        //Extract a line from the file.
-        input_file >> raw_line_data;
-        //Convert it into a stringstream for easy parsing.
+    string raw_line_data, value;
+    //Iterates over every line and stores it in a string.
+    while(getline(input_file, raw_line_data)){
+        //Converts the string to a stringstream for ease of parsing.
         stringstream s(raw_line_data);
-        LoadEyeFrameData(to_load, s);
+        EyeFrameData newEyeFrame;
 
-        input_file.close();
-        return true;
+        getline(s, value, ','); // Skips ParticipantID
+        if (first_data_line) {
+            to_load.participantID = QString(value.c_str());
+        }
 
-    } else {
-        return false;
+        getline(s, value, ','); // Grabs Experiment Name
+        //Finds which test to sort the current EyeFrame into based on experiment name.
+        auto& current_test = to_load.test_data[FullPatientData::test_name_to_id.at(value)];
+        current_test.eyeFrames.clear();
+
+        getline(s, value, ','); // ChangeOfSymptom
+        current_test.changeOfSymptoms = stoi(value);
+        getline(s, value, ','); // Skips SymptomScore
+        current_test.symptomScore = stoi(value);
+        getline(s, value, ','); // Timestamp
+        newEyeFrame.timestamp = stoi(value);
+
+        LoadEyeFrameFloat3Value(newEyeFrame.localDotPosition, s, value);
+        LoadEyeFrameFloat3Value(newEyeFrame.worldDotPosition, s, value);
+        LoadEyeFrameFloat3Value(newEyeFrame.headPosition, s, value);
+        LoadEyeFrameFloat3Value(newEyeFrame.headOrientation, s, value);
+        LoadEyeFrameFloat3Value(newEyeFrame.leftEyeOrigin, s, value);
+        LoadEyeFrameFloat3Value(newEyeFrame.leftEyeDirection, s, value);
+        LoadEyeFrameFloat3Value(newEyeFrame.rightEyeOrigin, s, value);
+        LoadEyeFrameFloat3Value(newEyeFrame.rightEyeDirection, s, value);
+        LoadEyeFrameFloat3Value(newEyeFrame.combinedEyeOrigin, s, value);
+        LoadEyeFrameFloat3Value(newEyeFrame.combinedEyeDirection, s, value);
+        LoadEyeFrameFloat3Value(newEyeFrame.fixation, s, value);
+
+        if (first_data_line) {
+            getline(s, value, ','); // Ignore 2nd ChangeOfSymptom
+            getline(s, value, ','); // Ignore 2nd SymptomScore
+
+            getline(s, value, ',');
+            to_load.first_name = QString(value.c_str());
+            getline(s, value, ',');
+            to_load.last_name = QString(value.c_str());
+
+            LoadDateFromCSV(to_load.date_of_injury, s, value);
+            LoadDateFromCSV(to_load.date_of_visit, s, value);
+
+            getline(s, value, ',');
+            to_load.sport_played = QString(value.c_str());
+            getline(s, value, ',');
+            to_load.age = stoi(value);
+            getline(s, value, ',');
+            to_load.gender = QString(value.c_str());
+
+            first_data_line = false;
+        }
+
+        current_test.eyeFrames.push_back(newEyeFrame);
     }
 }
 
 
-bool CSVSaveLoad::SaveData(const EyeSessionData& to_save, const char* filename)
+bool CSVSaveLoad::SaveData(const FullPatientData& to_save, const char* folder_to_save_to, const char* filename_patient_data)
 {
+
+    string filepath_patient_data = string(folder_to_save_to) + string(filename_patient_data);
     ofstream output_file;
-    output_file.open(filename, ios::out);
-
-    if (output_file.is_open()) {
-        CreateEyeFrameHeader(output_file);
-
-        //For every entry of EyeFrameData, insert that class's data into a new line.
-        //If last entry, do not inlude newline character.
-        for(auto it = to_save.eyeFrames.begin(); it !=to_save.eyeFrames.end(); it++) {
-            if (it == to_save.eyeFrames.end()) {
-                SaveEyeFrameData(*it, output_file, true);
-            } else {
-                SaveEyeFrameData(*it, output_file, false);
-            }
-        }
-        output_file.close();
-        return true;
-    } else {
-        return false;
-    }
-}
+    output_file.open(filepath_patient_data, ios::out | ios::trunc);
 
 
-bool CSVSaveLoad::LoadData(EyeSessionData& to_load, const char* filename)
-{
-    to_load.eyeFrames.clear();
-
-    fstream input_file;
-    input_file.open(filename, ios::in);
-
-    if (input_file.is_open()) {  
-        //Skip header line by jumping past first newline character.
-        input_file.ignore(std::numeric_limits<std::streamsize>::max(), '\n');
-
-        string raw_line_data;
-        //Iterates over every line and stores it in a string.
-        while(std::getline(input_file, raw_line_data)){
-            //Converts the string to a stringstream for ease of parsing.
-            stringstream s(raw_line_data);
-            EyeFrameData newEyeFrame;
-            LoadEyeFrameData(newEyeFrame, s);
-            to_load.eyeFrames.push_back(newEyeFrame);
-        }
-        input_file.close();
-        return true;
-
-    } else {
-        return false;
-    }
-
-}
-
-
-bool CSVSaveLoad::SaveData(const FullPatientData& to_save, const char* folder_to_save_to, const char* filename_patient_data, const char* filename_eye_frames)
-{
-
-    string filepath_patient_data = string(folder_to_save_to) + string(filename_patient_data) + ".dat";
-    QFile patient_data_file(QString::fromStdString(filepath_patient_data));
-    if (!patient_data_file.open(QIODevice::WriteOnly))
+    if (!output_file.is_open())
         return false;
 
-    QJsonObject jsonObject;
-    to_save.writeJSON(jsonObject);
-    QJsonDocument patient_data_doc(jsonObject);
-    QByteArray byte_array_patient_data = patient_data_doc.toJson();
-    //EncryptByteArray(byte_array_patient_data);
-    patient_data_file.write(byte_array_patient_data);
+    CreateEyeFrameHeader(output_file);
 
     for (size_t i = 0; i < NumOfTests; i++) {
-        string filepath_eye_data = string(folder_to_save_to) + string(filename_eye_frames) + to_save.test_names[i] + ".csv";
-        SaveData(to_save.test_data[i], filepath_eye_data.c_str());
+        SaveEyeSessionData(to_save, i, output_file);
     }
+    output_file.close();
 
     return true;
 
 }
 
-bool CSVSaveLoad::LoadData(FullPatientData& to_load, const char* folder_to_load_from, const char* filename_patient_data, const char* filename_eye_frames)
+bool CSVSaveLoad::LoadData(FullPatientData& to_load, const char* folder_to_load_from, const char* filename_patient_data)
 {
+    string filepath_patient_data = string(folder_to_load_from) + string(filename_patient_data);
+    ifstream input_file;
+    input_file.open(filename_patient_data);
 
-    string filepath_patient_data = string(folder_to_load_from) + string(filename_patient_data) + ".dat";
-    QFile patient_data_file(QString::fromStdString(filepath_patient_data));
-    if (!patient_data_file.open(QIODevice::ReadOnly))
+    // If failed to open file or file empty, return failure.
+    if (!input_file.is_open() || input_file.peek() == std::ifstream::traits_type::eof()) {
         return false;
-
-    QByteArray byte_array_patient_data = patient_data_file.readAll();
-    //DecryptByteArray(byte_array_patient_data);
-    QJsonDocument patient_data_doc = QJsonDocument::fromJson(byte_array_patient_data);
-    QJsonObject jsonObject = patient_data_doc.object();
-    to_load.readJSON(jsonObject);
-
-    for (size_t i = 0; i < NumOfTests; i++) {
-        string filepath_eye_data = string(folder_to_load_from) + string(filename_eye_frames) + to_load.test_names[i] + ".csv";
-        LoadData(to_load.test_data[i], filepath_eye_data.c_str());
     }
+
+    LoadEyeData(to_load, input_file);
+    input_file.close();
 
     return true;
 }

@@ -22,6 +22,8 @@
 #include <iostream>
 #include <string>
 #include <sstream>
+
+#define Serialize3Array(a) a[0]<<','<<a[1]<<','<<a[2]
 using namespace std;
 
 /**
@@ -46,33 +48,7 @@ public:
      *
      * @return bool
      */
-    bool SaveData(const EyeFrameData& to_save, const char* filename);
-
-    /**
-     * @brief Load EyeFrameData from CSV file.
-     * @details Will only load first two lines of the file: the header as first and the EyeFrameData as second. Returns whether successful.
-     *
-     * @pre Filename must refer to a valid file in form of path/to/file.csv.
-     *
-     * @param to_load EyeFrameData class to load data into.
-     * @param filename Path + Filename to load data from.
-     *
-     * @return bool
-     */
-    bool LoadData(EyeFrameData& to_load, const char* filename);
-
-    /**
-     * @brief Save EyeSessionData to CSV file.
-     * @details Makes a multi lined CSV file: one for header, rest for each EyeFrameData. Returns whether successful.
-     *
-     * @pre Filename must refer to a valid place for a file in form of path/to/file.csv.
-     *
-     * @param to_save EyeSessionData class to save.
-     * @param filename Path + Filename to save data to.
-     *
-     * @return bool
-     */
-    bool SaveData(const EyeSessionData& to_save, const char* filename);
+    void SaveEyeSessionData(const FullPatientData& to_save, const int current_test_to_save, ofstream& output_file);
 
     /**
      * @brief Load EyeSessionData from CSV file.
@@ -85,7 +61,7 @@ public:
      *
      * @return bool
      */
-    bool LoadData(EyeSessionData& to_load, const char* filename);
+    void LoadEyeData(FullPatientData& to_load, ifstream& input_file);
 
     /**
      * @brief Save FullPatientData to two CSV files.
@@ -95,11 +71,10 @@ public:
      *
      * @param to_save FullPatientData class to save.
      * @param filename_patient_data Path + Filename to save patient info to.
-     * @param filename_eye_frames Path + Filename to save patient eye data to.
      *
      * @return bool
      */
-    bool SaveData(const FullPatientData& to_save, const char* folder_to_save_to, const char* filename_patient_data, const char* filename_eye_frames);
+    bool SaveData(const FullPatientData& to_save, const char* folder_to_save_to, const char* filename_patient_data);
 
     /**
      * @brief Load FullPatientData from two CSV files.
@@ -113,34 +88,19 @@ public:
      *
      * @return bool
      */
-    bool LoadData(FullPatientData& toLoad, const char* folder_to_load_from, const char* filename_patient_data, const char* filename_eye_frames);
+    bool LoadData(FullPatientData& toLoad, const char* folder_to_load_from, const char* filename_patient_data);
 
 private:
-    /**
-     * @brief Actual function which saves EyeFrameData.
-     * @details This function exists to allow for storing 1 or multiple EyeFrameData in one CSV file.
-     *
-     * @param to_save EyeFrameData class to save.
-     * @param output_file ofstream object which allows for stream saving into the file.
-     * @param last_record Whether this will be the last entry in the CSV. If so, omits new line.
-     */
-    void SaveEyeFrameData(const EyeFrameData& to_save, ofstream& output_file, bool last_record = true);
-
-    /**
-     * @brief Actual function which loads EyeFrameData.
-     * @details This function exists to allow for loading 1 or multiple EyeFrameData from one CSV file.
-     *
-     * @param to_load EyeFrameData class to load into.
-     * @param input_line_string stringstream holding a line from an EyeFrameData CSV file. Function parses this.
-     */
-    void LoadEyeFrameData(EyeFrameData& to_load, stringstream& input_line_string);
-
     /**
      * @brief Creates a formatted header in EyeFrameData CSV files to ensure human readability.
      *
      * @param output_file ofstream object which allows for stream saving into the file.
      */
     void CreateEyeFrameHeader(ofstream& output_file);
+
+    inline void LoadEyeFrameFloat3Value(float* arrayBegin, stringstream& input_line_string, string& number);
+    inline string DateToString(const int* a) const;
+    inline void LoadDateFromCSV(int* arrayBegin, stringstream& input_line_string, string& date);
 };
 
 #endif // CSVSAVELOAD_H
