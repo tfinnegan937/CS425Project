@@ -34,6 +34,9 @@ set(CMAKE_MAKEFILE_DEPENDS
   "C:/Qt/5.15.2/mingw81_64/lib/cmake/Qt5Gui/Qt5Gui_QWindowsDirect2DIntegrationPlugin.cmake"
   "C:/Qt/5.15.2/mingw81_64/lib/cmake/Qt5Gui/Qt5Gui_QWindowsIntegrationPlugin.cmake"
   "C:/Qt/5.15.2/mingw81_64/lib/cmake/Qt5Gui/Qt5Gui_QXdgDesktopPortalThemePlugin.cmake"
+  "C:/Qt/5.15.2/mingw81_64/lib/cmake/Qt5Test/Qt5TestConfig.cmake"
+  "C:/Qt/5.15.2/mingw81_64/lib/cmake/Qt5Test/Qt5TestConfigExtras.cmake"
+  "C:/Qt/5.15.2/mingw81_64/lib/cmake/Qt5Test/Qt5TestConfigVersion.cmake"
   "C:/Qt/5.15.2/mingw81_64/lib/cmake/Qt5Widgets/Qt5WidgetsConfig.cmake"
   "C:/Qt/5.15.2/mingw81_64/lib/cmake/Qt5Widgets/Qt5WidgetsConfigExtras.cmake"
   "C:/Qt/5.15.2/mingw81_64/lib/cmake/Qt5Widgets/Qt5WidgetsConfigVersion.cmake"
@@ -90,12 +93,15 @@ set(CMAKE_MAKEFILE_OUTPUTS
 # Byproducts of CMake generate step:
 set(CMAKE_MAKEFILE_PRODUCTS
   "E:/CS425Project/Binaries/Win64/eye_chart.py"
+  "CMakeFiles/DesktopInterfaceTest_autogen.dir/AutogenInfo.json"
   "CMakeFiles/DesktopInterface_autogen.dir/AutogenInfo.json"
   "CMakeFiles/CMakeDirectoryInformation.cmake"
   )
 
 # Dependency information for all targets:
 set(CMAKE_DEPEND_INFO_FILES
+  "CMakeFiles/DesktopInterfaceTest.dir/DependInfo.cmake"
   "CMakeFiles/DesktopInterface.dir/DependInfo.cmake"
+  "CMakeFiles/DesktopInterfaceTest_autogen.dir/DependInfo.cmake"
   "CMakeFiles/DesktopInterface_autogen.dir/DependInfo.cmake"
   )

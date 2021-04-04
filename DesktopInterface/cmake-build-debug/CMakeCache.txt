@@ -271,6 +271,9 @@ Qt5Core_DIR:PATH=C:/Qt/5.15.2/mingw81_64/lib/cmake/Qt5Core
 //The directory containing a CMake configuration file for Qt5Gui.
 Qt5Gui_DIR:PATH=C:/Qt/5.15.2/mingw81_64/lib/cmake/Qt5Gui
 
+//The directory containing a CMake configuration file for Qt5Test.
+Qt5Test_DIR:PATH=C:/Qt/5.15.2/mingw81_64/lib/cmake/Qt5Test
+
 //The directory containing a CMake configuration file for Qt5Widgets.
 Qt5Widgets_DIR:PATH=C:/Qt/5.15.2/mingw81_64/lib/cmake/Qt5Widgets
 

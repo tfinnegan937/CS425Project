@@ -33,7 +33,7 @@ void UPipeline::BeginPlay()
 
 void UPipeline::SendTest()
 {
-    EyeFrameData testFrame1;
+    /*EyeFrameData testFrame1;
     EyeFrameData testFrame2;
     EyeFrameData testFrame3;
 
@@ -50,7 +50,7 @@ void UPipeline::SendTest()
     testFrame3.timestamp = 77;
     SendData(testFrame1);
     SendData(testFrame2);
-    SendData(testFrame3);
+    SendData(testFrame3);*/
 }
 
 #if ISWINDOWS

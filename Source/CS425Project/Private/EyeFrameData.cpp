@@ -3,10 +3,11 @@
 
 #include "EyeFrameData.h"
 
-EyeFrameData::EyeFrameData()
+/*EyeFrameData::EyeFrameData()
 {
 }
 
 EyeFrameData::~EyeFrameData()
 {
 }
+*/

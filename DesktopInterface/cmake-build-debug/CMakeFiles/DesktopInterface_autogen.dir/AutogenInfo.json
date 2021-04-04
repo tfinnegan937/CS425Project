@@ -35,6 +35,11 @@
 			"EWIEGA46WW/moc_QResultsPane.cpp"
 		],
 		[
+			"E:/CS425Project/DesktopInterface/QResultsWindow.h",
+			"MU",
+			"EWIEGA46WW/moc_QResultsWindow.cpp"
+		],
+		[
 			"E:/CS425Project/DesktopInterface/QSimulationControlPane.h",
 			"MU",
 			"EWIEGA46WW/moc_QSimulationControlPane.cpp"
@@ -43,6 +48,26 @@
 			"E:/CS425Project/DesktopInterface/QSimulationControls.h",
 			"MU",
 			"EWIEGA46WW/moc_QSimulationControls.cpp"
+		],
+		[
+			"E:/CS425Project/DesktopInterface/csvsaveload.h",
+			"MU",
+			"EWIEGA46WW/moc_csvsaveload.cpp"
+		],
+		[
+			"E:/CS425Project/shared_include/EyeFrameData.h",
+			"MU",
+			"ZAZD4J42IW/moc_EyeFrameData.cpp"
+		],
+		[
+			"E:/CS425Project/shared_include/EyeSessionData.h",
+			"MU",
+			"ZAZD4J42IW/moc_EyeSessionData.cpp"
+		],
+		[
+			"E:/CS425Project/shared_include/FullPatientData.h",
+			"MU",
+			"ZAZD4J42IW/moc_FullPatientData.cpp"
 		]
 	],
 	"HEADER_EXTENSIONS" : [ "h", "hh", "h++", "hm", "hpp", "hxx", "in", "txx" ],
@@ -60,6 +85,7 @@
 	[
 		"E:/CS425Project/shared_include",
 		"C:/Users/plays/AppData/Local/Programs/Python/Python39/include",
+		"E:/CS425Project/DesktopInterface/unit_tests",
 		"C:/Qt/5.15.2/mingw81_64/include",
 		"C:/Qt/5.15.2/mingw81_64/include/QtWidgets",
 		"C:/Qt/5.15.2/mingw81_64/include/QtGui",
@@ -86,7 +112,10 @@
 	],
 	"MOC_PREDEFS_FILE" : "E:/CS425Project/DesktopInterface/cmake-build-debug/DesktopInterface_autogen/moc_predefs.h",
 	"MOC_RELAXED_MODE" : false,
-	"MOC_SKIP" : [],
+	"MOC_SKIP" : 
+	[
+		"E:/CS425Project/DesktopInterface/cmake-build-debug/DesktopInterfaceTest_autogen/mocs_compilation.cpp"
+	],
 	"MULTI_CONFIG" : false,
 	"PARALLEL" : 8,
 	"PARSE_CACHE_FILE" : "E:/CS425Project/DesktopInterface/cmake-build-debug/CMakeFiles/DesktopInterface_autogen.dir/ParseCache.txt",
@@ -101,13 +130,19 @@
 		[ "E:/CS425Project/DesktopInterface/QHomeWindow.cpp", "MU" ],
 		[ "E:/CS425Project/DesktopInterface/QPatientDataPane.cpp", "MU" ],
 		[ "E:/CS425Project/DesktopInterface/QResultsPane.cpp", "MU" ],
+		[ "E:/CS425Project/DesktopInterface/QResultsWindow.cpp", "MU" ],
 		[ "E:/CS425Project/DesktopInterface/QSimulationControlPane.cpp", "MU" ],
 		[ "E:/CS425Project/DesktopInterface/QSimulationControls.cpp", "MU" ],
-		[ "E:/CS425Project/DesktopInterface/main.cpp", "MU" ]
+		[ "E:/CS425Project/DesktopInterface/csvsaveload.cpp", "MU" ],
+		[ "E:/CS425Project/DesktopInterface/main.cpp", "MU" ],
+		[ "E:/CS425Project/shared_include/FullPatientData.cpp", "MU" ]
 	],
 	"UIC_OPTIONS" : [],
 	"UIC_SEARCH_PATHS" : [],
-	"UIC_SKIP" : [],
+	"UIC_SKIP" : 
+	[
+		"E:/CS425Project/DesktopInterface/cmake-build-debug/DesktopInterfaceTest_autogen/mocs_compilation.cpp"
+	],
 	"UIC_UI_FILES" : [],
 	"VERBOSITY" : 0
 }

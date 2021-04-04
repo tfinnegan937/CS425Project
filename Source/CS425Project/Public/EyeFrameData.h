@@ -7,12 +7,12 @@
  */
 struct EyeFrameData
 {
-	EyeFrameData();
-	~EyeFrameData();
-	float[3] fixation;
-	float[3] leftEyeDirection;
-	float[3] rightEyeDirection;
-	float[3] leftEyeOrigin;
-	float[3] leftEyeOrigin;
+	//EyeFrameData();
+	//~EyeFrameData();
+	float fixation[3];
+	float leftEyeDirection[3];
+	float rightEyeDirection[3];
+	float leftEyeOrigin[3];
+	float rightEyeOrigin[3];
 	__int16 timestamp;
 };
