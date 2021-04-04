@@ -12,11 +12,16 @@ QPatientDataPane::QPatientDataPane(QWidget *parent) : QWidget(parent) {
 
     QDatePckr_daySeenPicker = new QDatePicker(this, "Date Seen");
     QDatePckr_dobPicker = new QDatePicker(this, "DOB");
-
-    QTxtEdt_commentsField = new QTextEdit("Description of Incident", this);
+    QDatePckr_dateOfInjury = new QDatePicker(this, "Date of Injury");
 
     QCssPckr_concussionSelector = new QConcussionPicker(this);
-
+    QCmbBox_SportPicker = new QComboBox(this);
+    QCmbBox_SportPicker->addItem("Basketball");
+    QCmbBox_SportPicker->addItem("Baseball");
+    QCmbBox_SportPicker->addItem("Football");
+    QCmbBox_SportPicker->addItem("Volleyball");
+    QCmbBox_SportPicker->addItem("Softball");
+    QCmbBox_SportPicker->addItem("Tennis");
     QGrd_mainLayout = new QGridLayout();
 
     QGrd_mainLayout->addWidget(QLineEdt_firstNameField, 0, 0);
@@ -24,7 +29,8 @@ QPatientDataPane::QPatientDataPane(QWidget *parent) : QWidget(parent) {
     QGrd_mainLayout->addWidget(QGenPckr_genderPicker, 1, 0);
     QGrd_mainLayout->addWidget(QDatePckr_daySeenPicker, 1, 1);
     QGrd_mainLayout->addWidget(QDatePckr_dobPicker, 2, 0);
-    QGrd_mainLayout->addWidget(QTxtEdt_commentsField, 3, 0);
+    QGrd_mainLayout->addWidget(QDatePckr_dateOfInjury, 2, 1);
+    QGrd_mainLayout->addWidget(QCmbBox_SportPicker, 3,0);
     QGrd_mainLayout->addWidget(QCssPckr_concussionSelector, 4, 0);
 
     QGrpBx_paneBox = new QGroupBox("Patient Information", this);
@@ -35,6 +41,19 @@ QPatientDataPane::QPatientDataPane(QWidget *parent) : QWidget(parent) {
 
     this->setLayout(QVbx_paneBoxContainer);
 
+}
+
+PatientData QPatientDataPane::getPatientData() {
+    QString dateOfBirth = QDatePckr_dobPicker->getDate();
+    QString dateSeen = QDatePckr_daySeenPicker->getDate();
+    QString dateOfInjury = QDatePckr_dateOfInjury->getDate();
+    QString firstName = QLineEdt_firstNameField->text();
+    QString lastName = QLineEdt_lastNameField->text();
+    QString gender = QGenPckr_genderPicker->getGender();
+    QString sport = QCmbBox_SportPicker->currentText();
+    bool concussed = QCssPckr_concussionSelector->getConcussStatus();
+    PatientData out(dateOfBirth, dateSeen, dateOfInjury, firstName, lastName, sport, gender, concussed);
+    return out;
 }
 
 
@@ -54,6 +73,16 @@ QGenderPicker::QGenderPicker(QWidget *parent) : QWidget(parent){
     QHbx_widgetBoxContainer = new QHBoxLayout(this);
     QHbx_widgetBoxContainer->insertWidget(0, QGrpBx_widgetBox);
     this->setLayout(QHbx_widgetBoxContainer);
+}
+
+QString QGenderPicker::getGender() const {
+    if(QRadBtn_male->isChecked()){
+        return "Male";
+    }else if (QRadBtn_female->isChecked()){
+        return "Female";
+    }else{
+        return "Other";
+    }
 }
 
 QDatePicker::QDatePicker(QWidget *parent, const QString& label) : QWidget(parent) {
@@ -141,4 +170,11 @@ QConcussionPicker::QConcussionPicker(QWidget *parent) : QWidget(parent) {
 
     this->setLayout(QHbx_widgetBoxContainer);
 
+}
+
+bool QConcussionPicker::getConcussStatus() const {
+    if(QRadBtn_yes->isChecked()){
+        return true;
+    }
+    return false;
 }

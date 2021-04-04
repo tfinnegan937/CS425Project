@@ -232,6 +232,14 @@
 			<Option target="DesktopInterfaceTest"/>
 			<Option target="DesktopInterface"/>
 		</Unit>
+		<Unit filename="E:/CS425Project/DesktopInterface/PatientData.cpp">
+			<Option target="DesktopInterfaceTest"/>
+			<Option target="DesktopInterface"/>
+		</Unit>
+		<Unit filename="E:/CS425Project/DesktopInterface/PatientData.h">
+			<Option target="DesktopInterfaceTest"/>
+			<Option target="DesktopInterface"/>
+		</Unit>
 		<Unit filename="E:/CS425Project/DesktopInterface/QHomeWindow.cpp">
 			<Option target="DesktopInterfaceTest"/>
 			<Option target="DesktopInterface"/>

@@ -319,6 +319,36 @@ E_/CS425Project/shared_include/FullPatientData.cpp.s:
 	$(MAKE) $(MAKESILENT) -f CMakeFiles\DesktopInterface.dir\build.make CMakeFiles/DesktopInterface.dir/E_/CS425Project/shared_include/FullPatientData.cpp.s
 .PHONY : E_/CS425Project/shared_include/FullPatientData.cpp.s
 
+PatientData.obj: PatientData.cpp.obj
+
+.PHONY : PatientData.obj
+
+# target to build an object file
+PatientData.cpp.obj:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles\DesktopInterfaceTest.dir\build.make CMakeFiles/DesktopInterfaceTest.dir/PatientData.cpp.obj
+	$(MAKE) $(MAKESILENT) -f CMakeFiles\DesktopInterface.dir\build.make CMakeFiles/DesktopInterface.dir/PatientData.cpp.obj
+.PHONY : PatientData.cpp.obj
+
+PatientData.i: PatientData.cpp.i
+
+.PHONY : PatientData.i
+
+# target to preprocess a source file
+PatientData.cpp.i:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles\DesktopInterfaceTest.dir\build.make CMakeFiles/DesktopInterfaceTest.dir/PatientData.cpp.i
+	$(MAKE) $(MAKESILENT) -f CMakeFiles\DesktopInterface.dir\build.make CMakeFiles/DesktopInterface.dir/PatientData.cpp.i
+.PHONY : PatientData.cpp.i
+
+PatientData.s: PatientData.cpp.s
+
+.PHONY : PatientData.s
+
+# target to generate assembly for a file
+PatientData.cpp.s:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles\DesktopInterfaceTest.dir\build.make CMakeFiles/DesktopInterfaceTest.dir/PatientData.cpp.s
+	$(MAKE) $(MAKESILENT) -f CMakeFiles\DesktopInterface.dir\build.make CMakeFiles/DesktopInterface.dir/PatientData.cpp.s
+.PHONY : PatientData.cpp.s
+
 QHomeWindow.obj: QHomeWindow.cpp.obj
 
 .PHONY : QHomeWindow.obj
@@ -609,6 +639,9 @@ help:
 	@echo ... E_/CS425Project/shared_include/FullPatientData.obj
 	@echo ... E_/CS425Project/shared_include/FullPatientData.i
 	@echo ... E_/CS425Project/shared_include/FullPatientData.s
+	@echo ... PatientData.obj
+	@echo ... PatientData.i
+	@echo ... PatientData.s
 	@echo ... QHomeWindow.obj
 	@echo ... QHomeWindow.i
 	@echo ... QHomeWindow.s

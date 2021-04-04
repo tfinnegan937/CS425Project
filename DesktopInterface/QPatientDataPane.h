@@ -17,7 +17,7 @@
 #include <QLineEdit>
 #include <QDateTime>
 #include <QCalendarWidget>
-
+#include "PatientData.h"
 //All of the additional classes in this header are components of QPatientDataPane and will not be used elsewhere.
 
 //This widget contains the radio buttons for selecting the patient's gender
@@ -83,7 +83,7 @@ private:
                                             //added to another layout, which is then set as the outermost layout for the widget
 public:
     QConcussionPicker(QWidget * parent = nullptr);
-    QString getConcussStatus() const;
+    bool getConcussStatus() const;
 };
 
 //This is the outermost widget containing all of the above widgets, and all input fields for the patient UI.
@@ -99,7 +99,7 @@ private:
     QLineEdit * QLineEdt_firstNameField;
     QLineEdit * QLineEdt_lastNameField;
 
-
+    QComboBox * QCmbBox_SportPicker;
     QConcussionPicker * QCssPckr_concussionSelector;
 
     QGridLayout * QGrd_mainLayout;
@@ -109,6 +109,7 @@ private:
                                          //added to another layout, which is then set as the outermost layout for the widget
 public:
     QPatientDataPane(QWidget * parent = nullptr);
+    PatientData getPatientData();
 };
 
 
