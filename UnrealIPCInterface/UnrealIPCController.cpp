@@ -27,8 +27,8 @@ std::string memID;
 
 
 
-bool instantiate_shared_mem(string memID_in) {
-
+bool instantiate_shared_mem() {
+std::string memID_in = "unreal_memory_buff";
 if(is_instantiated){
     return false;
 }else{

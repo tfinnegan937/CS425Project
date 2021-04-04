@@ -15,7 +15,7 @@ ATestController::ATestController()
 void ATestController::BeginPlay()
 {
 	Super::BeginPlay();
-	instantiate_shared_mem("unreal_memory_buff");
+	//instantiate_shared_mem();
 	FString project_directory = FPaths::ProjectDir();
 	FString binary = project_directory.Append("\\Binaries\\Win64\\DesktopInterface.exe");
 	FPlatformProcess::CreateProc(*binary, nullptr, true, false, false, nullptr, 0, nullptr, nullptr);

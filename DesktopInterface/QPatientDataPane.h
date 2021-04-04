@@ -92,13 +92,13 @@ Q_OBJECT
 private:
     QDatePicker * QDatePckr_daySeenPicker;
     QDatePicker * QDatePckr_dobPicker;
+    QDatePicker * QDatePckr_dateOfInjury;
 
     QGenderPicker * QGenPckr_genderPicker;
 
     QLineEdit * QLineEdt_firstNameField;
     QLineEdit * QLineEdt_lastNameField;
 
-    QTextEdit * QTxtEdt_commentsField;
 
     QConcussionPicker * QCssPckr_concussionSelector;
 

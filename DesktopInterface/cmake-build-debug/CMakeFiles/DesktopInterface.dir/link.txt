@@ -1,3 +1,3 @@
 "D:\CLion 2020.3\bin\cmake\win\bin\cmake.exe" -E rm -f CMakeFiles\DesktopInterface.dir/objects.a
 C:\mingw-w64\mingw64\bin\ar.exe cr CMakeFiles\DesktopInterface.dir/objects.a @CMakeFiles\DesktopInterface.dir\objects1.rsp
-C:\mingw-w64\mingw64\bin\g++.exe -g   -Wl,--whole-archive CMakeFiles\DesktopInterface.dir/objects.a -Wl,--no-whole-archive  -o E:\CS425Project\Binaries\Win64\DesktopInterface.exe -Wl,--out-implib,libDesktopInterface.dll.a -Wl,--major-image-version,0,--minor-image-version,0 @CMakeFiles\DesktopInterface.dir\linklibs.rsp
+C:\mingw-w64\mingw64\bin\g++.exe  -Wall -Werror -g   -Wl,--whole-archive CMakeFiles\DesktopInterface.dir/objects.a -Wl,--no-whole-archive  -o E:\CS425Project\Binaries\Win64\DesktopInterface.exe -Wl,--out-implib,libDesktopInterface.dll.a -Wl,--major-image-version,0,--minor-image-version,0 @CMakeFiles\DesktopInterface.dir\linklibs.rsp
