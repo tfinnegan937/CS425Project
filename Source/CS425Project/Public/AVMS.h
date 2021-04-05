@@ -14,7 +14,8 @@ class CS425PROJECT_API AAVMS : public APawn
 public:
 	// Sets default values for this pawn's properties
 	AAVMS();
-
+	UPROPERTY(EditAnywhere, BlueprintReadWrite, Category = "Completion Identifiers")
+	bool isCompleted = true;
 protected:
 	// Called when the game starts or when spawned
 	virtual void BeginPlay() override;

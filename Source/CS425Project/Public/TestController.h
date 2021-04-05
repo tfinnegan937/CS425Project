@@ -12,6 +12,9 @@ class CS425PROJECT_API ATestController : public AActor
 	GENERATED_BODY()
 private:
 	IPCCreator* ipcController;
+	FTimerHandle ipcTimerHandle;
+	void ipcTimerTick();
+	void handleMessage(UINT16 mess);
 public:	
 	// Sets default values for this actor's properties
 	ATestController();

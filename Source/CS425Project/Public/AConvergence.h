@@ -14,6 +14,8 @@ class CS425PROJECT_API AAConvergence : public APawn
 public:
 	// Sets default values for this pawn's properties
 	AAConvergence();
+	UPROPERTY(EditAnywhere, BlueprintReadWrite, Category = "Completion Identifiers")
+	bool isCompleted = true;
 
 protected:
 	// Called when the game starts or when spawned

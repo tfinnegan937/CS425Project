@@ -14,7 +14,8 @@ class CS425PROJECT_API AAVORHorizontal : public AActor
 public:	
 	// Sets default values for this actor's properties
 	AAVORHorizontal();
-
+	UPROPERTY(EditAnywhere, BlueprintReadWrite, Category = "Completion Identifiers")
+	bool isCompleted = true;
 protected:
 	// Called when the game starts or when spawned
 	virtual void BeginPlay() override;

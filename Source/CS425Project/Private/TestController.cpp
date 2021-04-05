@@ -19,6 +19,8 @@ void ATestController::BeginPlay()
 	FString project_directory = FPaths::ProjectDir();
 	FString binary = project_directory.Append("\\Binaries\\Win64\\DesktopInterface.exe");
 	FPlatformProcess::CreateProc(*binary, nullptr, true, false, false, nullptr, 0, nullptr, nullptr);
+
+	GetWorldTimerManager().SetTimer(ipcTimerHandle, this, &ATestController::ipcTimerTick, .1F, true, .1f); //Initializes the IPC timer to call every 100 miliseconds after an initial 100 milisecond delay
 }
 
 // Called every frame
@@ -28,3 +30,14 @@ void ATestController::Tick(float DeltaTime)
 
 }
 
+void ATestController::ipcTimerTick() {
+	UINT16 message = 0x00;
+	if (ipcController->messageReceived()) {
+		message = ipcController->receiveMessage();
+	}
+	handleMessage(message);
+}
+
+void ATestController::handleMessage(UINT16 mess_in) {
+
+}
