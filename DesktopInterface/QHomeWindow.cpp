@@ -34,7 +34,7 @@ QHomeWindow::QHomeWindow(QWidget *parent) : QWidget(parent) {
 int loop_counter = 0; //Temporary counter to increase alternating graphs to every second.
 void QHomeWindow::ipcTick() {
     //Handle UnrealEngine signals
-
+        ipcController->sendMessage(0x00); //Messages only seem to be received after a successful send action
         //std::cout << std::endl << "Reached Message Loop" << std::endl;
         if (ipcController->messageReceived()) {
             try {

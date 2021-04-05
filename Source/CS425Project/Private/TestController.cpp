@@ -7,7 +7,8 @@ ATestController::ATestController()
 {
  	// Set this actor to call Tick() every frame.  You can turn this off to improve performance if you don't need it.
 	PrimaryActorTick.bCanEverTick = true;
- 
+	RootComponent = CreateDefaultSubobject<USceneComponent>(TEXT("RootSceneComponent"));
+
 }
 
 // Called when the game starts or when spawned
@@ -31,7 +32,9 @@ void ATestController::Tick(float DeltaTime)
 }
 
 void ATestController::ipcTimerTick() {
+
 	UINT16 message = 0x00;
+	ipcController->sendMessage(0x00);
 	if (ipcController->messageReceived()) {
 		message = ipcController->receiveMessage();
 	}
@@ -39,5 +42,58 @@ void ATestController::ipcTimerTick() {
 }
 
 void ATestController::handleMessage(UINT16 mess_in) {
+	bool atLeastOneTest = false;
+	if (mess_in == 0x00) {
+		return;
+	}
+	GEngine->AddOnScreenDebugMessage(-1, 15.0f, FColor::Yellow, TEXT("Message Non-Zero"));
+	if (mess_in & QUEUE_SP) {
+		if (!testsStarted) {
+			atLeastOneTest = true;
+			//Queue the test
+			GEngine->AddOnScreenDebugMessage(-1, 15.0f, FColor::Yellow, TEXT("SP selected"));
+		}
+	}
+	if (mess_in & QUEUE_CON) {
+		if (!testsStarted) {
+			atLeastOneTest = true;
+			//Queue the test
+		}
+	}
+	if (mess_in & QUEUE_SH) {
+		if (!testsStarted) {
+			atLeastOneTest = true;
+			//Queue the test
+		}
+	}
+	if (mess_in & QUEUE_SV) {
+		if (!testsStarted) {
+			atLeastOneTest = true;
+			//Queue the test
+		}
+	}
+	if (mess_in & QUEUE_VMS) {
+		if (!testsStarted) {
+			atLeastOneTest = true;
+			//Queue the test
+		}
+	}
+	if (mess_in & QUEUE_VORH) {
+		if (!testsStarted) {
+			atLeastOneTest = true;
+			//Queue the test
+		}
+	}
+	if (mess_in & QUEUE_VORV) {
+		if (!testsStarted) {
+			atLeastOneTest = true;
+			//Queue the test
+		}
+	}
+
+	if (atLeastOneTest) {
+		testsStarted = true;
+		ipcController->sendMessage(SP_STARTED);
+	}
 
 }

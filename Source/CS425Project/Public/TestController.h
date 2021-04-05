@@ -15,6 +15,7 @@ private:
 	FTimerHandle ipcTimerHandle;
 	void ipcTimerTick();
 	void handleMessage(UINT16 mess);
+	bool testsStarted = false;
 public:	
 	// Sets default values for this actor's properties
 	ATestController();

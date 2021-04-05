@@ -8,6 +8,7 @@ AASaccadeVertical::AASaccadeVertical()
 {
  	// Set this actor to call Tick() every frame.  You can turn this off to improve performance if you don't need it.
 	PrimaryActorTick.bCanEverTick = true;
+	RootComponent = CreateDefaultSubobject<USceneComponent>(TEXT("RootSceneComponent"));
 
 }
 
@@ -15,7 +16,7 @@ AASaccadeVertical::AASaccadeVertical()
 void AASaccadeVertical::BeginPlay()
 {
 	Super::BeginPlay();
-	
+
 }
 
 // Called every frame
