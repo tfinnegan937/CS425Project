@@ -6,9 +6,9 @@
 /NAME:"UE4Editor-SRanipalLip.dll"
 /IGNORE:4221
 /NODEFAULTLIB
-"E:\CS425Project\Intermediate\Build\Win64\CS425ProjectEditor\Development\Engine\SharedPCH.Engine.ShadowErrors.h.obj"
-"E:\CS425Project\Plugins\SRanipal\Intermediate\Build\Win64\UE4Editor\Development\SRanipalLip\Module.SRanipalLip.cpp.obj"
-"E:\CS425Project\Plugins\SRanipal\Intermediate\Build\Win64\UE4Editor\Development\SRanipalLip\Module.SRanipalLip.gen.cpp.obj"
-"E:\CS425Project\Plugins\SRanipal\Intermediate\Build\Win64\UE4Editor\Development\SRanipalLip\Default.rc2.res"
-/OUT:"E:\CS425Project\Plugins\SRanipal\Intermediate\Build\Win64\UE4Editor\Development\SRanipalLip\UE4Editor-SRanipalLip.lib"
+"C:\Users\ohman\Documents\Senior Project\VPVR\Intermediate\Build\Win64\CS425ProjectEditor\Development\Engine\SharedPCH.Engine.ShadowErrors.h.obj"
+"C:\Users\ohman\Documents\Senior Project\VPVR\Plugins\SRanipal\Intermediate\Build\Win64\UE4Editor\Development\SRanipalLip\Module.SRanipalLip.cpp.obj"
+"C:\Users\ohman\Documents\Senior Project\VPVR\Plugins\SRanipal\Intermediate\Build\Win64\UE4Editor\Development\SRanipalLip\Module.SRanipalLip.gen.cpp.obj"
+"C:\Users\ohman\Documents\Senior Project\VPVR\Plugins\SRanipal\Intermediate\Build\Win64\UE4Editor\Development\SRanipalLip\Default.rc2.res"
+/OUT:"C:\Users\ohman\Documents\Senior Project\VPVR\Plugins\SRanipal\Intermediate\Build\Win64\UE4Editor\Development\SRanipalLip\UE4Editor-SRanipalLip.lib"
 /INCLUDE:IMPLEMENT_MODULE_SRanipalLip
