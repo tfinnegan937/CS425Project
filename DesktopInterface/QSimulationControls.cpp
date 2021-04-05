@@ -3,8 +3,9 @@
 //
 
 #include "QSimulationControls.h"
-#include "UnrealIPCController.h"
 #include <iostream>
+#include "WindowsIPCControls.h"
+#include "QHomeWindow.h"
 QSimulationControlButtonWidget::QSimulationControlButtonWidget(QWidget *parent) : QWidget(parent) {
     begin_button = new QPushButton("Begin", this);
     cancel_button = new QPushButton("Cancel", this);
@@ -16,6 +17,8 @@ QSimulationControlButtonWidget::QSimulationControlButtonWidget(QWidget *parent) 
 
     connect(cancel_button, &QPushButton::released, this, &QSimulationControlButtonWidget::cancelPressed);
     connect(begin_button, &QPushButton::released, this, &QSimulationControlButtonWidget::beginPressed);
+
+
 
 }
 
@@ -30,7 +33,7 @@ void QSimulationControlButtonWidget::beginPressed() {
 }
 
 void QSimulationControlButtonWidget::cancelPressed() {
-    send_message(STOP_ALL);
+    sendMessage(STOP_ALL);
 }
 
 QSimulationControls::QSimulationControls(QWidget *parent) : QWidget(parent){
@@ -73,6 +76,10 @@ QSimulationControls::QSimulationControls(QWidget *parent) : QWidget(parent){
 
     connect(control_buttons, &QSimulationControlButtonWidget::beginSignal, this,
             &QSimulationControls::passBeginSignalToIPC);
+
+    connect(control_buttons, &QSimulationControlButtonWidget::sendMessage, this, &QSimulationControls::passSendMessage);
+
+
 }
 
 void QSimulationControls::lockPane() {
@@ -149,9 +156,13 @@ void QSimulationControls::passBeginSignalToIPC() {
         std::cout << std::endl << 2.5 << std::endl;
         sim_flags |= BEGIN_ALL;
         //ipcMessageReceived(sim_flags);
-        send_message(sim_flags);
+        sendMessage(sim_flags);
     }
 
+}
+
+void QSimulationControls::passSendMessage(UINT16 mess) {
+    sendMessage(mess);
 }
 
 

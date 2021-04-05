@@ -15,7 +15,6 @@ public class CS425Project : ModuleRules
 		bUseRTTI = true;
 		bEnableExceptions = true;
 		PublicIncludePaths.Add(Path.Combine(ModuleDirectory, "../../", "shared_include"));
-		PublicAdditionalLibraries.Add(Path.Combine(ModuleDirectory, "../../", "shared_lib", "libUnrealIPCInterface.a"));
 		// Uncomment if you are using Slate UI
 		// PrivateDependencyModuleNames.AddRange(new string[] { "Slate", "SlateCore" });
 

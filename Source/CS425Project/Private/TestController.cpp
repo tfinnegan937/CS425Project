@@ -2,7 +2,6 @@
 
 
 #include "TestController.h"
-#include "UnrealIPCController.h"
 // Sets default values
 ATestController::ATestController()
 {
@@ -16,6 +15,7 @@ void ATestController::BeginPlay()
 {
 	Super::BeginPlay();
 	//instantiate_shared_mem();
+	ipcController = new IPCCreator(TEXT(BUFF_NAME));
 	FString project_directory = FPaths::ProjectDir();
 	FString binary = project_directory.Append("\\Binaries\\Win64\\DesktopInterface.exe");
 	FPlatformProcess::CreateProc(*binary, nullptr, true, false, false, nullptr, 0, nullptr, nullptr);

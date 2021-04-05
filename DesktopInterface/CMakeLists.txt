@@ -1,9 +1,7 @@
 # cmake_minimum_required(VERSION <specify CMake version here>)
 project(DesktopInterface)
 
-set ( COMPILE_FLAGS
-    "-Wall -Werror"
-    )
+
 
 set(CMAKE_CXX_FLAGS "${CMAKE_CXX_FLAGS} ${COMPILE_FLAGS}")
 
@@ -19,7 +17,7 @@ find_package(Qt5Widgets REQUIRED)
 find_package(Qt5 COMPONENTS Core REQUIRED)
 find_package(Python3 3.9 REQUIRED)
 find_package(PythonLibs 3.9 REQUIRED)
-set(CMAKE_CXX_STANDARD 20)
+set(CMAKE_CXX_STANDARD 14)
 set(dir ${CMAKE_CURRENT_SOURCE_DIR})
 link_directories(${dir}/../shared_lib)
 get_filename_component(PARENT_DIRECTORY ../ ABSOLUTE)
@@ -62,7 +60,7 @@ unit_tests/TestCSVSaveLoad.cpp
 )
 
 add_executable(DesktopInterface main.cpp ${SOURCES} ${MAIN_HEADERS} ${EXTRA_HEADERS} ${UI_HEADERS})
-target_link_libraries(DesktopInterface Qt5::Widgets Qt5::Core libUnrealIPCInterface.a ${PYTHON_LIBRARIES})
+target_link_libraries(DesktopInterface Qt5::Widgets Qt5::Core libUnrealIPCInterface.a libWindowsIPCInterface.a ${PYTHON_LIBRARIES})
 add_custom_target(
         TARGET DesktopInterface
         POST_BUILD
@@ -79,4 +77,5 @@ find_package(Qt5Test REQUIRED)
 
 add_executable(DesktopInterfaceTest ${SOURCES} ${UNIT_TESTS} ${MAIN_HEADERS} ${EXTRA_HEADERS} ${UI_HEADERS})
 add_test(NAME DesktopInterfaceTest COMMAND DesktopInterfaceTest)
-target_link_libraries(DesktopInterfaceTest PRIVATE Qt5::Test Qt5::Widgets Qt5::Core libUnrealIPCInterface.a ${PYTHON_LIBRARIES})
+target_link_libraries(DesktopInterfaceTest PRIVATE Qt5::Test Qt5::Widgets Qt5::Core libUnrealIPCInterface.a
+        libWindowsIPCInterface.a ${PYTHON_LIBRARIES})

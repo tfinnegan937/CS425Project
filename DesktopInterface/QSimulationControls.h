@@ -11,6 +11,7 @@
 #include <QPushButton>
 #include <QGroupBox>
 #include <QLabel>
+#include <Windows.h>
 class QSimulationControlButtonWidget : public QWidget{
     Q_OBJECT
 private:
@@ -19,6 +20,7 @@ private:
     QPushButton * cancel_button;
 signals:
     void beginSignal();
+    void sendMessage(UINT16);
 public slots:
     void beginPressed();
     void cancelPressed();
@@ -50,11 +52,13 @@ private:
 signals:
     void simActive(); //Passed to control_buttons when the matching signal is received from the parent
     void simFinished(); //Passed to control_buttons when the matching signal is received from the parent
+    void sendMessage(UINT16);
 public slots:
     void lockPane(); //Locks all checkboxes upon receiving simActive from its parent widget. Also toggles the "Begin" and "Cancel" buttons
     void unlockPane();//Locks all checkboxes upon receiving simFinished from its parent widget. Also toggles the "Begin" and "Cancel" buttons
     void selectAll(int state);
     void passBeginSignalToIPC();
+    void passSendMessage(UINT16 mess);
 public:
     QSimulationControls(QWidget * parent = nullptr);
     uint16_t getButtonStatesAsIPCBuff() const;
