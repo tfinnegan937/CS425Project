@@ -23,4 +23,9 @@ public:
 	// Called every frame
 	virtual void Tick(float DeltaTime) override;
 
+	UFUNCTION(BlueprintImplementableEvent, Category = "Output")
+		void StartTest();
+
+	UFUNCTION(BlueprintImplementableEvent, Category = "Output")
+		void StopTest();
 };
