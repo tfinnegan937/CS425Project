@@ -35,6 +35,7 @@ int loop_counter = 0; //Temporary counter to increase alternating graphs to ever
 void QHomeWindow::ipcTick() {
     //Handle UnrealEngine signals
         //std::cout << std::endl << "Reached Message Loop" << std::endl;
+        ipcController->sendMessage(0x00);
         if (ipcController->messageReceived()) {
             try {
                 UINT16 buffer_output = ipcController->receiveMessage();

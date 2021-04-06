@@ -16,7 +16,6 @@ void ATestController::BeginPlay()
 {
 
 	Super::BeginPlay();
-	GEngine->AddOnScreenDebugMessage(-1, 15.0f, FColor::Yellow, TEXT("debug"));
 
 	//instantiate_shared_mem();
 	ipcController = new IPCCreator(TEXT(BUFF_NAME));
@@ -35,9 +34,9 @@ void ATestController::Tick(float DeltaTime)
 }
 
 void ATestController::ipcTimerTick() {
-	GEngine->AddOnScreenDebugMessage(-1, 15.0f, FColor::Yellow, TEXT("tick"));
 
 	UINT16 message = 0x00;
+	ipcController->sendMessage(0x00);
 	if (ipcController->messageReceived()) {
 		message = ipcController->receiveMessage();
 	}
@@ -49,7 +48,6 @@ void ATestController::handleMessage(UINT16 mess_in) {
 	if (mess_in == 0x00) {
 		return;
 	}
-	GEngine->AddOnScreenDebugMessage(-1, 15.0f, FColor::Yellow, TEXT("Message Non-Zero"));
 	if (mess_in & QUEUE_SP) {
 		if (!testsStarted) {
 			atLeastOneTest = true;
@@ -92,6 +90,13 @@ void ATestController::handleMessage(UINT16 mess_in) {
 			atLeastOneTest = true;
 			//Queue the test
 		}
+	}
+	if (mess_in & STOP_ALL) {
+		atLeastOneTest = false;
+		testsStarted = false;
+		GEngine->AddOnScreenDebugMessage(-1, 15.0f, FColor::Yellow, TEXT("STOP TESTS"));
+
+		ipcController->sendMessage(TESTS_COMPLETED);
 	}
 
 	if (atLeastOneTest) {

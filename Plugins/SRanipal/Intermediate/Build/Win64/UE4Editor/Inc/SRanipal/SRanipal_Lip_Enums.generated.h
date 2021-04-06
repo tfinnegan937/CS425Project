@@ -14,7 +14,7 @@ PRAGMA_DISABLE_DEPRECATION_WARNINGS
 #define SRANIPAL_SRanipal_Lip_Enums_generated_h
 
 #undef CURRENT_FILE_ID
-#define CURRENT_FILE_ID VPVR_Plugins_SRanipal_Source_SRanipal_Public_Lip_SRanipal_Lip_Enums_h
+#define CURRENT_FILE_ID CS425Project_Plugins_SRanipal_Source_SRanipal_Public_Lip_SRanipal_Lip_Enums_h
 
 
 #define FOREACH_ENUM_SUPPORTEDLIPVERSION(op) \

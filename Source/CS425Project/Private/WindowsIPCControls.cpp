@@ -30,6 +30,7 @@ void IPCCreator::sendMessage(UINT16 mess_in) {
                 sizeof(UINT16)
                 );
         _getch();
+        FlushViewOfFile((void*)pBuf, 6);
     }
 }
 
@@ -51,6 +52,7 @@ UINT16 IPCCreator::receiveMessage() {
 }
 
 bool IPCCreator::messageReceived() {
+    FlushViewOfFile((void*)pBuf, 6);
 
     if(pBuf[1] != NULL && pBuf[1] != 0x00){
         return true;
@@ -91,6 +93,7 @@ void IPCReceiver::sendMessage(UINT16 mess_in) {
                 sizeof(UINT16)
         );
         _getch();
+        FlushViewOfFile((void*)pBuf, 6);
     }
 }
 
@@ -111,6 +114,7 @@ UINT16 IPCReceiver::receiveMessage() {
 }
 
 bool IPCReceiver::messageReceived() {
+    FlushViewOfFile((void*)pBuf, 6);
 
     if(pBuf[1] != NULL && pBuf[1] != 0x00){
         return true;
