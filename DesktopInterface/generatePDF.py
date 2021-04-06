@@ -480,4 +480,4 @@ def generatePDF(file_location, options_for_graphing, location_to_save_to):
 		print(sys.exc_info()[0].args)
 	
 	return True
-print(generatePDF("D:/Documents/CS425Project/Binaries/Win64/test.csv", "", "D:/Documents/CS425Project/Binaries/Win64/pdf/s.tex"))
+#print(generatePDF("D:/Documents/CS425Project/Binaries/Win64/test.csv", "", "D:/Documents/CS425Project/Binaries/Win64/pdf/s.tex"))

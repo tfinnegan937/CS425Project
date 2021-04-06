@@ -292,7 +292,6 @@ void QHomeWindow::exportDataToPDF()
             tr("LaTeX (*.tex);;All Files (*)"));
 
     PDFGenerator pdfgenerator;
-    std::cout << last_file_touched.toStdString() << std::endl << fileName.toStdString() << std::endl;
 
     try {
         pdfgenerator.GeneratePDFFromData(last_file_touched.toStdString().c_str(), "None", fileName.toStdString().c_str());
