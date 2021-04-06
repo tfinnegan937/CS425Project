@@ -7,7 +7,7 @@
 #include <Windows.h>
 #include <tchar.h>
 #include <conio.h>
-#define BUF_SIZE 8
+#define BUF_SIZE 6
 class IPCObject{
 public:
   virtual void sendMessage(UINT16 mess_in) = 0;
@@ -18,7 +18,7 @@ public:
 class IPCCreator : IPCObject{
 private:
     HANDLE hMapFile = NULL;
-    UINT16 * pBuf = NULL;
+    volatile UINT16 * pBuf = NULL;
 public:
     IPCCreator(TCHAR sharedMemName[]);
     ~IPCCreator();
@@ -31,7 +31,7 @@ public:
 class IPCReceiver : IPCObject{
 private:
     HANDLE hMapFile = NULL;
-    UINT16 * pBuf = NULL;
+    volatile UINT16 * pBuf = NULL;
 public:
     IPCReceiver(TCHAR sharedMemName[]);
     ~IPCReceiver();

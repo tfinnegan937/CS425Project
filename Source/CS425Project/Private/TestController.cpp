@@ -7,14 +7,17 @@ ATestController::ATestController()
 {
  	// Set this actor to call Tick() every frame.  You can turn this off to improve performance if you don't need it.
 	PrimaryActorTick.bCanEverTick = true;
-	RootComponent = CreateDefaultSubobject<USceneComponent>(TEXT("RootSceneComponent"));
+	//RootComponent = CreateDefaultSubobject<USceneComponent>(TEXT("RootSceneComponent"));
 
 }
 
 // Called when the game starts or when spawned
 void ATestController::BeginPlay()
 {
+
 	Super::BeginPlay();
+	GEngine->AddOnScreenDebugMessage(-1, 15.0f, FColor::Yellow, TEXT("debug"));
+
 	//instantiate_shared_mem();
 	ipcController = new IPCCreator(TEXT(BUFF_NAME));
 	FString project_directory = FPaths::ProjectDir();
@@ -32,9 +35,9 @@ void ATestController::Tick(float DeltaTime)
 }
 
 void ATestController::ipcTimerTick() {
+	GEngine->AddOnScreenDebugMessage(-1, 15.0f, FColor::Yellow, TEXT("tick"));
 
 	UINT16 message = 0x00;
-	ipcController->sendMessage(0x00);
 	if (ipcController->messageReceived()) {
 		message = ipcController->receiveMessage();
 	}

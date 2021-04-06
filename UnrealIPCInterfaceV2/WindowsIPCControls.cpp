@@ -34,6 +34,7 @@ void IPCCreator::sendMessage(UINT16 mess_in) {
 }
 
 UINT16 IPCCreator::receiveMessage() {
+
     if(hMapFile != NULL && pBuf != NULL){
         UINT16 buf_val = pBuf[1];
         UINT16 zero_val = 0x00;
@@ -50,6 +51,7 @@ UINT16 IPCCreator::receiveMessage() {
 }
 
 bool IPCCreator::messageReceived() {
+
     if(pBuf[1] != NULL && pBuf[1] != 0x00){
         return true;
     }
@@ -57,7 +59,7 @@ bool IPCCreator::messageReceived() {
 }
 
 IPCCreator::~IPCCreator() {
-    UnmapViewOfFile(pBuf);
+    UnmapViewOfFile((void*)pBuf);
     CloseHandle(hMapFile);
     hMapFile = NULL;
     pBuf = NULL;
@@ -93,6 +95,7 @@ void IPCReceiver::sendMessage(UINT16 mess_in) {
 }
 
 UINT16 IPCReceiver::receiveMessage() {
+
     if(hMapFile != NULL && pBuf != NULL){
         UINT16 buf_val = pBuf[0];
         UINT16 zero_val = 0x00;
@@ -108,6 +111,7 @@ UINT16 IPCReceiver::receiveMessage() {
 }
 
 bool IPCReceiver::messageReceived() {
+
     if(pBuf[1] != NULL && pBuf[1] != 0x00){
         return true;
     }
@@ -115,7 +119,7 @@ bool IPCReceiver::messageReceived() {
 }
 
 IPCReceiver::~IPCReceiver() {
-    UnmapViewOfFile(pBuf);
+    UnmapViewOfFile((void*)pBuf);
     CloseHandle(hMapFile);
     hMapFile = NULL;
     pBuf = NULL;
