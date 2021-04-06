@@ -17,7 +17,9 @@
 #include <QLineEdit>
 #include <QDateTime>
 #include <QCalendarWidget>
+#include "QHomeWindow.h"
 #include "PatientData.h"
+
 //All of the additional classes in this header are components of QPatientDataPane and will not be used elsewhere.
 
 //This widget contains the radio buttons for selecting the patient's gender
@@ -40,7 +42,7 @@ public:
 //This is a fancy date selection widget class. A QCalendarWidget pops up in a new window and allows one to select the appropriate date
 class QDatePicker : public QWidget{
 Q_OBJECT
-private:
+protected:
     QString QLbl_pickerLabel;
     QWidget * QWin_datePickerWindow;
     QPushButton * QBtn_selectDate;
@@ -89,7 +91,7 @@ public:
 //This is the outermost widget containing all of the above widgets, and all input fields for the patient UI.
 class QPatientDataPane : public QWidget{
 Q_OBJECT
-private:
+protected:
     QDatePicker * QDatePckr_daySeenPicker;
     QDatePicker * QDatePckr_dobPicker;
     QDatePicker * QDatePckr_dateOfInjury;

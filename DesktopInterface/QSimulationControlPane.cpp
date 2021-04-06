@@ -36,6 +36,7 @@ void QSimulationControlPane::connectControlSignals() {
     connect(this, &QSimulationControlPane::simActive, QSimCtrls_simulationControls, &QSimulationControls::lockPane);
     connect(this, &QSimulationControlPane::simFinished, QSimCtrls_simulationControls, &QSimulationControls::unlockPane);
     connect(QSimCtrls_simulationControls, &QSimulationControls::sendMessage, this, &QSimulationControlPane::passSendMessage);
+    //connect(QBtn_exportSimData, &QPushButton::pressed, this, &QHomeWindow::exportDataToPDF);
 }
 
 void QSimulationControlPane::passSendMessage(UINT16 mess) {

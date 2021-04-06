@@ -108,8 +108,10 @@ void CSVSaveLoad::LoadEyeData(FullPatientData& to_load, ifstream& input_file)
     input_file.ignore(std::numeric_limits<std::streamsize>::max(), '\n');
 
     string raw_line_data, value;
+    for (size_t i = 0; i < NumOfTests; i++) to_load.test_data[i].eyeFrames.clear();
     //Iterates over every line and stores it in a string.
     while(getline(input_file, raw_line_data)){
+
         //Converts the string to a stringstream for ease of parsing.
         stringstream s(raw_line_data);
         EyeFrameData newEyeFrame;
@@ -122,7 +124,6 @@ void CSVSaveLoad::LoadEyeData(FullPatientData& to_load, ifstream& input_file)
         getline(s, value, ','); // Grabs Experiment Name
         //Finds which test to sort the current EyeFrame into based on experiment name.
         auto& current_test = to_load.test_data[FullPatientData::test_name_to_id.at(value)];
-        current_test.eyeFrames.clear();
 
         getline(s, value, ','); // ChangeOfSymptom
         current_test.changeOfSymptoms = stoi(value);
@@ -196,7 +197,7 @@ bool CSVSaveLoad::LoadData(FullPatientData& to_load, const char* folder_to_load_
 {
     string filepath_patient_data = string(folder_to_load_from) + string(filename_patient_data);
     ifstream input_file;
-    input_file.open(filename_patient_data);
+    input_file.open(filename_patient_data, std::ios::binary);
 
     // If failed to open file or file empty, return failure.
     if (!input_file.is_open() || input_file.peek() == std::ifstream::traits_type::eof()) {

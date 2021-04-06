@@ -10,15 +10,32 @@
 #include <QTimer>
 #include <QString>
 #include <QMenuBar>
+#include <QFileDialog>
+#include <QMessageBox>
 #include <QAction>
+#include <QDateTimeEdit>
 #include "QVRControlWidget.h"
 #include "QSimulationControlPane.h"
 #include "QPatientDataPane.h"
 #include "QResultsPane.h"
+#include "csvsaveload.h"
+#include "../shared_include/EyeFrameData.h"
+#include "../shared_include/EyeSessionData.h"
+#include "../shared_include/FullPatientData.h"
+#include "PDFGenerator.h"
 #include "WindowsIPCControls.h"
+
+class QSimulationControlPane;
+class QPatientDataPane;
+
 class QHomeWindow : public QWidget {
 Q_OBJECT
 private:
+    //Data Files
+    FullPatientData current_patient_data;
+    FullPatientData comparison_data;
+    QString last_file_touched = "None";
+
     //UI panels
     QHBoxLayout * QHBx_panelLayout;
     QSimulationControlPane * QPane_simCtrlPane; //The third of the UI containing the simulation controls, a logo, and misc. buttons.
@@ -36,6 +53,12 @@ private:
     QAction * QMenAct_fileSaveAs;
     QAction * QMenAct_fileExit;
     QAction * QMenAct_fileExportData;
+
+    //Menu Action Functions
+    void loadFile();
+    void saveFile();
+    void saveAsFile();
+
 
     QMenu * QMen_help;
     QAction * QMenAct_helpAbout;
@@ -59,6 +82,8 @@ signals:
     void simFinished(); //This signal is called when all tests are completed and is passed down to the sim control UI to indicate that it should be unlocked
 public:
     explicit QHomeWindow(QWidget * parent = nullptr);
+    void updateCurrentPatientData();
+    void exportDataToPDF();
 };
 
 
