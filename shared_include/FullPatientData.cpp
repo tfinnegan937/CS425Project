@@ -21,5 +21,6 @@ const map<string, int> FullPatientData::test_name_to_id = {
         {FullPatientData::test_names[4], 4},
         {FullPatientData::test_names[5], 5},
         {FullPatientData::test_names[6], 6},
+        {"VOR", 3},
         {"VMS", 6}
 };

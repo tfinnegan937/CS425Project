@@ -108,7 +108,9 @@ void CSVSaveLoad::LoadEyeData(FullPatientData& to_load, ifstream& input_file)
     input_file.ignore(std::numeric_limits<std::streamsize>::max(), '\n');
 
     string raw_line_data, value;
-    for (size_t i = 0; i < NumOfTests; i++) to_load.test_data[i].eyeFrames.clear();
+    for (size_t i = 0; i < NumOfTests; i++) {
+        to_load.test_data[i].eyeFrames.clear();
+    }
     //Iterates over every line and stores it in a string.
     while(getline(input_file, raw_line_data)){
 
@@ -121,7 +123,7 @@ void CSVSaveLoad::LoadEyeData(FullPatientData& to_load, ifstream& input_file)
             to_load.participantID = QString(value.c_str());
         }
 
-        getline(s, value, ','); // Grabs Experiment Name
+        getline(s, value, ','); // Grabs Experiment Name'
         //Finds which test to sort the current EyeFrame into based on experiment name.
         auto& current_test = to_load.test_data[FullPatientData::test_name_to_id.at(value)];
 
@@ -168,6 +170,7 @@ void CSVSaveLoad::LoadEyeData(FullPatientData& to_load, ifstream& input_file)
 
         current_test.eyeFrames.push_back(newEyeFrame);
     }
+    std::cout << 4 << std::endl;
 }
 
 
@@ -184,6 +187,7 @@ bool CSVSaveLoad::SaveData(const FullPatientData& to_save, const char* folder_to
 
     CreateEyeFrameHeader(output_file);
 
+
     for (size_t i = 0; i < NumOfTests; i++) {
         SaveEyeSessionData(to_save, i, output_file);
     }
@@ -197,6 +201,7 @@ bool CSVSaveLoad::LoadData(FullPatientData& to_load, const char* folder_to_load_
 {
     string filepath_patient_data = string(folder_to_load_from) + string(filename_patient_data);
     ifstream input_file;
+
     input_file.open(filename_patient_data, std::ios::binary);
 
     // If failed to open file or file empty, return failure.
@@ -204,7 +209,9 @@ bool CSVSaveLoad::LoadData(FullPatientData& to_load, const char* folder_to_load_
         return false;
     }
 
+
     LoadEyeData(to_load, input_file);
+    std::cout << "they will not heal" << std::endl;
     input_file.close();
 
     return true;
