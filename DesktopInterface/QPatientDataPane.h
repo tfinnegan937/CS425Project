@@ -18,6 +18,7 @@
 #include <QDateTime>
 #include <QCalendarWidget>
 #include "QHomeWindow.h"
+#include "PatientData.h"
 
 //All of the additional classes in this header are components of QPatientDataPane and will not be used elsewhere.
 
@@ -84,7 +85,7 @@ private:
                                             //added to another layout, which is then set as the outermost layout for the widget
 public:
     QConcussionPicker(QWidget * parent = nullptr);
-    QString getConcussStatus() const;
+    bool getConcussStatus() const;
 };
 
 //This is the outermost widget containing all of the above widgets, and all input fields for the patient UI.
@@ -94,14 +95,14 @@ friend class QHomeWindow;
 protected:
     QDatePicker * QDatePckr_daySeenPicker;
     QDatePicker * QDatePckr_dobPicker;
+    QDatePicker * QDatePckr_dateOfInjury;
 
     QGenderPicker * QGenPckr_genderPicker;
 
     QLineEdit * QLineEdt_firstNameField;
     QLineEdit * QLineEdt_lastNameField;
 
-    QTextEdit * QTxtEdt_commentsField;
-
+    QComboBox * QCmbBox_SportPicker;
     QConcussionPicker * QCssPckr_concussionSelector;
 
     QGridLayout * QGrd_mainLayout;
@@ -111,6 +112,7 @@ protected:
                                          //added to another layout, which is then set as the outermost layout for the widget
 public:
     QPatientDataPane(QWidget * parent = nullptr);
+    PatientData getPatientData();
 };
 
 

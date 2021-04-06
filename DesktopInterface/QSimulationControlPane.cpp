@@ -35,6 +35,11 @@ void QSimulationControlPane::unlockPane() {
 void QSimulationControlPane::connectControlSignals() {
     connect(this, &QSimulationControlPane::simActive, QSimCtrls_simulationControls, &QSimulationControls::lockPane);
     connect(this, &QSimulationControlPane::simFinished, QSimCtrls_simulationControls, &QSimulationControls::unlockPane);
+    connect(QSimCtrls_simulationControls, &QSimulationControls::sendMessage, this, &QSimulationControlPane::passSendMessage);
+}
+
+void QSimulationControlPane::passSendMessage(UINT16 mess) {
+    sendMessage(mess);
 }
 
 

@@ -20,6 +20,11 @@
 			"EWIEGA46WW/moc_DesktopInterface.cpp"
 		],
 		[
+			"E:/CS425Project/DesktopInterface/PatientData.h",
+			"MU",
+			"EWIEGA46WW/moc_PatientData.cpp"
+		],
+		[
 			"E:/CS425Project/DesktopInterface/QHomeWindow.h",
 			"MU",
 			"EWIEGA46WW/moc_QHomeWindow.cpp"
@@ -127,6 +132,7 @@
 	"SOURCES" : 
 	[
 		[ "E:/CS425Project/DesktopInterface/DesktopInterface.cpp", "MU" ],
+		[ "E:/CS425Project/DesktopInterface/PatientData.cpp", "MU" ],
 		[ "E:/CS425Project/DesktopInterface/QHomeWindow.cpp", "MU" ],
 		[ "E:/CS425Project/DesktopInterface/QPatientDataPane.cpp", "MU" ],
 		[ "E:/CS425Project/DesktopInterface/QResultsPane.cpp", "MU" ],

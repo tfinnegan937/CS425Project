@@ -22,6 +22,7 @@
 #include "../shared_include/EyeFrameData.h"
 #include "../shared_include/EyeSessionData.h"
 #include "../shared_include/FullPatientData.h"
+#include "WindowsIPCControls.h"
 
 class QHomeWindow : public QWidget {
 Q_OBJECT
@@ -63,10 +64,11 @@ private:
 
     QMenu * QMen_help;
     QAction * QMenAct_helpAbout;
+    IPCReceiver * ipcController;
 
     void setupMenuBar();
 
-    bool initializeIPC(const QString& shared_mem_name); //initialize IPC communication
+    bool initializeIPC(); //initialize IPC communication
 
     bool handleIPCMessages(uint16_t message_buffer); //Take received message buffer and handle each received
 
@@ -75,6 +77,7 @@ private:
 
 public slots:
     void ipcTick(); //One tick of the IPC communication loop. Executed when a timeout() signal is called from QTmr_ipcCallbackTimer
+    void sendMessage(UINT16 mess);
 signals:
     //TODO
     void simActive(); //This signal is called any time a VOMS test begins, and is passed down to the sim control UI to indicate that it should be locked

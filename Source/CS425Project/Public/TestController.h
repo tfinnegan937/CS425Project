@@ -4,13 +4,18 @@
 
 #include "CoreMinimal.h"
 #include "GameFramework/Actor.h"
+#include "WindowsIPCControls.h"
 #include "TestController.generated.h"
-
 UCLASS()
 class CS425PROJECT_API ATestController : public AActor
 {
 	GENERATED_BODY()
-	
+private:
+	IPCCreator* ipcController;
+	FTimerHandle ipcTimerHandle;
+	void ipcTimerTick();
+	void handleMessage(UINT16 mess);
+	bool testsStarted = false;
 public:	
 	// Sets default values for this actor's properties
 	ATestController();

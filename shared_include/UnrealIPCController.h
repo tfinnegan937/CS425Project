@@ -61,7 +61,7 @@
 //4. Call receive_message to grab the entire flag buffer and check which flags are set.
 //A flag is set when desired_flag & flag_buffer == desired_flag
 
-bool instantiate_shared_mem(std::string memID_in); //Creates the shared memory buffer for communication
+bool instantiate_shared_mem(); //Creates the shared memory buffer for communication
 bool access_shared_mem(std::string memID_in);      //Accesses the shared memory and casts a structure to it.
 void send_message(uint16_t message = 0x00);
 uint16_t receive_message();

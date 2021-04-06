@@ -102,6 +102,7 @@ set(CMAKE_MAKEFILE_PRODUCTS
 set(CMAKE_DEPEND_INFO_FILES
   "CMakeFiles/DesktopInterfaceTest.dir/DependInfo.cmake"
   "CMakeFiles/DesktopInterface.dir/DependInfo.cmake"
+  "CMakeFiles/TARGET.dir/DependInfo.cmake"
   "CMakeFiles/DesktopInterfaceTest_autogen.dir/DependInfo.cmake"
   "CMakeFiles/DesktopInterface_autogen.dir/DependInfo.cmake"
   )

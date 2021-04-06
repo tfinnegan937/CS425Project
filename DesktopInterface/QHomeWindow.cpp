@@ -4,7 +4,6 @@
 
 #include "QHomeWindow.h"
 #include "QResultsWindow.h"
-#include "UnrealIPCController.h"
 #include <iostream>
 QResultsWindow *wdg;
 QHomeWindow::QHomeWindow(QWidget *parent) : QWidget(parent) {
@@ -28,7 +27,8 @@ QHomeWindow::QHomeWindow(QWidget *parent) : QWidget(parent) {
 
     this->setLayout(QHBx_panelLayout);
     //Initialize IPC communication
-    initializeIPC("unreal_memory_buff");
+    ipcController = new IPCReceiver(TEXT(BUFF_NAME));
+    initializeIPC();
 
     connectSimPaneSignals();
 
@@ -36,36 +36,20 @@ QHomeWindow::QHomeWindow(QWidget *parent) : QWidget(parent) {
 }
 
 
-//The below contains an IPC communication loop for the program.
-//The list of steps that it takes are as such:
-// 1. Send Queued Messaged (Implicit)
-// 2. Check to see if a message has been received (message_received())
-// 3. If a message has been received, handle that message and send the appropriate signals to UI elements.
-//
-//Step 1 is implicit as QRadBtn_no actual message queue exists. The messages are implemented as an unsigned integer buffer.
-//Messages are single-bit Macros that are anded to that buffer. When read from, the buffer is zeroed.
-//The buffer is global in scope, but can only be accessed by send_message(). A message can be queued from various UI
-//elements anywhere in the program.
-//
-//Step 2 is handled by message_received() which returns true if the inbound buffer is non-zero.
-//Step 3 is handled by QHomeWindow::handleMessages() which calls the appropriate signals to change the state
-//of the rest of the UI. These signals are defined in QHomeWindow::initializeIPC();
+
 int loop_counter = 0; //Temporary counter to increase alternating graphs to every second.
 void QHomeWindow::ipcTick() {
     //Handle UnrealEngine signals
-
-    if(isSharedMemInitialized) { //Error handling seems to fail when the shared memory isn't initialized
         //std::cout << std::endl << "Reached Message Loop" << std::endl;
-        if (message_received()) {
+        if (ipcController->messageReceived()) {
             try {
-                uint16_t buffer_output = receive_message();
+                UINT16 buffer_output = ipcController->receiveMessage();
                 handleIPCMessages(buffer_output);
             } catch (std::exception &e) {
                 //TODO: handle exception
             }
         }
-        std::cout << "here" << std::endl;
-    }
+
     //TODO: Ryan places the code for handling the data pipeline here
     loop_counter++;
     if (loop_counter >= 10) {
@@ -74,7 +58,7 @@ void QHomeWindow::ipcTick() {
     }
 }
 
-bool QHomeWindow::initializeIPC(const QString& shared_mem_name) {
+bool QHomeWindow::initializeIPC() {
     //Initialize the timer for communication with UnrealEngine
     QTmr_ipcCallbackTimer = new QTimer(this);
     //Connect to the appropriate signals and slots here
@@ -82,15 +66,7 @@ bool QHomeWindow::initializeIPC(const QString& shared_mem_name) {
     QTmr_ipcCallbackTimer->setInterval(100); //Time interval between calls in milliseconds. May need to be adjusted.
     QTmr_ipcCallbackTimer->start();
     try {
-        isSharedMemInitialized = access_shared_mem(shared_mem_name.toStdString());
-        if (isSharedMemInitialized) {
-            send_message(IPC_INITIALIZED);
-        }
-        else{
-            //TODO: Replace with permanent error type
-            isSharedMemInitialized = false;
-            throw(std::runtime_error("PLACEHOLDER_ERROR_IPC_INIT"));
-        }
+       ipcController->sendMessage(IPC_INITIALIZED);
     } catch(std::runtime_error& generic_error){
         //TODO: Handle errors
 
@@ -160,6 +136,7 @@ bool QHomeWindow::handleIPCMessages(uint16_t message_buffer) {
 void QHomeWindow::connectSimPaneSignals() {
     connect(this, &QHomeWindow::simActive, QPane_simCtrlPane, &QSimulationControlPane::lockPane);
     connect(this, &QHomeWindow::simFinished, QPane_simCtrlPane, &QSimulationControlPane::unlockPane);
+    connect(QPane_simCtrlPane,&QSimulationControlPane::sendMessage, this, &QHomeWindow::sendMessage);
 }
 
 void QHomeWindow::setupMenuBar() {
@@ -195,6 +172,10 @@ void QHomeWindow::setupMenuBar() {
 
     //wdg = new QResultsWindow(this);
     //wdg->show();
+}
+
+void QHomeWindow::sendMessage(UINT16 mess) {
+    ipcController->sendMessage(mess);
 }
 
 

@@ -2,6 +2,7 @@ file(REMOVE_RECURSE
   "CMakeFiles/DesktopInterface.dir/DesktopInterface.cpp.obj"
   "CMakeFiles/DesktopInterface.dir/DesktopInterface_autogen/mocs_compilation.cpp.obj"
   "CMakeFiles/DesktopInterface.dir/E_/CS425Project/shared_include/FullPatientData.cpp.obj"
+  "CMakeFiles/DesktopInterface.dir/PatientData.cpp.obj"
   "CMakeFiles/DesktopInterface.dir/QHomeWindow.cpp.obj"
   "CMakeFiles/DesktopInterface.dir/QPatientDataPane.cpp.obj"
   "CMakeFiles/DesktopInterface.dir/QResultsPane.cpp.obj"

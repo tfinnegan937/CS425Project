@@ -24,9 +24,11 @@ signals:
     void simActive(); //Sent to QSimCtrls_simulationControls when a matching simActive signal is received from the root window
     void simFinished(); //Sent to QSimCtrls_simulationControls when a matching simFinished signal is received from the root window.
     void ipcMessageReceived(uint16_t);
+    void sendMessage(UINT16);
 public slots:
     void lockPane(); //Receives the simActive() signal from the root window and passes it to QSimCtrls_simulationControls
     void unlockPane(); //Receives the simFinished() signal from the root window and passes it to QSimCtrls_simulationControls
+    void passSendMessage(UINT16 mess);
 public:
     QSimulationControlPane(QWidget * parent = nullptr);
 };

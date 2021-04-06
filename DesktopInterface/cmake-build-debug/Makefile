@@ -75,6 +75,17 @@ CMAKE_BINARY_DIR = E:\CS425Project\DesktopInterface\cmake-build-debug
 #=============================================================================
 # Targets provided globally by CMake.
 
+# Special rule for the target edit_cache
+edit_cache:
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --cyan "No interactive CMake dialog available..."
+	"D:\CLion 2020.3\bin\cmake\win\bin\cmake.exe" -E echo "No interactive CMake dialog available."
+.PHONY : edit_cache
+
+# Special rule for the target edit_cache
+edit_cache/fast: edit_cache
+
+.PHONY : edit_cache/fast
+
 # Special rule for the target rebuild_cache
 rebuild_cache:
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --cyan "Running CMake to regenerate build system..."
@@ -96,17 +107,6 @@ test:
 test/fast: test
 
 .PHONY : test/fast
-
-# Special rule for the target edit_cache
-edit_cache:
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --cyan "No interactive CMake dialog available..."
-	"D:\CLion 2020.3\bin\cmake\win\bin\cmake.exe" -E echo "No interactive CMake dialog available."
-.PHONY : edit_cache
-
-# Special rule for the target edit_cache
-edit_cache/fast: edit_cache
-
-.PHONY : edit_cache/fast
 
 # The main all target
 all: cmake_check_build_system
@@ -165,6 +165,19 @@ DesktopInterface: cmake_check_build_system
 DesktopInterface/fast:
 	$(MAKE) $(MAKESILENT) -f CMakeFiles\DesktopInterface.dir\build.make CMakeFiles/DesktopInterface.dir/build
 .PHONY : DesktopInterface/fast
+
+#=============================================================================
+# Target rules for targets named TARGET
+
+# Build rule for target.
+TARGET: cmake_check_build_system
+	$(MAKE) $(MAKESILENT) -f CMakeFiles\Makefile2 TARGET
+.PHONY : TARGET
+
+# fast build rule for target.
+TARGET/fast:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles\TARGET.dir\build.make CMakeFiles/TARGET.dir/build
+.PHONY : TARGET/fast
 
 #=============================================================================
 # Target rules for targets named DesktopInterfaceTest_autogen
@@ -305,6 +318,36 @@ E_/CS425Project/shared_include/FullPatientData.cpp.s:
 	$(MAKE) $(MAKESILENT) -f CMakeFiles\DesktopInterfaceTest.dir\build.make CMakeFiles/DesktopInterfaceTest.dir/E_/CS425Project/shared_include/FullPatientData.cpp.s
 	$(MAKE) $(MAKESILENT) -f CMakeFiles\DesktopInterface.dir\build.make CMakeFiles/DesktopInterface.dir/E_/CS425Project/shared_include/FullPatientData.cpp.s
 .PHONY : E_/CS425Project/shared_include/FullPatientData.cpp.s
+
+PatientData.obj: PatientData.cpp.obj
+
+.PHONY : PatientData.obj
+
+# target to build an object file
+PatientData.cpp.obj:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles\DesktopInterfaceTest.dir\build.make CMakeFiles/DesktopInterfaceTest.dir/PatientData.cpp.obj
+	$(MAKE) $(MAKESILENT) -f CMakeFiles\DesktopInterface.dir\build.make CMakeFiles/DesktopInterface.dir/PatientData.cpp.obj
+.PHONY : PatientData.cpp.obj
+
+PatientData.i: PatientData.cpp.i
+
+.PHONY : PatientData.i
+
+# target to preprocess a source file
+PatientData.cpp.i:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles\DesktopInterfaceTest.dir\build.make CMakeFiles/DesktopInterfaceTest.dir/PatientData.cpp.i
+	$(MAKE) $(MAKESILENT) -f CMakeFiles\DesktopInterface.dir\build.make CMakeFiles/DesktopInterface.dir/PatientData.cpp.i
+.PHONY : PatientData.cpp.i
+
+PatientData.s: PatientData.cpp.s
+
+.PHONY : PatientData.s
+
+# target to generate assembly for a file
+PatientData.cpp.s:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles\DesktopInterfaceTest.dir\build.make CMakeFiles/DesktopInterfaceTest.dir/PatientData.cpp.s
+	$(MAKE) $(MAKESILENT) -f CMakeFiles\DesktopInterface.dir\build.make CMakeFiles/DesktopInterface.dir/PatientData.cpp.s
+.PHONY : PatientData.cpp.s
 
 QHomeWindow.obj: QHomeWindow.cpp.obj
 
@@ -581,6 +624,7 @@ help:
 	@echo ... test
 	@echo ... DesktopInterfaceTest_autogen
 	@echo ... DesktopInterface_autogen
+	@echo ... TARGET
 	@echo ... DesktopInterface
 	@echo ... DesktopInterfaceTest
 	@echo ... DesktopInterface.obj
@@ -595,6 +639,9 @@ help:
 	@echo ... E_/CS425Project/shared_include/FullPatientData.obj
 	@echo ... E_/CS425Project/shared_include/FullPatientData.i
 	@echo ... E_/CS425Project/shared_include/FullPatientData.s
+	@echo ... PatientData.obj
+	@echo ... PatientData.i
+	@echo ... PatientData.s
 	@echo ... QHomeWindow.obj
 	@echo ... QHomeWindow.i
 	@echo ... QHomeWindow.s
