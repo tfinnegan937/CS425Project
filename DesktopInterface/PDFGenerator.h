@@ -18,23 +18,10 @@ class PDFGenerator : public QObject
     Q_OBJECT
 public:
 
-    bool GeneratePDFFromData();
-    bool isFinished() const;
-    bool wasSuccess() const;
-    void setup(const char* file_location);
-    void start();
+    bool GeneratePDFFromData(const char* file_location, const char* things_to_graph, const char* location_to_save_to);
 
 private:
     const char* python_file_name = "generatePDF";
-    PyObject* pName;
-    PyObject* pModule;
-    bool was_last_save_successful = false;
-    const char* data_file_location = nullptr;
-    const char* things_to_graph = nullptr;
-    bool is_finished;
-
-    void StartPDFThread();
-    void AfterPDF(const bool was_successful);
 
 };
 

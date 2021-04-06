@@ -94,7 +94,7 @@ void CSVSaveLoad::SaveEyeSessionData(const FullPatientData& to_save, const int c
 
         if (current_test_to_save < NumOfTests - 1
                 || it + 1 != current_test.eyeFrames.end()) {
-            //output_file << '\n';
+            output_file << '\n';
         }
     }
 }

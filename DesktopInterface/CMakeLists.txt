@@ -35,7 +35,7 @@ include_directories(unit_tests/)
 set ( SOURCES
 DesktopInterface.cpp
 QHomeWindow.cpp
-        QSimulationControlPane.cpp QPatientDataPane.cpp QResultsPane.cpp QSimulationControls.cpp QResultsWindow.cpp csvsaveload.cpp PatientData.cpp PatientData.h)
+        QSimulationControlPane.cpp QPatientDataPane.cpp QResultsPane.cpp QSimulationControls.cpp QResultsWindow.cpp csvsaveload.cpp PatientData.cpp PatientData.h PDFGenerator.cpp)
 
 set ( MAIN_HEADERS
 DesktopInterface.h

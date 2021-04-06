@@ -22,7 +22,11 @@
 #include "../shared_include/EyeFrameData.h"
 #include "../shared_include/EyeSessionData.h"
 #include "../shared_include/FullPatientData.h"
+#include "PDFGenerator.h"
 #include "WindowsIPCControls.h"
+
+class QSimulationControlPane;
+class QPatientDataPane;
 
 class QHomeWindow : public QWidget {
 Q_OBJECT
@@ -30,7 +34,7 @@ private:
     //Data Files
     FullPatientData current_patient_data;
     FullPatientData comparison_data;
-    const char* last_file_touched = nullptr;
+    QString last_file_touched = "None";
 
     //UI panels
     QHBoxLayout * QHBx_panelLayout;
@@ -55,12 +59,6 @@ private:
     void saveFile();
     void saveAsFile();
 
-    //Modify Functions
-    void setFirstName(const QString& text);
-    void setLastName(const QString& text);
-    void setGender(const QString& text);
-    void setDateOfBirth(const QString& text);
-    void setDateSeen(const QString& text);
 
     QMenu * QMen_help;
     QAction * QMenAct_helpAbout;
@@ -84,6 +82,8 @@ signals:
     void simFinished(); //This signal is called when all tests are completed and is passed down to the sim control UI to indicate that it should be unlocked
 public:
     explicit QHomeWindow(QWidget * parent = nullptr);
+    void updateCurrentPatientData();
+    void exportDataToPDF();
 };
 
 

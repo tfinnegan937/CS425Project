@@ -7,6 +7,7 @@
 #include <QWidget>
 #include <QVBoxLayout>
 #include "QSimulationControls.h"
+#include "QHomeWindow.h"
 #include <QImage>
 #include <QPushButton>
 class QSimulationControlPane : public QWidget{

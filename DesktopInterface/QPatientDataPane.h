@@ -91,7 +91,6 @@ public:
 //This is the outermost widget containing all of the above widgets, and all input fields for the patient UI.
 class QPatientDataPane : public QWidget{
 Q_OBJECT
-friend class QHomeWindow;
 protected:
     QDatePicker * QDatePckr_daySeenPicker;
     QDatePicker * QDatePckr_dobPicker;

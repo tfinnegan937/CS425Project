@@ -7,8 +7,7 @@ using namespace std;
 void TestPDFGeneration::testNoFilePDFGeneration()
 {
     PDFGenerator test;
-    test.start();
-    QVERIFY(!test.wasSuccess());
+    QVERIFY(!test.GeneratePDFFromData("","",""));
 }
 
 
