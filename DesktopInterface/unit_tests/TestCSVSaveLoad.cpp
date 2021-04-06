@@ -17,7 +17,7 @@ void TestCSVSaveLoad::cleanup()
 
 void TestCSVSaveLoad::cleanFile(const char* filename)
 {
-   //std::remove(filename);
+   std::remove(filename);
 }
 
 void TestCSVSaveLoad::populateTestPatientData(FullPatientData& test)
@@ -176,5 +176,3 @@ void TestCSVSaveLoad::testLoadFullPatientDataAlreadyFilled()
     QVERIFY(arePatientDataEqual(test, load));
 }
 
-QTEST_MAIN(TestCSVSaveLoad)
-#include "TestCSVSaveLoad.moc"

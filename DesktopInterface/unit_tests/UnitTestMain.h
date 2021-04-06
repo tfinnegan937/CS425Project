@@ -26,3 +26,31 @@ private slots:
 };
 
 
+class TestPDFGeneration : public QObject
+{
+    Q_OBJECT
+
+private slots:
+    void testNoFilePDFGeneration();
+    void testPDFGenerationWithData();
+
+    void testPersonalInfoInsertion();
+    void testGraphChangeOfSymptoms();
+    void testGraphSymptomScore();
+    void testGraphLocalDotPosition();
+    void testGraphWorldDotPosition();
+    void testGraphHeadPosition();
+    void testGraphHeadOrientation();
+    void testGraphLeftEyeOrigin();
+    void testGraphRightEyeOrigin();
+    void testGraphLeftEyeDirection();
+    void testGraphRightEyeDirection();
+    void testGraphCombinedEyeOrigin();
+    void testGraphCombinedEyeDirection();
+    void testGraphFixation();
+
+    void testGraphAll();
+
+};
+
+

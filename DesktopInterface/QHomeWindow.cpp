@@ -18,6 +18,12 @@ QHomeWindow::QHomeWindow(QWidget *parent) : QWidget(parent) {
 
     QHBx_panelLayout->insertWidget(0, QPane_simCtrlPane);
     QHBx_panelLayout->insertWidget(1, QPane_patientDataPane);
+    connect(QPane_patientDataPane->QLineEdt_firstNameField, &QLineEdit::textEdited, this,
+            [=](const QString& text) { current_patient_data.first_name = text; });
+    connect(QPane_patientDataPane->QLineEdt_lastNameField, &QLineEdit::textEdited, this,
+            [=](const QString& text) { current_patient_data.last_name = text; });
+    connect(QPane_patientDataPane->QLineEdt_firstNameField, &QLineEdit::textEdited, this,
+            &QHomeWindow::setDateSeen);
     QHBx_panelLayout->insertWidget(2, QPane_simResultsPane);
 
     this->setLayout(QHBx_panelLayout);
@@ -63,7 +69,7 @@ void QHomeWindow::ipcTick() {
     //TODO: Ryan places the code for handling the data pipeline here
     loop_counter++;
     if (loop_counter >= 10) {
-        wdg->AlternateGraph();
+        //wdg->AlternateGraph();
         loop_counter = 0;
     }
 }
@@ -175,6 +181,9 @@ void QHomeWindow::setupMenuBar() {
 
     //TODO connect file actions to appropriate signals
     QMenBar_menuBar->addMenu(QMen_file);
+    connect(QMenAct_fileOpen, &QAction::triggered, this, &QHomeWindow::loadFile);
+    connect(QMenAct_fileSave, &QAction::triggered, this, &QHomeWindow::saveFile);
+    connect(QMenAct_fileSaveAs, &QAction::triggered, this, &QHomeWindow::saveAsFile);
 
     QMen_help = new QMenu("Help", QMenBar_menuBar);
 
@@ -184,9 +193,89 @@ void QHomeWindow::setupMenuBar() {
     //TODO connect help actions to appropriate signals
     QMenBar_menuBar->addMenu(QMen_help);
 
-    wdg = new QResultsWindow(this);
-    wdg->show();
+    //wdg = new QResultsWindow(this);
+    //wdg->show();
 }
 
+
+void QHomeWindow::loadFile()
+{
+    QString fileName = QFileDialog::getOpenFileName(this,
+            tr("Open Patient Data"), "",
+            tr("Comma Seperated Values (*.csv);;All Files (*)"));
+
+    CSVSaveLoad saveload;
+
+    try {
+        saveload.LoadData(current_patient_data, "", fileName.toStdString().c_str());
+    } catch (const std::exception &exc) {
+        QMessageBox errorBox;
+        errorBox.critical(0, "Load Error", exc.what());
+        errorBox.setFixedSize(500,200);
+    }
+}
+
+
+void QHomeWindow::saveFile()
+{
+    if (last_file_touched == nullptr) {
+        saveAsFile();
+        return;
+    }
+
+    CSVSaveLoad saveload;
+
+    try {
+        saveload.SaveData(current_patient_data, "", last_file_touched);
+    } catch (const std::exception &exc) {
+        QMessageBox errorBox;
+        errorBox.critical(0, "Save Error", exc.what());
+        errorBox.setFixedSize(500,200);
+    }
+}
+
+
+void QHomeWindow::saveAsFile()
+{
+    QString fileName = QFileDialog::getSaveFileName(this,
+            tr("Save Patient Data"), "",
+            tr("Comma Seperated Values (*.csv);;All Files (*)"));
+
+    last_file_touched = fileName.toStdString().c_str();
+
+    CSVSaveLoad saveload;
+
+    try {
+        saveload.SaveData(current_patient_data, "", fileName.toStdString().c_str());
+    } catch (const std::exception &exc) {
+        QMessageBox errorBox;
+        errorBox.critical(0, "Save Error", exc.what());
+        errorBox.setFixedSize(500,200);
+    }
+}
+
+
+void QHomeWindow::setDateOfBirth(const QString& text)
+{
+    int piece = 0;
+    string number;
+    while (getline(stringstream(text.toStdString()), number, '/'))
+    {
+        current_patient_data.date_of_birth[piece] = stoi(number);
+        piece++;
+    }
+}
+
+
+void QHomeWindow::setDateSeen(const QString& text)
+{
+    int piece = 0;
+    string number;
+    while (getline(stringstream(text.toStdString()), number, '/'))
+    {
+        current_patient_data.date_of_visit[piece] = stoi(number);
+        piece++;
+    }
+}
 
 

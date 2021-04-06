@@ -37,12 +37,12 @@ include_directories(unit_tests/)
 set ( SOURCES
 DesktopInterface.cpp
 QHomeWindow.cpp
-        QSimulationControlPane.cpp QPatientDataPane.cpp QResultsPane.cpp QSimulationControls.cpp QResultsWindow.cpp csvsaveload.cpp)
+        QSimulationControlPane.cpp QPatientDataPane.cpp QResultsPane.cpp QSimulationControls.cpp QResultsWindow.cpp csvsaveload.cpp PDFGenerator.cpp)
 
 set ( MAIN_HEADERS
 DesktopInterface.h
 QHomeWindow.h
-        QSimulationControlPane.h QPatientDataPane.h QResultsPane.h QSimulationControls.h QResultsWindow.h csvsaveload.h)
+        QSimulationControlPane.h QPatientDataPane.h QResultsPane.h QSimulationControls.h QResultsWindow.h csvsaveload.h PDFGenerator.h)
 
 set ( EXTRA_HEADERS
 APPLICATION_CONSTANTS.h
@@ -58,7 +58,9 @@ QResultsWindow.ui
 
 set ( UNIT_TESTS
 unit_tests/UnitTestMain.h
+unit_tests/TestRunner.cpp
 unit_tests/TestCSVSaveLoad.cpp
+unit_tests/TestPDFGeneration.cpp
 )
 
 add_executable(DesktopInterface main.cpp ${SOURCES} ${MAIN_HEADERS} ${EXTRA_HEADERS} ${UI_HEADERS})
@@ -71,7 +73,8 @@ add_custom_target(
 
 #Copies python files over to build
 configure_file(eye_chart.py ${CMAKE_RUNTIME_OUTPUT_DIRECTORY}/eye_chart.py COPYONLY)
-
+configure_file(generatePDF.py ${CMAKE_RUNTIME_OUTPUT_DIRECTORY}/generatePDF.py COPYONLY)
+configure_file(generatePDF.bat ${CMAKE_RUNTIME_OUTPUT_DIRECTORY}/generatePDF.bat COPYONLY)
 
 #Testing
 enable_testing(true)

@@ -19,6 +19,7 @@ class GraphWorker : public QThread{
 
     PyObject* pName;
     PyObject* pModule;
+    const char* python_file_name = "plotEye";
     const char* eye_tracking_code;
     const char* current_data;
 
@@ -26,7 +27,7 @@ class GraphWorker : public QThread{
 
         QByteArray to_return;
         if(pModule) {
-            PyObject* pEyeTrackingFunc = PyObject_GetAttrString(pModule, "plotEye");
+            PyObject* pEyeTrackingFunc = PyObject_GetAttrString(pModule, python_file_name);
             if (pEyeTrackingFunc && PyCallable_Check(pEyeTrackingFunc)) {
                 PyObject* x = Py_BuildValue("s", current_data);
                 PyObject* args = PyTuple_Pack(1, x);

@@ -10,15 +10,27 @@
 #include <QTimer>
 #include <QString>
 #include <QMenuBar>
+#include <QFileDialog>
+#include <QMessageBox>
 #include <QAction>
+#include <QDateTimeEdit>
 #include "QVRControlWidget.h"
 #include "QSimulationControlPane.h"
 #include "QPatientDataPane.h"
 #include "QResultsPane.h"
+#include "csvsaveload.h"
+#include "../shared_include/EyeFrameData.h"
+#include "../shared_include/EyeSessionData.h"
+#include "../shared_include/FullPatientData.h"
 
 class QHomeWindow : public QWidget {
 Q_OBJECT
 private:
+    //Data Files
+    FullPatientData current_patient_data;
+    FullPatientData comparison_data;
+    const char* last_file_touched = nullptr;
+
     //UI panels
     QHBoxLayout * QHBx_panelLayout;
     QSimulationControlPane * QPane_simCtrlPane; //The third of the UI containing the simulation controls, a logo, and misc. buttons.
@@ -36,6 +48,18 @@ private:
     QAction * QMenAct_fileSaveAs;
     QAction * QMenAct_fileExit;
     QAction * QMenAct_fileExportData;
+
+    //Menu Action Functions
+    void loadFile();
+    void saveFile();
+    void saveAsFile();
+
+    //Modify Functions
+    void setFirstName(const QString& text);
+    void setLastName(const QString& text);
+    void setGender(const QString& text);
+    void setDateOfBirth(const QString& text);
+    void setDateSeen(const QString& text);
 
     QMenu * QMen_help;
     QAction * QMenAct_helpAbout;
