@@ -319,6 +319,36 @@ E_/CS425Project/shared_include/FullPatientData.cpp.s:
 	$(MAKE) $(MAKESILENT) -f CMakeFiles\DesktopInterface.dir\build.make CMakeFiles/DesktopInterface.dir/E_/CS425Project/shared_include/FullPatientData.cpp.s
 .PHONY : E_/CS425Project/shared_include/FullPatientData.cpp.s
 
+PDFGenerator.obj: PDFGenerator.cpp.obj
+
+.PHONY : PDFGenerator.obj
+
+# target to build an object file
+PDFGenerator.cpp.obj:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles\DesktopInterfaceTest.dir\build.make CMakeFiles/DesktopInterfaceTest.dir/PDFGenerator.cpp.obj
+	$(MAKE) $(MAKESILENT) -f CMakeFiles\DesktopInterface.dir\build.make CMakeFiles/DesktopInterface.dir/PDFGenerator.cpp.obj
+.PHONY : PDFGenerator.cpp.obj
+
+PDFGenerator.i: PDFGenerator.cpp.i
+
+.PHONY : PDFGenerator.i
+
+# target to preprocess a source file
+PDFGenerator.cpp.i:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles\DesktopInterfaceTest.dir\build.make CMakeFiles/DesktopInterfaceTest.dir/PDFGenerator.cpp.i
+	$(MAKE) $(MAKESILENT) -f CMakeFiles\DesktopInterface.dir\build.make CMakeFiles/DesktopInterface.dir/PDFGenerator.cpp.i
+.PHONY : PDFGenerator.cpp.i
+
+PDFGenerator.s: PDFGenerator.cpp.s
+
+.PHONY : PDFGenerator.s
+
+# target to generate assembly for a file
+PDFGenerator.cpp.s:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles\DesktopInterfaceTest.dir\build.make CMakeFiles/DesktopInterfaceTest.dir/PDFGenerator.cpp.s
+	$(MAKE) $(MAKESILENT) -f CMakeFiles\DesktopInterface.dir\build.make CMakeFiles/DesktopInterface.dir/PDFGenerator.cpp.s
+.PHONY : PDFGenerator.cpp.s
+
 PatientData.obj: PatientData.cpp.obj
 
 .PHONY : PatientData.obj
@@ -529,6 +559,36 @@ QSimulationControls.cpp.s:
 	$(MAKE) $(MAKESILENT) -f CMakeFiles\DesktopInterface.dir\build.make CMakeFiles/DesktopInterface.dir/QSimulationControls.cpp.s
 .PHONY : QSimulationControls.cpp.s
 
+WindowsIPCControls.obj: WindowsIPCControls.cpp.obj
+
+.PHONY : WindowsIPCControls.obj
+
+# target to build an object file
+WindowsIPCControls.cpp.obj:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles\DesktopInterfaceTest.dir\build.make CMakeFiles/DesktopInterfaceTest.dir/WindowsIPCControls.cpp.obj
+	$(MAKE) $(MAKESILENT) -f CMakeFiles\DesktopInterface.dir\build.make CMakeFiles/DesktopInterface.dir/WindowsIPCControls.cpp.obj
+.PHONY : WindowsIPCControls.cpp.obj
+
+WindowsIPCControls.i: WindowsIPCControls.cpp.i
+
+.PHONY : WindowsIPCControls.i
+
+# target to preprocess a source file
+WindowsIPCControls.cpp.i:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles\DesktopInterfaceTest.dir\build.make CMakeFiles/DesktopInterfaceTest.dir/WindowsIPCControls.cpp.i
+	$(MAKE) $(MAKESILENT) -f CMakeFiles\DesktopInterface.dir\build.make CMakeFiles/DesktopInterface.dir/WindowsIPCControls.cpp.i
+.PHONY : WindowsIPCControls.cpp.i
+
+WindowsIPCControls.s: WindowsIPCControls.cpp.s
+
+.PHONY : WindowsIPCControls.s
+
+# target to generate assembly for a file
+WindowsIPCControls.cpp.s:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles\DesktopInterfaceTest.dir\build.make CMakeFiles/DesktopInterfaceTest.dir/WindowsIPCControls.cpp.s
+	$(MAKE) $(MAKESILENT) -f CMakeFiles\DesktopInterface.dir\build.make CMakeFiles/DesktopInterface.dir/WindowsIPCControls.cpp.s
+.PHONY : WindowsIPCControls.cpp.s
+
 csvsaveload.obj: csvsaveload.cpp.obj
 
 .PHONY : csvsaveload.obj
@@ -613,6 +673,60 @@ unit_tests/TestCSVSaveLoad.cpp.s:
 	$(MAKE) $(MAKESILENT) -f CMakeFiles\DesktopInterfaceTest.dir\build.make CMakeFiles/DesktopInterfaceTest.dir/unit_tests/TestCSVSaveLoad.cpp.s
 .PHONY : unit_tests/TestCSVSaveLoad.cpp.s
 
+unit_tests/TestPDFGeneration.obj: unit_tests/TestPDFGeneration.cpp.obj
+
+.PHONY : unit_tests/TestPDFGeneration.obj
+
+# target to build an object file
+unit_tests/TestPDFGeneration.cpp.obj:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles\DesktopInterfaceTest.dir\build.make CMakeFiles/DesktopInterfaceTest.dir/unit_tests/TestPDFGeneration.cpp.obj
+.PHONY : unit_tests/TestPDFGeneration.cpp.obj
+
+unit_tests/TestPDFGeneration.i: unit_tests/TestPDFGeneration.cpp.i
+
+.PHONY : unit_tests/TestPDFGeneration.i
+
+# target to preprocess a source file
+unit_tests/TestPDFGeneration.cpp.i:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles\DesktopInterfaceTest.dir\build.make CMakeFiles/DesktopInterfaceTest.dir/unit_tests/TestPDFGeneration.cpp.i
+.PHONY : unit_tests/TestPDFGeneration.cpp.i
+
+unit_tests/TestPDFGeneration.s: unit_tests/TestPDFGeneration.cpp.s
+
+.PHONY : unit_tests/TestPDFGeneration.s
+
+# target to generate assembly for a file
+unit_tests/TestPDFGeneration.cpp.s:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles\DesktopInterfaceTest.dir\build.make CMakeFiles/DesktopInterfaceTest.dir/unit_tests/TestPDFGeneration.cpp.s
+.PHONY : unit_tests/TestPDFGeneration.cpp.s
+
+unit_tests/TestRunner.obj: unit_tests/TestRunner.cpp.obj
+
+.PHONY : unit_tests/TestRunner.obj
+
+# target to build an object file
+unit_tests/TestRunner.cpp.obj:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles\DesktopInterfaceTest.dir\build.make CMakeFiles/DesktopInterfaceTest.dir/unit_tests/TestRunner.cpp.obj
+.PHONY : unit_tests/TestRunner.cpp.obj
+
+unit_tests/TestRunner.i: unit_tests/TestRunner.cpp.i
+
+.PHONY : unit_tests/TestRunner.i
+
+# target to preprocess a source file
+unit_tests/TestRunner.cpp.i:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles\DesktopInterfaceTest.dir\build.make CMakeFiles/DesktopInterfaceTest.dir/unit_tests/TestRunner.cpp.i
+.PHONY : unit_tests/TestRunner.cpp.i
+
+unit_tests/TestRunner.s: unit_tests/TestRunner.cpp.s
+
+.PHONY : unit_tests/TestRunner.s
+
+# target to generate assembly for a file
+unit_tests/TestRunner.cpp.s:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles\DesktopInterfaceTest.dir\build.make CMakeFiles/DesktopInterfaceTest.dir/unit_tests/TestRunner.cpp.s
+.PHONY : unit_tests/TestRunner.cpp.s
+
 # Help Target
 help:
 	@echo The following are some of the valid targets for this Makefile:
@@ -639,6 +753,9 @@ help:
 	@echo ... E_/CS425Project/shared_include/FullPatientData.obj
 	@echo ... E_/CS425Project/shared_include/FullPatientData.i
 	@echo ... E_/CS425Project/shared_include/FullPatientData.s
+	@echo ... PDFGenerator.obj
+	@echo ... PDFGenerator.i
+	@echo ... PDFGenerator.s
 	@echo ... PatientData.obj
 	@echo ... PatientData.i
 	@echo ... PatientData.s
@@ -660,6 +777,9 @@ help:
 	@echo ... QSimulationControls.obj
 	@echo ... QSimulationControls.i
 	@echo ... QSimulationControls.s
+	@echo ... WindowsIPCControls.obj
+	@echo ... WindowsIPCControls.i
+	@echo ... WindowsIPCControls.s
 	@echo ... csvsaveload.obj
 	@echo ... csvsaveload.i
 	@echo ... csvsaveload.s
@@ -669,6 +789,12 @@ help:
 	@echo ... unit_tests/TestCSVSaveLoad.obj
 	@echo ... unit_tests/TestCSVSaveLoad.i
 	@echo ... unit_tests/TestCSVSaveLoad.s
+	@echo ... unit_tests/TestPDFGeneration.obj
+	@echo ... unit_tests/TestPDFGeneration.i
+	@echo ... unit_tests/TestPDFGeneration.s
+	@echo ... unit_tests/TestRunner.obj
+	@echo ... unit_tests/TestRunner.i
+	@echo ... unit_tests/TestRunner.s
 .PHONY : help
 
 

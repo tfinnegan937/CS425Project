@@ -18,10 +18,13 @@ IPCCreator::IPCCreator(TCHAR *sharedMemName) {
                                      0,
                                      0,
                                      BUF_SIZE);
+    hMutex = CreateMutex(NULL, false, TEXT(MUTEX_NAME));
 }
 
 void IPCCreator::sendMessage(UINT16 mess_in) {
     if(hMapFile != NULL && pBuf != NULL){
+        WaitForSingleObject(hMutex,
+                            INFINITE);
         UINT16 cur_val = pBuf[0];
         UINT16 new_val = cur_val | mess_in;
         CopyMemory(
@@ -31,12 +34,15 @@ void IPCCreator::sendMessage(UINT16 mess_in) {
                 );
         _getch();
         FlushViewOfFile((void*)pBuf, 6);
+        ReleaseMutex(hMutex);
     }
 }
 
 UINT16 IPCCreator::receiveMessage() {
 
     if(hMapFile != NULL && pBuf != NULL){
+        WaitForSingleObject(hMutex,
+                            INFINITE);
         UINT16 buf_val = pBuf[1];
         UINT16 zero_val = 0x00;
         CopyMemory(  //Zero memory after reading
@@ -45,18 +51,21 @@ UINT16 IPCCreator::receiveMessage() {
                 sizeof(UINT16)
                 );
         _getch();
-
+        ReleaseMutex(hMutex);
         return(buf_val);
     }
     return 0;
 }
 
 bool IPCCreator::messageReceived() {
-    FlushViewOfFile((void*)pBuf, 6);
-
+    WaitForSingleObject(hMutex,
+                        INFINITE);
     if(pBuf[1] != NULL && pBuf[1] != 0x00){
+        ReleaseMutex(hMutex);
         return true;
     }
+    ReleaseMutex(hMutex);
+
     return false;
 }
 
@@ -81,10 +90,13 @@ IPCReceiver::IPCReceiver(TCHAR *sharedMemName) {
                                         0,
                                         BUF_SIZE);
     }
+    hMutex = CreateMutex(NULL, false, TEXT(MUTEX_NAME));
 }
 
 void IPCReceiver::sendMessage(UINT16 mess_in) {
     if(hMapFile != NULL && pBuf != NULL){
+        WaitForSingleObject(hMutex,
+                            INFINITE);
         UINT16 cur_val = pBuf[1];
         UINT16 new_val = cur_val | mess_in;
         CopyMemory(
@@ -94,12 +106,15 @@ void IPCReceiver::sendMessage(UINT16 mess_in) {
         );
         _getch();
         FlushViewOfFile((void*)pBuf, 6);
+        ReleaseMutex(hMutex);
     }
 }
 
 UINT16 IPCReceiver::receiveMessage() {
 
     if(hMapFile != NULL && pBuf != NULL){
+        WaitForSingleObject(hMutex,
+                            INFINITE);
         UINT16 buf_val = pBuf[0];
         UINT16 zero_val = 0x00;
         CopyMemory(  //Zero memory after reading
@@ -108,6 +123,7 @@ UINT16 IPCReceiver::receiveMessage() {
                 sizeof(UINT16)
         );
         _getch();
+        ReleaseMutex(hMutex);
         return(buf_val);
     }
     return 0;
@@ -115,10 +131,14 @@ UINT16 IPCReceiver::receiveMessage() {
 
 bool IPCReceiver::messageReceived() {
     FlushViewOfFile((void*)pBuf, 6);
-
+    WaitForSingleObject(hMutex,
+                        INFINITE);
     if(pBuf[1] != NULL && pBuf[1] != 0x00){
+        ReleaseMutex(hMutex);
         return true;
     }
+    ReleaseMutex(hMutex);
+
     return false;
 }
 

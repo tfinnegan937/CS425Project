@@ -35,7 +35,7 @@ include_directories(unit_tests/)
 set ( SOURCES
 DesktopInterface.cpp
 QHomeWindow.cpp
-        QSimulationControlPane.cpp QPatientDataPane.cpp QResultsPane.cpp QSimulationControls.cpp QResultsWindow.cpp csvsaveload.cpp PatientData.cpp PatientData.h PDFGenerator.cpp)
+        QSimulationControlPane.cpp QPatientDataPane.cpp QResultsPane.cpp QSimulationControls.cpp QResultsWindow.cpp csvsaveload.cpp PatientData.cpp PatientData.h PDFGenerator.cpp WindowsIPCControls.cpp)
 
 set ( MAIN_HEADERS
 DesktopInterface.h
@@ -62,7 +62,7 @@ unit_tests/TestPDFGeneration.cpp
 )
 
 add_executable(DesktopInterface main.cpp ${SOURCES} ${MAIN_HEADERS} ${EXTRA_HEADERS} ${UI_HEADERS})
-target_link_libraries(DesktopInterface Qt5::Widgets Qt5::Core libUnrealIPCInterface.a libWindowsIPCInterface.a ${PYTHON_LIBRARIES})
+target_link_libraries(DesktopInterface Qt5::Widgets Qt5::Core libUnrealIPCInterface.a ${PYTHON_LIBRARIES})
 add_custom_target(
         TARGET DesktopInterface
         POST_BUILD
@@ -81,4 +81,4 @@ find_package(Qt5Test REQUIRED)
 add_executable(DesktopInterfaceTest ${SOURCES} ${UNIT_TESTS} ${MAIN_HEADERS} ${EXTRA_HEADERS} ${UI_HEADERS})
 add_test(NAME DesktopInterfaceTest COMMAND DesktopInterfaceTest)
 target_link_libraries(DesktopInterfaceTest PRIVATE Qt5::Test Qt5::Widgets Qt5::Core libUnrealIPCInterface.a
-        libWindowsIPCInterface.a ${PYTHON_LIBRARIES})
+        ${PYTHON_LIBRARIES})

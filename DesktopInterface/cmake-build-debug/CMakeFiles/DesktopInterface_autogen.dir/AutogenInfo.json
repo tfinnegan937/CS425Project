@@ -20,6 +20,11 @@
 			"EWIEGA46WW/moc_DesktopInterface.cpp"
 		],
 		[
+			"E:/CS425Project/DesktopInterface/PDFGenerator.h",
+			"MU",
+			"EWIEGA46WW/moc_PDFGenerator.cpp"
+		],
+		[
 			"E:/CS425Project/DesktopInterface/PatientData.h",
 			"MU",
 			"EWIEGA46WW/moc_PatientData.cpp"
@@ -132,6 +137,7 @@
 	"SOURCES" : 
 	[
 		[ "E:/CS425Project/DesktopInterface/DesktopInterface.cpp", "MU" ],
+		[ "E:/CS425Project/DesktopInterface/PDFGenerator.cpp", "MU" ],
 		[ "E:/CS425Project/DesktopInterface/PatientData.cpp", "MU" ],
 		[ "E:/CS425Project/DesktopInterface/QHomeWindow.cpp", "MU" ],
 		[ "E:/CS425Project/DesktopInterface/QPatientDataPane.cpp", "MU" ],
@@ -139,6 +145,7 @@
 		[ "E:/CS425Project/DesktopInterface/QResultsWindow.cpp", "MU" ],
 		[ "E:/CS425Project/DesktopInterface/QSimulationControlPane.cpp", "MU" ],
 		[ "E:/CS425Project/DesktopInterface/QSimulationControls.cpp", "MU" ],
+		[ "E:/CS425Project/DesktopInterface/WindowsIPCControls.cpp", "MU" ],
 		[ "E:/CS425Project/DesktopInterface/csvsaveload.cpp", "MU" ],
 		[ "E:/CS425Project/DesktopInterface/main.cpp", "MU" ],
 		[ "E:/CS425Project/shared_include/FullPatientData.cpp", "MU" ]

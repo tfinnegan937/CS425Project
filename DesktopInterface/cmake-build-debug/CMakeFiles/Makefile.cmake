@@ -82,6 +82,8 @@ set(CMAKE_MAKEFILE_DEPENDS
   "CMakeFiles/3.17.3/CMakeRCCompiler.cmake"
   "CMakeFiles/3.17.3/CMakeSystem.cmake"
   "../eye_chart.py"
+  "../generatePDF.bat"
+  "../generatePDF.py"
   )
 
 # The corresponding makefile is:
@@ -93,6 +95,8 @@ set(CMAKE_MAKEFILE_OUTPUTS
 # Byproducts of CMake generate step:
 set(CMAKE_MAKEFILE_PRODUCTS
   "E:/CS425Project/Binaries/Win64/eye_chart.py"
+  "E:/CS425Project/Binaries/Win64/generatePDF.py"
+  "E:/CS425Project/Binaries/Win64/generatePDF.bat"
   "CMakeFiles/DesktopInterfaceTest_autogen.dir/AutogenInfo.json"
   "CMakeFiles/DesktopInterface_autogen.dir/AutogenInfo.json"
   "CMakeFiles/CMakeDirectoryInformation.cmake"

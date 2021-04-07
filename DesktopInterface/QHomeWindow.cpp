@@ -7,7 +7,7 @@
 #include <iostream>
 QResultsWindow *wdg;
 QHomeWindow::QHomeWindow(QWidget *parent) : QWidget(parent) {
-
+    std::cout << "Here";
     QPane_simCtrlPane = new QSimulationControlPane(this);
     QPane_patientDataPane = new QPatientDataPane(this);
     QPane_simResultsPane = new QResultsPane(this);

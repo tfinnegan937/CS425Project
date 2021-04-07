@@ -230,10 +230,38 @@ CMakeFiles/DesktopInterface.dir/PatientData.cpp.s: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/DesktopInterface.dir/PatientData.cpp.s"
 	C:\mingw-w64\mingw64\bin\g++.exe $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S E:\CS425Project\DesktopInterface\PatientData.cpp -o CMakeFiles\DesktopInterface.dir\PatientData.cpp.s
 
+CMakeFiles/DesktopInterface.dir/PDFGenerator.cpp.obj: CMakeFiles/DesktopInterface.dir/flags.make
+CMakeFiles/DesktopInterface.dir/PDFGenerator.cpp.obj: CMakeFiles/DesktopInterface.dir/includes_CXX.rsp
+CMakeFiles/DesktopInterface.dir/PDFGenerator.cpp.obj: ../PDFGenerator.cpp
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=E:\CS425Project\DesktopInterface\cmake-build-debug\CMakeFiles --progress-num=$(CMAKE_PROGRESS_12) "Building CXX object CMakeFiles/DesktopInterface.dir/PDFGenerator.cpp.obj"
+	C:\mingw-w64\mingw64\bin\g++.exe  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles\DesktopInterface.dir\PDFGenerator.cpp.obj -c E:\CS425Project\DesktopInterface\PDFGenerator.cpp
+
+CMakeFiles/DesktopInterface.dir/PDFGenerator.cpp.i: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing CXX source to CMakeFiles/DesktopInterface.dir/PDFGenerator.cpp.i"
+	C:\mingw-w64\mingw64\bin\g++.exe $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E E:\CS425Project\DesktopInterface\PDFGenerator.cpp > CMakeFiles\DesktopInterface.dir\PDFGenerator.cpp.i
+
+CMakeFiles/DesktopInterface.dir/PDFGenerator.cpp.s: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/DesktopInterface.dir/PDFGenerator.cpp.s"
+	C:\mingw-w64\mingw64\bin\g++.exe $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S E:\CS425Project\DesktopInterface\PDFGenerator.cpp -o CMakeFiles\DesktopInterface.dir\PDFGenerator.cpp.s
+
+CMakeFiles/DesktopInterface.dir/WindowsIPCControls.cpp.obj: CMakeFiles/DesktopInterface.dir/flags.make
+CMakeFiles/DesktopInterface.dir/WindowsIPCControls.cpp.obj: CMakeFiles/DesktopInterface.dir/includes_CXX.rsp
+CMakeFiles/DesktopInterface.dir/WindowsIPCControls.cpp.obj: ../WindowsIPCControls.cpp
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=E:\CS425Project\DesktopInterface\cmake-build-debug\CMakeFiles --progress-num=$(CMAKE_PROGRESS_13) "Building CXX object CMakeFiles/DesktopInterface.dir/WindowsIPCControls.cpp.obj"
+	C:\mingw-w64\mingw64\bin\g++.exe  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles\DesktopInterface.dir\WindowsIPCControls.cpp.obj -c E:\CS425Project\DesktopInterface\WindowsIPCControls.cpp
+
+CMakeFiles/DesktopInterface.dir/WindowsIPCControls.cpp.i: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing CXX source to CMakeFiles/DesktopInterface.dir/WindowsIPCControls.cpp.i"
+	C:\mingw-w64\mingw64\bin\g++.exe $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E E:\CS425Project\DesktopInterface\WindowsIPCControls.cpp > CMakeFiles\DesktopInterface.dir\WindowsIPCControls.cpp.i
+
+CMakeFiles/DesktopInterface.dir/WindowsIPCControls.cpp.s: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/DesktopInterface.dir/WindowsIPCControls.cpp.s"
+	C:\mingw-w64\mingw64\bin\g++.exe $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S E:\CS425Project\DesktopInterface\WindowsIPCControls.cpp -o CMakeFiles\DesktopInterface.dir\WindowsIPCControls.cpp.s
+
 CMakeFiles/DesktopInterface.dir/E_/CS425Project/shared_include/FullPatientData.cpp.obj: CMakeFiles/DesktopInterface.dir/flags.make
 CMakeFiles/DesktopInterface.dir/E_/CS425Project/shared_include/FullPatientData.cpp.obj: CMakeFiles/DesktopInterface.dir/includes_CXX.rsp
 CMakeFiles/DesktopInterface.dir/E_/CS425Project/shared_include/FullPatientData.cpp.obj: E:/CS425Project/shared_include/FullPatientData.cpp
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=E:\CS425Project\DesktopInterface\cmake-build-debug\CMakeFiles --progress-num=$(CMAKE_PROGRESS_12) "Building CXX object CMakeFiles/DesktopInterface.dir/E_/CS425Project/shared_include/FullPatientData.cpp.obj"
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=E:\CS425Project\DesktopInterface\cmake-build-debug\CMakeFiles --progress-num=$(CMAKE_PROGRESS_14) "Building CXX object CMakeFiles/DesktopInterface.dir/E_/CS425Project/shared_include/FullPatientData.cpp.obj"
 	C:\mingw-w64\mingw64\bin\g++.exe  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles\DesktopInterface.dir\E_\CS425Project\shared_include\FullPatientData.cpp.obj -c E:\CS425Project\shared_include\FullPatientData.cpp
 
 CMakeFiles/DesktopInterface.dir/E_/CS425Project/shared_include/FullPatientData.cpp.i: cmake_force
@@ -257,6 +285,8 @@ DesktopInterface_OBJECTS = \
 "CMakeFiles/DesktopInterface.dir/QResultsWindow.cpp.obj" \
 "CMakeFiles/DesktopInterface.dir/csvsaveload.cpp.obj" \
 "CMakeFiles/DesktopInterface.dir/PatientData.cpp.obj" \
+"CMakeFiles/DesktopInterface.dir/PDFGenerator.cpp.obj" \
+"CMakeFiles/DesktopInterface.dir/WindowsIPCControls.cpp.obj" \
 "CMakeFiles/DesktopInterface.dir/E_/CS425Project/shared_include/FullPatientData.cpp.obj"
 
 # External object files for target DesktopInterface
@@ -273,6 +303,8 @@ E:/CS425Project/Binaries/Win64/DesktopInterface.exe: CMakeFiles/DesktopInterface
 E:/CS425Project/Binaries/Win64/DesktopInterface.exe: CMakeFiles/DesktopInterface.dir/QResultsWindow.cpp.obj
 E:/CS425Project/Binaries/Win64/DesktopInterface.exe: CMakeFiles/DesktopInterface.dir/csvsaveload.cpp.obj
 E:/CS425Project/Binaries/Win64/DesktopInterface.exe: CMakeFiles/DesktopInterface.dir/PatientData.cpp.obj
+E:/CS425Project/Binaries/Win64/DesktopInterface.exe: CMakeFiles/DesktopInterface.dir/PDFGenerator.cpp.obj
+E:/CS425Project/Binaries/Win64/DesktopInterface.exe: CMakeFiles/DesktopInterface.dir/WindowsIPCControls.cpp.obj
 E:/CS425Project/Binaries/Win64/DesktopInterface.exe: CMakeFiles/DesktopInterface.dir/E_/CS425Project/shared_include/FullPatientData.cpp.obj
 E:/CS425Project/Binaries/Win64/DesktopInterface.exe: CMakeFiles/DesktopInterface.dir/build.make
 E:/CS425Project/Binaries/Win64/DesktopInterface.exe: C:/Users/plays/AppData/Local/Programs/Python/Python39/libs/python39.lib
@@ -283,7 +315,7 @@ E:/CS425Project/Binaries/Win64/DesktopInterface.exe: C:/Qt/5.15.2/mingw81_64/lib
 E:/CS425Project/Binaries/Win64/DesktopInterface.exe: CMakeFiles/DesktopInterface.dir/linklibs.rsp
 E:/CS425Project/Binaries/Win64/DesktopInterface.exe: CMakeFiles/DesktopInterface.dir/objects1.rsp
 E:/CS425Project/Binaries/Win64/DesktopInterface.exe: CMakeFiles/DesktopInterface.dir/link.txt
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --bold --progress-dir=E:\CS425Project\DesktopInterface\cmake-build-debug\CMakeFiles --progress-num=$(CMAKE_PROGRESS_13) "Linking CXX executable E:\CS425Project\Binaries\Win64\DesktopInterface.exe"
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --bold --progress-dir=E:\CS425Project\DesktopInterface\cmake-build-debug\CMakeFiles --progress-num=$(CMAKE_PROGRESS_15) "Linking CXX executable E:\CS425Project\Binaries\Win64\DesktopInterface.exe"
 	$(CMAKE_COMMAND) -E cmake_link_script CMakeFiles\DesktopInterface.dir\link.txt --verbose=$(VERBOSE)
 
 # Rule to build all files generated by this target.

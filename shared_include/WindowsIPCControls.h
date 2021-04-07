@@ -42,6 +42,7 @@
 #define VMS_COMPLETED 0x4000
 #define TESTS_COMPLETED 0x8000
 #define BUFF_NAME "unreal_memory_buff"
+#define MUTEX_NAME "unreal_mem_mutex"
 class IPCObject{
 public:
   virtual void sendMessage(UINT16 mess_in) = 0;
@@ -52,7 +53,8 @@ public:
 class IPCCreator : IPCObject{
 private:
     HANDLE hMapFile = NULL;
-    UINT16 * pBuf = NULL;
+    HANDLE hMutex = NULL;
+    volatile UINT16 * pBuf = NULL;
 public:
     IPCCreator(TCHAR sharedMemName[]);
     ~IPCCreator();
@@ -65,7 +67,8 @@ public:
 class IPCReceiver : IPCObject{
 private:
     HANDLE hMapFile = NULL;
-    UINT16 * pBuf = NULL;
+    HANDLE hMutex = NULL;
+    volatile UINT16 * pBuf = NULL;
 public:
     IPCReceiver(TCHAR sharedMemName[]);
     ~IPCReceiver();

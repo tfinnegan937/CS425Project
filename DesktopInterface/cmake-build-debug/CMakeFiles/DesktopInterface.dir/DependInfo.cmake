@@ -7,6 +7,7 @@ set(CMAKE_DEPENDS_CHECK_CXX
   "E:/CS425Project/DesktopInterface/DesktopInterface.cpp" "E:/CS425Project/DesktopInterface/cmake-build-debug/CMakeFiles/DesktopInterface.dir/DesktopInterface.cpp.obj"
   "E:/CS425Project/DesktopInterface/cmake-build-debug/DesktopInterface_autogen/mocs_compilation.cpp" "E:/CS425Project/DesktopInterface/cmake-build-debug/CMakeFiles/DesktopInterface.dir/DesktopInterface_autogen/mocs_compilation.cpp.obj"
   "E:/CS425Project/shared_include/FullPatientData.cpp" "E:/CS425Project/DesktopInterface/cmake-build-debug/CMakeFiles/DesktopInterface.dir/E_/CS425Project/shared_include/FullPatientData.cpp.obj"
+  "E:/CS425Project/DesktopInterface/PDFGenerator.cpp" "E:/CS425Project/DesktopInterface/cmake-build-debug/CMakeFiles/DesktopInterface.dir/PDFGenerator.cpp.obj"
   "E:/CS425Project/DesktopInterface/PatientData.cpp" "E:/CS425Project/DesktopInterface/cmake-build-debug/CMakeFiles/DesktopInterface.dir/PatientData.cpp.obj"
   "E:/CS425Project/DesktopInterface/QHomeWindow.cpp" "E:/CS425Project/DesktopInterface/cmake-build-debug/CMakeFiles/DesktopInterface.dir/QHomeWindow.cpp.obj"
   "E:/CS425Project/DesktopInterface/QPatientDataPane.cpp" "E:/CS425Project/DesktopInterface/cmake-build-debug/CMakeFiles/DesktopInterface.dir/QPatientDataPane.cpp.obj"
@@ -14,6 +15,7 @@ set(CMAKE_DEPENDS_CHECK_CXX
   "E:/CS425Project/DesktopInterface/QResultsWindow.cpp" "E:/CS425Project/DesktopInterface/cmake-build-debug/CMakeFiles/DesktopInterface.dir/QResultsWindow.cpp.obj"
   "E:/CS425Project/DesktopInterface/QSimulationControlPane.cpp" "E:/CS425Project/DesktopInterface/cmake-build-debug/CMakeFiles/DesktopInterface.dir/QSimulationControlPane.cpp.obj"
   "E:/CS425Project/DesktopInterface/QSimulationControls.cpp" "E:/CS425Project/DesktopInterface/cmake-build-debug/CMakeFiles/DesktopInterface.dir/QSimulationControls.cpp.obj"
+  "E:/CS425Project/DesktopInterface/WindowsIPCControls.cpp" "E:/CS425Project/DesktopInterface/cmake-build-debug/CMakeFiles/DesktopInterface.dir/WindowsIPCControls.cpp.obj"
   "E:/CS425Project/DesktopInterface/csvsaveload.cpp" "E:/CS425Project/DesktopInterface/cmake-build-debug/CMakeFiles/DesktopInterface.dir/csvsaveload.cpp.obj"
   "E:/CS425Project/DesktopInterface/main.cpp" "E:/CS425Project/DesktopInterface/cmake-build-debug/CMakeFiles/DesktopInterface.dir/main.cpp.obj"
   )

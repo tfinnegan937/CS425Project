@@ -232,6 +232,14 @@
 			<Option target="DesktopInterfaceTest"/>
 			<Option target="DesktopInterface"/>
 		</Unit>
+		<Unit filename="E:/CS425Project/DesktopInterface/PDFGenerator.cpp">
+			<Option target="DesktopInterfaceTest"/>
+			<Option target="DesktopInterface"/>
+		</Unit>
+		<Unit filename="E:/CS425Project/DesktopInterface/PDFGenerator.h">
+			<Option target="DesktopInterfaceTest"/>
+			<Option target="DesktopInterface"/>
+		</Unit>
 		<Unit filename="E:/CS425Project/DesktopInterface/PatientData.cpp">
 			<Option target="DesktopInterfaceTest"/>
 			<Option target="DesktopInterface"/>
@@ -292,6 +300,10 @@
 			<Option target="DesktopInterfaceTest"/>
 			<Option target="DesktopInterface"/>
 		</Unit>
+		<Unit filename="E:/CS425Project/DesktopInterface/WindowsIPCControls.cpp">
+			<Option target="DesktopInterfaceTest"/>
+			<Option target="DesktopInterface"/>
+		</Unit>
 		<Unit filename="E:/CS425Project/DesktopInterface/cmake-build-debug/DesktopInterfaceTest_autogen/mocs_compilation.cpp">
 			<Option target="DesktopInterfaceTest"/>
 		</Unit>
@@ -310,6 +322,12 @@
 			<Option target="DesktopInterface"/>
 		</Unit>
 		<Unit filename="E:/CS425Project/DesktopInterface/unit_tests/TestCSVSaveLoad.cpp">
+			<Option target="DesktopInterfaceTest"/>
+		</Unit>
+		<Unit filename="E:/CS425Project/DesktopInterface/unit_tests/TestPDFGeneration.cpp">
+			<Option target="DesktopInterfaceTest"/>
+		</Unit>
+		<Unit filename="E:/CS425Project/DesktopInterface/unit_tests/TestRunner.cpp">
 			<Option target="DesktopInterfaceTest"/>
 		</Unit>
 		<Unit filename="E:/CS425Project/DesktopInterface/unit_tests/UnitTestMain.h">
@@ -335,6 +353,12 @@
 			<Option virtualFolder="CMake Files\"/>
 		</Unit>
 		<Unit filename="E:/CS425Project/DesktopInterface/eye_chart.py">
+			<Option virtualFolder="CMake Files\"/>
+		</Unit>
+		<Unit filename="E:/CS425Project/DesktopInterface/generatePDF.bat">
+			<Option virtualFolder="CMake Files\"/>
+		</Unit>
+		<Unit filename="E:/CS425Project/DesktopInterface/generatePDF.py">
 			<Option virtualFolder="CMake Files\"/>
 		</Unit>
 		<Unit filename="E:/CS425Project/DesktopInterface/Qt/5.15.2/mingw81_64/lib/cmake/Qt5Widgets/Qt5WidgetsConfig.cmake">
