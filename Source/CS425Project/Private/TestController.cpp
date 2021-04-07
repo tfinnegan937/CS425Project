@@ -49,11 +49,11 @@ void ATestController::handleMessage(UINT16 mess_in) {
 		return;
 	}
 	if (mess_in & QUEUE_SP) {
-		if (!testsStarted) {
-			atLeastOneTest = true;
+		//if (!testsStarted) {
+			//atLeastOneTest = true;
 			//Queue the test
 			GEngine->AddOnScreenDebugMessage(-1, 15.0f, FColor::Yellow, TEXT("SP selected"));
-		}
+		//}
 	}
 	if (mess_in & QUEUE_CON) {
 		if (!testsStarted) {
@@ -74,14 +74,17 @@ void ATestController::handleMessage(UINT16 mess_in) {
 		}
 	}
 	if (mess_in & QUEUE_VMS) {
-		if (!testsStarted) {
-			atLeastOneTest = true;
+		//if (!testsStarted) {
+			//atLeastOneTest = true;
 			//Queue the test
-		}
+			GEngine->AddOnScreenDebugMessage(-1, 15.0f, FColor::Yellow, TEXT("VMS Received"));
+
+		//}
 	}
 	if (mess_in & QUEUE_VORH) {
 		if (!testsStarted) {
 			atLeastOneTest = true;
+
 			//Queue the test
 		}
 	}

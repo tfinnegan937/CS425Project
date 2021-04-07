@@ -17,6 +17,10 @@ QSimulationControlButtonWidget::QSimulationControlButtonWidget(QWidget *parent) 
 
     connect(cancel_button, &QPushButton::released, this, &QSimulationControlButtonWidget::cancelPressed);
     connect(begin_button, &QPushButton::released, this, &QSimulationControlButtonWidget::beginPressed);
+    connect(begin_button, &QPushButton::released, this, &QSimulationControlButtonWidget::toggleButtons);
+    connect(cancel_button, &QPushButton::released, this, &QSimulationControlButtonWidget::toggleButtons);
+
+
 
 
 
@@ -29,10 +33,10 @@ void QSimulationControlButtonWidget::toggleButtons() {
 
 void QSimulationControlButtonWidget::beginPressed() {
     beginSignal();
-    std::cout << std::endl << 1 << std::endl;
 }
 
 void QSimulationControlButtonWidget::cancelPressed() {
+    cancelSignal();
     sendMessage(STOP_ALL);
 }
 
@@ -77,6 +81,11 @@ QSimulationControls::QSimulationControls(QWidget *parent) : QWidget(parent){
     connect(control_buttons, &QSimulationControlButtonWidget::beginSignal, this,
             &QSimulationControls::passBeginSignalToIPC);
 
+    connect(control_buttons, &QSimulationControlButtonWidget::beginSignal, this,
+            &QSimulationControls::lockPane);
+    connect(control_buttons, &QSimulationControlButtonWidget::cancelSignal, this,
+            &QSimulationControls::unlockPane);
+
     connect(control_buttons, &QSimulationControlButtonWidget::sendMessage, this, &QSimulationControls::passSendMessage);
 
 
@@ -92,10 +101,10 @@ void QSimulationControls::lockPane() {
     vms_check->setEnabled(false);
     select_all->setEnabled(false);
 
-    if(!isSimActive) {
-        isSimActive = true;
-        simActive();
-    }
+    //if(!isSimActive) {
+        //isSimActive = true;
+        //simActive();
+    //}
 }
 
 void QSimulationControls::unlockPane() {
@@ -107,8 +116,8 @@ void QSimulationControls::unlockPane() {
     con_check->setEnabled(true);
     vms_check->setEnabled(true);
     select_all->setEnabled(true);
-    simFinished();
-    isSimActive = false;
+    //simFinished();
+    //isSimActive = false;
 }
 
 void QSimulationControls::selectAll(int state) {

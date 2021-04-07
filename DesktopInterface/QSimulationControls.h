@@ -20,6 +20,7 @@ private:
     QPushButton * cancel_button;
 signals:
     void beginSignal();
+    void cancelSignal();
     void sendMessage(UINT16);
 public slots:
     void beginPressed();

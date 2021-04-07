@@ -21,8 +21,8 @@ QHomeWindow::QHomeWindow(QWidget *parent) : QWidget(parent) {
 
     this->setLayout(QHBx_panelLayout);
     //Initialize IPC communication
-    //ipcController = new IPCReceiver(TEXT(BUFF_NAME));
-    //initializeIPC();
+    ipcController = new IPCReceiver(TEXT(BUFF_NAME));
+    initializeIPC();
 
     connectSimPaneSignals();
 
@@ -35,7 +35,6 @@ int loop_counter = 0; //Temporary counter to increase alternating graphs to ever
 void QHomeWindow::ipcTick() {
     //Handle UnrealEngine signals
         //std::cout << std::endl << "Reached Message Loop" << std::endl;
-        ipcController->sendMessage(0x00);
         if (ipcController->messageReceived()) {
             try {
                 UINT16 buffer_output = ipcController->receiveMessage();
@@ -74,25 +73,25 @@ bool QHomeWindow::initializeIPC() {
 bool QHomeWindow::handleIPCMessages(uint16_t message_buffer) {
     //TODO: Handle Received Messages
     if(message_buffer & SP_STARTED){
-        simActive();
+        //simActive();
     }
     if(message_buffer & SH_STARTED){
-        simActive();
+        //simActive();
     }
     if(message_buffer & SV_STARTED){
-        simActive();
+        //simActive();
     }
     if(message_buffer & CON_STARTED){
-        simActive();
+        //simActive();
     }
     if(message_buffer & VORH_STARTED){
-        simActive();
+        //simActive();
     }
     if(message_buffer & VORV_STARTED){
-        simActive();
+        //simActive();
     }
     if(message_buffer & VMS_STARTED){
-        simActive();
+        //simActive();
     }
     if(message_buffer & SP_COMPLETED){
 
@@ -116,7 +115,7 @@ bool QHomeWindow::handleIPCMessages(uint16_t message_buffer) {
 
     }
     if(message_buffer & TESTS_COMPLETED){
-        simFinished();
+        //simFinished();
     }
     if(message_buffer & CONF_SHUTDOWN){
         exit(EXIT_SUCCESS);
