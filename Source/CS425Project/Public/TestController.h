@@ -6,6 +6,26 @@
 #include "GameFramework/Actor.h"
 #include "WindowsIPCControls.h"
 #include "TestController.generated.h"
+
+class TestQueueManager {
+private:
+	AActor* parent;
+	bool currentTestStarted = false;
+	TQueue<AActor*> testQueue;
+	FString activeTest = "None";
+
+	void startActiveTest();
+	bool isActiveTestDone();
+public:
+	bool testsStarted = false;
+	TestQueueManager(AActor* parent_in);
+	AActor* getTest(FString testNameContains);
+	void queueTests(UINT16 mess_in);
+	void stopAllTests();
+	void tick();
+
+};
+
 UCLASS()
 class CS425PROJECT_API ATestController : public AActor
 {
@@ -16,10 +36,11 @@ private:
 	void ipcTimerTick();
 	void handleMessage(UINT16 mess);
 	bool testsStarted = false;
+	TestQueueManager* testManager;
 public:	
 	// Sets default values for this actor's properties
 	ATestController();
-
+	void SignalUITestsDone();
 protected:
 	// Called when the game starts or when spawned
 	virtual void BeginPlay() override;

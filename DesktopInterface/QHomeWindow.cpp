@@ -115,7 +115,7 @@ bool QHomeWindow::handleIPCMessages(uint16_t message_buffer) {
 
     }
     if(message_buffer & TESTS_COMPLETED){
-        //simFinished();
+        simFinished();
     }
     if(message_buffer & CONF_SHUTDOWN){
         exit(EXIT_SUCCESS);

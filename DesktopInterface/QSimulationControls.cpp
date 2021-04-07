@@ -116,7 +116,7 @@ void QSimulationControls::unlockPane() {
     con_check->setEnabled(true);
     vms_check->setEnabled(true);
     select_all->setEnabled(true);
-    //simFinished();
+    simFinished();
     //isSimActive = false;
 }
 
