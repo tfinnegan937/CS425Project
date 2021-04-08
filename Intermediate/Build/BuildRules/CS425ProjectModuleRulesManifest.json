@@ -1,13 +1,13 @@
 {
 	"SourceFiles": [
-		"E:\\CS425Project\\Source\\CS425Project\\CS425Project.Build.cs",
-		"E:\\CS425Project\\Plugins\\SRanipal\\Source\\SRanipalEye\\SRanipalEye.Build.cs",
-		"E:\\CS425Project\\Plugins\\SRanipal\\Source\\SRanipalEditor\\SRanipalEditor.Build.cs",
-		"E:\\CS425Project\\Plugins\\SRanipal\\Source\\SRanipalLip\\SRanipalLip.Build.cs",
-		"E:\\CS425Project\\Plugins\\SRanipal\\Source\\SRanipal\\SRanipal.Build.cs",
-		"E:\\CS425Project\\Plugins\\SRanipal\\Source\\SRanipalEyeTracker\\SRanipalEyeTracker.Build.cs",
-		"E:\\CS425Project\\Source\\CS425Project.Target.cs",
-		"E:\\CS425Project\\Source\\CS425ProjectEditor.Target.cs"
+		"C:\\Users\\ohman\\Documents\\Senior Project\\VPVR\\Source\\CS425Project\\CS425Project.Build.cs",
+		"C:\\Users\\ohman\\Documents\\Senior Project\\VPVR\\Plugins\\SRanipal\\Source\\SRanipalEye\\SRanipalEye.Build.cs",
+		"C:\\Users\\ohman\\Documents\\Senior Project\\VPVR\\Plugins\\SRanipal\\Source\\SRanipal\\SRanipal.Build.cs",
+		"C:\\Users\\ohman\\Documents\\Senior Project\\VPVR\\Plugins\\SRanipal\\Source\\SRanipalLip\\SRanipalLip.Build.cs",
+		"C:\\Users\\ohman\\Documents\\Senior Project\\VPVR\\Plugins\\SRanipal\\Source\\SRanipalEditor\\SRanipalEditor.Build.cs",
+		"C:\\Users\\ohman\\Documents\\Senior Project\\VPVR\\Plugins\\SRanipal\\Source\\SRanipalEyeTracker\\SRanipalEyeTracker.Build.cs",
+		"C:\\Users\\ohman\\Documents\\Senior Project\\VPVR\\Source\\CS425Project.Target.cs",
+		"C:\\Users\\ohman\\Documents\\Senior Project\\VPVR\\Source\\CS425ProjectEditor.Target.cs"
 	],
-	"EngineVersion": "4.26.0"
+	"EngineVersion": "4.26.1"
 }
