@@ -31,7 +31,7 @@
 /wd4244
 /wd4838
 /I .
-/I E:\CS425Project\Source\CS425Project\Private
+/I "C:\Users\ohman\Documents\Senior Project\VPVR\Source\CS425Project\Private"
 /I ..\Intermediate\Build\Win64\UE4Editor\Inc\Engine
 /I Runtime
 /I Runtime\Engine\Classes
@@ -231,10 +231,10 @@
 /I Editor\Kismet\Public
 /I ..\Intermediate\Build\Win64\UE4Editor\Inc\ClothingSystemRuntimeInterface
 /I Runtime\ClothingSystemRuntimeInterface\Public
-/I E:\CS425Project\Intermediate\Build\Win64\UE4Editor\Inc\CS425Project
-/I E:\CS425Project\Source
-/I E:\CS425Project\shared_include
-/I E:\CS425Project\Source\CS425Project\Public
+/I "C:\Users\ohman\Documents\Senior Project\VPVR\Intermediate\Build\Win64\UE4Editor\Inc\CS425Project"
+/I "C:\Users\ohman\Documents\Senior Project\VPVR\Source"
+/I "C:\Users\ohman\Documents\Senior Project\VPVR\shared_include"
+/I "C:\Users\ohman\Documents\Senior Project\VPVR\Source\CS425Project\Public"
 /I Runtime\Networking\Public
 /I ThirdParty\PhysX3\PxShared\include
 /I ThirdParty\PhysX3\PxShared\include\cudamanager
@@ -259,18 +259,18 @@
 /I ThirdParty\PhysX3\APEX_1.4\shared\general\RenderDebug\public
 /I ThirdParty\PhysX3\APEX_1.4\shared\general\PairFilter\include
 /I ThirdParty\PhysX3\APEX_1.4\shared\internal\include
-/I "D:\Visual Studio\VC\Tools\MSVC\14.28.29333\INCLUDE"
-/I "C:\Program Files (x86)\Windows Kits\NETFXSDK\4.8\include\um"
-/I "D:\Windows Kits\10\include\10.0.18362.0\ucrt"
-/I "D:\Windows Kits\10\include\10.0.18362.0\shared"
-/I "D:\Windows Kits\10\include\10.0.18362.0\um"
-/I "D:\Windows Kits\10\include\10.0.18362.0\winrt"
-/FI"E:\CS425Project\Intermediate\Build\Win64\CS425ProjectEditor\Development\Engine\SharedPCH.Engine.RTTI.ShadowErrors.h"
-/Yu"E:\CS425Project\Intermediate\Build\Win64\CS425ProjectEditor\Development\Engine\SharedPCH.Engine.RTTI.ShadowErrors.h"
-/Fp"E:\CS425Project\Intermediate\Build\Win64\CS425ProjectEditor\Development\Engine\SharedPCH.Engine.RTTI.ShadowErrors.h.pch"
-"E:\CS425Project\Source\CS425Project\CS425ProjectGameModeBase.cpp"
-/FI"E:\CS425Project\Intermediate\Build\Win64\UE4Editor\Development\CS425Project\Definitions.CS425Project.h"
-/Fo"E:\CS425Project\Intermediate\Build\Win64\UE4Editor\Development\CS425Project\CS425ProjectGameModeBase.cpp.obj"
+/I "C:\Program Files (x86)\Microsoft Visual Studio\2019\Community\VC\Tools\MSVC\14.28.29910\INCLUDE"
+/I "C:\Program Files (x86)\Windows Kits\NETFXSDK\4.6.1\include\um"
+/I "C:\Program Files (x86)\Windows Kits\10\include\10.0.16299.0\ucrt"
+/I "C:\Program Files (x86)\Windows Kits\10\include\10.0.16299.0\shared"
+/I "C:\Program Files (x86)\Windows Kits\10\include\10.0.16299.0\um"
+/I "C:\Program Files (x86)\Windows Kits\10\include\10.0.16299.0\winrt"
+/FI"C:\Users\ohman\Documents\Senior Project\VPVR\Intermediate\Build\Win64\CS425ProjectEditor\Development\Engine\SharedPCH.Engine.RTTI.ShadowErrors.h"
+/Yu"C:\Users\ohman\Documents\Senior Project\VPVR\Intermediate\Build\Win64\CS425ProjectEditor\Development\Engine\SharedPCH.Engine.RTTI.ShadowErrors.h"
+/Fp"C:\Users\ohman\Documents\Senior Project\VPVR\Intermediate\Build\Win64\CS425ProjectEditor\Development\Engine\SharedPCH.Engine.RTTI.ShadowErrors.h.pch"
+"C:\Users\ohman\Documents\Senior Project\VPVR\Source\CS425Project\CS425ProjectGameModeBase.cpp"
+/FI"C:\Users\ohman\Documents\Senior Project\VPVR\Intermediate\Build\Win64\UE4Editor\Development\CS425Project\Definitions.CS425Project.h"
+/Fo"C:\Users\ohman\Documents\Senior Project\VPVR\Intermediate\Build\Win64\UE4Editor\Development\CS425Project\CS425ProjectGameModeBase.cpp.obj"
 /TP
 /GR
 /W4

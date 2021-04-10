@@ -14,7 +14,7 @@ PRAGMA_DISABLE_DEPRECATION_WARNINGS
 #define SRANIPALLIP_SRanipalLip_Core_generated_h
 
 #undef CURRENT_FILE_ID
-#define CURRENT_FILE_ID CS425Project_Plugins_SRanipal_Source_SRanipalLip_Public_SRanipalLip_Core_h
+#define CURRENT_FILE_ID VPVR_Plugins_SRanipal_Source_SRanipalLip_Public_SRanipalLip_Core_h
 
 
 #define FOREACH_ENUM_LIPSHAPEENUM_V2(op) \

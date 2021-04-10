@@ -6,9 +6,9 @@
 /NAME:"UE4Editor-SRanipalEditor.dll"
 /IGNORE:4221
 /NODEFAULTLIB
-"C:\Users\ohman\Documents\Senior Project\VPVR\Intermediate\Build\Win64\CS425ProjectEditor\Development\Engine\SharedPCH.Engine.ShadowErrors.h.obj"
-"C:\Users\ohman\Documents\Senior Project\VPVR\Plugins\SRanipal\Intermediate\Build\Win64\UE4Editor\Development\SRanipalEditor\Module.SRanipalEditor.cpp.obj"
-"C:\Users\ohman\Documents\Senior Project\VPVR\Plugins\SRanipal\Intermediate\Build\Win64\UE4Editor\Development\SRanipalEditor\Module.SRanipalEditor.gen.cpp.obj"
-"C:\Users\ohman\Documents\Senior Project\VPVR\Plugins\SRanipal\Intermediate\Build\Win64\UE4Editor\Development\SRanipalEditor\Default.rc2.res"
-/OUT:"C:\Users\ohman\Documents\Senior Project\VPVR\Plugins\SRanipal\Intermediate\Build\Win64\UE4Editor\Development\SRanipalEditor\UE4Editor-SRanipalEditor.lib"
+"E:\CS425Project\Intermediate\Build\Win64\CS425ProjectEditor\Development\Engine\SharedPCH.Engine.ShadowErrors.h.obj"
+"E:\CS425Project\Plugins\SRanipal\Intermediate\Build\Win64\UE4Editor\Development\SRanipalEditor\Module.SRanipalEditor.cpp.obj"
+"E:\CS425Project\Plugins\SRanipal\Intermediate\Build\Win64\UE4Editor\Development\SRanipalEditor\Module.SRanipalEditor.gen.cpp.obj"
+"E:\CS425Project\Plugins\SRanipal\Intermediate\Build\Win64\UE4Editor\Development\SRanipalEditor\Default.rc2.res"
+/OUT:"E:\CS425Project\Plugins\SRanipal\Intermediate\Build\Win64\UE4Editor\Development\SRanipalEditor\UE4Editor-SRanipalEditor.lib"
 /INCLUDE:IMPLEMENT_MODULE_SRanipalEditor
