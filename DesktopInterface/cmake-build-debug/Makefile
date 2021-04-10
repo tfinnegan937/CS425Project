@@ -67,10 +67,10 @@ RM = "D:\CLion 2020.3\bin\cmake\win\bin\cmake.exe" -E rm -f
 EQUALS = =
 
 # The top-level source directory on which CMake was run.
-CMAKE_SOURCE_DIR = E:\CS425Project\DesktopInterface
+CMAKE_SOURCE_DIR = E:\CS425Project\VPVR\DesktopInterface
 
 # The top-level build directory on which CMake was run.
-CMAKE_BINARY_DIR = E:\CS425Project\DesktopInterface\cmake-build-debug
+CMAKE_BINARY_DIR = E:\CS425Project\VPVR\DesktopInterface\cmake-build-debug
 
 #=============================================================================
 # Targets provided globally by CMake.
@@ -110,9 +110,9 @@ test/fast: test
 
 # The main all target
 all: cmake_check_build_system
-	$(CMAKE_COMMAND) -E cmake_progress_start E:\CS425Project\DesktopInterface\cmake-build-debug\CMakeFiles E:\CS425Project\DesktopInterface\cmake-build-debug\CMakeFiles\progress.marks
+	$(CMAKE_COMMAND) -E cmake_progress_start E:\CS425Project\VPVR\DesktopInterface\cmake-build-debug\CMakeFiles E:\CS425Project\VPVR\DesktopInterface\cmake-build-debug\CMakeFiles\progress.marks
 	$(MAKE) $(MAKESILENT) -f CMakeFiles\Makefile2 all
-	$(CMAKE_COMMAND) -E cmake_progress_start E:\CS425Project\DesktopInterface\cmake-build-debug\CMakeFiles 0
+	$(CMAKE_COMMAND) -E cmake_progress_start E:\CS425Project\VPVR\DesktopInterface\cmake-build-debug\CMakeFiles 0
 .PHONY : all
 
 # The main clean target
@@ -289,35 +289,35 @@ DesktopInterface_autogen/mocs_compilation.cpp.s:
 	$(MAKE) $(MAKESILENT) -f CMakeFiles\DesktopInterface.dir\build.make CMakeFiles/DesktopInterface.dir/DesktopInterface_autogen/mocs_compilation.cpp.s
 .PHONY : DesktopInterface_autogen/mocs_compilation.cpp.s
 
-E_/CS425Project/shared_include/FullPatientData.obj: E_/CS425Project/shared_include/FullPatientData.cpp.obj
+E_/CS425Project/VPVR/shared_include/FullPatientData.obj: E_/CS425Project/VPVR/shared_include/FullPatientData.cpp.obj
 
-.PHONY : E_/CS425Project/shared_include/FullPatientData.obj
+.PHONY : E_/CS425Project/VPVR/shared_include/FullPatientData.obj
 
 # target to build an object file
-E_/CS425Project/shared_include/FullPatientData.cpp.obj:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles\DesktopInterfaceTest.dir\build.make CMakeFiles/DesktopInterfaceTest.dir/E_/CS425Project/shared_include/FullPatientData.cpp.obj
-	$(MAKE) $(MAKESILENT) -f CMakeFiles\DesktopInterface.dir\build.make CMakeFiles/DesktopInterface.dir/E_/CS425Project/shared_include/FullPatientData.cpp.obj
-.PHONY : E_/CS425Project/shared_include/FullPatientData.cpp.obj
+E_/CS425Project/VPVR/shared_include/FullPatientData.cpp.obj:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles\DesktopInterfaceTest.dir\build.make CMakeFiles/DesktopInterfaceTest.dir/E_/CS425Project/VPVR/shared_include/FullPatientData.cpp.obj
+	$(MAKE) $(MAKESILENT) -f CMakeFiles\DesktopInterface.dir\build.make CMakeFiles/DesktopInterface.dir/E_/CS425Project/VPVR/shared_include/FullPatientData.cpp.obj
+.PHONY : E_/CS425Project/VPVR/shared_include/FullPatientData.cpp.obj
 
-E_/CS425Project/shared_include/FullPatientData.i: E_/CS425Project/shared_include/FullPatientData.cpp.i
+E_/CS425Project/VPVR/shared_include/FullPatientData.i: E_/CS425Project/VPVR/shared_include/FullPatientData.cpp.i
 
-.PHONY : E_/CS425Project/shared_include/FullPatientData.i
+.PHONY : E_/CS425Project/VPVR/shared_include/FullPatientData.i
 
 # target to preprocess a source file
-E_/CS425Project/shared_include/FullPatientData.cpp.i:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles\DesktopInterfaceTest.dir\build.make CMakeFiles/DesktopInterfaceTest.dir/E_/CS425Project/shared_include/FullPatientData.cpp.i
-	$(MAKE) $(MAKESILENT) -f CMakeFiles\DesktopInterface.dir\build.make CMakeFiles/DesktopInterface.dir/E_/CS425Project/shared_include/FullPatientData.cpp.i
-.PHONY : E_/CS425Project/shared_include/FullPatientData.cpp.i
+E_/CS425Project/VPVR/shared_include/FullPatientData.cpp.i:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles\DesktopInterfaceTest.dir\build.make CMakeFiles/DesktopInterfaceTest.dir/E_/CS425Project/VPVR/shared_include/FullPatientData.cpp.i
+	$(MAKE) $(MAKESILENT) -f CMakeFiles\DesktopInterface.dir\build.make CMakeFiles/DesktopInterface.dir/E_/CS425Project/VPVR/shared_include/FullPatientData.cpp.i
+.PHONY : E_/CS425Project/VPVR/shared_include/FullPatientData.cpp.i
 
-E_/CS425Project/shared_include/FullPatientData.s: E_/CS425Project/shared_include/FullPatientData.cpp.s
+E_/CS425Project/VPVR/shared_include/FullPatientData.s: E_/CS425Project/VPVR/shared_include/FullPatientData.cpp.s
 
-.PHONY : E_/CS425Project/shared_include/FullPatientData.s
+.PHONY : E_/CS425Project/VPVR/shared_include/FullPatientData.s
 
 # target to generate assembly for a file
-E_/CS425Project/shared_include/FullPatientData.cpp.s:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles\DesktopInterfaceTest.dir\build.make CMakeFiles/DesktopInterfaceTest.dir/E_/CS425Project/shared_include/FullPatientData.cpp.s
-	$(MAKE) $(MAKESILENT) -f CMakeFiles\DesktopInterface.dir\build.make CMakeFiles/DesktopInterface.dir/E_/CS425Project/shared_include/FullPatientData.cpp.s
-.PHONY : E_/CS425Project/shared_include/FullPatientData.cpp.s
+E_/CS425Project/VPVR/shared_include/FullPatientData.cpp.s:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles\DesktopInterfaceTest.dir\build.make CMakeFiles/DesktopInterfaceTest.dir/E_/CS425Project/VPVR/shared_include/FullPatientData.cpp.s
+	$(MAKE) $(MAKESILENT) -f CMakeFiles\DesktopInterface.dir\build.make CMakeFiles/DesktopInterface.dir/E_/CS425Project/VPVR/shared_include/FullPatientData.cpp.s
+.PHONY : E_/CS425Project/VPVR/shared_include/FullPatientData.cpp.s
 
 PDFGenerator.obj: PDFGenerator.cpp.obj
 
@@ -750,9 +750,9 @@ help:
 	@echo ... DesktopInterface_autogen/mocs_compilation.obj
 	@echo ... DesktopInterface_autogen/mocs_compilation.i
 	@echo ... DesktopInterface_autogen/mocs_compilation.s
-	@echo ... E_/CS425Project/shared_include/FullPatientData.obj
-	@echo ... E_/CS425Project/shared_include/FullPatientData.i
-	@echo ... E_/CS425Project/shared_include/FullPatientData.s
+	@echo ... E_/CS425Project/VPVR/shared_include/FullPatientData.obj
+	@echo ... E_/CS425Project/VPVR/shared_include/FullPatientData.i
+	@echo ... E_/CS425Project/VPVR/shared_include/FullPatientData.s
 	@echo ... PDFGenerator.obj
 	@echo ... PDFGenerator.i
 	@echo ... PDFGenerator.s

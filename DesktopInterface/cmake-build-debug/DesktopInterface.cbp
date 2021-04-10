@@ -8,31 +8,31 @@
 		<Option virtualFolders="CMake Files\;CMake Files\Qt\;CMake Files\Qt\5.15.2\;CMake Files\Qt\5.15.2\mingw81_64\;CMake Files\Qt\5.15.2\mingw81_64\lib\;CMake Files\Qt\5.15.2\mingw81_64\lib\cmake\;CMake Files\Qt\5.15.2\mingw81_64\lib\cmake\Qt5Widgets\;CMake Files\Qt\5.15.2\mingw81_64\lib\cmake\Qt5Gui\;CMake Files\Qt\5.15.2\mingw81_64\lib\cmake\Qt5Core\;CMake Files\Qt\5.15.2\mingw81_64\lib\cmake\Qt5\;CMake Files\Qt\5.15.2\mingw81_64\lib\cmake\Qt5Test\;"/>
 		<Build>
 			<Target title="all">
-				<Option working_dir="E:/CS425Project/DesktopInterface/cmake-build-debug"/>
+				<Option working_dir="E:/CS425Project/VPVR/DesktopInterface/cmake-build-debug"/>
 				<Option type="4"/>
 				<MakeCommands>
-					<Build command="C:/mingw-w64/mingw64/bin/mingw32-make.exe -f &quot;E:/CS425Project/DesktopInterface/cmake-build-debug/Makefile&quot;  VERBOSE=1 all"/>
-					<CompileFile command="C:/mingw-w64/mingw64/bin/mingw32-make.exe -f &quot;E:/CS425Project/DesktopInterface/cmake-build-debug/Makefile&quot;  VERBOSE=1 &quot;$file&quot;"/>
-					<Clean command="C:/mingw-w64/mingw64/bin/mingw32-make.exe -f &quot;E:/CS425Project/DesktopInterface/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
-					<DistClean command="C:/mingw-w64/mingw64/bin/mingw32-make.exe -f &quot;E:/CS425Project/DesktopInterface/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
+					<Build command="C:/mingw-w64/mingw64/bin/mingw32-make.exe -f &quot;E:/CS425Project/VPVR/DesktopInterface/cmake-build-debug/Makefile&quot;  VERBOSE=1 all"/>
+					<CompileFile command="C:/mingw-w64/mingw64/bin/mingw32-make.exe -f &quot;E:/CS425Project/VPVR/DesktopInterface/cmake-build-debug/Makefile&quot;  VERBOSE=1 &quot;$file&quot;"/>
+					<Clean command="C:/mingw-w64/mingw64/bin/mingw32-make.exe -f &quot;E:/CS425Project/VPVR/DesktopInterface/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
+					<DistClean command="C:/mingw-w64/mingw64/bin/mingw32-make.exe -f &quot;E:/CS425Project/VPVR/DesktopInterface/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
 				</MakeCommands>
 			</Target>
 			<Target title="DesktopInterfaceTest">
-				<Option output="E:/CS425Project/Binaries/Win64/DesktopInterfaceTest.exe" prefix_auto="0" extension_auto="0"/>
-				<Option working_dir="E:/CS425Project/DesktopInterface/../Binaries/Win64/"/>
+				<Option output="E:/CS425Project/VPVR/Binaries/Win64/DesktopInterfaceTest.exe" prefix_auto="0" extension_auto="0"/>
+				<Option working_dir="E:/CS425Project/VPVR/DesktopInterface/../Binaries/Win64/"/>
 				<Option object_output="./"/>
 				<Option type="1"/>
 				<Option compiler="gcc"/>
 				<Compiler>
 					<Add option="-DQT_TESTLIB_LIB"/>
-					<Add option="-DQT_TESTCASE_BUILDDIR=&quot;E:/CS425Project/DesktopInterface/cmake-build-debug&quot;"/>
+					<Add option="-DQT_TESTCASE_BUILDDIR=&quot;E:/CS425Project/VPVR/DesktopInterface/cmake-build-debug&quot;"/>
 					<Add option="-DQT_CORE_LIB"/>
 					<Add option="-DQT_WIDGETS_LIB"/>
 					<Add option="-DQT_GUI_LIB"/>
-					<Add directory="E:/CS425Project/DesktopInterface/cmake-build-debug/DesktopInterfaceTest_autogen/include"/>
-					<Add directory="E:/CS425Project/shared_include"/>
+					<Add directory="E:/CS425Project/VPVR/DesktopInterface/cmake-build-debug/DesktopInterfaceTest_autogen/include"/>
+					<Add directory="E:/CS425Project/VPVR/shared_include"/>
 					<Add directory="C:/Users/plays/AppData/Local/Programs/Python/Python39/include"/>
-					<Add directory="E:/CS425Project/DesktopInterface/unit_tests"/>
+					<Add directory="E:/CS425Project/VPVR/DesktopInterface/unit_tests"/>
 					<Add directory="C:/Qt/5.15.2/mingw81_64/include"/>
 					<Add directory="C:/Qt/5.15.2/mingw81_64/include/QtTest"/>
 					<Add directory="C:/Qt/5.15.2/mingw81_64/include/QtCore"/>
@@ -48,28 +48,28 @@
 					<Add directory="C:/mingw-w64/mingw64/bin/../lib/gcc/x86_64-w64-mingw32/8.1.0/../../../../x86_64-w64-mingw32/include"/>
 				</Compiler>
 				<MakeCommands>
-					<Build command="C:/mingw-w64/mingw64/bin/mingw32-make.exe -f &quot;E:/CS425Project/DesktopInterface/cmake-build-debug/Makefile&quot;  VERBOSE=1 DesktopInterfaceTest"/>
-					<CompileFile command="C:/mingw-w64/mingw64/bin/mingw32-make.exe -f &quot;E:/CS425Project/DesktopInterface/cmake-build-debug/Makefile&quot;  VERBOSE=1 &quot;$file&quot;"/>
-					<Clean command="C:/mingw-w64/mingw64/bin/mingw32-make.exe -f &quot;E:/CS425Project/DesktopInterface/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
-					<DistClean command="C:/mingw-w64/mingw64/bin/mingw32-make.exe -f &quot;E:/CS425Project/DesktopInterface/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
+					<Build command="C:/mingw-w64/mingw64/bin/mingw32-make.exe -f &quot;E:/CS425Project/VPVR/DesktopInterface/cmake-build-debug/Makefile&quot;  VERBOSE=1 DesktopInterfaceTest"/>
+					<CompileFile command="C:/mingw-w64/mingw64/bin/mingw32-make.exe -f &quot;E:/CS425Project/VPVR/DesktopInterface/cmake-build-debug/Makefile&quot;  VERBOSE=1 &quot;$file&quot;"/>
+					<Clean command="C:/mingw-w64/mingw64/bin/mingw32-make.exe -f &quot;E:/CS425Project/VPVR/DesktopInterface/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
+					<DistClean command="C:/mingw-w64/mingw64/bin/mingw32-make.exe -f &quot;E:/CS425Project/VPVR/DesktopInterface/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
 				</MakeCommands>
 			</Target>
 			<Target title="DesktopInterfaceTest/fast">
-				<Option output="E:/CS425Project/Binaries/Win64/DesktopInterfaceTest.exe" prefix_auto="0" extension_auto="0"/>
-				<Option working_dir="E:/CS425Project/DesktopInterface/../Binaries/Win64/"/>
+				<Option output="E:/CS425Project/VPVR/Binaries/Win64/DesktopInterfaceTest.exe" prefix_auto="0" extension_auto="0"/>
+				<Option working_dir="E:/CS425Project/VPVR/DesktopInterface/../Binaries/Win64/"/>
 				<Option object_output="./"/>
 				<Option type="1"/>
 				<Option compiler="gcc"/>
 				<Compiler>
 					<Add option="-DQT_TESTLIB_LIB"/>
-					<Add option="-DQT_TESTCASE_BUILDDIR=&quot;E:/CS425Project/DesktopInterface/cmake-build-debug&quot;"/>
+					<Add option="-DQT_TESTCASE_BUILDDIR=&quot;E:/CS425Project/VPVR/DesktopInterface/cmake-build-debug&quot;"/>
 					<Add option="-DQT_CORE_LIB"/>
 					<Add option="-DQT_WIDGETS_LIB"/>
 					<Add option="-DQT_GUI_LIB"/>
-					<Add directory="E:/CS425Project/DesktopInterface/cmake-build-debug/DesktopInterfaceTest_autogen/include"/>
-					<Add directory="E:/CS425Project/shared_include"/>
+					<Add directory="E:/CS425Project/VPVR/DesktopInterface/cmake-build-debug/DesktopInterfaceTest_autogen/include"/>
+					<Add directory="E:/CS425Project/VPVR/shared_include"/>
 					<Add directory="C:/Users/plays/AppData/Local/Programs/Python/Python39/include"/>
-					<Add directory="E:/CS425Project/DesktopInterface/unit_tests"/>
+					<Add directory="E:/CS425Project/VPVR/DesktopInterface/unit_tests"/>
 					<Add directory="C:/Qt/5.15.2/mingw81_64/include"/>
 					<Add directory="C:/Qt/5.15.2/mingw81_64/include/QtTest"/>
 					<Add directory="C:/Qt/5.15.2/mingw81_64/include/QtCore"/>
@@ -85,15 +85,15 @@
 					<Add directory="C:/mingw-w64/mingw64/bin/../lib/gcc/x86_64-w64-mingw32/8.1.0/../../../../x86_64-w64-mingw32/include"/>
 				</Compiler>
 				<MakeCommands>
-					<Build command="C:/mingw-w64/mingw64/bin/mingw32-make.exe -f &quot;E:/CS425Project/DesktopInterface/cmake-build-debug/Makefile&quot;  VERBOSE=1 DesktopInterfaceTest/fast"/>
-					<CompileFile command="C:/mingw-w64/mingw64/bin/mingw32-make.exe -f &quot;E:/CS425Project/DesktopInterface/cmake-build-debug/Makefile&quot;  VERBOSE=1 &quot;$file&quot;"/>
-					<Clean command="C:/mingw-w64/mingw64/bin/mingw32-make.exe -f &quot;E:/CS425Project/DesktopInterface/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
-					<DistClean command="C:/mingw-w64/mingw64/bin/mingw32-make.exe -f &quot;E:/CS425Project/DesktopInterface/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
+					<Build command="C:/mingw-w64/mingw64/bin/mingw32-make.exe -f &quot;E:/CS425Project/VPVR/DesktopInterface/cmake-build-debug/Makefile&quot;  VERBOSE=1 DesktopInterfaceTest/fast"/>
+					<CompileFile command="C:/mingw-w64/mingw64/bin/mingw32-make.exe -f &quot;E:/CS425Project/VPVR/DesktopInterface/cmake-build-debug/Makefile&quot;  VERBOSE=1 &quot;$file&quot;"/>
+					<Clean command="C:/mingw-w64/mingw64/bin/mingw32-make.exe -f &quot;E:/CS425Project/VPVR/DesktopInterface/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
+					<DistClean command="C:/mingw-w64/mingw64/bin/mingw32-make.exe -f &quot;E:/CS425Project/VPVR/DesktopInterface/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
 				</MakeCommands>
 			</Target>
 			<Target title="DesktopInterface">
-				<Option output="E:/CS425Project/Binaries/Win64/DesktopInterface.exe" prefix_auto="0" extension_auto="0"/>
-				<Option working_dir="E:/CS425Project/DesktopInterface/../Binaries/Win64/"/>
+				<Option output="E:/CS425Project/VPVR/Binaries/Win64/DesktopInterface.exe" prefix_auto="0" extension_auto="0"/>
+				<Option working_dir="E:/CS425Project/VPVR/DesktopInterface/../Binaries/Win64/"/>
 				<Option object_output="./"/>
 				<Option type="1"/>
 				<Option compiler="gcc"/>
@@ -101,10 +101,10 @@
 					<Add option="-DQT_WIDGETS_LIB"/>
 					<Add option="-DQT_GUI_LIB"/>
 					<Add option="-DQT_CORE_LIB"/>
-					<Add directory="E:/CS425Project/DesktopInterface/cmake-build-debug/DesktopInterface_autogen/include"/>
-					<Add directory="E:/CS425Project/shared_include"/>
+					<Add directory="E:/CS425Project/VPVR/DesktopInterface/cmake-build-debug/DesktopInterface_autogen/include"/>
+					<Add directory="E:/CS425Project/VPVR/shared_include"/>
 					<Add directory="C:/Users/plays/AppData/Local/Programs/Python/Python39/include"/>
-					<Add directory="E:/CS425Project/DesktopInterface/unit_tests"/>
+					<Add directory="E:/CS425Project/VPVR/DesktopInterface/unit_tests"/>
 					<Add directory="C:/Qt/5.15.2/mingw81_64/include"/>
 					<Add directory="C:/Qt/5.15.2/mingw81_64/include/QtWidgets"/>
 					<Add directory="C:/Qt/5.15.2/mingw81_64/include/QtGui"/>
@@ -119,15 +119,15 @@
 					<Add directory="C:/mingw-w64/mingw64/bin/../lib/gcc/x86_64-w64-mingw32/8.1.0/../../../../x86_64-w64-mingw32/include"/>
 				</Compiler>
 				<MakeCommands>
-					<Build command="C:/mingw-w64/mingw64/bin/mingw32-make.exe -f &quot;E:/CS425Project/DesktopInterface/cmake-build-debug/Makefile&quot;  VERBOSE=1 DesktopInterface"/>
-					<CompileFile command="C:/mingw-w64/mingw64/bin/mingw32-make.exe -f &quot;E:/CS425Project/DesktopInterface/cmake-build-debug/Makefile&quot;  VERBOSE=1 &quot;$file&quot;"/>
-					<Clean command="C:/mingw-w64/mingw64/bin/mingw32-make.exe -f &quot;E:/CS425Project/DesktopInterface/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
-					<DistClean command="C:/mingw-w64/mingw64/bin/mingw32-make.exe -f &quot;E:/CS425Project/DesktopInterface/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
+					<Build command="C:/mingw-w64/mingw64/bin/mingw32-make.exe -f &quot;E:/CS425Project/VPVR/DesktopInterface/cmake-build-debug/Makefile&quot;  VERBOSE=1 DesktopInterface"/>
+					<CompileFile command="C:/mingw-w64/mingw64/bin/mingw32-make.exe -f &quot;E:/CS425Project/VPVR/DesktopInterface/cmake-build-debug/Makefile&quot;  VERBOSE=1 &quot;$file&quot;"/>
+					<Clean command="C:/mingw-w64/mingw64/bin/mingw32-make.exe -f &quot;E:/CS425Project/VPVR/DesktopInterface/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
+					<DistClean command="C:/mingw-w64/mingw64/bin/mingw32-make.exe -f &quot;E:/CS425Project/VPVR/DesktopInterface/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
 				</MakeCommands>
 			</Target>
 			<Target title="DesktopInterface/fast">
-				<Option output="E:/CS425Project/Binaries/Win64/DesktopInterface.exe" prefix_auto="0" extension_auto="0"/>
-				<Option working_dir="E:/CS425Project/DesktopInterface/../Binaries/Win64/"/>
+				<Option output="E:/CS425Project/VPVR/Binaries/Win64/DesktopInterface.exe" prefix_auto="0" extension_auto="0"/>
+				<Option working_dir="E:/CS425Project/VPVR/DesktopInterface/../Binaries/Win64/"/>
 				<Option object_output="./"/>
 				<Option type="1"/>
 				<Option compiler="gcc"/>
@@ -135,10 +135,10 @@
 					<Add option="-DQT_WIDGETS_LIB"/>
 					<Add option="-DQT_GUI_LIB"/>
 					<Add option="-DQT_CORE_LIB"/>
-					<Add directory="E:/CS425Project/DesktopInterface/cmake-build-debug/DesktopInterface_autogen/include"/>
-					<Add directory="E:/CS425Project/shared_include"/>
+					<Add directory="E:/CS425Project/VPVR/DesktopInterface/cmake-build-debug/DesktopInterface_autogen/include"/>
+					<Add directory="E:/CS425Project/VPVR/shared_include"/>
 					<Add directory="C:/Users/plays/AppData/Local/Programs/Python/Python39/include"/>
-					<Add directory="E:/CS425Project/DesktopInterface/unit_tests"/>
+					<Add directory="E:/CS425Project/VPVR/DesktopInterface/unit_tests"/>
 					<Add directory="C:/Qt/5.15.2/mingw81_64/include"/>
 					<Add directory="C:/Qt/5.15.2/mingw81_64/include/QtWidgets"/>
 					<Add directory="C:/Qt/5.15.2/mingw81_64/include/QtGui"/>
@@ -153,317 +153,317 @@
 					<Add directory="C:/mingw-w64/mingw64/bin/../lib/gcc/x86_64-w64-mingw32/8.1.0/../../../../x86_64-w64-mingw32/include"/>
 				</Compiler>
 				<MakeCommands>
-					<Build command="C:/mingw-w64/mingw64/bin/mingw32-make.exe -f &quot;E:/CS425Project/DesktopInterface/cmake-build-debug/Makefile&quot;  VERBOSE=1 DesktopInterface/fast"/>
-					<CompileFile command="C:/mingw-w64/mingw64/bin/mingw32-make.exe -f &quot;E:/CS425Project/DesktopInterface/cmake-build-debug/Makefile&quot;  VERBOSE=1 &quot;$file&quot;"/>
-					<Clean command="C:/mingw-w64/mingw64/bin/mingw32-make.exe -f &quot;E:/CS425Project/DesktopInterface/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
-					<DistClean command="C:/mingw-w64/mingw64/bin/mingw32-make.exe -f &quot;E:/CS425Project/DesktopInterface/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
+					<Build command="C:/mingw-w64/mingw64/bin/mingw32-make.exe -f &quot;E:/CS425Project/VPVR/DesktopInterface/cmake-build-debug/Makefile&quot;  VERBOSE=1 DesktopInterface/fast"/>
+					<CompileFile command="C:/mingw-w64/mingw64/bin/mingw32-make.exe -f &quot;E:/CS425Project/VPVR/DesktopInterface/cmake-build-debug/Makefile&quot;  VERBOSE=1 &quot;$file&quot;"/>
+					<Clean command="C:/mingw-w64/mingw64/bin/mingw32-make.exe -f &quot;E:/CS425Project/VPVR/DesktopInterface/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
+					<DistClean command="C:/mingw-w64/mingw64/bin/mingw32-make.exe -f &quot;E:/CS425Project/VPVR/DesktopInterface/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
 				</MakeCommands>
 			</Target>
 			<Target title="edit_cache">
-				<Option working_dir="E:/CS425Project/DesktopInterface/cmake-build-debug"/>
+				<Option working_dir="E:/CS425Project/VPVR/DesktopInterface/cmake-build-debug"/>
 				<Option type="4"/>
 				<MakeCommands>
-					<Build command="C:/mingw-w64/mingw64/bin/mingw32-make.exe -f &quot;E:/CS425Project/DesktopInterface/cmake-build-debug/Makefile&quot;  VERBOSE=1 edit_cache"/>
-					<CompileFile command="C:/mingw-w64/mingw64/bin/mingw32-make.exe -f &quot;E:/CS425Project/DesktopInterface/cmake-build-debug/Makefile&quot;  VERBOSE=1 &quot;$file&quot;"/>
-					<Clean command="C:/mingw-w64/mingw64/bin/mingw32-make.exe -f &quot;E:/CS425Project/DesktopInterface/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
-					<DistClean command="C:/mingw-w64/mingw64/bin/mingw32-make.exe -f &quot;E:/CS425Project/DesktopInterface/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
+					<Build command="C:/mingw-w64/mingw64/bin/mingw32-make.exe -f &quot;E:/CS425Project/VPVR/DesktopInterface/cmake-build-debug/Makefile&quot;  VERBOSE=1 edit_cache"/>
+					<CompileFile command="C:/mingw-w64/mingw64/bin/mingw32-make.exe -f &quot;E:/CS425Project/VPVR/DesktopInterface/cmake-build-debug/Makefile&quot;  VERBOSE=1 &quot;$file&quot;"/>
+					<Clean command="C:/mingw-w64/mingw64/bin/mingw32-make.exe -f &quot;E:/CS425Project/VPVR/DesktopInterface/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
+					<DistClean command="C:/mingw-w64/mingw64/bin/mingw32-make.exe -f &quot;E:/CS425Project/VPVR/DesktopInterface/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
 				</MakeCommands>
 			</Target>
 			<Target title="TARGET">
-				<Option working_dir="E:/CS425Project/DesktopInterface/cmake-build-debug"/>
+				<Option working_dir="E:/CS425Project/VPVR/DesktopInterface/cmake-build-debug"/>
 				<Option type="4"/>
 				<MakeCommands>
-					<Build command="C:/mingw-w64/mingw64/bin/mingw32-make.exe -f &quot;E:/CS425Project/DesktopInterface/cmake-build-debug/Makefile&quot;  VERBOSE=1 TARGET"/>
-					<CompileFile command="C:/mingw-w64/mingw64/bin/mingw32-make.exe -f &quot;E:/CS425Project/DesktopInterface/cmake-build-debug/Makefile&quot;  VERBOSE=1 &quot;$file&quot;"/>
-					<Clean command="C:/mingw-w64/mingw64/bin/mingw32-make.exe -f &quot;E:/CS425Project/DesktopInterface/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
-					<DistClean command="C:/mingw-w64/mingw64/bin/mingw32-make.exe -f &quot;E:/CS425Project/DesktopInterface/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
+					<Build command="C:/mingw-w64/mingw64/bin/mingw32-make.exe -f &quot;E:/CS425Project/VPVR/DesktopInterface/cmake-build-debug/Makefile&quot;  VERBOSE=1 TARGET"/>
+					<CompileFile command="C:/mingw-w64/mingw64/bin/mingw32-make.exe -f &quot;E:/CS425Project/VPVR/DesktopInterface/cmake-build-debug/Makefile&quot;  VERBOSE=1 &quot;$file&quot;"/>
+					<Clean command="C:/mingw-w64/mingw64/bin/mingw32-make.exe -f &quot;E:/CS425Project/VPVR/DesktopInterface/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
+					<DistClean command="C:/mingw-w64/mingw64/bin/mingw32-make.exe -f &quot;E:/CS425Project/VPVR/DesktopInterface/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
 				</MakeCommands>
 			</Target>
 			<Target title="rebuild_cache">
-				<Option working_dir="E:/CS425Project/DesktopInterface/cmake-build-debug"/>
+				<Option working_dir="E:/CS425Project/VPVR/DesktopInterface/cmake-build-debug"/>
 				<Option type="4"/>
 				<MakeCommands>
-					<Build command="C:/mingw-w64/mingw64/bin/mingw32-make.exe -f &quot;E:/CS425Project/DesktopInterface/cmake-build-debug/Makefile&quot;  VERBOSE=1 rebuild_cache"/>
-					<CompileFile command="C:/mingw-w64/mingw64/bin/mingw32-make.exe -f &quot;E:/CS425Project/DesktopInterface/cmake-build-debug/Makefile&quot;  VERBOSE=1 &quot;$file&quot;"/>
-					<Clean command="C:/mingw-w64/mingw64/bin/mingw32-make.exe -f &quot;E:/CS425Project/DesktopInterface/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
-					<DistClean command="C:/mingw-w64/mingw64/bin/mingw32-make.exe -f &quot;E:/CS425Project/DesktopInterface/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
+					<Build command="C:/mingw-w64/mingw64/bin/mingw32-make.exe -f &quot;E:/CS425Project/VPVR/DesktopInterface/cmake-build-debug/Makefile&quot;  VERBOSE=1 rebuild_cache"/>
+					<CompileFile command="C:/mingw-w64/mingw64/bin/mingw32-make.exe -f &quot;E:/CS425Project/VPVR/DesktopInterface/cmake-build-debug/Makefile&quot;  VERBOSE=1 &quot;$file&quot;"/>
+					<Clean command="C:/mingw-w64/mingw64/bin/mingw32-make.exe -f &quot;E:/CS425Project/VPVR/DesktopInterface/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
+					<DistClean command="C:/mingw-w64/mingw64/bin/mingw32-make.exe -f &quot;E:/CS425Project/VPVR/DesktopInterface/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
 				</MakeCommands>
 			</Target>
 			<Target title="test">
-				<Option working_dir="E:/CS425Project/DesktopInterface/cmake-build-debug"/>
+				<Option working_dir="E:/CS425Project/VPVR/DesktopInterface/cmake-build-debug"/>
 				<Option type="4"/>
 				<MakeCommands>
-					<Build command="C:/mingw-w64/mingw64/bin/mingw32-make.exe -f &quot;E:/CS425Project/DesktopInterface/cmake-build-debug/Makefile&quot;  VERBOSE=1 test"/>
-					<CompileFile command="C:/mingw-w64/mingw64/bin/mingw32-make.exe -f &quot;E:/CS425Project/DesktopInterface/cmake-build-debug/Makefile&quot;  VERBOSE=1 &quot;$file&quot;"/>
-					<Clean command="C:/mingw-w64/mingw64/bin/mingw32-make.exe -f &quot;E:/CS425Project/DesktopInterface/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
-					<DistClean command="C:/mingw-w64/mingw64/bin/mingw32-make.exe -f &quot;E:/CS425Project/DesktopInterface/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
+					<Build command="C:/mingw-w64/mingw64/bin/mingw32-make.exe -f &quot;E:/CS425Project/VPVR/DesktopInterface/cmake-build-debug/Makefile&quot;  VERBOSE=1 test"/>
+					<CompileFile command="C:/mingw-w64/mingw64/bin/mingw32-make.exe -f &quot;E:/CS425Project/VPVR/DesktopInterface/cmake-build-debug/Makefile&quot;  VERBOSE=1 &quot;$file&quot;"/>
+					<Clean command="C:/mingw-w64/mingw64/bin/mingw32-make.exe -f &quot;E:/CS425Project/VPVR/DesktopInterface/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
+					<DistClean command="C:/mingw-w64/mingw64/bin/mingw32-make.exe -f &quot;E:/CS425Project/VPVR/DesktopInterface/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
 				</MakeCommands>
 			</Target>
 			<Target title="DesktopInterfaceTest_autogen">
-				<Option working_dir="E:/CS425Project/DesktopInterface/cmake-build-debug"/>
+				<Option working_dir="E:/CS425Project/VPVR/DesktopInterface/cmake-build-debug"/>
 				<Option type="4"/>
 				<MakeCommands>
-					<Build command="C:/mingw-w64/mingw64/bin/mingw32-make.exe -f &quot;E:/CS425Project/DesktopInterface/cmake-build-debug/Makefile&quot;  VERBOSE=1 DesktopInterfaceTest_autogen"/>
-					<CompileFile command="C:/mingw-w64/mingw64/bin/mingw32-make.exe -f &quot;E:/CS425Project/DesktopInterface/cmake-build-debug/Makefile&quot;  VERBOSE=1 &quot;$file&quot;"/>
-					<Clean command="C:/mingw-w64/mingw64/bin/mingw32-make.exe -f &quot;E:/CS425Project/DesktopInterface/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
-					<DistClean command="C:/mingw-w64/mingw64/bin/mingw32-make.exe -f &quot;E:/CS425Project/DesktopInterface/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
+					<Build command="C:/mingw-w64/mingw64/bin/mingw32-make.exe -f &quot;E:/CS425Project/VPVR/DesktopInterface/cmake-build-debug/Makefile&quot;  VERBOSE=1 DesktopInterfaceTest_autogen"/>
+					<CompileFile command="C:/mingw-w64/mingw64/bin/mingw32-make.exe -f &quot;E:/CS425Project/VPVR/DesktopInterface/cmake-build-debug/Makefile&quot;  VERBOSE=1 &quot;$file&quot;"/>
+					<Clean command="C:/mingw-w64/mingw64/bin/mingw32-make.exe -f &quot;E:/CS425Project/VPVR/DesktopInterface/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
+					<DistClean command="C:/mingw-w64/mingw64/bin/mingw32-make.exe -f &quot;E:/CS425Project/VPVR/DesktopInterface/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
 				</MakeCommands>
 			</Target>
 			<Target title="DesktopInterface_autogen">
-				<Option working_dir="E:/CS425Project/DesktopInterface/cmake-build-debug"/>
+				<Option working_dir="E:/CS425Project/VPVR/DesktopInterface/cmake-build-debug"/>
 				<Option type="4"/>
 				<MakeCommands>
-					<Build command="C:/mingw-w64/mingw64/bin/mingw32-make.exe -f &quot;E:/CS425Project/DesktopInterface/cmake-build-debug/Makefile&quot;  VERBOSE=1 DesktopInterface_autogen"/>
-					<CompileFile command="C:/mingw-w64/mingw64/bin/mingw32-make.exe -f &quot;E:/CS425Project/DesktopInterface/cmake-build-debug/Makefile&quot;  VERBOSE=1 &quot;$file&quot;"/>
-					<Clean command="C:/mingw-w64/mingw64/bin/mingw32-make.exe -f &quot;E:/CS425Project/DesktopInterface/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
-					<DistClean command="C:/mingw-w64/mingw64/bin/mingw32-make.exe -f &quot;E:/CS425Project/DesktopInterface/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
+					<Build command="C:/mingw-w64/mingw64/bin/mingw32-make.exe -f &quot;E:/CS425Project/VPVR/DesktopInterface/cmake-build-debug/Makefile&quot;  VERBOSE=1 DesktopInterface_autogen"/>
+					<CompileFile command="C:/mingw-w64/mingw64/bin/mingw32-make.exe -f &quot;E:/CS425Project/VPVR/DesktopInterface/cmake-build-debug/Makefile&quot;  VERBOSE=1 &quot;$file&quot;"/>
+					<Clean command="C:/mingw-w64/mingw64/bin/mingw32-make.exe -f &quot;E:/CS425Project/VPVR/DesktopInterface/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
+					<DistClean command="C:/mingw-w64/mingw64/bin/mingw32-make.exe -f &quot;E:/CS425Project/VPVR/DesktopInterface/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
 				</MakeCommands>
 			</Target>
 		</Build>
-		<Unit filename="E:/CS425Project/DesktopInterface/APPLICATION_CONSTANTS.h">
+		<Unit filename="E:/CS425Project/VPVR/DesktopInterface/APPLICATION_CONSTANTS.h">
 			<Option target="DesktopInterfaceTest"/>
 			<Option target="DesktopInterface"/>
 		</Unit>
-		<Unit filename="E:/CS425Project/DesktopInterface/DesktopInterface.cpp">
+		<Unit filename="E:/CS425Project/VPVR/DesktopInterface/DesktopInterface.cpp">
 			<Option target="DesktopInterfaceTest"/>
 			<Option target="DesktopInterface"/>
 		</Unit>
-		<Unit filename="E:/CS425Project/DesktopInterface/DesktopInterface.h">
+		<Unit filename="E:/CS425Project/VPVR/DesktopInterface/DesktopInterface.h">
 			<Option target="DesktopInterfaceTest"/>
 			<Option target="DesktopInterface"/>
 		</Unit>
-		<Unit filename="E:/CS425Project/DesktopInterface/PDFGenerator.cpp">
+		<Unit filename="E:/CS425Project/VPVR/DesktopInterface/PDFGenerator.cpp">
 			<Option target="DesktopInterfaceTest"/>
 			<Option target="DesktopInterface"/>
 		</Unit>
-		<Unit filename="E:/CS425Project/DesktopInterface/PDFGenerator.h">
+		<Unit filename="E:/CS425Project/VPVR/DesktopInterface/PDFGenerator.h">
 			<Option target="DesktopInterfaceTest"/>
 			<Option target="DesktopInterface"/>
 		</Unit>
-		<Unit filename="E:/CS425Project/DesktopInterface/PatientData.cpp">
+		<Unit filename="E:/CS425Project/VPVR/DesktopInterface/PatientData.cpp">
 			<Option target="DesktopInterfaceTest"/>
 			<Option target="DesktopInterface"/>
 		</Unit>
-		<Unit filename="E:/CS425Project/DesktopInterface/PatientData.h">
+		<Unit filename="E:/CS425Project/VPVR/DesktopInterface/PatientData.h">
 			<Option target="DesktopInterfaceTest"/>
 			<Option target="DesktopInterface"/>
 		</Unit>
-		<Unit filename="E:/CS425Project/DesktopInterface/QHomeWindow.cpp">
+		<Unit filename="E:/CS425Project/VPVR/DesktopInterface/QHomeWindow.cpp">
 			<Option target="DesktopInterfaceTest"/>
 			<Option target="DesktopInterface"/>
 		</Unit>
-		<Unit filename="E:/CS425Project/DesktopInterface/QHomeWindow.h">
+		<Unit filename="E:/CS425Project/VPVR/DesktopInterface/QHomeWindow.h">
 			<Option target="DesktopInterfaceTest"/>
 			<Option target="DesktopInterface"/>
 		</Unit>
-		<Unit filename="E:/CS425Project/DesktopInterface/QPatientDataPane.cpp">
+		<Unit filename="E:/CS425Project/VPVR/DesktopInterface/QPatientDataPane.cpp">
 			<Option target="DesktopInterfaceTest"/>
 			<Option target="DesktopInterface"/>
 		</Unit>
-		<Unit filename="E:/CS425Project/DesktopInterface/QPatientDataPane.h">
+		<Unit filename="E:/CS425Project/VPVR/DesktopInterface/QPatientDataPane.h">
 			<Option target="DesktopInterfaceTest"/>
 			<Option target="DesktopInterface"/>
 		</Unit>
-		<Unit filename="E:/CS425Project/DesktopInterface/QResultsPane.cpp">
+		<Unit filename="E:/CS425Project/VPVR/DesktopInterface/QResultsPane.cpp">
 			<Option target="DesktopInterfaceTest"/>
 			<Option target="DesktopInterface"/>
 		</Unit>
-		<Unit filename="E:/CS425Project/DesktopInterface/QResultsPane.h">
+		<Unit filename="E:/CS425Project/VPVR/DesktopInterface/QResultsPane.h">
 			<Option target="DesktopInterfaceTest"/>
 			<Option target="DesktopInterface"/>
 		</Unit>
-		<Unit filename="E:/CS425Project/DesktopInterface/QResultsWindow.cpp">
+		<Unit filename="E:/CS425Project/VPVR/DesktopInterface/QResultsWindow.cpp">
 			<Option target="DesktopInterfaceTest"/>
 			<Option target="DesktopInterface"/>
 		</Unit>
-		<Unit filename="E:/CS425Project/DesktopInterface/QResultsWindow.h">
+		<Unit filename="E:/CS425Project/VPVR/DesktopInterface/QResultsWindow.h">
 			<Option target="DesktopInterfaceTest"/>
 			<Option target="DesktopInterface"/>
 		</Unit>
-		<Unit filename="E:/CS425Project/DesktopInterface/QResultsWindow.ui">
+		<Unit filename="E:/CS425Project/VPVR/DesktopInterface/QResultsWindow.ui">
 			<Option target="DesktopInterfaceTest"/>
 			<Option target="DesktopInterface"/>
 		</Unit>
-		<Unit filename="E:/CS425Project/DesktopInterface/QSimulationControlPane.cpp">
+		<Unit filename="E:/CS425Project/VPVR/DesktopInterface/QSimulationControlPane.cpp">
 			<Option target="DesktopInterfaceTest"/>
 			<Option target="DesktopInterface"/>
 		</Unit>
-		<Unit filename="E:/CS425Project/DesktopInterface/QSimulationControlPane.h">
+		<Unit filename="E:/CS425Project/VPVR/DesktopInterface/QSimulationControlPane.h">
 			<Option target="DesktopInterfaceTest"/>
 			<Option target="DesktopInterface"/>
 		</Unit>
-		<Unit filename="E:/CS425Project/DesktopInterface/QSimulationControls.cpp">
+		<Unit filename="E:/CS425Project/VPVR/DesktopInterface/QSimulationControls.cpp">
 			<Option target="DesktopInterfaceTest"/>
 			<Option target="DesktopInterface"/>
 		</Unit>
-		<Unit filename="E:/CS425Project/DesktopInterface/QSimulationControls.h">
+		<Unit filename="E:/CS425Project/VPVR/DesktopInterface/QSimulationControls.h">
 			<Option target="DesktopInterfaceTest"/>
 			<Option target="DesktopInterface"/>
 		</Unit>
-		<Unit filename="E:/CS425Project/DesktopInterface/WindowsIPCControls.cpp">
+		<Unit filename="E:/CS425Project/VPVR/DesktopInterface/WindowsIPCControls.cpp">
 			<Option target="DesktopInterfaceTest"/>
 			<Option target="DesktopInterface"/>
 		</Unit>
-		<Unit filename="E:/CS425Project/DesktopInterface/cmake-build-debug/DesktopInterfaceTest_autogen/mocs_compilation.cpp">
+		<Unit filename="E:/CS425Project/VPVR/DesktopInterface/cmake-build-debug/DesktopInterfaceTest_autogen/mocs_compilation.cpp">
 			<Option target="DesktopInterfaceTest"/>
 		</Unit>
-		<Unit filename="E:/CS425Project/DesktopInterface/cmake-build-debug/DesktopInterface_autogen/mocs_compilation.cpp">
+		<Unit filename="E:/CS425Project/VPVR/DesktopInterface/cmake-build-debug/DesktopInterface_autogen/mocs_compilation.cpp">
 			<Option target="DesktopInterface"/>
 		</Unit>
-		<Unit filename="E:/CS425Project/DesktopInterface/csvsaveload.cpp">
-			<Option target="DesktopInterfaceTest"/>
-			<Option target="DesktopInterface"/>
-		</Unit>
-		<Unit filename="E:/CS425Project/DesktopInterface/csvsaveload.h">
+		<Unit filename="E:/CS425Project/VPVR/DesktopInterface/csvsaveload.cpp">
 			<Option target="DesktopInterfaceTest"/>
 			<Option target="DesktopInterface"/>
 		</Unit>
-		<Unit filename="E:/CS425Project/DesktopInterface/main.cpp">
-			<Option target="DesktopInterface"/>
-		</Unit>
-		<Unit filename="E:/CS425Project/DesktopInterface/unit_tests/TestCSVSaveLoad.cpp">
-			<Option target="DesktopInterfaceTest"/>
-		</Unit>
-		<Unit filename="E:/CS425Project/DesktopInterface/unit_tests/TestPDFGeneration.cpp">
-			<Option target="DesktopInterfaceTest"/>
-		</Unit>
-		<Unit filename="E:/CS425Project/DesktopInterface/unit_tests/TestRunner.cpp">
-			<Option target="DesktopInterfaceTest"/>
-		</Unit>
-		<Unit filename="E:/CS425Project/DesktopInterface/unit_tests/UnitTestMain.h">
-			<Option target="DesktopInterfaceTest"/>
-		</Unit>
-		<Unit filename="E:/CS425Project/shared_include/EyeFrameData.h">
+		<Unit filename="E:/CS425Project/VPVR/DesktopInterface/csvsaveload.h">
 			<Option target="DesktopInterfaceTest"/>
 			<Option target="DesktopInterface"/>
 		</Unit>
-		<Unit filename="E:/CS425Project/shared_include/EyeSessionData.h">
+		<Unit filename="E:/CS425Project/VPVR/DesktopInterface/main.cpp">
+			<Option target="DesktopInterface"/>
+		</Unit>
+		<Unit filename="E:/CS425Project/VPVR/DesktopInterface/unit_tests/TestCSVSaveLoad.cpp">
+			<Option target="DesktopInterfaceTest"/>
+		</Unit>
+		<Unit filename="E:/CS425Project/VPVR/DesktopInterface/unit_tests/TestPDFGeneration.cpp">
+			<Option target="DesktopInterfaceTest"/>
+		</Unit>
+		<Unit filename="E:/CS425Project/VPVR/DesktopInterface/unit_tests/TestRunner.cpp">
+			<Option target="DesktopInterfaceTest"/>
+		</Unit>
+		<Unit filename="E:/CS425Project/VPVR/DesktopInterface/unit_tests/UnitTestMain.h">
+			<Option target="DesktopInterfaceTest"/>
+		</Unit>
+		<Unit filename="E:/CS425Project/VPVR/shared_include/EyeFrameData.h">
 			<Option target="DesktopInterfaceTest"/>
 			<Option target="DesktopInterface"/>
 		</Unit>
-		<Unit filename="E:/CS425Project/shared_include/FullPatientData.cpp">
+		<Unit filename="E:/CS425Project/VPVR/shared_include/EyeSessionData.h">
 			<Option target="DesktopInterfaceTest"/>
 			<Option target="DesktopInterface"/>
 		</Unit>
-		<Unit filename="E:/CS425Project/shared_include/FullPatientData.h">
+		<Unit filename="E:/CS425Project/VPVR/shared_include/FullPatientData.cpp">
 			<Option target="DesktopInterfaceTest"/>
 			<Option target="DesktopInterface"/>
 		</Unit>
-		<Unit filename="E:/CS425Project/DesktopInterface/CMakeLists.txt">
+		<Unit filename="E:/CS425Project/VPVR/shared_include/FullPatientData.h">
+			<Option target="DesktopInterfaceTest"/>
+			<Option target="DesktopInterface"/>
+		</Unit>
+		<Unit filename="E:/CS425Project/VPVR/DesktopInterface/CMakeLists.txt">
 			<Option virtualFolder="CMake Files\"/>
 		</Unit>
-		<Unit filename="E:/CS425Project/DesktopInterface/eye_chart.py">
+		<Unit filename="E:/CS425Project/VPVR/DesktopInterface/eye_chart.py">
 			<Option virtualFolder="CMake Files\"/>
 		</Unit>
-		<Unit filename="E:/CS425Project/DesktopInterface/generatePDF.bat">
+		<Unit filename="E:/CS425Project/VPVR/DesktopInterface/generatePDF.bat">
 			<Option virtualFolder="CMake Files\"/>
 		</Unit>
-		<Unit filename="E:/CS425Project/DesktopInterface/generatePDF.py">
+		<Unit filename="E:/CS425Project/VPVR/DesktopInterface/generatePDF.py">
 			<Option virtualFolder="CMake Files\"/>
 		</Unit>
-		<Unit filename="E:/CS425Project/DesktopInterface/Qt/5.15.2/mingw81_64/lib/cmake/Qt5Widgets/Qt5WidgetsConfig.cmake">
+		<Unit filename="E:/CS425Project/VPVR/DesktopInterface/Qt/5.15.2/mingw81_64/lib/cmake/Qt5Widgets/Qt5WidgetsConfig.cmake">
 			<Option virtualFolder="CMake Files\Qt\5.15.2\mingw81_64\lib\cmake\Qt5Widgets\"/>
 		</Unit>
-		<Unit filename="E:/CS425Project/DesktopInterface/Qt/5.15.2/mingw81_64/lib/cmake/Qt5Widgets/Qt5WidgetsConfigExtras.cmake">
+		<Unit filename="E:/CS425Project/VPVR/DesktopInterface/Qt/5.15.2/mingw81_64/lib/cmake/Qt5Widgets/Qt5WidgetsConfigExtras.cmake">
 			<Option virtualFolder="CMake Files\Qt\5.15.2\mingw81_64\lib\cmake\Qt5Widgets\"/>
 		</Unit>
-		<Unit filename="E:/CS425Project/DesktopInterface/Qt/5.15.2/mingw81_64/lib/cmake/Qt5Widgets/Qt5WidgetsConfigVersion.cmake">
+		<Unit filename="E:/CS425Project/VPVR/DesktopInterface/Qt/5.15.2/mingw81_64/lib/cmake/Qt5Widgets/Qt5WidgetsConfigVersion.cmake">
 			<Option virtualFolder="CMake Files\Qt\5.15.2\mingw81_64\lib\cmake\Qt5Widgets\"/>
 		</Unit>
-		<Unit filename="E:/CS425Project/DesktopInterface/Qt/5.15.2/mingw81_64/lib/cmake/Qt5Widgets/Qt5WidgetsMacros.cmake">
+		<Unit filename="E:/CS425Project/VPVR/DesktopInterface/Qt/5.15.2/mingw81_64/lib/cmake/Qt5Widgets/Qt5WidgetsMacros.cmake">
 			<Option virtualFolder="CMake Files\Qt\5.15.2\mingw81_64\lib\cmake\Qt5Widgets\"/>
 		</Unit>
-		<Unit filename="E:/CS425Project/DesktopInterface/Qt/5.15.2/mingw81_64/lib/cmake/Qt5Widgets/Qt5Widgets_QWindowsVistaStylePlugin.cmake">
+		<Unit filename="E:/CS425Project/VPVR/DesktopInterface/Qt/5.15.2/mingw81_64/lib/cmake/Qt5Widgets/Qt5Widgets_QWindowsVistaStylePlugin.cmake">
 			<Option virtualFolder="CMake Files\Qt\5.15.2\mingw81_64\lib\cmake\Qt5Widgets\"/>
 		</Unit>
-		<Unit filename="E:/CS425Project/DesktopInterface/Qt/5.15.2/mingw81_64/lib/cmake/Qt5Gui/Qt5GuiConfig.cmake">
+		<Unit filename="E:/CS425Project/VPVR/DesktopInterface/Qt/5.15.2/mingw81_64/lib/cmake/Qt5Gui/Qt5GuiConfig.cmake">
 			<Option virtualFolder="CMake Files\Qt\5.15.2\mingw81_64\lib\cmake\Qt5Gui\"/>
 		</Unit>
-		<Unit filename="E:/CS425Project/DesktopInterface/Qt/5.15.2/mingw81_64/lib/cmake/Qt5Gui/Qt5GuiConfigExtras.cmake">
+		<Unit filename="E:/CS425Project/VPVR/DesktopInterface/Qt/5.15.2/mingw81_64/lib/cmake/Qt5Gui/Qt5GuiConfigExtras.cmake">
 			<Option virtualFolder="CMake Files\Qt\5.15.2\mingw81_64\lib\cmake\Qt5Gui\"/>
 		</Unit>
-		<Unit filename="E:/CS425Project/DesktopInterface/Qt/5.15.2/mingw81_64/lib/cmake/Qt5Gui/Qt5GuiConfigVersion.cmake">
+		<Unit filename="E:/CS425Project/VPVR/DesktopInterface/Qt/5.15.2/mingw81_64/lib/cmake/Qt5Gui/Qt5GuiConfigVersion.cmake">
 			<Option virtualFolder="CMake Files\Qt\5.15.2\mingw81_64\lib\cmake\Qt5Gui\"/>
 		</Unit>
-		<Unit filename="E:/CS425Project/DesktopInterface/Qt/5.15.2/mingw81_64/lib/cmake/Qt5Gui/Qt5Gui_QGifPlugin.cmake">
+		<Unit filename="E:/CS425Project/VPVR/DesktopInterface/Qt/5.15.2/mingw81_64/lib/cmake/Qt5Gui/Qt5Gui_QGifPlugin.cmake">
 			<Option virtualFolder="CMake Files\Qt\5.15.2\mingw81_64\lib\cmake\Qt5Gui\"/>
 		</Unit>
-		<Unit filename="E:/CS425Project/DesktopInterface/Qt/5.15.2/mingw81_64/lib/cmake/Qt5Gui/Qt5Gui_QICNSPlugin.cmake">
+		<Unit filename="E:/CS425Project/VPVR/DesktopInterface/Qt/5.15.2/mingw81_64/lib/cmake/Qt5Gui/Qt5Gui_QICNSPlugin.cmake">
 			<Option virtualFolder="CMake Files\Qt\5.15.2\mingw81_64\lib\cmake\Qt5Gui\"/>
 		</Unit>
-		<Unit filename="E:/CS425Project/DesktopInterface/Qt/5.15.2/mingw81_64/lib/cmake/Qt5Gui/Qt5Gui_QICOPlugin.cmake">
+		<Unit filename="E:/CS425Project/VPVR/DesktopInterface/Qt/5.15.2/mingw81_64/lib/cmake/Qt5Gui/Qt5Gui_QICOPlugin.cmake">
 			<Option virtualFolder="CMake Files\Qt\5.15.2\mingw81_64\lib\cmake\Qt5Gui\"/>
 		</Unit>
-		<Unit filename="E:/CS425Project/DesktopInterface/Qt/5.15.2/mingw81_64/lib/cmake/Qt5Gui/Qt5Gui_QJpegPlugin.cmake">
+		<Unit filename="E:/CS425Project/VPVR/DesktopInterface/Qt/5.15.2/mingw81_64/lib/cmake/Qt5Gui/Qt5Gui_QJpegPlugin.cmake">
 			<Option virtualFolder="CMake Files\Qt\5.15.2\mingw81_64\lib\cmake\Qt5Gui\"/>
 		</Unit>
-		<Unit filename="E:/CS425Project/DesktopInterface/Qt/5.15.2/mingw81_64/lib/cmake/Qt5Gui/Qt5Gui_QMinimalIntegrationPlugin.cmake">
+		<Unit filename="E:/CS425Project/VPVR/DesktopInterface/Qt/5.15.2/mingw81_64/lib/cmake/Qt5Gui/Qt5Gui_QMinimalIntegrationPlugin.cmake">
 			<Option virtualFolder="CMake Files\Qt\5.15.2\mingw81_64\lib\cmake\Qt5Gui\"/>
 		</Unit>
-		<Unit filename="E:/CS425Project/DesktopInterface/Qt/5.15.2/mingw81_64/lib/cmake/Qt5Gui/Qt5Gui_QOffscreenIntegrationPlugin.cmake">
+		<Unit filename="E:/CS425Project/VPVR/DesktopInterface/Qt/5.15.2/mingw81_64/lib/cmake/Qt5Gui/Qt5Gui_QOffscreenIntegrationPlugin.cmake">
 			<Option virtualFolder="CMake Files\Qt\5.15.2\mingw81_64\lib\cmake\Qt5Gui\"/>
 		</Unit>
-		<Unit filename="E:/CS425Project/DesktopInterface/Qt/5.15.2/mingw81_64/lib/cmake/Qt5Gui/Qt5Gui_QSvgIconPlugin.cmake">
+		<Unit filename="E:/CS425Project/VPVR/DesktopInterface/Qt/5.15.2/mingw81_64/lib/cmake/Qt5Gui/Qt5Gui_QSvgIconPlugin.cmake">
 			<Option virtualFolder="CMake Files\Qt\5.15.2\mingw81_64\lib\cmake\Qt5Gui\"/>
 		</Unit>
-		<Unit filename="E:/CS425Project/DesktopInterface/Qt/5.15.2/mingw81_64/lib/cmake/Qt5Gui/Qt5Gui_QSvgPlugin.cmake">
+		<Unit filename="E:/CS425Project/VPVR/DesktopInterface/Qt/5.15.2/mingw81_64/lib/cmake/Qt5Gui/Qt5Gui_QSvgPlugin.cmake">
 			<Option virtualFolder="CMake Files\Qt\5.15.2\mingw81_64\lib\cmake\Qt5Gui\"/>
 		</Unit>
-		<Unit filename="E:/CS425Project/DesktopInterface/Qt/5.15.2/mingw81_64/lib/cmake/Qt5Gui/Qt5Gui_QTgaPlugin.cmake">
+		<Unit filename="E:/CS425Project/VPVR/DesktopInterface/Qt/5.15.2/mingw81_64/lib/cmake/Qt5Gui/Qt5Gui_QTgaPlugin.cmake">
 			<Option virtualFolder="CMake Files\Qt\5.15.2\mingw81_64\lib\cmake\Qt5Gui\"/>
 		</Unit>
-		<Unit filename="E:/CS425Project/DesktopInterface/Qt/5.15.2/mingw81_64/lib/cmake/Qt5Gui/Qt5Gui_QTiffPlugin.cmake">
+		<Unit filename="E:/CS425Project/VPVR/DesktopInterface/Qt/5.15.2/mingw81_64/lib/cmake/Qt5Gui/Qt5Gui_QTiffPlugin.cmake">
 			<Option virtualFolder="CMake Files\Qt\5.15.2\mingw81_64\lib\cmake\Qt5Gui\"/>
 		</Unit>
-		<Unit filename="E:/CS425Project/DesktopInterface/Qt/5.15.2/mingw81_64/lib/cmake/Qt5Gui/Qt5Gui_QTuioTouchPlugin.cmake">
+		<Unit filename="E:/CS425Project/VPVR/DesktopInterface/Qt/5.15.2/mingw81_64/lib/cmake/Qt5Gui/Qt5Gui_QTuioTouchPlugin.cmake">
 			<Option virtualFolder="CMake Files\Qt\5.15.2\mingw81_64\lib\cmake\Qt5Gui\"/>
 		</Unit>
-		<Unit filename="E:/CS425Project/DesktopInterface/Qt/5.15.2/mingw81_64/lib/cmake/Qt5Gui/Qt5Gui_QWbmpPlugin.cmake">
+		<Unit filename="E:/CS425Project/VPVR/DesktopInterface/Qt/5.15.2/mingw81_64/lib/cmake/Qt5Gui/Qt5Gui_QWbmpPlugin.cmake">
 			<Option virtualFolder="CMake Files\Qt\5.15.2\mingw81_64\lib\cmake\Qt5Gui\"/>
 		</Unit>
-		<Unit filename="E:/CS425Project/DesktopInterface/Qt/5.15.2/mingw81_64/lib/cmake/Qt5Gui/Qt5Gui_QWebpPlugin.cmake">
+		<Unit filename="E:/CS425Project/VPVR/DesktopInterface/Qt/5.15.2/mingw81_64/lib/cmake/Qt5Gui/Qt5Gui_QWebpPlugin.cmake">
 			<Option virtualFolder="CMake Files\Qt\5.15.2\mingw81_64\lib\cmake\Qt5Gui\"/>
 		</Unit>
-		<Unit filename="E:/CS425Project/DesktopInterface/Qt/5.15.2/mingw81_64/lib/cmake/Qt5Gui/Qt5Gui_QWindowsDirect2DIntegrationPlugin.cmake">
+		<Unit filename="E:/CS425Project/VPVR/DesktopInterface/Qt/5.15.2/mingw81_64/lib/cmake/Qt5Gui/Qt5Gui_QWindowsDirect2DIntegrationPlugin.cmake">
 			<Option virtualFolder="CMake Files\Qt\5.15.2\mingw81_64\lib\cmake\Qt5Gui\"/>
 		</Unit>
-		<Unit filename="E:/CS425Project/DesktopInterface/Qt/5.15.2/mingw81_64/lib/cmake/Qt5Gui/Qt5Gui_QWindowsIntegrationPlugin.cmake">
+		<Unit filename="E:/CS425Project/VPVR/DesktopInterface/Qt/5.15.2/mingw81_64/lib/cmake/Qt5Gui/Qt5Gui_QWindowsIntegrationPlugin.cmake">
 			<Option virtualFolder="CMake Files\Qt\5.15.2\mingw81_64\lib\cmake\Qt5Gui\"/>
 		</Unit>
-		<Unit filename="E:/CS425Project/DesktopInterface/Qt/5.15.2/mingw81_64/lib/cmake/Qt5Gui/Qt5Gui_QXdgDesktopPortalThemePlugin.cmake">
+		<Unit filename="E:/CS425Project/VPVR/DesktopInterface/Qt/5.15.2/mingw81_64/lib/cmake/Qt5Gui/Qt5Gui_QXdgDesktopPortalThemePlugin.cmake">
 			<Option virtualFolder="CMake Files\Qt\5.15.2\mingw81_64\lib\cmake\Qt5Gui\"/>
 		</Unit>
-		<Unit filename="E:/CS425Project/DesktopInterface/Qt/5.15.2/mingw81_64/lib/cmake/Qt5Core/Qt5CoreConfig.cmake">
+		<Unit filename="E:/CS425Project/VPVR/DesktopInterface/Qt/5.15.2/mingw81_64/lib/cmake/Qt5Core/Qt5CoreConfig.cmake">
 			<Option virtualFolder="CMake Files\Qt\5.15.2\mingw81_64\lib\cmake\Qt5Core\"/>
 		</Unit>
-		<Unit filename="E:/CS425Project/DesktopInterface/Qt/5.15.2/mingw81_64/lib/cmake/Qt5Core/Qt5CoreConfigExtras.cmake">
+		<Unit filename="E:/CS425Project/VPVR/DesktopInterface/Qt/5.15.2/mingw81_64/lib/cmake/Qt5Core/Qt5CoreConfigExtras.cmake">
 			<Option virtualFolder="CMake Files\Qt\5.15.2\mingw81_64\lib\cmake\Qt5Core\"/>
 		</Unit>
-		<Unit filename="E:/CS425Project/DesktopInterface/Qt/5.15.2/mingw81_64/lib/cmake/Qt5Core/Qt5CoreConfigExtrasMkspecDir.cmake">
+		<Unit filename="E:/CS425Project/VPVR/DesktopInterface/Qt/5.15.2/mingw81_64/lib/cmake/Qt5Core/Qt5CoreConfigExtrasMkspecDir.cmake">
 			<Option virtualFolder="CMake Files\Qt\5.15.2\mingw81_64\lib\cmake\Qt5Core\"/>
 		</Unit>
-		<Unit filename="E:/CS425Project/DesktopInterface/Qt/5.15.2/mingw81_64/lib/cmake/Qt5Core/Qt5CoreConfigVersion.cmake">
+		<Unit filename="E:/CS425Project/VPVR/DesktopInterface/Qt/5.15.2/mingw81_64/lib/cmake/Qt5Core/Qt5CoreConfigVersion.cmake">
 			<Option virtualFolder="CMake Files\Qt\5.15.2\mingw81_64\lib\cmake\Qt5Core\"/>
 		</Unit>
-		<Unit filename="E:/CS425Project/DesktopInterface/Qt/5.15.2/mingw81_64/lib/cmake/Qt5Core/Qt5CoreMacros.cmake">
+		<Unit filename="E:/CS425Project/VPVR/DesktopInterface/Qt/5.15.2/mingw81_64/lib/cmake/Qt5Core/Qt5CoreMacros.cmake">
 			<Option virtualFolder="CMake Files\Qt\5.15.2\mingw81_64\lib\cmake\Qt5Core\"/>
 		</Unit>
-		<Unit filename="E:/CS425Project/DesktopInterface/Qt/5.15.2/mingw81_64/lib/cmake/Qt5/Qt5Config.cmake">
+		<Unit filename="E:/CS425Project/VPVR/DesktopInterface/Qt/5.15.2/mingw81_64/lib/cmake/Qt5/Qt5Config.cmake">
 			<Option virtualFolder="CMake Files\Qt\5.15.2\mingw81_64\lib\cmake\Qt5\"/>
 		</Unit>
-		<Unit filename="E:/CS425Project/DesktopInterface/Qt/5.15.2/mingw81_64/lib/cmake/Qt5/Qt5ConfigVersion.cmake">
+		<Unit filename="E:/CS425Project/VPVR/DesktopInterface/Qt/5.15.2/mingw81_64/lib/cmake/Qt5/Qt5ConfigVersion.cmake">
 			<Option virtualFolder="CMake Files\Qt\5.15.2\mingw81_64\lib\cmake\Qt5\"/>
 		</Unit>
-		<Unit filename="E:/CS425Project/DesktopInterface/Qt/5.15.2/mingw81_64/lib/cmake/Qt5/Qt5ModuleLocation.cmake">
+		<Unit filename="E:/CS425Project/VPVR/DesktopInterface/Qt/5.15.2/mingw81_64/lib/cmake/Qt5/Qt5ModuleLocation.cmake">
 			<Option virtualFolder="CMake Files\Qt\5.15.2\mingw81_64\lib\cmake\Qt5\"/>
 		</Unit>
-		<Unit filename="E:/CS425Project/DesktopInterface/Qt/5.15.2/mingw81_64/lib/cmake/Qt5Test/Qt5TestConfig.cmake">
+		<Unit filename="E:/CS425Project/VPVR/DesktopInterface/Qt/5.15.2/mingw81_64/lib/cmake/Qt5Test/Qt5TestConfig.cmake">
 			<Option virtualFolder="CMake Files\Qt\5.15.2\mingw81_64\lib\cmake\Qt5Test\"/>
 		</Unit>
-		<Unit filename="E:/CS425Project/DesktopInterface/Qt/5.15.2/mingw81_64/lib/cmake/Qt5Test/Qt5TestConfigExtras.cmake">
+		<Unit filename="E:/CS425Project/VPVR/DesktopInterface/Qt/5.15.2/mingw81_64/lib/cmake/Qt5Test/Qt5TestConfigExtras.cmake">
 			<Option virtualFolder="CMake Files\Qt\5.15.2\mingw81_64\lib\cmake\Qt5Test\"/>
 		</Unit>
-		<Unit filename="E:/CS425Project/DesktopInterface/Qt/5.15.2/mingw81_64/lib/cmake/Qt5Test/Qt5TestConfigVersion.cmake">
+		<Unit filename="E:/CS425Project/VPVR/DesktopInterface/Qt/5.15.2/mingw81_64/lib/cmake/Qt5Test/Qt5TestConfigVersion.cmake">
 			<Option virtualFolder="CMake Files\Qt\5.15.2\mingw81_64\lib\cmake\Qt5Test\"/>
 		</Unit>
 	</Project>
