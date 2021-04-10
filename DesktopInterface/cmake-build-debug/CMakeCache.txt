@@ -262,9 +262,6 @@ PYTHON_LIBRARY:FILEPATH=C:/Users/plays/AppData/Local/Programs/Python/Python39/li
 //Path to a library.
 PYTHON_LIBRARY_DEBUG:FILEPATH=PYTHON_LIBRARY_DEBUG-NOTFOUND
 
-//Path to a library.
-PYTHON_LIBRARY_RELEASE:FILEPATH=PYTHON_LIBRARY_RELEASE-NOTFOUND
-
 //The directory containing a CMake configuration file for Qt5Core.
 Qt5Core_DIR:PATH=C:/Qt/5.15.2/mingw81_64/lib/cmake/Qt5Core
 
@@ -459,8 +456,6 @@ PYTHON_INCLUDE_DIR-ADVANCED:INTERNAL=1
 PYTHON_LIBRARY-ADVANCED:INTERNAL=1
 //ADVANCED property for variable: PYTHON_LIBRARY_DEBUG
 PYTHON_LIBRARY_DEBUG-ADVANCED:INTERNAL=1
-//ADVANCED property for variable: PYTHON_LIBRARY_RELEASE
-PYTHON_LIBRARY_RELEASE-ADVANCED:INTERNAL=1
 //Path to a program.
 _Python3_EXECUTABLE:INTERNAL=C:/Users/plays/AppData/Local/Programs/Python/Python39/python.exe
 //Python3 Properties
