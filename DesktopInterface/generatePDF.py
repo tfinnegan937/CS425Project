@@ -2,14 +2,16 @@ import matplotlib
 import numpy as np
 matplotlib.use('Agg')
 import matplotlib.pyplot as plt
-from pylatex import Document, Section, Subsection, Tabular, Math, TikZ, Axis, \
-	Plot, Figure, Matrix, Alignat
-from pylatex.utils import italic
+from reportlab.lib import colors
+from reportlab.lib.styles import getSampleStyleSheet
+from reportlab.platypus import SimpleDocTemplate, Paragraph, PageBreak, Table, TableStyle, Image
 import io
 from pathlib import Path
 import sys
 import csv
 from enum import Enum
+
+from graph_generator import *
 
 class valueID(Enum):
 	ParticipantID = 0
@@ -131,11 +133,91 @@ class PatientData:
 			Experiment("Visual Motion Sensitivity", "visual_motion_sensitivity")]
 
 
+def create_table_list(test, stats_headings):
+	test_stats_table = []
+
+	test_stats_table.append(["", "Mean", "St. Dev."])
+	test_stats_table.append([stats_headings[0], np.average(test.changeOfSymptom), np.std(test.changeOfSymptom)])
+	test_stats_table.append([stats_headings[1], np.average(test.symptomScore), np.std(test.symptomScore)])
+	test_stats_table.append([stats_headings[2], np.average(test.localDotPositionX), np.std(test.localDotPositionX)])
+	test_stats_table.append([stats_headings[3], np.average(test.localDotPositionY), np.std(test.localDotPositionY)])
+	test_stats_table.append([stats_headings[4], np.average(test.localDotPositionZ), np.std(test.localDotPositionZ)])
+	test_stats_table.append([stats_headings[5], np.average(test.worldDotPositionX), np.std(test.worldDotPositionX)])
+	test_stats_table.append([stats_headings[6], np.average(test.worldDotPositionY), np.std(test.worldDotPositionY)])
+	test_stats_table.append([stats_headings[7], np.average(test.worldDotPositionZ), np.std(test.worldDotPositionZ)])
+	test_stats_table.append([stats_headings[8], np.average(test.headPositionX), np.std(test.headPositionX)])
+	test_stats_table.append([stats_headings[9], np.average(test.headPositionY), np.std(test.headPositionY)])
+	test_stats_table.append([stats_headings[10], np.average(test.headPositionZ), np.std(test.headPositionZ)])
+	test_stats_table.append([stats_headings[11], np.average(test.headOrientationX), np.std(test.headOrientationX)])
+	test_stats_table.append([stats_headings[12], np.average(test.headOrientationY), np.std(test.headOrientationY)])
+	test_stats_table.append([stats_headings[13], np.average(test.headOrientationZ), np.std(test.headOrientationZ)])
+	test_stats_table.append([stats_headings[14], np.average(test.leftEyeOriginX), np.std(test.leftEyeOriginX)])
+	test_stats_table.append([stats_headings[15], np.average(test.leftEyeOriginY), np.std(test.leftEyeOriginY)])
+	test_stats_table.append([stats_headings[16], np.average(test.leftEyeOriginZ), np.std(test.leftEyeOriginZ)])
+	test_stats_table.append([stats_headings[17], np.average(test.rightEyeOriginX), np.std(test.rightEyeOriginX)])
+	test_stats_table.append([stats_headings[18], np.average(test.rightEyeOriginY), np.std(test.rightEyeOriginY)])
+	test_stats_table.append([stats_headings[19], np.average(test.rightEyeOriginZ), np.std(test.rightEyeOriginZ)])
+	test_stats_table.append([stats_headings[20], np.average(test.leftEyeDirectionX), np.std(test.leftEyeDirectionX)])
+	test_stats_table.append([stats_headings[21], np.average(test.leftEyeDirectionY), np.std(test.leftEyeDirectionY)])
+	test_stats_table.append([stats_headings[22], np.average(test.leftEyeDirectionZ), np.std(test.leftEyeDirectionZ)])
+	test_stats_table.append([stats_headings[23], np.average(test.rightEyeDirectionX), np.std(test.rightEyeDirectionX)])
+	test_stats_table.append([stats_headings[24], np.average(test.rightEyeDirectionY), np.std(test.rightEyeDirectionY)])
+	test_stats_table.append([stats_headings[25], np.average(test.rightEyeDirectionZ), np.std(test.rightEyeDirectionZ)])
+	test_stats_table.append([stats_headings[26], np.average(test.combinedEyeOriginX), np.std(test.combinedEyeOriginX)])
+	test_stats_table.append([stats_headings[27], np.average(test.combinedEyeOriginY), np.std(test.combinedEyeOriginY)])
+	test_stats_table.append([stats_headings[28], np.average(test.combinedEyeOriginZ), np.std(test.combinedEyeOriginZ)])
+	test_stats_table.append([stats_headings[29], np.average(test.combinedEyeDirectionX), np.std(test.combinedEyeDirectionX)])
+	test_stats_table.append([stats_headings[30], np.average(test.combinedEyeDirectionY), np.std(test.combinedEyeDirectionY)])
+	test_stats_table.append([stats_headings[31], np.average(test.combinedEyeDirectionZ), np.std(test.combinedEyeDirectionZ)])
+	test_stats_table.append([stats_headings[29], np.average(test.fixationX), np.std(test.fixationX)])
+	test_stats_table.append([stats_headings[30], np.average(test.fixationY), np.std(test.fixationY)])
+	test_stats_table.append([stats_headings[31], np.average(test.fixationZ), np.std(test.fixationZ)])
+
+	return test_stats_table
+
+def load_row_experiment_data(patient_data, row):
+	row_experiment = row[valueID.Experiment.value]
+	patient_data.experiments[experimentID[row_experiment]].hasData = True
+	patient_data.experiments[experimentID[row_experiment]].timestamp.append(float(row[valueID.Timestamp.value]))
+	patient_data.experiments[experimentID[row_experiment]].changeOfSymptom.append(float(row[valueID.ChangeOfSymptom.value]))
+	patient_data.experiments[experimentID[row_experiment]].symptomScore.append(float(row[valueID.SymptomScore.value]))
+	patient_data.experiments[experimentID[row_experiment]].localDotPositionX.append(float(row[valueID.LocalDotPositionX.value]))
+	patient_data.experiments[experimentID[row_experiment]].localDotPositionY.append(float(row[valueID.LocalDotPositionY.value]))
+	patient_data.experiments[experimentID[row_experiment]].localDotPositionZ.append(float(row[valueID.LocalDotPositionZ.value]))
+	patient_data.experiments[experimentID[row_experiment]].worldDotPositionX.append(float(row[valueID.WorldDotPositionX.value]))
+	patient_data.experiments[experimentID[row_experiment]].worldDotPositionY.append(float(row[valueID.WorldDotPositionY.value]))
+	patient_data.experiments[experimentID[row_experiment]].worldDotPositionZ.append(float(row[valueID.WorldDotPositionZ.value]))
+	patient_data.experiments[experimentID[row_experiment]].headPositionX.append(float(row[valueID.HeadPositionX.value]))
+	patient_data.experiments[experimentID[row_experiment]].headPositionY.append(float(row[valueID.HeadPositionY.value]))
+	patient_data.experiments[experimentID[row_experiment]].headPositionZ.append(float(row[valueID.HeadPositionZ.value]))
+	patient_data.experiments[experimentID[row_experiment]].headOrientationX.append(float(row[valueID.HeadOrientationX.value]))
+	patient_data.experiments[experimentID[row_experiment]].headOrientationY.append(float(row[valueID.HeadOrientationY.value]))
+	patient_data.experiments[experimentID[row_experiment]].headOrientationZ.append(float(row[valueID.HeadOrientationZ.value]))
+	patient_data.experiments[experimentID[row_experiment]].leftEyeOriginX.append(float(row[valueID.LeftEyeOriginX.value]))
+	patient_data.experiments[experimentID[row_experiment]].leftEyeOriginY.append(float(row[valueID.LeftEyeOriginY.value]))
+	patient_data.experiments[experimentID[row_experiment]].leftEyeOriginZ.append(float(row[valueID.LeftEyeOriginZ.value]))
+	patient_data.experiments[experimentID[row_experiment]].rightEyeOriginX.append(float(row[valueID.RightEyeOriginX.value]))
+	patient_data.experiments[experimentID[row_experiment]].rightEyeOriginY.append(float(row[valueID.RightEyeOriginY.value]))
+	patient_data.experiments[experimentID[row_experiment]].rightEyeOriginZ.append(float(row[valueID.RightEyeOriginZ.value]))
+	patient_data.experiments[experimentID[row_experiment]].leftEyeDirectionX.append(float(row[valueID.LeftEyeDirectionX.value]))
+	patient_data.experiments[experimentID[row_experiment]].leftEyeDirectionY.append(float(row[valueID.LeftEyeDirectionY.value]))
+	patient_data.experiments[experimentID[row_experiment]].leftEyeDirectionZ.append(float(row[valueID.LeftEyeDirectionZ.value]))
+	patient_data.experiments[experimentID[row_experiment]].rightEyeDirectionX.append(float(row[valueID.RightEyeDirectionX.value]))
+	patient_data.experiments[experimentID[row_experiment]].rightEyeDirectionY.append(float(row[valueID.RightEyeDirectionY.value]))
+	patient_data.experiments[experimentID[row_experiment]].rightEyeDirectionZ.append(float(row[valueID.RightEyeDirectionZ.value]))
+	patient_data.experiments[experimentID[row_experiment]].combinedEyeOriginX.append(float(row[valueID.CombinedEyeOriginX.value]))
+	patient_data.experiments[experimentID[row_experiment]].combinedEyeOriginY.append(float(row[valueID.CombinedEyeOriginY.value]))
+	patient_data.experiments[experimentID[row_experiment]].combinedEyeOriginZ.append(float(row[valueID.CombinedEyeOriginZ.value]))
+	patient_data.experiments[experimentID[row_experiment]].combinedEyeDirectionX.append(float(row[valueID.CombinedEyeDirectionX.value]))
+	patient_data.experiments[experimentID[row_experiment]].combinedEyeDirectionY.append(float(row[valueID.CombinedEyeDirectionY.value]))
+	patient_data.experiments[experimentID[row_experiment]].combinedEyeDirectionZ.append(float(row[valueID.CombinedEyeDirectionZ.value]))
+	patient_data.experiments[experimentID[row_experiment]].fixationX.append(float(row[valueID.FixationX.value]))
+	patient_data.experiments[experimentID[row_experiment]].fixationY.append(float(row[valueID.FixationY.value]))
+	patient_data.experiments[experimentID[row_experiment]].fixationZ.append(float(row[valueID.FixationZ.value]))
+
 
 def generatePDF(file_location, options_for_graphing, location_to_save_to):
 	if not Path(file_location).exists(): return False
-
-	location_to_save_to = location_to_save_to.replace(".tex","")
 	
 	csvfile = open(file_location)
 	data = csv.reader(csvfile, delimiter=",")
@@ -154,330 +236,68 @@ def generatePDF(file_location, options_for_graphing, location_to_save_to):
 			patient_data.age = row[valueID.Age.value]
 			patient_data.gender = row[valueID.Gender.value]
 
-		row_experiment = row[valueID.Experiment.value]
-		patient_data.experiments[experimentID[row_experiment]].hasData = True
-		patient_data.experiments[experimentID[row_experiment]].timestamp.append(float(row[valueID.Timestamp.value]))
-		patient_data.experiments[experimentID[row_experiment]].changeOfSymptom.append(float(row[valueID.ChangeOfSymptom.value]))
-		patient_data.experiments[experimentID[row_experiment]].symptomScore.append(float(row[valueID.SymptomScore.value]))
-		patient_data.experiments[experimentID[row_experiment]].localDotPositionX.append(float(row[valueID.LocalDotPositionX.value]))
-		patient_data.experiments[experimentID[row_experiment]].localDotPositionY.append(float(row[valueID.LocalDotPositionY.value]))
-		patient_data.experiments[experimentID[row_experiment]].localDotPositionZ.append(float(row[valueID.LocalDotPositionZ.value]))
-		patient_data.experiments[experimentID[row_experiment]].worldDotPositionX.append(float(row[valueID.WorldDotPositionX.value]))
-		patient_data.experiments[experimentID[row_experiment]].worldDotPositionY.append(float(row[valueID.WorldDotPositionY.value]))
-		patient_data.experiments[experimentID[row_experiment]].worldDotPositionZ.append(float(row[valueID.WorldDotPositionZ.value]))
-		patient_data.experiments[experimentID[row_experiment]].headPositionX.append(float(row[valueID.HeadPositionX.value]))
-		patient_data.experiments[experimentID[row_experiment]].headPositionY.append(float(row[valueID.HeadPositionY.value]))
-		patient_data.experiments[experimentID[row_experiment]].headPositionZ.append(float(row[valueID.HeadPositionZ.value]))
-		patient_data.experiments[experimentID[row_experiment]].headOrientationX.append(float(row[valueID.HeadOrientationX.value]))
-		patient_data.experiments[experimentID[row_experiment]].headOrientationY.append(float(row[valueID.HeadOrientationY.value]))
-		patient_data.experiments[experimentID[row_experiment]].headOrientationZ.append(float(row[valueID.HeadOrientationZ.value]))
-		patient_data.experiments[experimentID[row_experiment]].leftEyeOriginX.append(float(row[valueID.LeftEyeOriginX.value]))
-		patient_data.experiments[experimentID[row_experiment]].leftEyeOriginY.append(float(row[valueID.LeftEyeOriginY.value]))
-		patient_data.experiments[experimentID[row_experiment]].leftEyeOriginZ.append(float(row[valueID.LeftEyeOriginZ.value]))
-		patient_data.experiments[experimentID[row_experiment]].rightEyeOriginX.append(float(row[valueID.RightEyeOriginX.value]))
-		patient_data.experiments[experimentID[row_experiment]].rightEyeOriginY.append(float(row[valueID.RightEyeOriginY.value]))
-		patient_data.experiments[experimentID[row_experiment]].rightEyeOriginZ.append(float(row[valueID.RightEyeOriginZ.value]))
-		patient_data.experiments[experimentID[row_experiment]].leftEyeDirectionX.append(float(row[valueID.LeftEyeDirectionX.value]))
-		patient_data.experiments[experimentID[row_experiment]].leftEyeDirectionY.append(float(row[valueID.LeftEyeDirectionY.value]))
-		patient_data.experiments[experimentID[row_experiment]].leftEyeDirectionZ.append(float(row[valueID.LeftEyeDirectionZ.value]))
-		patient_data.experiments[experimentID[row_experiment]].rightEyeDirectionX.append(float(row[valueID.RightEyeDirectionX.value]))
-		patient_data.experiments[experimentID[row_experiment]].rightEyeDirectionY.append(float(row[valueID.RightEyeDirectionY.value]))
-		patient_data.experiments[experimentID[row_experiment]].rightEyeDirectionZ.append(float(row[valueID.RightEyeDirectionZ.value]))
-		patient_data.experiments[experimentID[row_experiment]].combinedEyeOriginX.append(float(row[valueID.CombinedEyeOriginX.value]))
-		patient_data.experiments[experimentID[row_experiment]].combinedEyeOriginY.append(float(row[valueID.CombinedEyeOriginY.value]))
-		patient_data.experiments[experimentID[row_experiment]].combinedEyeOriginZ.append(float(row[valueID.CombinedEyeOriginZ.value]))
-		patient_data.experiments[experimentID[row_experiment]].combinedEyeDirectionX.append(float(row[valueID.CombinedEyeDirectionX.value]))
-		patient_data.experiments[experimentID[row_experiment]].combinedEyeDirectionY.append(float(row[valueID.CombinedEyeDirectionY.value]))
-		patient_data.experiments[experimentID[row_experiment]].combinedEyeDirectionZ.append(float(row[valueID.CombinedEyeDirectionZ.value]))
-		patient_data.experiments[experimentID[row_experiment]].fixationX.append(float(row[valueID.FixationX.value]))
-		patient_data.experiments[experimentID[row_experiment]].fixationY.append(float(row[valueID.FixationY.value]))
-		patient_data.experiments[experimentID[row_experiment]].fixationZ.append(float(row[valueID.FixationZ.value]))
-
+		load_row_experiment_data(patient_data, row)
 	
-	geometry_options = {"tmargin": "1cm", "lmargin": "1cm"}
-	doc = Document(geometry_options=geometry_options)
+	
+	# Create buffer and document object
+	pdf_buffer = io.BytesIO()
+	doc = SimpleDocTemplate(pdf_buffer)
+	flowables = []
 
-	with doc.create(Section("Patient Data")):
-		doc.append("Patient Name: " + patient_data.first_name + " " + patient_data.last_name + "\n")
-		doc.append("Age: " + patient_data.age + "\n")
-		doc.append("Gender: " + patient_data.gender + "\n")
-		doc.append("Sport: " + patient_data.sport + "\n")
-		doc.append("Date of Injury: " + patient_data.dateOfInjury + "\n")
-		doc.append("Date of Visit: " + patient_data.dateOfVisit + "\n")
+	sample_style_sheet = getSampleStyleSheet()
+
+	main_title = Paragraph("Patient Data", sample_style_sheet["Heading1"])
+	demographics_paragraph = Paragraph(
+		"Patient Name: " + patient_data.first_name + " " + patient_data.last_name + "<br/>"\
+		"Age: " + patient_data.age + "<br/>"\
+		"Gender: " + patient_data.gender + "<br/>"\
+		"Sport: " + patient_data.sport + "<br/>"
+		"Date of Injury: " + patient_data.dateOfInjury + "<br/>"
+		"Date of Visit: " + patient_data.dateOfVisit + "<br/>",
+		sample_style_sheet["BodyText"]
+	)
+	flowables.append(main_title)
+	flowables.append(demographics_paragraph)
+
+	stats_headings = ["ChangeOfSymptom","SymptomScore",\
+		"Local Dot Position X", "Local Dot Position Y", "Local Dot Position Z",\
+		"World Dot Position X", "World Dot Position Y", "World Dot Position Z",\
+		"Head Position X", "Head Position Y", "Head Position Z",\
+		"Head Orientation X", "Head Orientation Y", "Head Orientation Z",\
+		"Left Eye Origin X", "Left Eye Origin Y", "Left Eye Origin Z",\
+		"Right Eye Origin X", "Right Eye Origin Y", "Right Eye Origin Z",\
+		"Left Eye Direction X", "Left Eye Direction Y", "Left Eye Direction Z",\
+		"Right Eye Direction X", "Right Eye Direction Y", "Right Eye Direction Z",\
+		"Combined Eye Origin X", "Combined Eye Origin Y", "Combined Eye Origin Z",\
+		"Combined Eye Direction X", "Combined Eye Direction Y", "Combined Eye Direction Z",\
+		"Fixation X", "Fixation Y", "Fixation Z"]
 
 	tests_with_data = filter(lambda a: a.hasData, patient_data.experiments)
 
 	for test in tests_with_data:
-		with doc.create(Section(test.experimentName)):
-			with doc.create(Figure()) as change_of_symptoms_vs_time:
-				plt.plot(test.timestamp, test.changeOfSymptom)
-				plt.title("Change in Symptoms vs Time")
-				plt.xlabel("Time (s)")
-				plt.ylabel("Change in Symptoms")
-				change_of_symptoms_vs_time.add_plot()
-			plt.clf()
+		flowables.append(PageBreak())
+		flowables.append(Paragraph(test.experimentName, sample_style_sheet["Heading1"]))
 
-			with doc.create(Figure()) as symptoms_vs_time:
-				plt.plot(test.timestamp, test.symptomScore)
-				plt.title("Symptom Score vs Time")
-				plt.xlabel("Time (s)")
-				plt.ylabel("Symptom Score")
-				symptoms_vs_time.add_plot()
-			plt.clf()
-			
-			with doc.create(Figure()) as local_dot_pos_x_vs_time:
-				plt.plot(test.timestamp, test.localDotPositionX)
-				plt.title("Local Dot Position X-value vs Time")
-				plt.xlabel("Time (s)")
-				plt.ylabel("Local Dot Position X-value")
-				local_dot_pos_x_vs_time.add_plot()
-			plt.clf()
-			with doc.create(Figure()) as local_dot_pos_y_vs_time:
-				plt.plot(test.timestamp, test.localDotPositionY)
-				plt.title("Local Dot Position Y-value vs Time")
-				plt.xlabel("Time (s)")
-				plt.ylabel("Local Dot Position Y-value")
-				local_dot_pos_y_vs_time.add_plot()
-			plt.clf()
-			with doc.create(Figure()) as local_dot_pos_z_vs_time:
-				plt.plot(test.timestamp, test.localDotPositionZ)
-				plt.title("Local Dot Position Z-value vs Time")
-				plt.xlabel("Time (s)")
-				plt.ylabel("Local Dot Position Z-value")
-				local_dot_pos_z_vs_time.add_plot()
-			plt.clf()
+		test_stats_table = create_table_list(test, stats_headings)
 
-			with doc.create(Figure()) as world_dot_pos_x_vs_time:
-				plt.plot(test.timestamp, test.worldDotPositionX)
-				plt.title("World Dot Position X-value vs Time")
-				plt.xlabel("Time (s)")
-				plt.ylabel("World Dot Position X-value")
-				world_dot_pos_x_vs_time.add_plot()
-			plt.clf()
-			with doc.create(Figure()) as world_dot_pos_y_vs_time:
-				plt.plot(test.timestamp, test.worldDotPositionY)
-				plt.title("World Dot Position Y-value vs Time")
-				plt.xlabel("Time (s)")
-				plt.ylabel("World Dot Position Y-value")
-				world_dot_pos_y_vs_time.add_plot()
-			plt.clf()
-			with doc.create(Figure()) as world_dot_pos_z_vs_time:
-				plt.plot(test.timestamp, test.worldDotPositionZ)
-				plt.title("World Dot Position Z-value vs Time")
-				plt.xlabel("Time (s)")
-				plt.ylabel("World Dot Position Z-value")
-				world_dot_pos_z_vs_time.add_plot()
-			plt.clf()
+		stats_table = Table(test_stats_table)
+		stats_table.setStyle(TableStyle([('INNERGRID', (0,0), (-1,-1), 0.25, colors.black)]	))
+		flowables.append(stats_table)
 
-			with doc.create(Figure()) as head_position_x_vs_time:
-				plt.plot(test.timestamp, test.headPositionX)
-				plt.title("Head Position X-value vs Time")
-				plt.xlabel("Time (s)")
-				plt.ylabel("Head Position X-value")
-				head_position_x_vs_time.add_plot()
-			plt.clf()
-			with doc.create(Figure()) as head_position_y_vs_time:
-				plt.plot(test.timestamp, test.headPositionY)
-				plt.title("Head Position Y-value vs Time")
-				plt.xlabel("Time (s)")
-				plt.ylabel("Head Position Y-value")
-				head_position_y_vs_time.add_plot()
-			plt.clf()
-			with doc.create(Figure()) as head_position_z_vs_time:
-				plt.plot(test.timestamp, test.headPositionZ)
-				plt.title("Head Position Z-value vs Time")
-				plt.xlabel("Time (s)")
-				plt.ylabel("Head Position Z-value")
-				head_position_z_vs_time.add_plot()
-			plt.clf()
+		list_of_graphs = create_all_graphs(test)
 
-			with doc.create(Figure()) as head_orientation_x_vs_time:
-				plt.plot(test.timestamp, test.headOrientationX)
-				plt.title("Head Orientation X-value vs Time")
-				plt.xlabel("Time (s)")
-				plt.ylabel("Head Orientation X-value")
-				head_orientation_x_vs_time.add_plot()
-			plt.clf()
-			with doc.create(Figure()) as head_orientation_y_vs_time:
-				plt.plot(test.timestamp, test.headOrientationY)
-				plt.title("Head Orientation Y-value vs Time")
-				plt.xlabel("Time (s)")
-				plt.ylabel("Head Orientation Y-value")
-				head_orientation_y_vs_time.add_plot()
-			plt.clf()
-			with doc.create(Figure()) as head_orientation_z_vs_time:
-				plt.plot(test.timestamp, test.headOrientationZ)
-				plt.title("Head Orientation Z-value vs Time")
-				plt.xlabel("Time (s)")
-				plt.ylabel("Head Orientation Z-value")
-				head_orientation_z_vs_time.add_plot()
-			plt.clf()
-
-			with doc.create(Figure()) as left_eye_origin_x_vs_time:
-				plt.plot(test.timestamp, test.leftEyeOriginX)
-				plt.title("Left Eye Origin X-value vs Time")
-				plt.xlabel("Time (s)")
-				plt.ylabel("Left Eye Origin X-value")
-				left_eye_origin_x_vs_time.add_plot()
-			plt.clf()
-			with doc.create(Figure()) as left_eye_origin_y_vs_time:
-				plt.plot(test.timestamp, test.leftEyeOriginY)
-				plt.title("Left Eye Origin Y-value vs Time")
-				plt.xlabel("Time (s)")
-				plt.ylabel("Left Eye Origin Y-value")
-				left_eye_origin_y_vs_time.add_plot()
-			plt.clf()
-			with doc.create(Figure()) as left_eye_origin_z_vs_time:
-				plt.plot(test.timestamp, test.leftEyeOriginZ)
-				plt.title("Left Eye Origin Z-value vs Time")
-				plt.xlabel("Time (s)")
-				plt.ylabel("Left Eye Origin Z-value")
-				left_eye_origin_z_vs_time.add_plot()
-			plt.clf()
-
-			with doc.create(Figure()) as left_eye_direction_x_vs_time:
-				plt.plot(test.timestamp, test.leftEyeDirectionX)
-				plt.title("Left Eye Direction X-value vs Time")
-				plt.xlabel("Time (s)")
-				plt.ylabel("Left Eye Direction X-value")
-				left_eye_direction_x_vs_time.add_plot()
-			plt.clf()
-			with doc.create(Figure()) as left_eye_direction_y_vs_time:
-				plt.plot(test.timestamp, test.leftEyeDirectionY)
-				plt.title("Left Eye Direction Y-value vs Time")
-				plt.xlabel("Time (s)")
-				plt.ylabel("Left Eye Direction Y-value")
-				left_eye_direction_y_vs_time.add_plot()
-			plt.clf()
-			with doc.create(Figure()) as left_eye_direction_z_vs_time:
-				plt.plot(test.timestamp, test.leftEyeDirectionZ)
-				plt.title("Left Eye Direction Z-value vs Time")
-				plt.xlabel("Time (s)")
-				plt.ylabel("Left Eye Direction Z-value")
-				left_eye_direction_z_vs_time.add_plot()
-			plt.clf()
-				
-			with doc.create(Figure()) as right_eye_origin_x_vs_time:
-				plt.plot(test.timestamp, test.rightEyeOriginX)
-				plt.title("Right Eye Origin X-value vs Time")
-				plt.xlabel("Time (s)")
-				plt.ylabel("Right Eye Origin X-value")
-				right_eye_origin_x_vs_time.add_plot()
-			plt.clf()
-			with doc.create(Figure()) as right_eye_origin_y_vs_time:
-				plt.plot(test.timestamp, test.rightEyeOriginY)
-				plt.title("Right Eye Origin Y-value vs Time")
-				plt.xlabel("Time (s)")
-				plt.ylabel("Right Eye Origin Y-value")
-				right_eye_origin_y_vs_time.add_plot()
-			plt.clf()
-			with doc.create(Figure()) as right_eye_origin_z_vs_time:
-				plt.plot(test.timestamp, test.rightEyeOriginZ)
-				plt.title("Right Eye Origin Z-value vs Time")
-				plt.xlabel("Time (s)")
-				plt.ylabel("Right Eye Origin Z-value")
-				right_eye_origin_z_vs_time.add_plot()
-			plt.clf()
-
-			with doc.create(Figure()) as right_eye_direction_x_vs_time:
-				plt.plot(test.timestamp, test.rightEyeDirectionX)
-				plt.title("Right Eye Direction X-value vs Time")
-				plt.xlabel("Time (s)")
-				plt.ylabel("Right Eye Direction X-value")
-				right_eye_direction_x_vs_time.add_plot()
-			plt.clf()
-			with doc.create(Figure()) as right_eye_direction_y_vs_time:
-				plt.plot(test.timestamp, test.rightEyeDirectionY)
-				plt.title("Right Eye Direction Y-value vs Time")
-				plt.xlabel("Time (s)")
-				plt.ylabel("Right Eye Direction Y-value")
-				right_eye_direction_y_vs_time.add_plot()
-			plt.clf()
-			with doc.create(Figure()) as right_eye_direction_z_vs_time:
-				plt.plot(test.timestamp, test.rightEyeDirectionZ)
-				plt.title("Right Eye Direction Z-value vs Time")
-				plt.xlabel("Time (s)")
-				plt.ylabel("Right Eye Direction Z-value")
-				right_eye_direction_z_vs_time.add_plot()
-			plt.clf()
-
-			with doc.create(Figure()) as combined_eye_origin_x_vs_time:
-				plt.plot(test.timestamp, test.combinedEyeOriginX)
-				plt.title("Combined Eye Origin X-value vs Time")
-				plt.xlabel("Time (s)")
-				plt.ylabel("Combined Eye Origin X-value")
-				combined_eye_origin_x_vs_time.add_plot()
-			plt.clf()
-			with doc.create(Figure()) as combined_eye_origin_y_vs_time:
-				plt.plot(test.timestamp, test.combinedEyeOriginY)
-				plt.title("Combined Eye Origin Y-value vs Time")
-				plt.xlabel("Time (s)")
-				plt.ylabel("Combined Eye Origin Y-value")
-				combined_eye_origin_y_vs_time.add_plot()
-			plt.clf()
-			with doc.create(Figure()) as combined_eye_origin_z_vs_time:
-				plt.plot(test.timestamp, test.combinedEyeOriginZ)
-				plt.title("Combined Eye Origin Z-value vs Time")
-				plt.xlabel("Time (s)")
-				plt.ylabel("Combined Eye Origin Z-value")
-				combined_eye_origin_z_vs_time.add_plot()
-			plt.clf()
-
-			with doc.create(Figure()) as combined_eye_direction_x_vs_time:
-				plt.plot(test.timestamp, test.combinedEyeDirectionX)
-				plt.title("Combined Eye Direction X-value vs Time")
-				plt.xlabel("Time (s)")
-				plt.ylabel("Combined Eye Direction X-value")
-				combined_eye_direction_x_vs_time.add_plot()
-			plt.clf()
-			with doc.create(Figure()) as combined_eye_direction_y_vs_time:
-				plt.plot(test.timestamp, test.combinedEyeDirectionY)
-				plt.title("Combined Eye Direction Y-value vs Time")
-				plt.xlabel("Time (s)")
-				plt.ylabel("Combined Eye Direction Y-value")
-				combined_eye_direction_y_vs_time.add_plot()
-			plt.clf()
-			with doc.create(Figure()) as combined_eye_direction_z_vs_time:
-				plt.plot(test.timestamp, test.combinedEyeDirectionZ)
-				plt.title("Combined Eye Direction Z-value vs Time")
-				plt.xlabel("Time (s)")
-				plt.ylabel("Combined Eye Direction Z-value")
-				combined_eye_direction_z_vs_time.add_plot()
-			plt.clf()
-
-			with doc.create(Figure()) as fixation_x_vs_time:
-				plt.plot(test.timestamp, test.combinedEyeDirectionX)
-				plt.title("Fixation X-value vs Time")
-				plt.xlabel("Time (s)")
-				plt.ylabel("Fixation X-value")
-				fixation_x_vs_time.add_plot()
-			plt.clf()
-			with doc.create(Figure()) as fixation_y_vs_time:
-				plt.plot(test.timestamp, test.combinedEyeDirectionY)
-				plt.title("Fixation Y-value vs Time")
-				plt.xlabel("Time (s)")
-				plt.ylabel("Fixation Y-value")
-				fixation_y_vs_time.add_plot()
-			plt.clf()
-			with doc.create(Figure()) as fixation_z_vs_time:
-				plt.plot(test.timestamp, test.combinedEyeDirectionZ)
-				plt.title("Fixation Z-value vs Time")
-				plt.xlabel("Time (s)")
-				plt.ylabel("Fixation Z-value")
-				fixation_z_vs_time.add_plot()
-			plt.clf()
-
+		for graph in list_of_graphs:
+			flowables.append(graph)
 		
-	f = open(location_to_save_to + ".tex", "w")
-	f.write(doc.dumps())
-	f.close()
-
 	try:
-		doc.generate_pdf(location_to_save_to, clean_tex = False)
+		doc.build(flowables)
+		with open(location_to_save_to, "wb") as f:
+			f.write(pdf_buffer.getvalue())
 		
 	except: 
-		print("Error in generating PDF. No LaTeX compiler might be installed!")
+		print("Error in generating PDF!")
 		print(sys.exc_info()[0].args)
+		return False
 	
 	return True
-#print(generatePDF("D:/Documents/CS425Project/Binaries/Win64/test.csv", "", "D:/Documents/CS425Project/Binaries/Win64/pdf/s.tex"))
+print(generatePDF("D:/Documents/CS425Project/Binaries/Win64/test.csv", "", "D:/Documents/CS425Project/Binaries/Win64/pdf/s.pdf"))
