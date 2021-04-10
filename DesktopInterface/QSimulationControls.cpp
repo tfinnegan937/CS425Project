@@ -174,4 +174,8 @@ void QSimulationControls::passSendMessage(UINT16 mess) {
     sendMessage(mess);
 }
 
+void QSimulationControls::updateStatusMessage(QString mess) {
+    status_message->setText(mess);
+}
+
 

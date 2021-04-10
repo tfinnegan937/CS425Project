@@ -80,6 +80,7 @@ signals:
     //TODO
     void simActive(); //This signal is called any time a VOMS test begins, and is passed down to the sim control UI to indicate that it should be locked
     void simFinished(); //This signal is called when all tests are completed and is passed down to the sim control UI to indicate that it should be unlocked
+    void updateVRStatus(QString mess);
 public:
     explicit QHomeWindow(QWidget * parent = nullptr);
     void updateCurrentPatientData();

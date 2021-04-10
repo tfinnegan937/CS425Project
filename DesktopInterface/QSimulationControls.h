@@ -25,7 +25,6 @@ signals:
 public slots:
     void beginPressed();
     void cancelPressed();
-
     void toggleButtons();
 public:
     QSimulationControlButtonWidget(QWidget * parent);
@@ -60,6 +59,8 @@ public slots:
     void selectAll(int state);
     void passBeginSignalToIPC();
     void passSendMessage(UINT16 mess);
+    void updateStatusMessage(QString mess);
+
 public:
     QSimulationControls(QWidget * parent = nullptr);
     uint16_t getButtonStatesAsIPCBuff() const;

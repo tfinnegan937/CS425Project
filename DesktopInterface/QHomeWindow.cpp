@@ -74,48 +74,69 @@ bool QHomeWindow::handleIPCMessages(uint16_t message_buffer) {
     //TODO: Handle Received Messages
     if(message_buffer & SP_STARTED){
         //simActive();
+        updateVRStatus("Status: Smooth Pursuits started.");
     }
     if(message_buffer & SH_STARTED){
         //simActive();
+        updateVRStatus("Status: Horizontal Saccades started.");
+
     }
     if(message_buffer & SV_STARTED){
         //simActive();
+        updateVRStatus("Status: Vertical Saccades started.");
+
     }
     if(message_buffer & CON_STARTED){
         //simActive();
+        updateVRStatus("Status: Near-Point Convergence started.");
+
     }
     if(message_buffer & VORH_STARTED){
         //simActive();
+        updateVRStatus("Status: VOR Horizontal started.");
+
     }
     if(message_buffer & VORV_STARTED){
         //simActive();
+        updateVRStatus("Status: VOR Vertical started.");
+
     }
     if(message_buffer & VMS_STARTED){
         //simActive();
+        updateVRStatus("Status: VMS started.");
+
     }
     if(message_buffer & SP_COMPLETED){
+        updateVRStatus("Status: Smooth Pursuits completed.");
 
     }
     if(message_buffer & SH_COMPLETED){
+        updateVRStatus("Status: Horizontal Saccades Completed");
 
     }
     if(message_buffer & SV_COMPLETED){
+        updateVRStatus("Status: Vertical Saccades Completed");
 
     }
     if(message_buffer & CON_COMPLETED){
+        updateVRStatus("Status: Near-Point Convergence Completed");
 
     }
     if(message_buffer & VORH_COMPLETED){
-
+        updateVRStatus("Status: VOR Horizontal Completed");
     }
     if(message_buffer & VORV_COMPLETED){
+        updateVRStatus("Status: VOR Vertical Completed");
 
     }
     if(message_buffer & VMS_COMPLETED){
+        updateVRStatus("Status: VMS Completed");
 
     }
     if(message_buffer & TESTS_COMPLETED){
         simFinished();
+        updateVRStatus("Status: Ready");
+
     }
     if(message_buffer & CONF_SHUTDOWN){
         exit(EXIT_SUCCESS);
@@ -131,6 +152,7 @@ void QHomeWindow::connectSimPaneSignals() {
     connect(this, &QHomeWindow::simActive, QPane_simCtrlPane, &QSimulationControlPane::lockPane);
     connect(this, &QHomeWindow::simFinished, QPane_simCtrlPane, &QSimulationControlPane::unlockPane);
     connect(QPane_simCtrlPane,&QSimulationControlPane::sendMessage, this, &QHomeWindow::sendMessage);
+    connect(this, &QHomeWindow::updateVRStatus, QPane_simCtrlPane, &QSimulationControlPane::receiveStatusUpdate);
 }
 
 void QHomeWindow::setupMenuBar() {
