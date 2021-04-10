@@ -1,3 +1,0 @@
-E:\CS425Project\Intermediate\Build\Win64\UE4Editor\Development\CS425Project\Definitions.CS425Project.h
-E:\CS425Project\Source\CS425Project\Public\CommunicationBufferAPIObject.h
-E:\CS425Project\Intermediate\Build\Win64\UE4Editor\Inc\CS425Project\CommunicationBufferAPIObject.generated.h
