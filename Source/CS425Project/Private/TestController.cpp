@@ -100,7 +100,6 @@ void ATestController::handleMessage(UINT16 mess_in) {
 	}
 	if (mess_in & REQ_SHUTDOWN) {
 		ipcController->sendMessage(CONF_SHUTDOWN);
-		GEngine->AddOnScreenDebugMessage(-1, 15.0f, FColor::Yellow, TEXT("Quit Received"));
 		UKismetSystemLibrary::QuitGame(this->GetWorld(), 0, EQuitPreference::Quit, true);
 
 	}

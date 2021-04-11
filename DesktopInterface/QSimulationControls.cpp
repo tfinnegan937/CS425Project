@@ -73,7 +73,7 @@ QSimulationControls::QSimulationControls(QWidget *parent) : QWidget(parent){
     groupbox_container->insertWidget(0, group_box);
     this->setLayout(groupbox_container);
 
-    connect(this, &QSimulationControls::simActive, control_buttons, &QSimulationControlButtonWidget::toggleButtons);
+    //connect(this, &QSimulationControls::simActive, control_buttons, &QSimulationControlButtonWidget::toggleButtons);
     connect(this, &QSimulationControls::simFinished, control_buttons, &QSimulationControlButtonWidget::toggleButtons);
 
     connect(select_all, &QCheckBox::stateChanged, this, &QSimulationControls::selectAll);

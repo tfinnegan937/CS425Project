@@ -42,7 +42,6 @@ void QHomeWindow::ipcTick() {
             try {
                 UINT16 buffer_output = ipcController->receiveMessage();
                 string debug_mess2 = to_string(buffer_output);
-                debug_label2->setText(debug_mess2.c_str());
 
                 handleIPCMessages(buffer_output);
             } catch (std::exception &e) {
