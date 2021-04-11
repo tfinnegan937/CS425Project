@@ -74,7 +74,7 @@ QSimulationControls::QSimulationControls(QWidget *parent) : QWidget(parent){
     this->setLayout(groupbox_container);
 
     //connect(this, &QSimulationControls::simActive, control_buttons, &QSimulationControlButtonWidget::toggleButtons);
-    connect(this, &QSimulationControls::simFinished, control_buttons, &QSimulationControlButtonWidget::toggleButtons);
+    //connect(this, &QSimulationControls::simFinished, control_buttons, &QSimulationControlButtonWidget::toggleButtons);
 
     connect(select_all, &QCheckBox::stateChanged, this, &QSimulationControls::selectAll);
 
@@ -116,7 +116,7 @@ void QSimulationControls::unlockPane() {
     con_check->setEnabled(true);
     vms_check->setEnabled(true);
     select_all->setEnabled(true);
-    simFinished();
+    //simFinished();
     //isSimActive = false;
 }
 

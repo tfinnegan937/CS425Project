@@ -193,7 +193,7 @@ void TestQueueManager::stopAllTests() {
 	((AASaccadeVertical*)getTest("saccadevertical"))->StopTest();
 	((AAConvergence*)getTest("convergence"))->StopTest();
 	((AAVMS*)getTest("convergence"))->StopTest();
-
+	((ATestController*)parent)->SignalUITestsDone();
 
 
 }
