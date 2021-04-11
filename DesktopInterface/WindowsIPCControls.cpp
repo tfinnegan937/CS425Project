@@ -19,6 +19,13 @@ IPCCreator::IPCCreator(TCHAR *sharedMemName) {
                                      0,
                                      BUF_SIZE);
     hMutex = CreateMutex(NULL, false, TEXT(MUTEX_NAME));
+    UINT16 zero_val = 0x00; //Empty previous contents of buffer
+    CopyMemory(
+            (PVOID)(&pBuf[1]),
+            &zero_val,
+            sizeof(UINT16)
+    );
+    FlushViewOfFile((void*)pBuf, 6);
 }
 
 void IPCCreator::sendMessage(UINT16 mess_in) {
@@ -91,6 +98,15 @@ IPCReceiver::IPCReceiver(TCHAR *sharedMemName) {
                                         BUF_SIZE);
     }
     hMutex = CreateMutex(NULL, false, TEXT(MUTEX_NAME));
+    //Zero previous contents of buffer
+    UINT16 zero_val = 0x00;
+    CopyMemory(
+            (PVOID)(&pBuf[0]),
+            &zero_val,
+            sizeof(UINT16)
+    );
+    FlushViewOfFile((void*)pBuf, 6);
+
 }
 
 void IPCReceiver::sendMessage(UINT16 mess_in) {
@@ -130,10 +146,9 @@ UINT16 IPCReceiver::receiveMessage() {
 }
 
 bool IPCReceiver::messageReceived() {
-    FlushViewOfFile((void*)pBuf, 6);
     WaitForSingleObject(hMutex,
                         INFINITE);
-    if(pBuf[1] != NULL && pBuf[1] != 0x00){
+    if(pBuf[0] != NULL && pBuf[0] != 0x00){
         ReleaseMutex(hMutex);
         return true;
     }

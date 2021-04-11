@@ -45,6 +45,10 @@ private:
     //IPC Loop Items
     QTimer * QTmr_ipcCallbackTimer; //This timer provides a callback ever 100 ms that checks the ipc buffer
 
+    //Debug Label
+    QLabel * debug_label;
+    QLabel * debug_label2;
+
     //Menu Items
     QMenuBar * QMenBar_menuBar;
     QMenu * QMen_file;
@@ -72,7 +76,7 @@ private:
 
     void connectSimPaneSignals(); //Connects all of the appropriate ipc signals to the simulator control pane
     bool isSharedMemInitialized = false;
-
+    void closeEvent(QCloseEvent *bar); //Override the close event in QWidget
 public slots:
     void ipcTick(); //One tick of the IPC communication loop. Executed when a timeout() signal is called from QTmr_ipcCallbackTimer
     void sendMessage(UINT16 mess);

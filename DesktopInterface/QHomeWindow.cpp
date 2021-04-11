@@ -5,6 +5,7 @@
 #include "QHomeWindow.h"
 #include "QResultsWindow.h"
 #include <iostream>
+#include <QCloseEvent>
 QResultsWindow *wdg;
 QHomeWindow::QHomeWindow(QWidget *parent) : QWidget(parent) {
     std::cout << "Here";
@@ -18,6 +19,8 @@ QHomeWindow::QHomeWindow(QWidget *parent) : QWidget(parent) {
     QHBx_panelLayout->insertWidget(0, QPane_simCtrlPane);
     QHBx_panelLayout->insertWidget(1, QPane_patientDataPane);
     QHBx_panelLayout->insertWidget(2, QPane_simResultsPane);
+
+
 
     this->setLayout(QHBx_panelLayout);
     //Initialize IPC communication
@@ -38,6 +41,9 @@ void QHomeWindow::ipcTick() {
         if (ipcController->messageReceived()) {
             try {
                 UINT16 buffer_output = ipcController->receiveMessage();
+                string debug_mess2 = to_string(buffer_output);
+                debug_label2->setText(debug_mess2.c_str());
+
                 handleIPCMessages(buffer_output);
             } catch (std::exception &e) {
                 //TODO: handle exception
@@ -322,3 +328,9 @@ void QHomeWindow::exportDataToPDF()
         errorBox.setFixedSize(500,200);
     }
 }
+
+void QHomeWindow::closeEvent(QCloseEvent *event){
+    ipcController->sendMessage(REQ_SHUTDOWN);
+    event->ignore(); //Don't want to close the window unless Unreal closes too.
+}
+

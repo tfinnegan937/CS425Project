@@ -41,6 +41,8 @@ public:
 	// Sets default values for this actor's properties
 	ATestController();
 	void SignalUITestsDone();
+	void SignalUISingleTestStarted(UINT16 mess);
+	void SignalUISingleTestDone(UINT16 mess);
 protected:
 	// Called when the game starts or when spawned
 	virtual void BeginPlay() override;

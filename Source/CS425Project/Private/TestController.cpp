@@ -9,6 +9,7 @@
 #include "AVORHorizontal.h"
 #include "AVORVertical.h"
 #include "AVMS.h"
+#include "Kismet/KismetSystemLibrary.h"
 // Sets default values
 ATestController::ATestController()
 {
@@ -16,15 +17,15 @@ ATestController::ATestController()
 	PrimaryActorTick.bCanEverTick = true;
 	RootComponent = CreateDefaultSubobject<USceneComponent>(TEXT("RootSceneComponent"));
 	testManager = new TestQueueManager(this);
+	ipcController = new IPCCreator(TEXT(BUFF_NAME));
+
 }
 
 // Called when the game starts or when spawned
 void ATestController::BeginPlay()
 {
-
 	Super::BeginPlay();
 	//instantiate_shared_mem();
-	ipcController = new IPCCreator(TEXT(BUFF_NAME));
 	FString project_directory = FPaths::ProjectDir();
 	FString binary = project_directory.Append("\\Binaries\\Win64\\DesktopInterface.exe");
 	FPlatformProcess::CreateProc(*binary, nullptr, true, false, false, nullptr, 0, nullptr, nullptr);
@@ -32,6 +33,8 @@ void ATestController::BeginPlay()
 
 	GetWorldTimerManager().SetTimer(ipcTimerHandle, this, &ATestController::ipcTimerTick, .1F, true, .1f); //Initializes the IPC timer to call every 100 miliseconds after an initial 100 milisecond delay
 }
+
+
 
 // Called every frame
 void ATestController::Tick(float DeltaTime)
@@ -95,6 +98,12 @@ void ATestController::handleMessage(UINT16 mess_in) {
 			testManager->stopAllTests();
 		}
 	}
+	if (mess_in & REQ_SHUTDOWN) {
+		ipcController->sendMessage(CONF_SHUTDOWN);
+		GEngine->AddOnScreenDebugMessage(-1, 15.0f, FColor::Yellow, TEXT("Quit Received"));
+		UKismetSystemLibrary::QuitGame(this->GetWorld(), 0, EQuitPreference::Quit, true);
+
+	}
 
 
 
@@ -102,7 +111,6 @@ void ATestController::handleMessage(UINT16 mess_in) {
 
 void ATestController::SignalUITestsDone() {
 	ipcController->sendMessage(TESTS_COMPLETED);
-	GEngine->AddOnScreenDebugMessage(-1, 15.0f, FColor::Yellow, TEXT("SIGNALLED"));
 }
 
 
@@ -221,24 +229,39 @@ void TestQueueManager::tick() {
 void TestQueueManager::startActiveTest() {
 	if (activeTest.ToLower().Contains("smooth")) {
 		((AASmoothPursuit*)getTest("smooth"))->StartTest();
+		((ATestController*)parent)->SignalUISingleTestStarted(SP_STARTED);
+
+
 	}
 	else if (activeTest.ToLower().Contains("saccadeshorizontal")) {
 		((AASaccadesHorizontal*)getTest("saccadeshorizontal"))->StartTest();
+		((ATestController*)parent)->SignalUISingleTestStarted(SH_STARTED);
+
 	}
 	else if (activeTest.ToLower().Contains("saccadevertical")) {
 		((AASaccadeVertical*)getTest("saccadevertical"))->StartTest();
+		((ATestController*)parent)->SignalUISingleTestStarted(SV_STARTED);
+
 	}
 	else if (activeTest.ToLower().Contains("vorhorizontal")) {
 		((AAVORHorizontal*)getTest("vorhorizontal"))->StartTest();
+		((ATestController*)parent)->SignalUISingleTestStarted(VORH_STARTED);
+
 	}
 	else if (activeTest.ToLower().Contains("vorvertical")) {
 		((AAVORVertical*)getTest("vorvertical"))->StartTest();
+		((ATestController*)parent)->SignalUISingleTestStarted(VORV_STARTED);
+
 	}
 	else if (activeTest.ToLower().Contains("convergence")) {
 		((AAConvergence*)getTest("convergence"))->StartTest();
+		((ATestController*)parent)->SignalUISingleTestStarted(CON_STARTED);
+
 	}
 	else if (activeTest.ToLower().Contains("vms")) {
 		((AAVMS*)getTest("vms"))->StartTest();
+		((ATestController*)parent)->SignalUISingleTestStarted(VMS_STARTED);
+
 	}
 	else {
 		//Handle Error?
@@ -247,27 +270,59 @@ void TestQueueManager::startActiveTest() {
 
 bool TestQueueManager::isActiveTestDone() {
 	if (activeTest.ToLower().Contains("smooth")) {
+		if (((AASmoothPursuit*)getTest("smooth"))->isCompleted) {
+			((ATestController*)parent)->SignalUISingleTestDone(SP_COMPLETED);
+		}
 		return ((AASmoothPursuit*)getTest("smooth"))->isCompleted;
 	}
 	else if (activeTest.ToLower().Contains("saccadeshorizontal")) {
+		if (((AASaccadesHorizontal*)getTest("saccadeshorizontal"))->isCompleted) {
+			((ATestController*)parent)->SignalUISingleTestDone(SH_COMPLETED);
+
+		}
 		return ((AASaccadesHorizontal*)getTest("saccadeshorizontal"))->isCompleted;
 	}
 	else if (activeTest.ToLower().Contains("saccadevertical")) {
+		if (((AASaccadeVertical*)getTest("saccadevertical"))->isCompleted) {
+			((ATestController*)parent)->SignalUISingleTestDone(SV_COMPLETED);
+		}
 		return ((AASaccadeVertical*)getTest("saccadevertical"))->isCompleted;
 	}
 	else if (activeTest.ToLower().Contains("vorhorizontal")) {
+		if (((AAVORHorizontal*)getTest("vorhorizontal"))->isCompleted) {
+			((ATestController*)parent)->SignalUISingleTestDone(VORH_COMPLETED);
+		}
 		return ((AAVORHorizontal*)getTest("vorhorizontal"))->isCompleted;
 	}
 	else if (activeTest.ToLower().Contains("vorvertical")) {
+		if (((AAVORVertical*)getTest("vorvertical"))->isCompleted) {
+			((ATestController*)parent)->SignalUISingleTestDone(VORV_COMPLETED);
+
+		}
 		return ((AAVORVertical*)getTest("vorvertical"))->isCompleted;
 	}
 	else if (activeTest.ToLower().Contains("convergence")) {
+		if (((AAConvergence*)getTest("convergence"))->isCompleted) {
+			((ATestController*)parent)->SignalUISingleTestDone(CON_COMPLETED);
+
+		}
 		return ((AAConvergence*)getTest("convergence"))->isCompleted;
 	}
 	else if (activeTest.ToLower().Contains("vms")) {
+		if (((AAVMS*)getTest("vms"))->isCompleted) {
+			((ATestController*)parent)->SignalUISingleTestDone(VMS_COMPLETED);
+		}
 		return ((AAVMS*)getTest("vms"))->isCompleted;
 	}
 	else {
 		return false;
 	}
+}
+
+void ATestController::SignalUISingleTestStarted(UINT16 mess) {
+	ipcController->sendMessage(mess);
+}
+
+void ATestController::SignalUISingleTestDone(UINT16 mess) {
+	ipcController->sendMessage(mess);
 }

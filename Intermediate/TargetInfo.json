@@ -2,12 +2,12 @@
 	"Targets": [
 		{
 			"Name": "CS425Project",
-			"Path": "E:\\CS425Project\\Source\\CS425Project.Target.cs",
+			"Path": "E:\\CS425Project\\VPVR\\Source\\CS425Project.Target.cs",
 			"Type": "Game"
 		},
 		{
 			"Name": "CS425ProjectEditor",
-			"Path": "E:\\CS425Project\\Source\\CS425ProjectEditor.Target.cs",
+			"Path": "E:\\CS425Project\\VPVR\\Source\\CS425ProjectEditor.Target.cs",
 			"Type": "Editor"
 		}
 	]
