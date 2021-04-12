@@ -39,6 +39,20 @@ public:
     QString getGender() const;
 };
 
+class QSportPicker : public QWidget{
+private:
+    QComboBox * QCmbBox_SportPicker;
+    QHBoxLayout * QHbx_mainLayout;
+
+    QGroupBox * QGrpBx_widgetBox;
+    QVBoxLayout * QVbx_widgetBoxContainer;
+public:
+    QSportPicker(QWidget * parent);
+    QString getSport() const;
+    void setSport(QString sport);
+
+};
+
 //This is a fancy date selection widget class. A QCalendarWidget pops up in a new window and allows one to select the appropriate date
 class QDatePicker : public QWidget{
 Q_OBJECT
@@ -100,8 +114,7 @@ protected:
 
     QLineEdit * QLineEdt_firstNameField;
     QLineEdit * QLineEdt_lastNameField;
-
-    QComboBox * QCmbBox_SportPicker;
+    QSportPicker * QSprtPcker_sportPicker;
     QConcussionPicker * QCssPckr_concussionSelector;
 
     QGridLayout * QGrd_mainLayout;

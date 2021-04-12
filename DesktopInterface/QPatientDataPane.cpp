@@ -15,13 +15,7 @@ QPatientDataPane::QPatientDataPane(QWidget *parent) : QWidget(parent) {
     QDatePckr_dateOfInjury = new QDatePicker(this, "Date of Injury");
 
     QCssPckr_concussionSelector = new QConcussionPicker(this);
-    QCmbBox_SportPicker = new QComboBox(this);
-    QCmbBox_SportPicker->addItem("Basketball");
-    QCmbBox_SportPicker->addItem("Baseball");
-    QCmbBox_SportPicker->addItem("Football");
-    QCmbBox_SportPicker->addItem("Volleyball");
-    QCmbBox_SportPicker->addItem("Softball");
-    QCmbBox_SportPicker->addItem("Tennis");
+    QSprtPcker_sportPicker = new QSportPicker(this);
     QGrd_mainLayout = new QGridLayout();
 
     QGrd_mainLayout->addWidget(QLineEdt_firstNameField, 0, 0);
@@ -30,7 +24,7 @@ QPatientDataPane::QPatientDataPane(QWidget *parent) : QWidget(parent) {
     QGrd_mainLayout->addWidget(QDatePckr_daySeenPicker, 1, 1);
     QGrd_mainLayout->addWidget(QDatePckr_dobPicker, 2, 0);
     QGrd_mainLayout->addWidget(QDatePckr_dateOfInjury, 2, 1);
-    QGrd_mainLayout->addWidget(QCmbBox_SportPicker, 3,0);
+    QGrd_mainLayout->addWidget(QSprtPcker_sportPicker, 3,0);
     QGrd_mainLayout->addWidget(QCssPckr_concussionSelector, 4, 0);
 
     QGrpBx_paneBox = new QGroupBox("Patient Information", this);
@@ -50,8 +44,8 @@ PatientData QPatientDataPane::getPatientData() {
     QString firstName = QLineEdt_firstNameField->text();
     QString lastName = QLineEdt_lastNameField->text();
     QString gender = QGenPckr_genderPicker->getGender();
-    QString sport = QCmbBox_SportPicker->currentText();
     bool concussed = QCssPckr_concussionSelector->getConcussStatus();
+    QString sport = QSprtPcker_sportPicker->getSport();
     PatientData out(dateOfBirth, dateSeen, dateOfInjury, firstName, lastName, sport, gender, concussed);
     return out;
 }
@@ -60,12 +54,10 @@ PatientData QPatientDataPane::getPatientData() {
 QGenderPicker::QGenderPicker(QWidget *parent) : QWidget(parent){
     QRadBtn_male = new QRadioButton("M", this);
     QRadBtn_female = new QRadioButton("F", this);
-    QRadBtn_other = new QRadioButton("Other", this);
     QRadBtn_male->setChecked(true);
     QHbx_mainLayout = new QHBoxLayout(this);
     QHbx_mainLayout->insertWidget(0, QRadBtn_male);
     QHbx_mainLayout->insertWidget(1, QRadBtn_female);
-    QHbx_mainLayout->insertWidget(2, QRadBtn_other);
 
     QGrpBx_widgetBox = new QGroupBox("Gender", this);
     QGrpBx_widgetBox->setLayout(QHbx_mainLayout);
@@ -177,4 +169,31 @@ bool QConcussionPicker::getConcussStatus() const {
         return true;
     }
     return false;
+}
+
+QSportPicker::QSportPicker(QWidget *parent) : QWidget(parent){
+    QCmbBox_SportPicker = new QComboBox(this);
+    QCmbBox_SportPicker->addItem("Basketball");
+    QCmbBox_SportPicker->addItem("Baseball");
+    QCmbBox_SportPicker->addItem("Football");
+    QCmbBox_SportPicker->addItem("Volleyball");
+    QCmbBox_SportPicker->addItem("Softball");
+    QCmbBox_SportPicker->addItem("Tennis");
+    QHbx_mainLayout = new QHBoxLayout(this);
+    QHbx_mainLayout->addWidget(QCmbBox_SportPicker);
+
+    QGrpBx_widgetBox = new QGroupBox("Sport", this);
+    QGrpBx_widgetBox->setLayout(QHbx_mainLayout);
+
+    QVbx_widgetBoxContainer = new QVBoxLayout(this);
+    QVbx_widgetBoxContainer->addWidget(QGrpBx_widgetBox);
+    setLayout(QVbx_widgetBoxContainer);
+}
+
+QString QSportPicker::getSport() const {
+    return QCmbBox_SportPicker->currentText();
+}
+
+void QSportPicker::setSport(QString sport) {
+    QCmbBox_SportPicker->setCurrentText(sport);
 }
