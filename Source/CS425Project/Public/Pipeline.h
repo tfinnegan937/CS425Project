@@ -16,7 +16,9 @@
 #include <string.h>
 #include <codecvt>
 #include <locale>
+#include "Pipeline_Constants.h"
 #include "Pipeline.generated.h"
+
 
 UCLASS( ClassGroup=(Custom), meta=(BlueprintSpawnableComponent) )
 class CS425PROJECT_API UPipeline : public UActorComponent

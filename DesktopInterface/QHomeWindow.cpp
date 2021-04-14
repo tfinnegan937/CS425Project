@@ -21,7 +21,6 @@ QHomeWindow::QHomeWindow(QWidget *parent) : QWidget(parent) {
     QHBx_panelLayout->insertWidget(2, QPane_simResultsPane);
 
 
-
     this->setLayout(QHBx_panelLayout);
     //Initialize IPC communication
     ipcController = new IPCReceiver(TEXT(BUFF_NAME));
@@ -29,6 +28,7 @@ QHomeWindow::QHomeWindow(QWidget *parent) : QWidget(parent) {
 
     connectSimPaneSignals();
 
+    connect(&pipelineThread, &PipelineThread::frameData, this, &QHomeWindow::addFrameToPatientData);
 
 }
 
@@ -84,22 +84,18 @@ bool QHomeWindow::handleIPCMessages(uint16_t message_buffer) {
     if(message_buffer & SH_STARTED){
         //simActive();
         updateVRStatus("Status: Horizontal Saccades started.");
-
     }
     if(message_buffer & SV_STARTED){
         //simActive();
         updateVRStatus("Status: Vertical Saccades started.");
-
     }
     if(message_buffer & CON_STARTED){
         //simActive();
         updateVRStatus("Status: Near-Point Convergence started.");
-
     }
     if(message_buffer & VORH_STARTED){
         //simActive();
         updateVRStatus("Status: VOR Horizontal started.");
-
     }
     if(message_buffer & VORV_STARTED){
         //simActive();
@@ -213,6 +209,21 @@ void QHomeWindow::loadFile()
     try {
         saveload.LoadData(current_patient_data, "", fileName.toStdString().c_str());
         last_file_touched = fileName;
+
+        string dob = to_string(current_patient_data.date_of_birth[0]) + "/" + to_string(current_patient_data.date_of_birth[1]) + "/" + to_string(current_patient_data.date_of_birth[2]);
+        string dov = to_string(current_patient_data.date_of_visit[0]) + "/" + to_string(current_patient_data.date_of_visit[1]) + "/" + to_string(current_patient_data.date_of_visit[2]);
+        string doi = to_string(current_patient_data.date_of_injury[0]) + "/" + to_string(current_patient_data.date_of_injury[1]) + "/" + to_string(current_patient_data.date_of_injury[2]);
+        PatientData x = PatientData(
+            QString(dob.c_str()),
+            QString(dov.c_str()),
+            QString(doi.c_str()),
+            current_patient_data.first_name,
+            current_patient_data.last_name,
+            current_patient_data.sport_played,
+            current_patient_data.gender,
+            current_patient_data.concussed);
+        emit(patientDataLoaded(x));
+
     } catch (const std::exception &exc) {
         QMessageBox errorBox;
         errorBox.critical(0, "Load Error", exc.what());
@@ -333,3 +344,10 @@ void QHomeWindow::closeEvent(QCloseEvent *event){
     event->ignore(); //Don't want to close the window unless Unreal closes too.
 }
 
+
+
+void QHomeWindow::addFrameToPatientData(EyeFrameData eyeFrame)
+{
+    current_patient_data.tests_with_data[eyeFrame.test] = true;
+    current_patient_data.test_data[eyeFrame.test].eyeFrames.push_back(eyeFrame);
+}

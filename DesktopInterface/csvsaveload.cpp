@@ -211,7 +211,6 @@ bool CSVSaveLoad::LoadData(FullPatientData& to_load, const char* folder_to_load_
 
 
     LoadEyeData(to_load, input_file);
-    std::cout << "they will not heal" << std::endl;
     input_file.close();
 
     return true;

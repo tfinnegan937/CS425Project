@@ -28,6 +28,7 @@ struct FullPatientData
     int age;
     QString sport_played;
     QString gender;
+    bool concussed;
 
     //3 parts of a data: month/day/year
     enum DatePart { month, day, year};

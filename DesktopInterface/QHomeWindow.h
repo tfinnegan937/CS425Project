@@ -19,10 +19,12 @@
 #include "QPatientDataPane.h"
 #include "QResultsPane.h"
 #include "csvsaveload.h"
+#include "PatientData.h"
 #include "../shared_include/EyeFrameData.h"
 #include "../shared_include/EyeSessionData.h"
 #include "../shared_include/FullPatientData.h"
 #include "PDFGenerator.h"
+#include "PipelineThread.h"
 #include "WindowsIPCControls.h"
 
 class QSimulationControlPane;
@@ -35,6 +37,7 @@ private:
     FullPatientData current_patient_data;
     FullPatientData comparison_data;
     QString last_file_touched = "None";
+    FullPatientData::Tests current_test;
 
     //UI panels
     QHBoxLayout * QHBx_panelLayout;
@@ -63,6 +66,9 @@ private:
     void saveFile();
     void saveAsFile();
 
+    //Threads
+    PipelineThread pipelineThread;
+
 
     QMenu * QMen_help;
     QAction * QMenAct_helpAbout;
@@ -80,11 +86,13 @@ private:
 public slots:
     void ipcTick(); //One tick of the IPC communication loop. Executed when a timeout() signal is called from QTmr_ipcCallbackTimer
     void sendMessage(UINT16 mess);
+    void addFrameToPatientData(EyeFrameData eyeFrame);
 signals:
     //TODO
     void simActive(); //This signal is called any time a VOMS test begins, and is passed down to the sim control UI to indicate that it should be locked
     void simFinished(); //This signal is called when all tests are completed and is passed down to the sim control UI to indicate that it should be unlocked
     void updateVRStatus(QString mess);
+    void patientDataLoaded(PatientData object);
 public:
     explicit QHomeWindow(QWidget * parent = nullptr);
     void updateCurrentPatientData();
