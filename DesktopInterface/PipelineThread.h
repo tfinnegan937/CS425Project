@@ -4,6 +4,8 @@
 #include <QObject>
 #include <QThread>
 #include <QWaitCondition>
+#include <QDeadlineTimer>
+#include <QMutex>
 #include <windows.h>
 #include <iostream>
 #include <queue>
@@ -27,7 +29,7 @@ protected:
 
 private:
     QWaitCondition condition;
-    bool abort = false;
+    QAtomicInt abort;
     HANDLE Pipe;
 };
 

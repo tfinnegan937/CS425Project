@@ -12,7 +12,7 @@ struct EyeFrameData
 {
     EyeFrameData(){};
     ~EyeFrameData(){};
-    int timestamp = 0;
+    float timestamp = 0;
     int test = 0;
     float localDotPosition[3] = {0};
     float worldDotPosition[3] = {0};

@@ -5,6 +5,7 @@
 #ifndef DESKTOPINTERFACE_QHOMEWINDOW_H
 #define DESKTOPINTERFACE_QHOMEWINDOW_H
 #include <QWidget>
+#include <QCoreApplication>
 #include <QHBoxLayout>
 #include <QPushButton>
 #include <QTimer>
@@ -67,7 +68,7 @@ private:
     void saveAsFile();
 
     //Threads
-    PipelineThread pipelineThread;
+    PipelineThread* pipelineThread;
 
 
     QMenu * QMen_help;
@@ -77,6 +78,7 @@ private:
     void setupMenuBar();
 
     bool initializeIPC(); //initialize IPC communication
+    bool initializeDataPipeline(); //initialize Data Pipeline
 
     bool handleIPCMessages(uint16_t message_buffer); //Take received message buffer and handle each received
 
@@ -95,6 +97,7 @@ signals:
     void patientDataLoaded(PatientData object);
 public:
     explicit QHomeWindow(QWidget * parent = nullptr);
+    ~QHomeWindow();
     void updateCurrentPatientData();
     void exportDataToPDF();
 };

@@ -19,11 +19,6 @@ QSimulationControlButtonWidget::QSimulationControlButtonWidget(QWidget *parent) 
     connect(begin_button, &QPushButton::released, this, &QSimulationControlButtonWidget::beginPressed);
     connect(begin_button, &QPushButton::released, this, &QSimulationControlButtonWidget::toggleButtons);
     connect(cancel_button, &QPushButton::released, this, &QSimulationControlButtonWidget::toggleButtons);
-
-
-
-
-
 }
 
 void QSimulationControlButtonWidget::toggleButtons() {
