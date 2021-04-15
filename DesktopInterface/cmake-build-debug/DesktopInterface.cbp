@@ -248,6 +248,14 @@
 			<Option target="DesktopInterfaceTest"/>
 			<Option target="DesktopInterface"/>
 		</Unit>
+		<Unit filename="E:/CS425Project/VPVR/DesktopInterface/PipelineThread.cpp">
+			<Option target="DesktopInterfaceTest"/>
+			<Option target="DesktopInterface"/>
+		</Unit>
+		<Unit filename="E:/CS425Project/VPVR/DesktopInterface/PipelineThread.h">
+			<Option target="DesktopInterfaceTest"/>
+			<Option target="DesktopInterface"/>
+		</Unit>
 		<Unit filename="E:/CS425Project/VPVR/DesktopInterface/QHomeWindow.cpp">
 			<Option target="DesktopInterfaceTest"/>
 			<Option target="DesktopInterface"/>
@@ -346,6 +354,10 @@
 			<Option target="DesktopInterface"/>
 		</Unit>
 		<Unit filename="E:/CS425Project/VPVR/shared_include/FullPatientData.h">
+			<Option target="DesktopInterfaceTest"/>
+			<Option target="DesktopInterface"/>
+		</Unit>
+		<Unit filename="E:/CS425Project/VPVR/shared_include/Pipeline_Constants.h">
 			<Option target="DesktopInterfaceTest"/>
 			<Option target="DesktopInterface"/>
 		</Unit>
