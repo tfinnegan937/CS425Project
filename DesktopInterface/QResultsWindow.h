@@ -1,6 +1,6 @@
 #ifndef QRESULTSWINDOW_H
 #define QRESULTSWINDOW_H
-
+/*
 #pragma push_macro("slots")
 #undef slots
 #include "Python.h"
@@ -88,5 +88,5 @@ private:
 
     void StartGraphThread();
 };
-
+*/
 #endif // QRESULTSWINDOW_H

@@ -6,9 +6,7 @@
 #include "QResultsWindow.h"
 #include <iostream>
 #include <QCloseEvent>
-QResultsWindow *wdg;
 QHomeWindow::QHomeWindow(QWidget *parent) : QWidget(parent) {
-    std::cout << "Here";
     QPane_simCtrlPane = new QSimulationControlPane(this);
     QPane_patientDataPane = new QPatientDataPane(this);
     QPane_simResultsPane = new QResultsPane(this);
@@ -21,17 +19,20 @@ QHomeWindow::QHomeWindow(QWidget *parent) : QWidget(parent) {
     QHBx_panelLayout->insertWidget(2, QPane_simResultsPane);
 
 
-
     this->setLayout(QHBx_panelLayout);
     //Initialize IPC communication
-    ipcController = new IPCReceiver(TEXT(BUFF_NAME));
     initializeIPC();
+    initializeDataPipeline();
 
     connectSimPaneSignals();
 
-
 }
 
+
+QHomeWindow::~QHomeWindow()
+{
+    delete pipelineThread;
+}
 
 
 int loop_counter = 0; //Temporary counter to increase alternating graphs to every second.
@@ -58,6 +59,8 @@ void QHomeWindow::ipcTick() {
 }
 
 bool QHomeWindow::initializeIPC() {
+    std::cout << "Initializing control communications with Unreal..." << std::endl;
+    ipcController = new IPCReceiver(TEXT(BUFF_NAME));
     //Initialize the timer for communication with UnrealEngine
     QTmr_ipcCallbackTimer = new QTimer(this);
     //Connect to the appropriate signals and slots here
@@ -66,13 +69,30 @@ bool QHomeWindow::initializeIPC() {
     QTmr_ipcCallbackTimer->start();
     try {
        ipcController->sendMessage(IPC_INITIALIZED);
+       std::cout << "Successfully initialized control communications with Unreal." << std::endl;
     } catch(std::runtime_error& generic_error){
         //TODO: Handle errors
-
+        std::cout << "ERROR! Failed to initialize control communications with Unreal!" << std::endl;
         return false;
     }
-    //TODO: Ryan places pipeline initialization code here
     return true;
+}
+
+
+bool QHomeWindow::initializeDataPipeline()
+{
+    std::cout << "Initializing eye frame data pipeline..." << std::endl;
+    pipelineThread = new PipelineThread();
+
+    if (pipelineThread != nullptr) {
+        connect(pipelineThread, &PipelineThread::frameData, this, &QHomeWindow::addFrameToPatientData);
+        pipelineThread->start();
+        std::cout << "Successfully initialized eye frame data pipeline." << std::endl;
+        return true;
+    } else {
+        std::cout << "ERROR! Failed to initialize eye frame data pipeline!" << std::endl;
+        return false;
+    }
 }
 
 bool QHomeWindow::handleIPCMessages(uint16_t message_buffer) {
@@ -84,22 +104,18 @@ bool QHomeWindow::handleIPCMessages(uint16_t message_buffer) {
     if(message_buffer & SH_STARTED){
         //simActive();
         updateVRStatus("Status: Horizontal Saccades started.");
-
     }
     if(message_buffer & SV_STARTED){
         //simActive();
         updateVRStatus("Status: Vertical Saccades started.");
-
     }
     if(message_buffer & CON_STARTED){
         //simActive();
         updateVRStatus("Status: Near-Point Convergence started.");
-
     }
     if(message_buffer & VORH_STARTED){
         //simActive();
         updateVRStatus("Status: VOR Horizontal started.");
-
     }
     if(message_buffer & VORV_STARTED){
         //simActive();
@@ -213,6 +229,21 @@ void QHomeWindow::loadFile()
     try {
         saveload.LoadData(current_patient_data, "", fileName.toStdString().c_str());
         last_file_touched = fileName;
+
+        string dob = to_string(current_patient_data.date_of_birth[0]) + "/" + to_string(current_patient_data.date_of_birth[1]) + "/" + to_string(current_patient_data.date_of_birth[2]);
+        string dov = to_string(current_patient_data.date_of_visit[0]) + "/" + to_string(current_patient_data.date_of_visit[1]) + "/" + to_string(current_patient_data.date_of_visit[2]);
+        string doi = to_string(current_patient_data.date_of_injury[0]) + "/" + to_string(current_patient_data.date_of_injury[1]) + "/" + to_string(current_patient_data.date_of_injury[2]);
+        PatientData x = PatientData(
+            QString(dob.c_str()),
+            QString(dov.c_str()),
+            QString(doi.c_str()),
+            current_patient_data.first_name,
+            current_patient_data.last_name,
+            current_patient_data.sport_played,
+            current_patient_data.gender,
+            current_patient_data.concussed);
+        emit(patientDataLoaded(x));
+
     } catch (const std::exception &exc) {
         QMessageBox errorBox;
         errorBox.critical(0, "Load Error", exc.what());
@@ -329,7 +360,17 @@ void QHomeWindow::exportDataToPDF()
 }
 
 void QHomeWindow::closeEvent(QCloseEvent *event){
-    ipcController->sendMessage(REQ_SHUTDOWN);
+    if (pipelineThread != NULL) delete pipelineThread;
+    if (ipcController != NULL) {
+        ipcController->sendMessage(REQ_SHUTDOWN);
+    }
     event->ignore(); //Don't want to close the window unless Unreal closes too.
 }
 
+
+
+void QHomeWindow::addFrameToPatientData(EyeFrameData eyeFrame)
+{
+    current_patient_data.tests_with_data[eyeFrame.test] = true;
+    current_patient_data.test_data[eyeFrame.test].eyeFrames.push_back(eyeFrame);
+}

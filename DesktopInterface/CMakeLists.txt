@@ -33,14 +33,33 @@ include_directories(${PYTHON_INCLUDE_DIRS})
 include_directories(unit_tests/)
 
 set ( SOURCES
-DesktopInterface.cpp
-QHomeWindow.cpp
-        QSimulationControlPane.cpp QPatientDataPane.cpp QResultsPane.cpp QSimulationControls.cpp QResultsWindow.cpp csvsaveload.cpp PatientData.cpp PatientData.h PDFGenerator.cpp WindowsIPCControls.cpp)
+    DesktopInterface.cpp
+    QHomeWindow.cpp
+    QSimulationControlPane.cpp
+    QPatientDataPane.cpp
+    QResultsPane.cpp
+    QSimulationControls.cpp
+    QResultsWindow.cpp
+    csvsaveload.cpp
+    PatientData.cpp
+    PatientData.h
+    PDFGenerator.cpp
+    WindowsIPCControls.cpp
+    PipelineThread.cpp
+)
 
 set ( MAIN_HEADERS
-DesktopInterface.h
-QHomeWindow.h
-        QSimulationControlPane.h QPatientDataPane.h QResultsPane.h QSimulationControls.h QResultsWindow.h csvsaveload.h PDFGenerator.h)
+    DesktopInterface.h
+    QHomeWindow.h
+    QSimulationControlPane.h
+    QPatientDataPane.h
+    QResultsPane.h
+    QSimulationControls.h
+    QResultsWindow.h
+    csvsaveload.h
+    PDFGenerator.h
+    PipelineThread.h
+)
 
 set ( EXTRA_HEADERS
 APPLICATION_CONSTANTS.h
@@ -48,6 +67,7 @@ ${PARENT_DIRECTORY}/shared_include/EyeFrameData.h
 ${PARENT_DIRECTORY}/shared_include/EyeSessionData.h
 ${PARENT_DIRECTORY}/shared_include/FullPatientData.h
 ${PARENT_DIRECTORY}/shared_include/FullPatientData.cpp
+${PARENT_DIRECTORY}/shared_include/Pipeline_Constants.h
 )
 
 set ( UI_HEADERS

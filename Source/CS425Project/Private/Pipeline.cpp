@@ -22,8 +22,7 @@ void UPipeline::BeginPlay()
 {
 	Super::BeginPlay();
 
-
-	CreatePipe(L"\\\\.\\pipe\\test");
+	CreatePipe(PIPELINE_NAME_LONG);
 
     //Starts a send test on the pipeline 10 seconds after the pipe creation is triggered.
     FTimerHandle UnusedHandle;

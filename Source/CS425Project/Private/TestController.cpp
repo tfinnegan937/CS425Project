@@ -27,8 +27,13 @@ void ATestController::BeginPlay()
 	Super::BeginPlay();
 	//instantiate_shared_mem();
 	FString project_directory = FPaths::ProjectDir();
+	if (GEngine) GEngine->AddOnScreenDebugMessage(-1, 15.0f, FColor::Yellow, FString::Printf(TEXT("Opening physician's interface...")));
 	FString binary = project_directory.Append("\\Binaries\\Win64\\DesktopInterface.exe");
-	FPlatformProcess::CreateProc(*binary, nullptr, true, false, false, nullptr, 0, nullptr, nullptr);
+	FString dir = project_directory.Append("\\Binaries\\Win64");
+	FProcHandle tempHandle = FPlatformProcess::CreateProc(*binary, nullptr, true, false, false, nullptr, 0, *dir, nullptr);
+	if (!tempHandle.IsValid()) {
+		if (GEngine) GEngine->AddOnScreenDebugMessage(-1, 15.0f, FColor::Yellow, FString::Printf(TEXT("Failed to open physician's interface!")));
+	}
 
 
 	GetWorldTimerManager().SetTimer(ipcTimerHandle, this, &ATestController::ipcTimerTick, .1F, true, .1f); //Initializes the IPC timer to call every 100 miliseconds after an initial 100 milisecond delay

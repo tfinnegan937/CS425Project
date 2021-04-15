@@ -18,6 +18,7 @@ private:
 public:
     DesktopInterface();
     DesktopInterface(QApplication * app);
+    ~DesktopInterface();
     int run();
 };
 

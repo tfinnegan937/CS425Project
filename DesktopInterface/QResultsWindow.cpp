@@ -1,4 +1,4 @@
-#include "QResultsWindow.h"
+/*#include "QResultsWindow.h"
 #include "ui_QResultsWindow.h"
 
 
@@ -12,7 +12,6 @@ QResultsWindow::QResultsWindow(QWidget *parent) :
 
 QResultsWindow::~QResultsWindow()
 {
-    delete ui;
 }
 
 int QResultsWindow::current_graph = 0;
@@ -36,9 +35,9 @@ typedef struct{
 
 void QResultsWindow::StartGraphThread()
 {
-    workerThread = new GraphWorker();
-    connect(workerThread, &GraphWorker::GraphReady, this, &QResultsWindow::DisplayGraph);
-    workerThread->setup();
+    //workerThread = new GraphWorker();
+    //connect(workerThread, &GraphWorker::GraphReady, this, &QResultsWindow::DisplayGraph);
+    //workerThread->setup();
 }
 
 void QResultsWindow::DisplayGraph(const QByteArray graph_in_base_64)
@@ -52,3 +51,4 @@ void QResultsWindow::DisplayGraph(const QByteArray graph_in_base_64)
         ui->EyeTrackingFrame->findChild<QLabel*>("EyeGraph")->setPixmap(image.scaled(ui->EyeTrackingFrame->findChild<QLabel*>("EyeGraph")->size(), Qt::KeepAspectRatio, Qt::SmoothTransformation));
     }
 }
+*/

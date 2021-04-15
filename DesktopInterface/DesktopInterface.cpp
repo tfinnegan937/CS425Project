@@ -31,6 +31,10 @@ DesktopInterface::DesktopInterface(QApplication *app) {
     homeWindow->show();
 }
 
+DesktopInterface::~DesktopInterface()
+{
+}
+
 int DesktopInterface::run() {
     try{
         return app->exec();
@@ -39,3 +43,5 @@ int DesktopInterface::run() {
         return EXIT_FAILURE;
     }
 }
+
+

@@ -28,6 +28,7 @@ public:
     QString getSport() const;
     QString getGender() const;
     bool getIsConcussed() const;
+
 };
 
 

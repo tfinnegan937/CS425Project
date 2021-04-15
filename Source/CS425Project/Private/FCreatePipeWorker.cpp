@@ -63,27 +63,20 @@ void FCreatePipeWorker::SendData(EyeFrameData frame)
 // TODO: Add code to handle failed opening.
 bool FCreatePipeWorker::openPipe()
 {
-    const int INSTANCES = 1;
-    const int BUFFERINSIZE = 512;
-    const int BUFFEROUTSIZE = 512;
-    const int TIMEOUTTIME = 0;
+    
+    WaitNamedPipe(localPipeName, NMPWAIT_WAIT_FOREVER);
 
-    HANDLE pipe = CreateNamedPipe(
-        localPipeName,
-        PIPE_ACCESS_OUTBOUND,
-        PIPE_TYPE_MESSAGE,
-        INSTANCES,
-        BUFFERINSIZE,
-        BUFFEROUTSIZE,
-        TIMEOUTTIME,
-        NULL //No security
-    );
-
-    ensureAlways(pipe == NULL || pipe == INVALID_HANDLE_VALUE);
+    HANDLE pipe = CreateFile(
+        localPipeName,         //Pipe name
+        GENERIC_WRITE,          //Open as Write
+        FILE_SHARE_READ | FILE_SHARE_WRITE,    //Allow other processes to read/write
+        NULL,                  //Security attributes
+        OPEN_EXISTING,
+        FILE_ATTRIBUTE_NORMAL,
+        NULL);
 
     bool pipe_connected_successfully = ConnectNamedPipe(pipe, NULL);
-    ensureAlways(pipe_connected_successfully);
-    if (!pipe_connected_successfully) CloseHandle(pipe);
+    
 
     Pipe = pipe;
     if (GEngine) GEngine->AddOnScreenDebugMessage(-1, 15.0f, FColor::Yellow, TEXT("Pipe created!"));
