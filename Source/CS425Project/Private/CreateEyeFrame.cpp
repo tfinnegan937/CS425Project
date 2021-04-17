@@ -3,12 +3,12 @@
 
 #include "CreateEyeFrame.h"
 
-EyeFrameData CreateEyeFrame(float timestamp, int test_number, FEyeTrackerGazeData& combinedEye, FEyeTrackerStereoGazeData& soloEyes, FVector& localBallPosition, FVector& worldBallPosition, FVector& headPosition, FVector& headOrientation)
+EyeFrameData CreateEyeFrame(float timestamp, EyeTests::Tests test, FEyeTrackerGazeData& combinedEye, FEyeTrackerStereoGazeData& soloEyes, FVector& localBallPosition, FVector& worldBallPosition, FVector& headPosition, FVector& headOrientation)
 {
 	EyeFrameData to_return;
 
 	to_return.timestamp = timestamp;
-	to_return.test = test_number;
+	to_return.test = test;
 
 	to_return.localDotPosition[0] = localBallPosition[0];
 	to_return.localDotPosition[1] = localBallPosition[1];
