@@ -364,7 +364,7 @@ void QHomeWindow::closeEvent(QCloseEvent *event){
     if (ipcController != NULL) {
         ipcController->sendMessage(REQ_SHUTDOWN);
     }
-    event->ignore(); //Don't want to close the window unless Unreal closes too.
+    event->accept(); //Don't want to close the window unless Unreal closes too.
 }
 
 

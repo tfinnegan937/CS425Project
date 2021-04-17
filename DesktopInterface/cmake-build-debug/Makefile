@@ -379,6 +379,36 @@ PatientData.cpp.s:
 	$(MAKE) $(MAKESILENT) -f CMakeFiles\DesktopInterface.dir\build.make CMakeFiles/DesktopInterface.dir/PatientData.cpp.s
 .PHONY : PatientData.cpp.s
 
+PipelineThread.obj: PipelineThread.cpp.obj
+
+.PHONY : PipelineThread.obj
+
+# target to build an object file
+PipelineThread.cpp.obj:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles\DesktopInterfaceTest.dir\build.make CMakeFiles/DesktopInterfaceTest.dir/PipelineThread.cpp.obj
+	$(MAKE) $(MAKESILENT) -f CMakeFiles\DesktopInterface.dir\build.make CMakeFiles/DesktopInterface.dir/PipelineThread.cpp.obj
+.PHONY : PipelineThread.cpp.obj
+
+PipelineThread.i: PipelineThread.cpp.i
+
+.PHONY : PipelineThread.i
+
+# target to preprocess a source file
+PipelineThread.cpp.i:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles\DesktopInterfaceTest.dir\build.make CMakeFiles/DesktopInterfaceTest.dir/PipelineThread.cpp.i
+	$(MAKE) $(MAKESILENT) -f CMakeFiles\DesktopInterface.dir\build.make CMakeFiles/DesktopInterface.dir/PipelineThread.cpp.i
+.PHONY : PipelineThread.cpp.i
+
+PipelineThread.s: PipelineThread.cpp.s
+
+.PHONY : PipelineThread.s
+
+# target to generate assembly for a file
+PipelineThread.cpp.s:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles\DesktopInterfaceTest.dir\build.make CMakeFiles/DesktopInterfaceTest.dir/PipelineThread.cpp.s
+	$(MAKE) $(MAKESILENT) -f CMakeFiles\DesktopInterface.dir\build.make CMakeFiles/DesktopInterface.dir/PipelineThread.cpp.s
+.PHONY : PipelineThread.cpp.s
+
 QHomeWindow.obj: QHomeWindow.cpp.obj
 
 .PHONY : QHomeWindow.obj
@@ -759,6 +789,9 @@ help:
 	@echo ... PatientData.obj
 	@echo ... PatientData.i
 	@echo ... PatientData.s
+	@echo ... PipelineThread.obj
+	@echo ... PipelineThread.i
+	@echo ... PipelineThread.s
 	@echo ... QHomeWindow.obj
 	@echo ... QHomeWindow.i
 	@echo ... QHomeWindow.s
