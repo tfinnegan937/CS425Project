@@ -31,11 +31,9 @@ QHomeWindow::QHomeWindow(QWidget *parent) : QWidget(parent) {
 
 QHomeWindow::~QHomeWindow()
 {
-    delete pipelineThread;
 }
 
 
-int loop_counter = 0; //Temporary counter to increase alternating graphs to every second.
 void QHomeWindow::ipcTick() {
     //Handle UnrealEngine signals
         //std::cout << std::endl << "Reached Message Loop" << std::endl;
@@ -49,13 +47,6 @@ void QHomeWindow::ipcTick() {
                 //TODO: handle exception
             }
         }
-
-    //TODO: Ryan places the code for handling the data pipeline here
-    loop_counter++;
-    if (loop_counter >= 10) {
-        //wdg->AlternateGraph();
-        loop_counter = 0;
-    }
 }
 
 bool QHomeWindow::initializeIPC() {
@@ -65,6 +56,7 @@ bool QHomeWindow::initializeIPC() {
     QTmr_ipcCallbackTimer = new QTimer(this);
     //Connect to the appropriate signals and slots here
     connect(QTmr_ipcCallbackTimer, &QTimer::timeout, this, &QHomeWindow::ipcTick);
+    connect(this, &QHomeWindow::testFinished, &tempCSVLoader, &TempCSVLoader::LoadTempCSV);
     QTmr_ipcCallbackTimer->setInterval(100); //Time interval between calls in milliseconds. May need to be adjusted.
     QTmr_ipcCallbackTimer->start();
     try {
@@ -78,22 +70,6 @@ bool QHomeWindow::initializeIPC() {
     return true;
 }
 
-
-bool QHomeWindow::initializeDataPipeline()
-{
-    std::cout << "Initializing eye frame data pipeline..." << std::endl;
-    pipelineThread = new PipelineThread();
-
-    if (pipelineThread != nullptr) {
-        connect(pipelineThread, &PipelineThread::frameData, this, &QHomeWindow::addFrameToPatientData);
-        pipelineThread->start();
-        std::cout << "Successfully initialized eye frame data pipeline." << std::endl;
-        return true;
-    } else {
-        std::cout << "ERROR! Failed to initialize eye frame data pipeline!" << std::endl;
-        return false;
-    }
-}
 
 bool QHomeWindow::handleIPCMessages(uint16_t message_buffer) {
     //TODO: Handle Received Messages
@@ -129,30 +105,31 @@ bool QHomeWindow::handleIPCMessages(uint16_t message_buffer) {
     }
     if(message_buffer & SP_COMPLETED){
         updateVRStatus("Status: Smooth Pursuits completed.");
-
+        emit(testFinished(EyeTests::Tests::smooth_pursuits, current_patient_data));
     }
     if(message_buffer & SH_COMPLETED){
         updateVRStatus("Status: Horizontal Saccades Completed");
-
+        emit(testFinished(EyeTests::Tests::saccades_horizontal, current_patient_data));
     }
     if(message_buffer & SV_COMPLETED){
         updateVRStatus("Status: Vertical Saccades Completed");
-
+        emit(testFinished(EyeTests::Tests::saccades_vertical, current_patient_data));
     }
     if(message_buffer & CON_COMPLETED){
         updateVRStatus("Status: Near-Point Convergence Completed");
-
+        emit(testFinished(EyeTests::Tests::near_point_convergence, current_patient_data));
     }
     if(message_buffer & VORH_COMPLETED){
         updateVRStatus("Status: VOR Horizontal Completed");
+        emit(testFinished(EyeTests::Tests::vor_horizontal, current_patient_data));
     }
     if(message_buffer & VORV_COMPLETED){
         updateVRStatus("Status: VOR Vertical Completed");
-
+        emit(testFinished(EyeTests::Tests::vor_vertical, current_patient_data));
     }
     if(message_buffer & VMS_COMPLETED){
         updateVRStatus("Status: VMS Completed");
-
+        emit(testFinished(EyeTests::Tests::visual_motion_sensitivity, current_patient_data));
     }
     if(message_buffer & TESTS_COMPLETED){
         simFinished();
@@ -360,17 +337,8 @@ void QHomeWindow::exportDataToPDF()
 }
 
 void QHomeWindow::closeEvent(QCloseEvent *event){
-    if (pipelineThread != NULL) delete pipelineThread;
     if (ipcController != NULL) {
         ipcController->sendMessage(REQ_SHUTDOWN);
     }
     event->accept(); //Don't want to close the window unless Unreal closes too.
-}
-
-
-
-void QHomeWindow::addFrameToPatientData(EyeFrameData eyeFrame)
-{
-    current_patient_data.tests_with_data[eyeFrame.test] = true;
-    current_patient_data.test_data[eyeFrame.test].eyeFrames.push_back(eyeFrame);
 }
