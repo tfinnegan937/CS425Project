@@ -8,7 +8,7 @@ public class CS425Project : ModuleRules
 	{
 		PCHUsage = PCHUsageMode.UseExplicitOrSharedPCHs;
 	
-		PublicDependencyModuleNames.AddRange(new string[] { "Core", "CoreUObject", "Engine", "InputCore", "Networking", "Sockets" });
+		PublicDependencyModuleNames.AddRange(new string[] { "Core", "CoreUObject", "Engine", "InputCore", "Networking", "Sockets", "EyeTracker"});
 
 		PrivateDependencyModuleNames.AddRange(new string[] {  });
 		//THE BELOW THREE LINES ARE NECESSARY TO USE THE BOOST LIBRARY

@@ -45,7 +45,7 @@ set ( SOURCES
     PatientData.h
     PDFGenerator.cpp
     WindowsIPCControls.cpp
-    PipelineThread.cpp
+    TempCSVLoader.cpp
 )
 
 set ( MAIN_HEADERS
@@ -58,7 +58,7 @@ set ( MAIN_HEADERS
     QResultsWindow.h
     csvsaveload.h
     PDFGenerator.h
-    PipelineThread.h
+    TempCSVLoader.h
 )
 
 set ( EXTRA_HEADERS
@@ -67,7 +67,8 @@ ${PARENT_DIRECTORY}/shared_include/EyeFrameData.h
 ${PARENT_DIRECTORY}/shared_include/EyeSessionData.h
 ${PARENT_DIRECTORY}/shared_include/FullPatientData.h
 ${PARENT_DIRECTORY}/shared_include/FullPatientData.cpp
-${PARENT_DIRECTORY}/shared_include/Pipeline_Constants.h
+${PARENT_DIRECTORY}/shared_include/EyeTestEnum.h
+${PARENT_DIRECTORY}/shared_include/TempCSVFiles.h
 )
 
 set ( UI_HEADERS

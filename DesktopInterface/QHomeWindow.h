@@ -21,11 +21,12 @@
 #include "QResultsPane.h"
 #include "csvsaveload.h"
 #include "PatientData.h"
+#include "TempCSVLoader.h"
 #include "../shared_include/EyeFrameData.h"
 #include "../shared_include/EyeSessionData.h"
 #include "../shared_include/FullPatientData.h"
+#include "../shared_include/EyeTestEnum.h"
 #include "PDFGenerator.h"
-#include "PipelineThread.h"
 #include "WindowsIPCControls.h"
 
 class QSimulationControlPane;
@@ -39,6 +40,7 @@ private:
     FullPatientData comparison_data;
     QString last_file_touched = "None";
     FullPatientData::Tests current_test;
+    TempCSVLoader tempCSVLoader;
 
     //UI panels
     QHBoxLayout * QHBx_panelLayout;
@@ -67,9 +69,6 @@ private:
     void saveFile();
     void saveAsFile();
 
-    //Threads
-    PipelineThread* pipelineThread;
-
 
     QMenu * QMen_help;
     QAction * QMenAct_helpAbout;
@@ -93,6 +92,7 @@ signals:
     //TODO
     void simActive(); //This signal is called any time a VOMS test begins, and is passed down to the sim control UI to indicate that it should be locked
     void simFinished(); //This signal is called when all tests are completed and is passed down to the sim control UI to indicate that it should be unlocked
+    void testFinished(EyeTests::Tests testID, FullPatientData& current_patient_data);
     void updateVRStatus(QString mess);
     void patientDataLoaded(PatientData object);
 public:

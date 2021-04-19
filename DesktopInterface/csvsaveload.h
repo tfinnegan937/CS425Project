@@ -17,7 +17,6 @@
 #include "../shared_include/EyeSessionData.h"
 #include "../shared_include/FullPatientData.h"
 #include <QFile>
-#include <QJsonDocument>
 #include <fstream>
 #include <iostream>
 #include <string>
