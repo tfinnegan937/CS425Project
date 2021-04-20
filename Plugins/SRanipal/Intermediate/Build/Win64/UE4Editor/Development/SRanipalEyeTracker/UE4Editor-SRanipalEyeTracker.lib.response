@@ -6,8 +6,8 @@
 /NAME:"UE4Editor-SRanipalEyeTracker.dll"
 /IGNORE:4221
 /NODEFAULTLIB
-"E:\CS425Project\VPVR\Intermediate\Build\Win64\CS425ProjectEditor\Development\Engine\SharedPCH.Engine.ShadowErrors.h.obj"
-"E:\CS425Project\VPVR\Plugins\SRanipal\Intermediate\Build\Win64\UE4Editor\Development\SRanipalEyeTracker\SRanipalEyeTracker.cpp.obj"
-"E:\CS425Project\VPVR\Plugins\SRanipal\Intermediate\Build\Win64\UE4Editor\Development\SRanipalEyeTracker\Default.rc2.res"
-/OUT:"E:\CS425Project\VPVR\Plugins\SRanipal\Intermediate\Build\Win64\UE4Editor\Development\SRanipalEyeTracker\UE4Editor-SRanipalEyeTracker.lib"
+"C:\Users\ohman\Documents\Senior Project\VPVR\Intermediate\Build\Win64\CS425ProjectEditor\Development\Engine\SharedPCH.Engine.ShadowErrors.h.obj"
+"C:\Users\ohman\Documents\Senior Project\VPVR\Plugins\SRanipal\Intermediate\Build\Win64\UE4Editor\Development\SRanipalEyeTracker\SRanipalEyeTracker.cpp.obj"
+"C:\Users\ohman\Documents\Senior Project\VPVR\Plugins\SRanipal\Intermediate\Build\Win64\UE4Editor\Development\SRanipalEyeTracker\Default.rc2.res"
+/OUT:"C:\Users\ohman\Documents\Senior Project\VPVR\Plugins\SRanipal\Intermediate\Build\Win64\UE4Editor\Development\SRanipalEyeTracker\UE4Editor-SRanipalEyeTracker.lib"
 /INCLUDE:IMPLEMENT_MODULE_SRanipalEyeTracker
