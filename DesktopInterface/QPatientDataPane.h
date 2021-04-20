@@ -37,6 +37,7 @@ private:
 public:
     QGenderPicker(QWidget * parent = nullptr);
     QString getGender() const;
+    void setGender(QString gender);
 };
 
 class QSportPicker : public QWidget{
@@ -125,6 +126,9 @@ protected:
 public:
     QPatientDataPane(QWidget * parent = nullptr);
     PatientData getPatientData();
+
+public slots:
+    void UpdatePatientDataPanes(PatientData current);
 };
 
 

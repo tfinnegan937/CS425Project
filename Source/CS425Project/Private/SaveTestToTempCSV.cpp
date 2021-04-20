@@ -16,13 +16,10 @@ CSVTempStream::CSVTempStream()
 }
 
 
-
-
-
 void CSVTempStream::SaveFrameToTemp(EyeFrameData& toSave)
 {
 	if (!temp_file_handles_[toSave.test].is_open()) {
-		std::string game_dir = std::string(TCHAR_TO_UTF8(*FPaths::ProjectUserDir));
+		std::string game_dir = std::string(TCHAR_TO_UTF8(*FPaths::ProjectUserDir)) + "temp/";
 		temp_file_handles_[toSave.test].open(game_dir + temp_file_locations_[toSave.test], std::ios::out | std::ios::trunc);
 	
 		temp_file_handles_[toSave.test] << "Timestamp,ExperimentID,"
@@ -53,22 +50,30 @@ void CSVTempStream::SaveFrameToTemp(EyeFrameData& toSave)
 }
 
 
-void CSVTempStream::SaveSymptomScore(int score)
-{
+void CSVTempStream::SaveSymptomScore(SymptomScores scores, bool isBaseline = false) {
 	std::ofstream temp_save_score;
-	std::string dir = std::string(TCHAR_TO_UTF8(*FPaths::ProjectUserDir)) + ".score";
+	std::string dir;
+	if (isBaseline) {
+		dir = std::string(TCHAR_TO_UTF8(*FPaths::ProjectUserDir)) + "temp/baseline_" + SCORES_TEMP;
+	}
+	else {
+		dir = std::string(TCHAR_TO_UTF8(*FPaths::ProjectUserDir)) + "temp/" + SCORES_TEMP;
+	}
 	temp_save_score.open(dir, std::ios::out | std::ios::trunc);
-	temp_save_score << score;
+	temp_save_score << "headache,dizziness,nausea,fogginess" << std::endl;
+	temp_save_score << scores.headache << "," << scores.dizziness << "," << scores.nausea << "," << scores.fogginess;
 	temp_save_score.close();
 }
 
-void CSVTempStream::SaveSymptomScore(SymptomScores scores) {
-
-}
 
 void CSVTempStream::SaveConvergence(float first, float second, float third) {
-
+	std::ofstream temp_convergences;
+	std::string dir = std::string(TCHAR_TO_UTF8(*FPaths::ProjectUserDir)) + "temp/" + CONVERGENCE_VALUES_TEMP_CSV;
+	temp_convergences.open(dir, std::ios::out | std::ios::trunc);
+	temp_convergences << first << "," << second << "," << third;
+	temp_convergences.close();
 }
+
 
 void CSVTempStream::CloseoutTemp(EyeTests::Tests x)
 {

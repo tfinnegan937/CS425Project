@@ -38,7 +38,9 @@ private:
     //Data Files
     FullPatientData current_patient_data;
     FullPatientData comparison_data;
+    bool comparison_data_loaded = false;
     QString last_file_touched = "None";
+    QString comparison_data_path = "None";
     FullPatientData::Tests current_test;
     TempCSVLoader tempCSVLoader;
 
@@ -66,9 +68,13 @@ private:
 
     //Menu Action Functions
     void loadFile();
+    void loadComparisonFile();
     void saveFile();
     void saveAsFile();
 
+    QMenu * QMen_load;
+    QAction * QMenAct_fileCurrentOpen;
+    QAction * QMenAct_fileComparisonOpen;
 
     QMenu * QMen_help;
     QAction * QMenAct_helpAbout;
@@ -86,17 +92,19 @@ private:
 public slots:
     void ipcTick(); //One tick of the IPC communication loop. Executed when a timeout() signal is called from QTmr_ipcCallbackTimer
     void sendMessage(UINT16 mess);
+    void updateSymptomScores();
 signals:
     //TODO
     void simActive(); //This signal is called any time a VOMS test begins, and is passed down to the sim control UI to indicate that it should be locked
     void simFinished(); //This signal is called when all tests are completed and is passed down to the sim control UI to indicate that it should be unlocked
-    void testFinished(EyeTests::Tests testID, FullPatientData& current_patient_data);
+    void testFinished(EyeTests::Tests testID, FullPatientData& current_patient_data); //This signal is called any time a VOMS test ends, and is used to update the current_patient_data.
     void updateVRStatus(QString mess);
-    void patientDataLoaded(PatientData object);
+    void patientDataLoaded(PatientData object); //This signal is called whenever a patient file is loaded for the current_patient_data, and propogates to update the UI.
+    void patientBaselineDataLoaded(PatientData object);
 public:
     explicit QHomeWindow(QWidget * parent = nullptr);
     ~QHomeWindow();
-    void updateCurrentPatientData();
+    void updateCurrentPatientData(); //Updates the current_patient_data object with information from UI.
     void exportDataToPDF();
 };
 

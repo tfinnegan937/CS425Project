@@ -11,8 +11,9 @@ QHomeWindow::QHomeWindow(QWidget *parent) : QWidget(parent) {
     QPane_patientDataPane = new QPatientDataPane(this);
     QPane_simResultsPane = new QResultsPane(this);
 
-    QHBx_panelLayout = new QHBoxLayout(this);
     setupMenuBar();
+    QHBx_panelLayout = new QHBoxLayout(this);
+
 
     QHBx_panelLayout->insertWidget(0, QPane_simCtrlPane);
     QHBx_panelLayout->insertWidget(1, QPane_patientDataPane);
@@ -25,6 +26,11 @@ QHomeWindow::QHomeWindow(QWidget *parent) : QWidget(parent) {
     std::cout << "IPC Initialized" << std::endl;
 
     connectSimPaneSignals();
+
+    connect(this, &QHomeWindow::patientDataLoaded, QPane_patientDataPane, &QPatientDataPane::UpdatePatientDataPanes);
+    connect(this, &QHomeWindow::patientDataLoaded, QPane_simResultsPane, &QResultsPane::UpdateCurrentScores);
+    connect(this, &QHomeWindow::patientBaselineDataLoaded, QPane_simResultsPane, &QResultsPane::UpdateBaselineScores);
+    connect(&tempCSVLoader, &TempCSVLoader::tempCSVLoaded, this, &QHomeWindow::updateSymptomScores);
 
 }
 
@@ -156,7 +162,7 @@ void QHomeWindow::connectSimPaneSignals() {
 void QHomeWindow::setupMenuBar() {
     QMenBar_menuBar = new QMenuBar(this);
 
-    QMen_file = new QMenu("File", QMenBar_menuBar);
+    QMen_file = QMenBar_menuBar->addMenu(tr("&File"));
 
     QMenAct_fileOpen = new QAction("Open...", QMen_file);
     QMen_file->addAction(QMenAct_fileOpen);
@@ -170,28 +176,41 @@ void QHomeWindow::setupMenuBar() {
     QMenAct_fileExit = new QAction("Exit", QMen_file);
     QMen_file->addAction(QMenAct_fileExit);
 
+
+    QMen_load = QMenBar_menuBar->addMenu(tr("&Load Data"));
+
+    QMenAct_fileCurrentOpen = new QAction("Load Current Data", QMen_load);
+    QMen_load->addAction(QMenAct_fileCurrentOpen);
+    QMenAct_fileComparisonOpen = new QAction("Load Baseline Data", QMen_load);
+    QMen_load->addAction(QMenAct_fileComparisonOpen);
+
+
     //TODO connect file actions to appropriate signals
-    QMenBar_menuBar->addMenu(QMen_file);
     connect(QMenAct_fileOpen, &QAction::triggered, this, &QHomeWindow::loadFile);
     connect(QMenAct_fileSave, &QAction::triggered, this, &QHomeWindow::saveFile);
     connect(QMenAct_fileSaveAs, &QAction::triggered, this, &QHomeWindow::saveAsFile);
     connect(QMenAct_fileExportData, &QAction::triggered, this, &QHomeWindow::exportDataToPDF);
+    connect(QMenAct_fileCurrentOpen, &QAction::triggered, this, &QHomeWindow::loadFile);
+    connect(QMenAct_fileComparisonOpen, &QAction::triggered, this, &QHomeWindow::loadComparisonFile);
 
+    connect(QPane_simCtrlPane->QBtn_exportSimData, &QPushButton::pressed, this, &QHomeWindow::exportDataToPDF);
 
-    QMen_help = new QMenu("Help", QMenBar_menuBar);
+    QMen_help = QMenBar_menuBar->addMenu(tr("&Help"));
 
     QMenAct_helpAbout = new QAction("About", QMen_help);
     QMen_help->addAction(QMenAct_helpAbout);
 
     //TODO connect help actions to appropriate signals
-    QMenBar_menuBar->addMenu(QMen_help);
-
-    //wdg = new QResultsWindow(this);
-    //wdg->show();
 }
 
 void QHomeWindow::sendMessage(UINT16 mess) {
     ipcController->sendMessage(mess);
+}
+
+
+void QHomeWindow::updateSymptomScores()
+{
+    //TODO
 }
 
 
@@ -220,6 +239,43 @@ void QHomeWindow::loadFile()
             current_patient_data.gender,
             current_patient_data.concussed);
         emit(patientDataLoaded(x));
+
+    } catch (const std::exception &exc) {
+        QMessageBox errorBox;
+        errorBox.critical(0, "Load Error", exc.what());
+        errorBox.setFixedSize(500,200);
+    }
+}
+
+
+void QHomeWindow::loadComparisonFile()
+{
+    QString fileName = QFileDialog::getOpenFileName(this,
+            tr("Open Patient Baseline Data"), "",
+            tr("Comma Seperated Values (*.csv);;All Files (*)"));
+
+    if (fileName.isEmpty()) return;
+
+    CSVSaveLoad saveload;
+
+    try {
+        saveload.LoadData(comparison_data, "", fileName.toStdString().c_str());
+
+        string dob = to_string(comparison_data.date_of_birth[0]) + "/" + to_string(comparison_data.date_of_birth[1]) + "/" + to_string(comparison_data.date_of_birth[2]);
+        string dov = to_string(comparison_data.date_of_visit[0]) + "/" + to_string(comparison_data.date_of_visit[1]) + "/" + to_string(comparison_data.date_of_visit[2]);
+        string doi = to_string(comparison_data.date_of_injury[0]) + "/" + to_string(comparison_data.date_of_injury[1]) + "/" + to_string(comparison_data.date_of_injury[2]);
+        PatientData x = PatientData(
+            QString(dob.c_str()),
+            QString(dov.c_str()),
+            QString(doi.c_str()),
+            comparison_data.first_name,
+            comparison_data.last_name,
+            comparison_data.sport_played,
+            comparison_data.gender,
+            comparison_data.concussed);
+        comparison_data_loaded = true;
+        comparison_data_path = fileName;
+        emit(patientBaselineDataLoaded(x));
 
     } catch (const std::exception &exc) {
         QMessageBox errorBox;
@@ -299,6 +355,7 @@ void QHomeWindow::saveAsFile()
             tr("Save Patient Data"), "",
             tr("Comma Seperated Values (*.csv);;All Files (*)"));
 
+    if (fileName.isEmpty()) return;
 
     last_file_touched = fileName;
 
@@ -323,12 +380,21 @@ void QHomeWindow::exportDataToPDF()
 
     QString fileName = QFileDialog::getSaveFileName(this,
             tr("Export data to..."), "",
-            tr("LaTeX (*.tex);;All Files (*)"));
+            tr("PDF (*.pdf);;All Files (*)"));
+
+    if (fileName.isEmpty()) return;
 
     PDFGenerator pdfgenerator;
 
     try {
-        pdfgenerator.GeneratePDFFromData(last_file_touched.toStdString().c_str(), "None", fileName.toStdString().c_str());
+        if (comparison_data_loaded) {
+            std::cout << "Generating comparison PDF..." << std::endl;
+            pdfgenerator.GeneratePDFComparisonFromData(last_file_touched.toStdString().c_str(), comparison_data_path.toStdString().c_str(), "None", fileName.toStdString().c_str());
+        } else {
+            std::cout << "Generating solo PDF..." << std::endl;
+            pdfgenerator.GeneratePDFFromData(last_file_touched.toStdString().c_str(), "None", fileName.toStdString().c_str());
+        }
+
     } catch (const std::exception &exc) {
         QMessageBox errorBox;
         errorBox.critical(0, "Export Error", exc.what());
