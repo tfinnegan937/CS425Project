@@ -22,7 +22,7 @@ QHomeWindow::QHomeWindow(QWidget *parent) : QWidget(parent) {
     this->setLayout(QHBx_panelLayout);
     //Initialize IPC communication
     initializeIPC();
-
+    std::cout << "IPC Initialized" << std::endl;
 
     connectSimPaneSignals();
 

@@ -29,8 +29,8 @@ void ATestController::BeginPlay()
 	FString project_directory = FPaths::ProjectDir();
 	if (GEngine) GEngine->AddOnScreenDebugMessage(-1, 15.0f, FColor::Yellow, FString::Printf(TEXT("Opening physician's interface...")));
 	FString binary = project_directory.Append("\\Binaries\\Win64\\DesktopInterface.exe");
-	FString dir = project_directory.Append("\\Binaries\\Win64");
-	FProcHandle tempHandle = FPlatformProcess::CreateProc(*binary, nullptr, true, false, false, nullptr, 0, *dir, nullptr);
+	FProcHandle tempHandle = FPlatformProcess::CreateProc(*binary, nullptr, true, false, false, nullptr, 0, nullptr, nullptr);
+	GEngine->AddOnScreenDebugMessage(-1, 15.0f, FColor::Yellow, binary);
 	if (!tempHandle.IsValid()) {
 		if (GEngine) GEngine->AddOnScreenDebugMessage(-1, 15.0f, FColor::Yellow, FString::Printf(TEXT("Failed to open physician's interface!")));
 	}
