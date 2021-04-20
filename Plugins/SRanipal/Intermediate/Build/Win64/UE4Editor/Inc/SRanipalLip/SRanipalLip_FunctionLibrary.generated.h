@@ -9,9 +9,10 @@
 
 PRAGMA_DISABLE_DEPRECATION_WARNINGS
 class UTexture2D;
-enum class LipShapeEnum_v2 : uint8; 
-enum class LipShapeEnum : uint8; 
+ 
 enum class SupportedLipVersion : uint8;
+enum class LipShapeEnum : uint8; 
+enum class LipShapeEnum_v2 : uint8; 
 #ifdef SRANIPALLIP_SRanipalLip_FunctionLibrary_generated_h
 #error "SRanipalLip_FunctionLibrary.generated.h already included, missing '#pragma once' in SRanipalLip_FunctionLibrary.h"
 #endif
@@ -21,6 +22,8 @@ enum class SupportedLipVersion : uint8;
 #define VPVR_Plugins_SRanipal_Source_SRanipalLip_Public_SRanipalLip_FunctionLibrary_h_16_RPC_WRAPPERS \
  \
 	DECLARE_FUNCTION(execUpdateTexture); \
+	DECLARE_FUNCTION(execGetLipWeightings_byName); \
+	DECLARE_FUNCTION(execGetLipWeightings_byEnum); \
 	DECLARE_FUNCTION(execGetLipWeightings_v2); \
 	DECLARE_FUNCTION(execGetLipWeightings); \
 	DECLARE_FUNCTION(execStopLipFramework); \
@@ -30,6 +33,8 @@ enum class SupportedLipVersion : uint8;
 #define VPVR_Plugins_SRanipal_Source_SRanipalLip_Public_SRanipalLip_FunctionLibrary_h_16_RPC_WRAPPERS_NO_PURE_DECLS \
  \
 	DECLARE_FUNCTION(execUpdateTexture); \
+	DECLARE_FUNCTION(execGetLipWeightings_byName); \
+	DECLARE_FUNCTION(execGetLipWeightings_byEnum); \
 	DECLARE_FUNCTION(execGetLipWeightings_v2); \
 	DECLARE_FUNCTION(execGetLipWeightings); \
 	DECLARE_FUNCTION(execStopLipFramework); \
