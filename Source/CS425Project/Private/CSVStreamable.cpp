@@ -27,7 +27,7 @@ void CSVStreamable::SaveConvergenceData(float first, float second, float third) 
 	csvStream->SaveConvergence(first, second, third);
 }
 
-void CSVStreamable::SaveEyeFrameData(float timestamp, int test, FEyeTrackerGazeData& combinedEye, FEyeTrackerStereoGazeData& soloEyes, FVector& localBallPosition, FVector& worldBallPosition, FVector& headPosition, FVector& headOrientation) {
+void CSVStreamable::SaveEyeFrameData(float timestamp, int test, FEyeTrackerGazeData combinedEye, FEyeTrackerStereoGazeData soloEyes, FVector localBallPosition, FVector worldBallPosition, FVector headPosition, FVector headOrientation) {
 	EyeFrameData frame = CreateEyeFrame(timestamp, (EyeTests::Tests)test, combinedEye, soloEyes, localBallPosition, worldBallPosition, headPosition, headOrientation);
 }
 

@@ -34,7 +34,7 @@ public:
 		void SaveConvergenceData(float first, float second, float third);
 
 	UFUNCTION(BlueprintCallable, Category = "IPC Functions")
-		void SaveEyeFrameData(float timestamp, int test, FEyeTrackerGazeData& combinedEye, FEyeTrackerStereoGazeData& soloEyes, FVector& localBallPosition, FVector& worldBallPosition, FVector& headPosition, FVector& headOrientation);
+		void SaveEyeFrameData(float timestamp, int test, FEyeTrackerGazeData combinedEye, FEyeTrackerStereoGazeData soloEyes, FVector localBallPosition, FVector worldBallPosition, FVector headPosition, FVector headOrientation);
 
 	void Closeup(int test);
 

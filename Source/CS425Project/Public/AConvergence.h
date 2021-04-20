@@ -4,10 +4,10 @@
 
 #include "CoreMinimal.h"
 #include "GameFramework/Pawn.h"
-#include "CSVStreamable.h"
+#include "CSVStreamablePawn.h"
 #include "AConvergence.generated.h"
 UCLASS()
-class CS425PROJECT_API AAConvergence : public APawn, public CSVStreamable
+class CS425PROJECT_API AAConvergence : public ACSVStreamablePawn
 {
 	GENERATED_BODY()
 
