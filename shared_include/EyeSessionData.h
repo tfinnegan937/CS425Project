@@ -13,10 +13,7 @@ struct EyeSessionData
 {
     EyeSessionData(){};
     ~EyeSessionData(){};
-    float symptomHeadache = 0;
-    float symptomDizziness = 0;
-    float symptomNausea = 0;
-    float symptomFogginess = 0;
-    float convergence_measurements[3] = {0.0};
+    int changeOfSymptoms = 0;
+    int symptomScore = 0;
     std::vector<EyeFrameData> eyeFrames;
 };

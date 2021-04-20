@@ -46,12 +46,5 @@ struct FullPatientData
 
     bool tests_with_data[NumOfTests] = { false };
 
-    bool baseline_loaded = false;
-
-    float symptomHeadacheBaseline = 0;
-    float symptomDizzinessBaseline = 0;
-    float symptomNauseaBaseline = 0;
-    float symptomFogginessBaseline = 0;
-
     vector<EyeSessionData> test_data;
 };

@@ -199,6 +199,8 @@ void TestQueueManager::stopAllTests() {
 	((AAConvergence*)getTest("convergence"))->StopTest();
 	((AAVMS*)getTest("convergence"))->StopTest();
 	((ATestController*)parent)->SignalUITestsDone();
+
+
 }
 
 void TestQueueManager::tick() {

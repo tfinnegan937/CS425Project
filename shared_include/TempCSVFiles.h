@@ -7,5 +7,3 @@
 #define VOR_VERTICAL_TEMP_CSV "temp_vor_vertical.csv"
 #define NEAR_POINT_CONVERGENCE_TEMP_CSV "temp_near_point_convergence.csv"
 #define VMS_TEMP_CSV "temp_vms.csv"
-#define CONVERGENCE_VALUES_TEMP_CSV "temp_convergences.csv"
-#define SCORES_TEMP "temp_scores.csv"

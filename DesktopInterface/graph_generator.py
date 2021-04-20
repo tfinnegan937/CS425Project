@@ -49,6 +49,12 @@ def create_all_graphs(test):
     
     list_of_graphs = []
 
+    create_graph(test.timestamp, test.changeOfSymptom, "Change in Symptoms vs Time",\
+        "Time (s)", "Change in Symptoms", list_of_graphs)
+
+    create_graph(test.timestamp, test.symptomScore, "Symptom Score vs Time",\
+        "Time (s)", "Symptom Score", list_of_graphs)
+
     create_graph(test.timestamp, test.localDotPositionX, "Local Dot Position X-value vs Time",\
         "Time (s)", "Local Dot Position X-value", list_of_graphs)
 
