@@ -77,7 +77,6 @@ private:
     void setupMenuBar();
 
     bool initializeIPC(); //initialize IPC communication
-    bool initializeDataPipeline(); //initialize Data Pipeline
 
     bool handleIPCMessages(uint16_t message_buffer); //Take received message buffer and handle each received
 
@@ -87,7 +86,6 @@ private:
 public slots:
     void ipcTick(); //One tick of the IPC communication loop. Executed when a timeout() signal is called from QTmr_ipcCallbackTimer
     void sendMessage(UINT16 mess);
-    void addFrameToPatientData(EyeFrameData eyeFrame);
 signals:
     //TODO
     void simActive(); //This signal is called any time a VOMS test begins, and is passed down to the sim control UI to indicate that it should be locked

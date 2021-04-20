@@ -16,14 +16,7 @@ CSVTempStream::CSVTempStream()
 }
 
 
-CSVTempStream::~CSVTempStream()
-{
-	for (int i = 0; i < 7; i++) {
-		if (temp_file_handles_[i].is_open()) {
-			temp_file_handles_[i].close();
-		}
-	}
-}
+
 
 
 void CSVTempStream::SaveFrameToTemp(EyeFrameData& toSave)

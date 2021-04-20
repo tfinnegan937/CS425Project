@@ -11,7 +11,7 @@
 #include "EyeTestEnum.h"
 #include "FullPatientData.h"
 
-class TempCSVLoader
+class TempCSVLoader : public QObject
 {
     Q_OBJECT
 public:

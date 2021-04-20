@@ -9,11 +9,7 @@ CSVStreamable::CSVStreamable()
 	csvStream = new CSVTempStream();
 }
 
-CSVStreamable::~CSVStreamable()
-{
-	delete[] csvStream;
-	csvStream = nullptr;
-}
+
 
 void CSVStreamable::SaveSymptomData(int headache, int dizziness, int nausea, int fogginess) {
 	SymptomScores scores;

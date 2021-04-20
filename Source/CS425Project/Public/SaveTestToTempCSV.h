@@ -20,7 +20,6 @@ private:
 
 public:
 	CSVTempStream();
-	~CSVTempStream();
 
 	void SaveFrameToTemp(EyeFrameData& toSave);
 	void SaveSymptomScore(int score);

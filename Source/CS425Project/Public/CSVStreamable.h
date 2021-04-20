@@ -14,7 +14,6 @@ private:
 	CSVTempStream * csvStream;
 public:
 	CSVStreamable();
-	~CSVStreamable();
 
 	UFUNCTION(BlueprintCallable, Category = "IPC Functions")
 	void SaveSymptomData(int headache, int dizziness, int nausea, int fogginess);

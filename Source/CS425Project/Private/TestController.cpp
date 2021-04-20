@@ -275,12 +275,14 @@ void TestQueueManager::startActiveTest() {
 bool TestQueueManager::isActiveTestDone() {
 	if (activeTest.ToLower().Contains("smooth")) {
 		if (((AASmoothPursuit*)getTest("smooth"))->isCompleted) {
+			((AASmoothPursuit*)getTest("smooth"))->Closeup(0);
 			((ATestController*)parent)->SignalUISingleTestDone(SP_COMPLETED);
 		}
 		return ((AASmoothPursuit*)getTest("smooth"))->isCompleted;
 	}
 	else if (activeTest.ToLower().Contains("saccadeshorizontal")) {
 		if (((AASaccadesHorizontal*)getTest("saccadeshorizontal"))->isCompleted) {
+			((AASaccadesHorizontal*)getTest("saccadeshorizontal"))->Closeup(2);
 			((ATestController*)parent)->SignalUISingleTestDone(SH_COMPLETED);
 
 		}
@@ -288,18 +290,21 @@ bool TestQueueManager::isActiveTestDone() {
 	}
 	else if (activeTest.ToLower().Contains("saccadevertical")) {
 		if (((AASaccadeVertical*)getTest("saccadevertical"))->isCompleted) {
+			((AASaccadeVertical*)getTest("saccadevertical"))->Closeup(1);
 			((ATestController*)parent)->SignalUISingleTestDone(SV_COMPLETED);
 		}
 		return ((AASaccadeVertical*)getTest("saccadevertical"))->isCompleted;
 	}
 	else if (activeTest.ToLower().Contains("vorhorizontal")) {
 		if (((AAVORHorizontal*)getTest("vorhorizontal"))->isCompleted) {
+			((AAVORHorizontal*)getTest("vorhorizontal"))->Closeup(3);
 			((ATestController*)parent)->SignalUISingleTestDone(VORH_COMPLETED);
 		}
 		return ((AAVORHorizontal*)getTest("vorhorizontal"))->isCompleted;
 	}
 	else if (activeTest.ToLower().Contains("vorvertical")) {
 		if (((AAVORVertical*)getTest("vorvertical"))->isCompleted) {
+			((AAVORVertical*)getTest("vorvertical"))->Closeup(4);
 			((ATestController*)parent)->SignalUISingleTestDone(VORV_COMPLETED);
 
 		}
@@ -308,12 +313,13 @@ bool TestQueueManager::isActiveTestDone() {
 	else if (activeTest.ToLower().Contains("convergence")) {
 		if (((AAConvergence*)getTest("convergence"))->isCompleted) {
 			((ATestController*)parent)->SignalUISingleTestDone(CON_COMPLETED);
-
+			((AAConvergence*)getTest("convergence"))->Closeup(5);
 		}
 		return ((AAConvergence*)getTest("convergence"))->isCompleted;
 	}
 	else if (activeTest.ToLower().Contains("vms")) {
 		if (((AAVMS*)getTest("vms"))->isCompleted) {
+			((AAVMS*)getTest("vms"))->Closeup(6);
 			((ATestController*)parent)->SignalUISingleTestDone(VMS_COMPLETED);
 		}
 		return ((AAVMS*)getTest("vms"))->isCompleted;

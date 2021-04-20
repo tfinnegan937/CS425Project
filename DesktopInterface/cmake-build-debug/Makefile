@@ -379,36 +379,6 @@ PatientData.cpp.s:
 	$(MAKE) $(MAKESILENT) -f CMakeFiles\DesktopInterface.dir\build.make CMakeFiles/DesktopInterface.dir/PatientData.cpp.s
 .PHONY : PatientData.cpp.s
 
-PipelineThread.obj: PipelineThread.cpp.obj
-
-.PHONY : PipelineThread.obj
-
-# target to build an object file
-PipelineThread.cpp.obj:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles\DesktopInterfaceTest.dir\build.make CMakeFiles/DesktopInterfaceTest.dir/PipelineThread.cpp.obj
-	$(MAKE) $(MAKESILENT) -f CMakeFiles\DesktopInterface.dir\build.make CMakeFiles/DesktopInterface.dir/PipelineThread.cpp.obj
-.PHONY : PipelineThread.cpp.obj
-
-PipelineThread.i: PipelineThread.cpp.i
-
-.PHONY : PipelineThread.i
-
-# target to preprocess a source file
-PipelineThread.cpp.i:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles\DesktopInterfaceTest.dir\build.make CMakeFiles/DesktopInterfaceTest.dir/PipelineThread.cpp.i
-	$(MAKE) $(MAKESILENT) -f CMakeFiles\DesktopInterface.dir\build.make CMakeFiles/DesktopInterface.dir/PipelineThread.cpp.i
-.PHONY : PipelineThread.cpp.i
-
-PipelineThread.s: PipelineThread.cpp.s
-
-.PHONY : PipelineThread.s
-
-# target to generate assembly for a file
-PipelineThread.cpp.s:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles\DesktopInterfaceTest.dir\build.make CMakeFiles/DesktopInterfaceTest.dir/PipelineThread.cpp.s
-	$(MAKE) $(MAKESILENT) -f CMakeFiles\DesktopInterface.dir\build.make CMakeFiles/DesktopInterface.dir/PipelineThread.cpp.s
-.PHONY : PipelineThread.cpp.s
-
 QHomeWindow.obj: QHomeWindow.cpp.obj
 
 .PHONY : QHomeWindow.obj
@@ -588,6 +558,36 @@ QSimulationControls.cpp.s:
 	$(MAKE) $(MAKESILENT) -f CMakeFiles\DesktopInterfaceTest.dir\build.make CMakeFiles/DesktopInterfaceTest.dir/QSimulationControls.cpp.s
 	$(MAKE) $(MAKESILENT) -f CMakeFiles\DesktopInterface.dir\build.make CMakeFiles/DesktopInterface.dir/QSimulationControls.cpp.s
 .PHONY : QSimulationControls.cpp.s
+
+TempCSVLoader.obj: TempCSVLoader.cpp.obj
+
+.PHONY : TempCSVLoader.obj
+
+# target to build an object file
+TempCSVLoader.cpp.obj:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles\DesktopInterfaceTest.dir\build.make CMakeFiles/DesktopInterfaceTest.dir/TempCSVLoader.cpp.obj
+	$(MAKE) $(MAKESILENT) -f CMakeFiles\DesktopInterface.dir\build.make CMakeFiles/DesktopInterface.dir/TempCSVLoader.cpp.obj
+.PHONY : TempCSVLoader.cpp.obj
+
+TempCSVLoader.i: TempCSVLoader.cpp.i
+
+.PHONY : TempCSVLoader.i
+
+# target to preprocess a source file
+TempCSVLoader.cpp.i:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles\DesktopInterfaceTest.dir\build.make CMakeFiles/DesktopInterfaceTest.dir/TempCSVLoader.cpp.i
+	$(MAKE) $(MAKESILENT) -f CMakeFiles\DesktopInterface.dir\build.make CMakeFiles/DesktopInterface.dir/TempCSVLoader.cpp.i
+.PHONY : TempCSVLoader.cpp.i
+
+TempCSVLoader.s: TempCSVLoader.cpp.s
+
+.PHONY : TempCSVLoader.s
+
+# target to generate assembly for a file
+TempCSVLoader.cpp.s:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles\DesktopInterfaceTest.dir\build.make CMakeFiles/DesktopInterfaceTest.dir/TempCSVLoader.cpp.s
+	$(MAKE) $(MAKESILENT) -f CMakeFiles\DesktopInterface.dir\build.make CMakeFiles/DesktopInterface.dir/TempCSVLoader.cpp.s
+.PHONY : TempCSVLoader.cpp.s
 
 WindowsIPCControls.obj: WindowsIPCControls.cpp.obj
 
@@ -789,9 +789,6 @@ help:
 	@echo ... PatientData.obj
 	@echo ... PatientData.i
 	@echo ... PatientData.s
-	@echo ... PipelineThread.obj
-	@echo ... PipelineThread.i
-	@echo ... PipelineThread.s
 	@echo ... QHomeWindow.obj
 	@echo ... QHomeWindow.i
 	@echo ... QHomeWindow.s
@@ -810,6 +807,9 @@ help:
 	@echo ... QSimulationControls.obj
 	@echo ... QSimulationControls.i
 	@echo ... QSimulationControls.s
+	@echo ... TempCSVLoader.obj
+	@echo ... TempCSVLoader.i
+	@echo ... TempCSVLoader.s
 	@echo ... WindowsIPCControls.obj
 	@echo ... WindowsIPCControls.i
 	@echo ... WindowsIPCControls.s

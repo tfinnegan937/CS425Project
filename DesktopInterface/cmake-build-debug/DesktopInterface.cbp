@@ -248,14 +248,6 @@
 			<Option target="DesktopInterfaceTest"/>
 			<Option target="DesktopInterface"/>
 		</Unit>
-		<Unit filename="E:/CS425Project/VPVR/DesktopInterface/PipelineThread.cpp">
-			<Option target="DesktopInterfaceTest"/>
-			<Option target="DesktopInterface"/>
-		</Unit>
-		<Unit filename="E:/CS425Project/VPVR/DesktopInterface/PipelineThread.h">
-			<Option target="DesktopInterfaceTest"/>
-			<Option target="DesktopInterface"/>
-		</Unit>
 		<Unit filename="E:/CS425Project/VPVR/DesktopInterface/QHomeWindow.cpp">
 			<Option target="DesktopInterfaceTest"/>
 			<Option target="DesktopInterface"/>
@@ -308,6 +300,14 @@
 			<Option target="DesktopInterfaceTest"/>
 			<Option target="DesktopInterface"/>
 		</Unit>
+		<Unit filename="E:/CS425Project/VPVR/DesktopInterface/TempCSVLoader.cpp">
+			<Option target="DesktopInterfaceTest"/>
+			<Option target="DesktopInterface"/>
+		</Unit>
+		<Unit filename="E:/CS425Project/VPVR/DesktopInterface/TempCSVLoader.h">
+			<Option target="DesktopInterfaceTest"/>
+			<Option target="DesktopInterface"/>
+		</Unit>
 		<Unit filename="E:/CS425Project/VPVR/DesktopInterface/WindowsIPCControls.cpp">
 			<Option target="DesktopInterfaceTest"/>
 			<Option target="DesktopInterface"/>
@@ -349,6 +349,10 @@
 			<Option target="DesktopInterfaceTest"/>
 			<Option target="DesktopInterface"/>
 		</Unit>
+		<Unit filename="E:/CS425Project/VPVR/shared_include/EyeTestEnum.h">
+			<Option target="DesktopInterfaceTest"/>
+			<Option target="DesktopInterface"/>
+		</Unit>
 		<Unit filename="E:/CS425Project/VPVR/shared_include/FullPatientData.cpp">
 			<Option target="DesktopInterfaceTest"/>
 			<Option target="DesktopInterface"/>
@@ -357,7 +361,7 @@
 			<Option target="DesktopInterfaceTest"/>
 			<Option target="DesktopInterface"/>
 		</Unit>
-		<Unit filename="E:/CS425Project/VPVR/shared_include/Pipeline_Constants.h">
+		<Unit filename="E:/CS425Project/VPVR/shared_include/TempCSVFiles.h">
 			<Option target="DesktopInterfaceTest"/>
 			<Option target="DesktopInterface"/>
 		</Unit>
