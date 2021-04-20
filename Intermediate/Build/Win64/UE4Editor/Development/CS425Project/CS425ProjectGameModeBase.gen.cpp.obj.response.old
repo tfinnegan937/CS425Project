@@ -236,6 +236,8 @@
 /I E:\CS425Project\VPVR\shared_include
 /I E:\CS425Project\VPVR\Source\CS425Project\Public
 /I Runtime\Networking\Public
+/I ..\Intermediate\Build\Win64\UE4Editor\Inc\EyeTracker
+/I Runtime\EyeTracker\Public
 /I ThirdParty\PhysX3\PxShared\include
 /I ThirdParty\PhysX3\PxShared\include\cudamanager
 /I ThirdParty\PhysX3\PxShared\include\filebuf
