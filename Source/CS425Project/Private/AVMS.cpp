@@ -4,7 +4,7 @@
 #include "AVMS.h"
 
 // Sets default values
-AAVMS::AAVMS()
+AAVMS::AAVMS() : CSVStreamable()
 {
  	// Set this pawn to call Tick() every frame.  You can turn this off to improve performance if you don't need it.
 	PrimaryActorTick.bCanEverTick = true;
