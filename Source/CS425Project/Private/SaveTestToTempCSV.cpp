@@ -50,7 +50,7 @@ void CSVTempStream::SaveFrameToTemp(EyeFrameData& toSave)
 }
 
 
-void CSVTempStream::SaveSymptomScore(SymptomScores scores, bool isBaseline = false) {
+void CSVTempStream::SaveSymptomScore(SymptomScores scores, bool isBaseline) {
 	std::ofstream temp_save_score;
 	std::string dir;
 	if (isBaseline) {
