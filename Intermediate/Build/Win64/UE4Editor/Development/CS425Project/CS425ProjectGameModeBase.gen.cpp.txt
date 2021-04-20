@@ -1,9 +1,9 @@
-E:\CS425Project\VPVR\Intermediate\Build\Win64\UE4Editor\Development\CS425Project\Definitions.CS425Project.h
-E:\UE_4.26\Engine\Source\Runtime\CoreUObject\Public\UObject/GeneratedCppIncludes.h
-E:\UE_4.26\Engine\Source\Runtime\CoreUObject\Public\UObject/MetaData.h
-E:\CS425Project\VPVR\Source\CS425Project/CS425ProjectGameModeBase.h
-E:\UE_4.26\Engine\Source\Runtime\Engine\Classes\GameFramework/GameModeBase.h
-E:\UE_4.26\Engine\Source\Runtime\Engine\Classes\Engine/ServerStatReplicator.h
-E:\UE_4.26\Engine\Intermediate\Build\Win64\UE4Editor\Inc\Engine\ServerStatReplicator.generated.h
-E:\UE_4.26\Engine\Intermediate\Build\Win64\UE4Editor\Inc\Engine\GameModeBase.generated.h
-E:\CS425Project\VPVR\Intermediate\Build\Win64\UE4Editor\Inc\CS425Project\CS425ProjectGameModeBase.generated.h
+C:\Users\ohman\Documents\Senior Project\VPVR\Intermediate\Build\Win64\UE4Editor\Development\CS425Project\Definitions.CS425Project.h
+C:\Program Files\Epic Games\UE_4.26\Engine\Source\Runtime\CoreUObject\Public\UObject/GeneratedCppIncludes.h
+C:\Program Files\Epic Games\UE_4.26\Engine\Source\Runtime\CoreUObject\Public\UObject/MetaData.h
+C:\Users\ohman\Documents\Senior Project\VPVR\Source\CS425Project/CS425ProjectGameModeBase.h
+C:\Program Files\Epic Games\UE_4.26\Engine\Source\Runtime\Engine\Classes\GameFramework/GameModeBase.h
+C:\Program Files\Epic Games\UE_4.26\Engine\Source\Runtime\Engine\Classes\Engine/ServerStatReplicator.h
+C:\Program Files\Epic Games\UE_4.26\Engine\Intermediate\Build\Win64\UE4Editor\Inc\Engine\ServerStatReplicator.generated.h
+C:\Program Files\Epic Games\UE_4.26\Engine\Intermediate\Build\Win64\UE4Editor\Inc\Engine\GameModeBase.generated.h
+C:\Users\ohman\Documents\Senior Project\VPVR\Intermediate\Build\Win64\UE4Editor\Inc\CS425Project\CS425ProjectGameModeBase.generated.h
