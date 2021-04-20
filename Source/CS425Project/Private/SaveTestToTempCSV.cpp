@@ -3,7 +3,6 @@
 #pragma once
 
 #include "SaveTestToTempCSV.h"
-
 CSVTempStream::CSVTempStream()
 {
 	temp_file_locations_.resize(7);
@@ -70,6 +69,13 @@ void CSVTempStream::SaveSymptomScore(int score)
 	temp_save_score.close();
 }
 
+void CSVTempStream::SaveSymptomScore(SymptomScores scores) {
+
+}
+
+void CSVTempStream::SaveConvergence(float first, float second, float third) {
+
+}
 
 void CSVTempStream::CloseoutTemp(EyeTests::Tests x)
 {

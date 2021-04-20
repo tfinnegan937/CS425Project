@@ -11,7 +11,7 @@
 #include <iostream>
 #include <fstream>
 #include "CoreMinimal.h"
-
+#include "SymptomScores.h"
 class CSVTempStream
 {
 private:
@@ -24,6 +24,8 @@ public:
 
 	void SaveFrameToTemp(EyeFrameData& toSave);
 	void SaveSymptomScore(int score);
+	void SaveSymptomScore(SymptomScores scores);
+	void SaveConvergence(float first, float second, float third);
 	void CloseoutTemp(EyeTests::Tests x);
 };
 

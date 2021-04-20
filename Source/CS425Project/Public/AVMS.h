@@ -4,10 +4,12 @@
 
 #include "CoreMinimal.h"
 #include "GameFramework/Pawn.h"
+#include "CSVStreamable.h"
+
 #include "AVMS.generated.h"
 
 UCLASS()
-class CS425PROJECT_API AAVMS : public APawn
+class CS425PROJECT_API AAVMS : public APawn, public CSVStreamable
 {
 	GENERATED_BODY()
 

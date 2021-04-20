@@ -4,10 +4,12 @@
 
 #include "CoreMinimal.h"
 #include "GameFramework/Actor.h"
+#include "CSVStreamable.h"
+
 #include "ASaccadesHorizontal.generated.h"
 
 UCLASS()
-class CS425PROJECT_API AASaccadesHorizontal : public AActor
+class CS425PROJECT_API AASaccadesHorizontal : public AActor, public CSVStreamable
 {
 	GENERATED_BODY()
 	

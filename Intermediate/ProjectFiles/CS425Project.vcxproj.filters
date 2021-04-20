@@ -3,7 +3,7 @@
   <ItemGroup>
     <None Include="..\..\CS425Project.uproject" />
     <Filter Include="Source">
-      <UniqueIdentifier>{D0C48F62-F2A6-4847-B92C-AE1D026B61FA}</UniqueIdentifier>
+      <UniqueIdentifier>{C63CE1B1-48CA-499A-B52D-405CBEFFA907}</UniqueIdentifier>
     </Filter>
     <None Include="..\..\Source\CS425Project.Target.cs">
       <Filter>Source</Filter>
@@ -16,7 +16,7 @@
     <None Include="..\..\convertCSVToNew.py" />
     <None Include="..\..\oldCSVVMS.csv" />
     <Filter Include="Config">
-      <UniqueIdentifier>{1A7528D5-55AD-4CE9-B996-0CFF515657F2}</UniqueIdentifier>
+      <UniqueIdentifier>{F93C90BC-4DC8-484E-99E2-601525FA5AD8}</UniqueIdentifier>
     </Filter>
     <None Include="..\..\Config\DefaultEditor.ini">
       <Filter>Config</Filter>
@@ -31,7 +31,7 @@
       <Filter>Config</Filter>
     </None>
     <Filter Include="Config\SteamVRBindings">
-      <UniqueIdentifier>{2B473329-BD0A-45AB-AA71-1CF15CA3E0F0}</UniqueIdentifier>
+      <UniqueIdentifier>{36D9C4EA-6E3B-4368-8E3A-E8AD2B8C4D19}</UniqueIdentifier>
     </Filter>
     <None Include="..\..\Config\SteamVRBindings\gamepad.json">
       <Filter>Config\SteamVRBindings</Filter>
@@ -112,22 +112,22 @@
       <Filter>Config\SteamVRBindings</Filter>
     </None>
     <Filter Include="Plugins">
-      <UniqueIdentifier>{518080ED-65A1-4DAB-9E17-8EB3739D7727}</UniqueIdentifier>
+      <UniqueIdentifier>{B085E01F-A92F-4350-896B-49B891EB7731}</UniqueIdentifier>
     </Filter>
     <Filter Include="Plugins\SRanipal">
-      <UniqueIdentifier>{93BBA7C2-A5FA-48F3-93CB-054F12009459}</UniqueIdentifier>
+      <UniqueIdentifier>{2E17AD26-1B67-4BE8-9D29-10F475975B48}</UniqueIdentifier>
     </Filter>
     <Filter Include="Plugins\SRanipal\Source">
-      <UniqueIdentifier>{EE6644C5-F47F-4DF3-A722-6C79163BF5F9}</UniqueIdentifier>
+      <UniqueIdentifier>{92B57DF0-0AD7-4931-B173-E4C8AB353A6A}</UniqueIdentifier>
     </Filter>
     <Filter Include="Plugins\SRanipal\Source\SRanipal">
-      <UniqueIdentifier>{33181C80-3AD7-4ABE-9B46-80AD39161341}</UniqueIdentifier>
+      <UniqueIdentifier>{793781D1-6138-48EE-AE8F-BAF9EBF8145B}</UniqueIdentifier>
     </Filter>
     <None Include="..\..\Plugins\SRanipal\Source\SRanipal\SRanipal.Build.cs">
       <Filter>Plugins\SRanipal\Source\SRanipal</Filter>
     </None>
     <Filter Include="Plugins\SRanipal\Source\SRanipal\Private">
-      <UniqueIdentifier>{E473A219-FD1C-45BA-A169-A981B582B6EE}</UniqueIdentifier>
+      <UniqueIdentifier>{076F6D25-614E-47C8-B924-AAADDAB426EC}</UniqueIdentifier>
     </Filter>
     <ClCompile Include="..\..\Plugins\SRanipal\Source\SRanipal\Private\SRanipal.cpp">
       <Filter>Plugins\SRanipal\Source\SRanipal\Private</Filter>
@@ -139,7 +139,7 @@
       <Filter>Plugins\SRanipal\Source\SRanipal\Private</Filter>
     </ClInclude>
     <Filter Include="Plugins\SRanipal\Source\SRanipal\Public">
-      <UniqueIdentifier>{67C38E34-D56B-480C-9B4D-A5107E26D54A}</UniqueIdentifier>
+      <UniqueIdentifier>{21004F7C-71E6-457C-BEF1-F8711F1DF263}</UniqueIdentifier>
     </Filter>
     <ClInclude Include="..\..\Plugins\SRanipal\Source\SRanipal\Public\SRanipal.h">
       <Filter>Plugins\SRanipal\Source\SRanipal\Public</Filter>
@@ -154,7 +154,7 @@
       <Filter>Plugins\SRanipal\Source\SRanipal\Public</Filter>
     </ClInclude>
     <Filter Include="Plugins\SRanipal\Source\SRanipal\Public\Eye">
-      <UniqueIdentifier>{3D00ED9B-4E2B-4193-B540-2612A270AEA7}</UniqueIdentifier>
+      <UniqueIdentifier>{82E8155A-5122-4DC1-8D61-67F2FDE3B382}</UniqueIdentifier>
     </Filter>
     <ClInclude Include="..\..\Plugins\SRanipal\Source\SRanipal\Public\Eye\SRanipal_API_Eye.h">
       <Filter>Plugins\SRanipal\Source\SRanipal\Public\Eye</Filter>
@@ -163,7 +163,7 @@
       <Filter>Plugins\SRanipal\Source\SRanipal\Public\Eye</Filter>
     </ClInclude>
     <Filter Include="Plugins\SRanipal\Source\SRanipal\Public\Lip">
-      <UniqueIdentifier>{6535C4EC-FA74-4294-862A-A81528067732}</UniqueIdentifier>
+      <UniqueIdentifier>{075CD78F-DB45-40C5-A06C-B424579048ED}</UniqueIdentifier>
     </Filter>
     <ClInclude Include="..\..\Plugins\SRanipal\Source\SRanipal\Public\Lip\SRanipal_API_Lip.h">
       <Filter>Plugins\SRanipal\Source\SRanipal\Public\Lip</Filter>
@@ -175,25 +175,25 @@
       <Filter>Plugins\SRanipal</Filter>
     </None>
     <Filter Include="Plugins\SRanipal\Config">
-      <UniqueIdentifier>{37CB1AC5-7573-4B4D-B363-C40BF3AE74F8}</UniqueIdentifier>
+      <UniqueIdentifier>{75FB505C-1654-4D9D-9E5E-BF64E43AFF3A}</UniqueIdentifier>
     </Filter>
     <None Include="..\..\Plugins\SRanipal\Config\FilterPlugin.ini">
       <Filter>Plugins\SRanipal\Config</Filter>
     </None>
     <Filter Include="Plugins\SRanipal\Resources">
-      <UniqueIdentifier>{E036E711-5835-4C6E-958A-F3A6B560BD91}</UniqueIdentifier>
+      <UniqueIdentifier>{37E95A9B-090C-40A1-B793-71FE516B3255}</UniqueIdentifier>
     </Filter>
     <None Include="..\..\Plugins\SRanipal\Resources\Icon128.png">
       <Filter>Plugins\SRanipal\Resources</Filter>
     </None>
     <Filter Include="Plugins\SRanipal\Source\SRanipalEditor">
-      <UniqueIdentifier>{6B1AEE01-5AAB-4B6E-B444-9986C48340B9}</UniqueIdentifier>
+      <UniqueIdentifier>{0B55CB85-CBCC-42CA-A310-C6915BA168F1}</UniqueIdentifier>
     </Filter>
     <None Include="..\..\Plugins\SRanipal\Source\SRanipalEditor\SRanipalEditor.Build.cs">
       <Filter>Plugins\SRanipal\Source\SRanipalEditor</Filter>
     </None>
     <Filter Include="Plugins\SRanipal\Source\SRanipalEditor\Private">
-      <UniqueIdentifier>{FC055037-02B0-4F67-A27C-37925217D9CC}</UniqueIdentifier>
+      <UniqueIdentifier>{F8DAF453-B91F-45D0-B6C4-D85CD13EA082}</UniqueIdentifier>
     </Filter>
     <ClCompile Include="..\..\Plugins\SRanipal\Source\SRanipalEditor\Private\SRanipalEditor.cpp">
       <Filter>Plugins\SRanipal\Source\SRanipalEditor\Private</Filter>
@@ -211,19 +211,19 @@
       <Filter>Plugins\SRanipal\Source\SRanipalEditor\Private</Filter>
     </ClInclude>
     <Filter Include="Plugins\SRanipal\Source\SRanipalEditor\Public">
-      <UniqueIdentifier>{EAFA9692-F503-4A1D-A8A7-13B234CE8A95}</UniqueIdentifier>
+      <UniqueIdentifier>{6CEC0BE9-153C-468F-A778-0A0C5FB6B1D0}</UniqueIdentifier>
     </Filter>
     <ClInclude Include="..\..\Plugins\SRanipal\Source\SRanipalEditor\Public\SRanipalEditor.h">
       <Filter>Plugins\SRanipal\Source\SRanipalEditor\Public</Filter>
     </ClInclude>
     <Filter Include="Plugins\SRanipal\Source\SRanipalEye">
-      <UniqueIdentifier>{3060404C-5C0F-4466-9750-B1BD304FFC03}</UniqueIdentifier>
+      <UniqueIdentifier>{0C7F22E6-0663-4D21-87AF-50E2289859B1}</UniqueIdentifier>
     </Filter>
     <None Include="..\..\Plugins\SRanipal\Source\SRanipalEye\SRanipalEye.Build.cs">
       <Filter>Plugins\SRanipal\Source\SRanipalEye</Filter>
     </None>
     <Filter Include="Plugins\SRanipal\Source\SRanipalEye\Private">
-      <UniqueIdentifier>{ABB9DB2B-D355-40BD-8C55-20C084D96ACA}</UniqueIdentifier>
+      <UniqueIdentifier>{C06107EC-A24A-44CC-9259-1A42D91AACBB}</UniqueIdentifier>
     </Filter>
     <ClCompile Include="..\..\Plugins\SRanipal\Source\SRanipalEye\Private\DartBoard.cpp">
       <Filter>Plugins\SRanipal\Source\SRanipalEye\Private</Filter>
@@ -247,7 +247,7 @@
       <Filter>Plugins\SRanipal\Source\SRanipalEye\Private</Filter>
     </ClCompile>
     <Filter Include="Plugins\SRanipal\Source\SRanipalEye\Public">
-      <UniqueIdentifier>{87948354-B694-47B4-9E43-0980EE4FAE4F}</UniqueIdentifier>
+      <UniqueIdentifier>{460D719D-2255-46E9-BCA6-10685CD72CDC}</UniqueIdentifier>
     </Filter>
     <ClInclude Include="..\..\Plugins\SRanipal\Source\SRanipalEye\Public\DartBoard.h">
       <Filter>Plugins\SRanipal\Source\SRanipalEye\Public</Filter>
@@ -271,31 +271,31 @@
       <Filter>Plugins\SRanipal\Source\SRanipalEye\Public</Filter>
     </ClInclude>
     <Filter Include="Plugins\SRanipal\Source\SRanipalEyeTracker">
-      <UniqueIdentifier>{676E964D-A636-403A-9AA1-81B992C50669}</UniqueIdentifier>
+      <UniqueIdentifier>{45CF0E61-B7F5-436F-AB80-52FA7FE164D3}</UniqueIdentifier>
     </Filter>
     <None Include="..\..\Plugins\SRanipal\Source\SRanipalEyeTracker\SRanipalEyeTracker.Build.cs">
       <Filter>Plugins\SRanipal\Source\SRanipalEyeTracker</Filter>
     </None>
     <Filter Include="Plugins\SRanipal\Source\SRanipalEyeTracker\Private">
-      <UniqueIdentifier>{96C99E2F-F3E6-4B9F-8FB0-94B4E8D76923}</UniqueIdentifier>
+      <UniqueIdentifier>{8C84D17F-341A-4D29-B6E9-0148122A8DE2}</UniqueIdentifier>
     </Filter>
     <ClCompile Include="..\..\Plugins\SRanipal\Source\SRanipalEyeTracker\Private\SRanipalEyeTracker.cpp">
       <Filter>Plugins\SRanipal\Source\SRanipalEyeTracker\Private</Filter>
     </ClCompile>
     <Filter Include="Plugins\SRanipal\Source\SRanipalEyeTracker\Public">
-      <UniqueIdentifier>{EB923DD1-DC9A-4267-9AF5-8380184BEC40}</UniqueIdentifier>
+      <UniqueIdentifier>{B84FBEA4-70F4-4940-92FA-15C335CEC9AA}</UniqueIdentifier>
     </Filter>
     <ClInclude Include="..\..\Plugins\SRanipal\Source\SRanipalEyeTracker\Public\SRanipalEyeTracker.h">
       <Filter>Plugins\SRanipal\Source\SRanipalEyeTracker\Public</Filter>
     </ClInclude>
     <Filter Include="Plugins\SRanipal\Source\SRanipalLip">
-      <UniqueIdentifier>{42F2FEE3-2F17-4664-BA75-AF4BEB29D590}</UniqueIdentifier>
+      <UniqueIdentifier>{51953609-DBF1-4E3C-B46A-7E36048EA84E}</UniqueIdentifier>
     </Filter>
     <None Include="..\..\Plugins\SRanipal\Source\SRanipalLip\SRanipalLip.Build.cs">
       <Filter>Plugins\SRanipal\Source\SRanipalLip</Filter>
     </None>
     <Filter Include="Plugins\SRanipal\Source\SRanipalLip\Private">
-      <UniqueIdentifier>{C5C92711-475E-453C-9D61-E44903EC5A94}</UniqueIdentifier>
+      <UniqueIdentifier>{47EA2626-9DE3-4D4B-A266-A9D55781CC70}</UniqueIdentifier>
     </Filter>
     <ClCompile Include="..\..\Plugins\SRanipal\Source\SRanipalLip\Private\SRanipalLip.cpp">
       <Filter>Plugins\SRanipal\Source\SRanipalLip\Private</Filter>
@@ -313,7 +313,7 @@
       <Filter>Plugins\SRanipal\Source\SRanipalLip\Private</Filter>
     </ClCompile>
     <Filter Include="Plugins\SRanipal\Source\SRanipalLip\Public">
-      <UniqueIdentifier>{338AE3C7-3CED-4E9C-8EA6-54E1922A6F1D}</UniqueIdentifier>
+      <UniqueIdentifier>{5C6A2379-F62C-4885-AFD7-510383171501}</UniqueIdentifier>
     </Filter>
     <ClInclude Include="..\..\Plugins\SRanipal\Source\SRanipalLip\Public\SRanipalLip.h">
       <Filter>Plugins\SRanipal\Source\SRanipalLip\Public</Filter>
@@ -331,7 +331,7 @@
       <Filter>Plugins\SRanipal\Source\SRanipalLip\Public</Filter>
     </ClInclude>
     <Filter Include="Source\CS425Project">
-      <UniqueIdentifier>{4D8545D9-6E66-4A3D-8D17-3B80EE8CA3B0}</UniqueIdentifier>
+      <UniqueIdentifier>{3588F4B5-9DE2-4D85-9581-B5143D040732}</UniqueIdentifier>
     </Filter>
     <None Include="..\..\Source\CS425Project\CS425Project.Build.cs">
       <Filter>Source\CS425Project</Filter>
@@ -349,7 +349,7 @@
       <Filter>Source\CS425Project</Filter>
     </ClInclude>
     <Filter Include="Source\CS425Project\Private">
-      <UniqueIdentifier>{9B5721C6-4350-4B9C-ACD8-7305AADA66A9}</UniqueIdentifier>
+      <UniqueIdentifier>{30DBD8A9-453D-4761-8C37-C075E3441515}</UniqueIdentifier>
     </Filter>
     <ClCompile Include="..\..\Source\CS425Project\Private\AConvergence.cpp">
       <Filter>Source\CS425Project\Private</Filter>
@@ -372,13 +372,16 @@
     <ClCompile Include="..\..\Source\CS425Project\Private\AVORVertical.cpp">
       <Filter>Source\CS425Project\Private</Filter>
     </ClCompile>
-    <ClCompile Include="..\..\Source\CS425Project\Private\EyeFrameData.cpp">
+    <ClCompile Include="..\..\Source\CS425Project\Private\CreateEyeFrame.cpp">
       <Filter>Source\CS425Project\Private</Filter>
     </ClCompile>
-    <ClCompile Include="..\..\Source\CS425Project\Private\FCreatePipeWorker.cpp">
+    <ClCompile Include="..\..\Source\CS425Project\Private\CSVStreamable.cpp">
       <Filter>Source\CS425Project\Private</Filter>
     </ClCompile>
-    <ClCompile Include="..\..\Source\CS425Project\Private\Pipeline.cpp">
+    <ClCompile Include="..\..\Source\CS425Project\Private\CSVStreamableActor.cpp">
+      <Filter>Source\CS425Project\Private</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\Source\CS425Project\Private\SaveTestToTempCSV.cpp">
       <Filter>Source\CS425Project\Private</Filter>
     </ClCompile>
     <ClCompile Include="..\..\Source\CS425Project\Private\TestController.cpp">
@@ -388,7 +391,7 @@
       <Filter>Source\CS425Project\Private</Filter>
     </ClCompile>
     <Filter Include="Source\CS425Project\Public">
-      <UniqueIdentifier>{744A5D09-5178-4E5A-B40C-1D8F2388E355}</UniqueIdentifier>
+      <UniqueIdentifier>{023882A8-9704-46E5-9010-F4ACA2E42CD4}</UniqueIdentifier>
     </Filter>
     <ClInclude Include="..\..\Source\CS425Project\Public\AConvergence.h">
       <Filter>Source\CS425Project\Public</Filter>
@@ -411,13 +414,16 @@
     <ClInclude Include="..\..\Source\CS425Project\Public\AVORVertical.h">
       <Filter>Source\CS425Project\Public</Filter>
     </ClInclude>
-    <ClInclude Include="..\..\Source\CS425Project\Public\EyeFrameData.h">
+    <ClInclude Include="..\..\Source\CS425Project\Public\CreateEyeFrame.h">
       <Filter>Source\CS425Project\Public</Filter>
     </ClInclude>
-    <ClInclude Include="..\..\Source\CS425Project\Public\FCreatePipeWorker.h">
+    <ClInclude Include="..\..\Source\CS425Project\Public\CSVStreamable.h">
       <Filter>Source\CS425Project\Public</Filter>
     </ClInclude>
-    <ClInclude Include="..\..\Source\CS425Project\Public\Pipeline.h">
+    <ClInclude Include="..\..\Source\CS425Project\Public\CSVStreamableActor.h">
+      <Filter>Source\CS425Project\Public</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\Source\CS425Project\Public\SaveTestToTempCSV.h">
       <Filter>Source\CS425Project\Public</Filter>
     </ClInclude>
     <ClInclude Include="..\..\Source\CS425Project\Public\TestController.h">

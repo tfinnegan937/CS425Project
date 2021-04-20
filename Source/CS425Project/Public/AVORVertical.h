@@ -4,10 +4,12 @@
 
 #include "CoreMinimal.h"
 #include "GameFramework/Actor.h"
+#include "CSVStreamable.h"
+
 #include "AVORVertical.generated.h"
 
 UCLASS()
-class CS425PROJECT_API AAVORVertical : public AActor
+class CS425PROJECT_API AAVORVertical : public AActor, public CSVStreamable
 {
 	GENERATED_BODY()
 	

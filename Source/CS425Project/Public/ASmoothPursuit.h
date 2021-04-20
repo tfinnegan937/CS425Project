@@ -4,10 +4,12 @@
 
 #include "CoreMinimal.h"
 #include "GameFramework/Actor.h"
+#include "CSVStreamable.h"
+
 #include "ASmoothPursuit.generated.h"
 
 UCLASS()
-class CS425PROJECT_API AASmoothPursuit : public AActor
+class CS425PROJECT_API AASmoothPursuit : public AActor, public CSVStreamable
 {
 	GENERATED_BODY()
 	
