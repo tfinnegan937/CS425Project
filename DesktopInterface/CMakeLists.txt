@@ -93,6 +93,7 @@ add_custom_target(
 #Copies python files over to build
 configure_file(eye_chart.py ${CMAKE_RUNTIME_OUTPUT_DIRECTORY}/eye_chart.py COPYONLY)
 configure_file(generatePDF.py ${CMAKE_RUNTIME_OUTPUT_DIRECTORY}/generatePDF.py COPYONLY)
+configure_file(graph_generator.py ${CMAKE_RUNTIME_OUTPUT_DIRECTORY}/graph_generator.bat COPYONLY)
 configure_file(generatePDF.bat ${CMAKE_RUNTIME_OUTPUT_DIRECTORY}/generatePDF.bat COPYONLY)
 
 #Testing

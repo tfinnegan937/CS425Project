@@ -77,6 +77,20 @@ QString QGenderPicker::getGender() const {
     }
 }
 
+void QGenderPicker::setGender(QString gender)
+{
+    if (gender == QString("Male")) {
+        QRadBtn_male->setChecked(true);
+        QRadBtn_female->setChecked(false);
+    } else if (gender == QString("Female")) {
+        QRadBtn_male->setChecked(false);
+        QRadBtn_female->setChecked(true);
+    } else {
+        QRadBtn_male->setChecked(false);
+        QRadBtn_female->setChecked(false);
+    }
+}
+
 QDatePicker::QDatePicker(QWidget *parent, const QString& label) : QWidget(parent) {
     QLbl_pickerLabel = label;
     QLineEdt_dateField = new QLineEdit("mm/dd/yyyy", this);
@@ -196,4 +210,18 @@ QString QSportPicker::getSport() const {
 
 void QSportPicker::setSport(QString sport) {
     QCmbBox_SportPicker->setCurrentText(sport);
+}
+
+void QPatientDataPane::UpdatePatientDataPanes(PatientData current)
+{
+    QDatePckr_daySeenPicker->updateDate(QDate().fromString(current.getDateSeen()));
+    QDatePckr_dobPicker->updateDate(QDate().fromString(current.getDateOfBirth()));
+    QDatePckr_dateOfInjury->updateDate(QDate().fromString(current.getDateOfInjury()));
+
+    QGenPckr_genderPicker->setGender(current.getGender());
+
+    QLineEdt_firstNameField->setText(current.getFirstName());
+    QLineEdt_lastNameField->setText(current.getLastName());
+
+    QSprtPcker_sportPicker->setSport(current.getSport());
 }

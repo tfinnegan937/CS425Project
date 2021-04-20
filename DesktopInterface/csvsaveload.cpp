@@ -18,7 +18,10 @@ CSVSaveLoad::CSVSaveLoad()
 
 void CSVSaveLoad::CreateEyeFrameHeader(ofstream& output_file)
 {
-    output_file << "ParticipantID,Experiment,ChangeOfSymptom,SymptomScore,Timestamp,"
+    output_file << "ParticipantID,Experiment,"
+                   "ChangeOfHeadache,ChangeOfDizziness,ChangeOfNausea,ChangeOfFogginess,"
+                   "HeadacheScore,DizzinessScore,NauseaScore,FogginessScore,"
+                   "Timestamp,"
                    "LocalDotPositionX,LocalDotPositionY,LocalDotPositionZ,"
                    "WorldDotPositionX,WorldDotPositionY,WorldDotPositionZ,"
                    "HeadPositionX,HeadPositionY,HeadPositionZ,"
@@ -30,7 +33,9 @@ void CSVSaveLoad::CreateEyeFrameHeader(ofstream& output_file)
                    "CombinedEyeOriginX,CombinedEyeOriginY,CombinedEyeOriginZ,"
                    "CombinedEyeDirectionX,CombinedEyeDirectionY,CombinedEyeDirectionZ,"
                    "FixationX,FixationY,FixationZ,"
-                   "ChangeOfSymptom,SymptomScore,"
+                   "FirstConvergence,SecondConvergence,ThirdConvergence,"
+                   "ChangeOfHeadache,ChangeOfDizziness,ChangeOfNausea,ChangeOfFogginess,"
+                   "HeadacheScore,DizzinessScore,NauseaScore,FogginessScore,"
                    "FirstName,LastName,DateOfInjury,DateSeen,Sport,Age,Gender" << std::endl;
 }
 
@@ -68,8 +73,14 @@ void CSVSaveLoad::SaveEyeSessionData(const FullPatientData& to_save, const int c
     for(auto it = current_test.eyeFrames.begin(); it != current_test.eyeFrames.end(); it++) {
         output_file << to_save.participantID.toStdString() << ','
                     << FullPatientData::test_names[current_test_to_save] << ','
-                    << current_test.changeOfSymptoms << ','
-                    << current_test.symptomScore << ','
+                    << (current_test.symptomHeadache - to_save.symptomHeadacheBaseline) << ','
+                    << (current_test.symptomDizziness - to_save.symptomDizzinessBaseline) << ','
+                    << (current_test.symptomNausea - to_save.symptomNauseaBaseline) << ','
+                    << (current_test.symptomFogginess - to_save.symptomFogginessBaseline) << ','
+                    << current_test.symptomHeadache << ','
+                    << current_test.symptomDizziness << ','
+                    << current_test.symptomNausea << ','
+                    << current_test.symptomFogginess << ','
                     << it->timestamp << ','
                     << Serialize3Array(it->localDotPosition) << ','
                     << Serialize3Array(it->worldDotPosition) << ','
@@ -82,8 +93,15 @@ void CSVSaveLoad::SaveEyeSessionData(const FullPatientData& to_save, const int c
                     << Serialize3Array(it->combinedEyeOrigin) << ','
                     << Serialize3Array(it->combinedEyeDirection) << ','
                     << Serialize3Array(it->fixation) << ','
-                    << current_test.changeOfSymptoms << ','
-                    << current_test.symptomScore << ','
+                    << (current_test.symptomHeadache - to_save.symptomHeadacheBaseline) << ','
+                    << (current_test.symptomDizziness - to_save.symptomDizzinessBaseline) << ','
+                    << (current_test.symptomNausea - to_save.symptomNauseaBaseline) << ','
+                    << (current_test.symptomFogginess - to_save.symptomFogginessBaseline) << ','
+                    << current_test.symptomHeadache << ','
+                    << current_test.symptomDizziness << ','
+                    << current_test.symptomNausea << ','
+                    << current_test.symptomFogginess << ','
+                    << Serialize3Array(current_test.convergence_measurements) << ','
                     << to_save.first_name.toStdString() << ','
                     << to_save.last_name.toStdString() << ','
                     << DateToString(to_save.date_of_injury) << ','
@@ -127,10 +145,38 @@ void CSVSaveLoad::LoadEyeData(FullPatientData& to_load, ifstream& input_file)
         //Finds which test to sort the current EyeFrame into based on experiment name.
         auto& current_test = to_load.test_data[FullPatientData::test_name_to_id.at(value)];
 
-        getline(s, value, ','); // ChangeOfSymptom
-        current_test.changeOfSymptoms = stoi(value);
-        getline(s, value, ','); // Skips SymptomScore
-        current_test.symptomScore = stoi(value);
+        //Only use this for the first data line to extrapolate baseline symptom scores
+        float change[4];
+        getline(s, value, ',');
+        change[0] = stof(value);
+        getline(s, value, ',');
+        change[1] = stof(value);
+        getline(s, value, ',');
+        change[2] = stof(value);
+        getline(s, value, ',');
+        change[3] = stof(value);
+
+
+
+        //Symptom scores
+        getline(s, value, ',');
+        current_test.symptomHeadache = stof(value);
+        getline(s, value, ',');
+        current_test.symptomDizziness = stof(value);
+        getline(s, value, ',');
+        current_test.symptomNausea = stof(value);
+        getline(s, value, ',');
+        current_test.symptomFogginess = stof(value);
+
+        //If first data line, extrapolate baseline symptom scores
+        if (first_data_line) {
+            to_load.baseline_loaded = true;
+            to_load.symptomHeadacheBaseline = change[0] - current_test.symptomHeadache;
+            to_load.symptomDizzinessBaseline = change[1] - current_test.symptomDizziness;
+            to_load.symptomNauseaBaseline = change[2] - current_test.symptomNausea;
+            to_load.symptomFogginessBaseline = change[3] - current_test.symptomFogginess;
+        }
+
         getline(s, value, ','); // Timestamp
         newEyeFrame.timestamp = stoi(value);
 
@@ -146,9 +192,23 @@ void CSVSaveLoad::LoadEyeData(FullPatientData& to_load, ifstream& input_file)
         LoadEyeFrameFloat3Value(newEyeFrame.combinedEyeDirection, s, value);
         LoadEyeFrameFloat3Value(newEyeFrame.fixation, s, value);
 
+        //Load convergence measurements, should load a 0 unless it is a convergence test.
+        getline(s, value, ',');
+        current_test.convergence_measurements[0] = stof(value);
+        getline(s, value, ',');
+        current_test.convergence_measurements[1] = stof(value);
+        getline(s, value, ',');
+        current_test.convergence_measurements[2] = stof(value);
+
         if (first_data_line) {
-            getline(s, value, ','); // Ignore 2nd ChangeOfSymptom
-            getline(s, value, ','); // Ignore 2nd SymptomScore
+            getline(s, value, ','); // Ignore 2nd Change Of Symptom Scores
+            getline(s, value, ',');
+            getline(s, value, ',');
+            getline(s, value, ',');
+            getline(s, value, ','); // Ignore 2nd Symptom Scores
+            getline(s, value, ',');
+            getline(s, value, ',');
+            getline(s, value, ',');
 
             getline(s, value, ',');
             to_load.first_name = QString(value.c_str());

@@ -48,3 +48,43 @@ bool PatientData::getIsConcussed() const {
 QString PatientData::getGender() const {
     return gender;
 }
+
+QString PatientData::getHeadacheScore() const
+{
+    return headacheScore;
+}
+
+QString PatientData::getDizzinessScore() const
+{
+    return dizzinessScore;
+}
+
+QString PatientData::getNauseaScore() const
+{
+    return nauseaScore;
+}
+
+QString PatientData::getFogginessScore() const
+{
+    return fogginessScore;
+}
+
+void PatientData::setHeadacheScore(float headache)
+{
+    headacheScore = headache;
+}
+
+void PatientData::setDizzinessScore(float dizziness)
+{
+    dizzinessScore = dizziness;
+}
+
+void PatientData::setNauseaScore(float nausea)
+{
+    nauseaScore = nausea;
+}
+
+void PatientData::setFogginessScore(float fogginess)
+{
+    fogginessScore = fogginess;
+}
