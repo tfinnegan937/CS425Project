@@ -34,7 +34,7 @@ The goal of VPVR is to be a platform that can be used to both clinically diagnos
 <div id="poster"></div>
 # Poster
 
-![Our project's poster.](poster.jpg "VPVR Digital Poster")
+![Our project's poster.](https://github.com/tfinnegan937/VPVR/raw/gh-pages/poster.jpg "VPVR Digital Poster")
 <div id="video"></div>
 # Video
 <iframe width="560" height="315" src="https://www.youtube-nocookie.com/embed/C0DPdy98e4c" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
