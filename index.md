@@ -27,7 +27,7 @@ The VOMS Protocol VR project is a system that seeks to be the first step in brin
 The goal of VPVR is to create a platform that can be used to both clinically diagnose concussions, and generate the necessary data with which future projects can train artificial intelligence for automated diagnosis. While the VPVR system administers the VOMS protocol automatically to the patient (with guidance from an attending physician), the eye-tracking sensors within the Vive Pro-Eye headset collect and record information on the patient's eye movements. As eye movement is often noticeably impaired by the presence of a concussion, it is the hope of the VPVR team that this data can be used to train a model that can automatically and accurately detect a concussion at the site in which a concussion has occurred. 
 
 
-## Project Resources and Related Information
+<div id="resources">## Project Resources and Related Information
 
 ### Problem Domain Book
 
@@ -74,3 +74,4 @@ doi:10.7556/jaoa.2018.144
 
 [Virtual Reality (VR) Headsets Market Size To Reach $19.78 Billion By 2025, Owing To High Demand For Smartphone-Enabled & PC-Enabled VR Headsets](https://finance.yahoo.com/news/virtual-reality-vr-headsets-market-101000618.html) by Million Insights  
 - Overview of the growth and future prospects of the VR headset sector. As this grows, the cost of our project should decrease.
+</div>
