@@ -20,13 +20,13 @@ The VOMS Protocol VR project is a system that seeks to be the first step in brin
 The goal of VPVR is to be a platform that can be used to both clinically diagnose concussions, and generate the necessary data with which future projects can train artificial intelligence for automated diagnosis. While the VPVR system administers the VOMS protocol automatically to the patient (with guidance from an attending physician), the eye-tracking sensors within the Vive Pro-Eye headset collect and record information on the patient's eye movements. As eye movement is often noticeably impaired by the presence of a concussion, it is the hope of the VPVR team that this data can eventually be used to investigate concussions and train concussion models for portable, automatic concussion detection.
 
 ## Technologies Used
-- <a href="https://isocpp.org/"><img src="https://github.com/isocpp/logos/blob/master/cpp_logo.png" width="112" height="100" alt="C++"></a>
+- <a href="https://isocpp.org/"><img src="https://github.com/isocpp/logos/blob/master/cpp_logo.png" width="89" height="100" alt="C++"></a>
 - <a href="https://www.python.org/"><img src="python.png" width="100" height="100" alt="Python"></a>
 - <a href="https://www.numpy.org/"><img src="https://github.com/numpy/numpy/blob/main/branding/logo/primary/numpylogo.png" width="225" height="100" alt="Numpy"></a>
-- <a href="https://matplotlib.org/"><img src="matplotlib.svg" width="24" height="100" alt="Matplotlib"></a>
-- <a href="https://www.qt.io/"><img src="qt.png" width="24" height="100" alt="Qt"></a>
-- <a href="https://www.unrealengine.com/">Unreal</a>
+- <a href="https://matplotlib.org/"><img src="matplotlib.svg" width="417" height="100" alt="Matplotlib"></a>
+- <a href="https://www.qt.io/"><img src="qt.png" width="417" height="100" alt="Qt"></a>
 - <a href="https://visualstudio.microsoft.com/"><img src="vs.png" width="100" height="100" alt="Visual Studio"></a>
+- <a href="https://www.unrealengine.com/">Unreal</a>
 - <a href="https://visualstudio.microsoft.com/">HTC Vive Pro-Eye</a>
 
 <div id = "team"></div>
