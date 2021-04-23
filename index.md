@@ -8,11 +8,26 @@ __Computer Science and Engineering Department__
 __Spring 2021__
 
 __Team #3__
+
+<div id="video"></div>
+# Video
+<iframe width="560" height="315" src="https://www.youtube-nocookie.com/embed/C0DPdy98e4c" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+
 <div id = "description"></div>
 ## What is VOMS Protocol VR?
 The VOMS Protocol VR project is a system that seeks to be the first step in bringing the concussion diagnosis process into the modern era. Developed for the Vive Pro-Eye in Unreal Engine and the Qt5 UI framework, VOMS Protocol VR (VPVR) takes existing methods of concussion detection and implements them in virtual reality. Currently, the gold standard for rapid concussion detection is the Vestibular/Oculomotor Motor Screening (VOMS) Assessment, a series of exercises with the head and eye that attempt to induce symptoms in a patient in order to quickly identify a concussion. This screening is often done without the assistance of technology, and relies upon a patient's subjective report of his symptoms. With the rise of Machine Learning and Artificial Intelligence, it is possible that this process can be supplanted with an automated system that uses data and modelling to more accurately detect concussions. No such model has thus far been created due to the lack of available research into the topic, and the sparsity of data upon which such a model could be trained. 
 
 The goal of VPVR is to be a platform that can be used to both clinically diagnose concussions, and generate the necessary data with which future projects can train artificial intelligence for automated diagnosis. While the VPVR system administers the VOMS protocol automatically to the patient (with guidance from an attending physician), the eye-tracking sensors within the Vive Pro-Eye headset collect and record information on the patient's eye movements. As eye movement is often noticeably impaired by the presence of a concussion, it is the hope of the VPVR team that this data can eventually be used to investigate concussions and train concussion models for portable, automatic concussion detection.
+
+## Technologies Used
+- <a href="https://isocpp.org/"><img src="https://github.com/isocpp/logos/blob/master/cpp_logo.png" width="112" height="100" alt="C++"></a>
+- <a href="https://www.python.org/"><img src="python.png" width="100" height="100" alt="Python"></a>
+- <a href="https://www.numpy.org/"><img src="https://github.com/numpy/numpy/blob/main/branding/logo/primary/numpylogo.png" width="225" height="100" alt="Numpy"></a>
+- <a href="https://matplotlib.org/"><img src="matplotlib.svg" width="24" height="100" alt="Matplotlib"></a>
+- <a href="https://www.qt.io/"><img src="qt.png" width="24" height="100" alt="Qt"></a>
+- <a href="https://www.unrealengine.com/">Unreal</a>
+- <a href="https://visualstudio.microsoft.com/"><img src="vs.png" width="100" height="100" alt="Visual Studio"></a>
+- <a href="https://visualstudio.microsoft.com/">HTC Vive Pro-Eye</a>
 
 <div id = "team"></div>
 # Team
@@ -35,9 +50,6 @@ The goal of VPVR is to be a platform that can be used to both clinically diagnos
 # Poster
 
 [![Our project's poster.](https://github.com/tfinnegan937/VPVR/raw/gh-pages/poster.jpg "VPVR Digital Poster")](https://github.com/tfinnegan937/VPVR/raw/gh-pages/poster.jpg)
-<div id="video"></div>
-# Video
-<iframe width="560" height="315" src="https://www.youtube-nocookie.com/embed/C0DPdy98e4c" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
 
 <div id="resources"></div>
 # Project Resources and Related Information
