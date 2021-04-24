@@ -1,18 +1,21 @@
-#pragma once
-#include "CoreMinimal.h"
-#include "GameFramework/Actor.h"
-#include "CSVStreamableActor.h"
+// Fill out your copyright notice in the Description page of Project Settings.
 
+#pragma once
+
+#include "CoreMinimal.h"
+#include "CSVStreamableActor.h"
 #include "AUIController.generated.h"
 
+/**
+ * 
+ */
 UCLASS()
-class CS425PROJECT_API AUIController : public ACSVStreamableActor
+class CS425PROJECT_API AAUIController : public ACSVStreamableActor
 {
-    GENERATED_BODY()
-
+	GENERATED_BODY()
 public:
 	// Sets default values for this actor's properties
-	AUIController();
+	AAUIController();
 	UPROPERTY(EditAnywhere, BlueprintReadWrite, Category = "Completion Identifiers")
 		bool isCompleted = true;
 protected:
@@ -30,4 +33,3 @@ public:
 		void StopTest();
 
 };
-
