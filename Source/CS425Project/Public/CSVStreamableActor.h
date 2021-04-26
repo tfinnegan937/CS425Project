@@ -28,7 +28,7 @@ public:
 	virtual void Tick(float DeltaTime) override;
 
 	UFUNCTION(BlueprintCallable, Category = "IPC Functions")
-		void SaveSymptomData(int headache, int dizziness, int nausea, int fogginess);
+		void SaveSymptomData(int headache, int dizziness, int nausea, int fogginess, bool isBaseline);
 
 	UFUNCTION(BlueprintCallable, Category = "IPC Functions")
 		void SaveConvergenceData(float first, float second, float third);

@@ -30,7 +30,7 @@ void ACSVStreamableActor::Tick(float DeltaTime)
 
 
 
-void ACSVStreamableActor::SaveSymptomData(int headache, int dizziness, int nausea, int fogginess) {
+void ACSVStreamableActor::SaveSymptomData(int headache, int dizziness, int nausea, int fogginess, bool isBaseline) {
 	SymptomScores scores;
 
 	scores.headache = headache;
@@ -38,7 +38,7 @@ void ACSVStreamableActor::SaveSymptomData(int headache, int dizziness, int nause
 	scores.nausea = nausea;
 	scores.fogginess = fogginess;
 
-	csvStream->SaveSymptomScore(scores);
+	csvStream->SaveSymptomScore(scores, isBaseline);
 }
 
 

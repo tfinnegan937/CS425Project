@@ -138,6 +138,7 @@ void TestQueueManager::queueTests(UINT16 mess_in) {
 	if (!testsStarted) {
 		testsStarted = true;
 		testQueue.Empty();
+		testQueue.Enqueue(getTest("UI")); //Enqueue the baseline symptoms
 		if (mess_in & QUEUE_SP) {
 			if (testQueue.IsEmpty()) {
 				activeTest = "smooth";
