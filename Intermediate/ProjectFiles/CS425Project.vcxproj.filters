@@ -3,7 +3,7 @@
   <ItemGroup>
     <None Include="..\..\CS425Project.uproject" />
     <Filter Include="Source">
-      <UniqueIdentifier>{F60E9DAC-B8A3-498F-BBCE-3563E8E8B544}</UniqueIdentifier>
+      <UniqueIdentifier>{852565BC-2989-457B-A78C-171A166A7BC2}</UniqueIdentifier>
     </Filter>
     <None Include="..\..\Source\CS425Project.Target.cs">
       <Filter>Source</Filter>
@@ -16,7 +16,7 @@
     <None Include="..\..\convertCSVToNew.py" />
     <None Include="..\..\oldCSVVMS.csv" />
     <Filter Include="Config">
-      <UniqueIdentifier>{B442FCE7-829A-469B-AF72-E2801EB7BBE1}</UniqueIdentifier>
+      <UniqueIdentifier>{6BF6D764-18E2-4CD3-A939-A25297CC3F54}</UniqueIdentifier>
     </Filter>
     <None Include="..\..\Config\DefaultEditor.ini">
       <Filter>Config</Filter>
@@ -31,7 +31,7 @@
       <Filter>Config</Filter>
     </None>
     <Filter Include="Config\SteamVRBindings">
-      <UniqueIdentifier>{4FD58544-2018-4E7E-927D-BA006A82EFB2}</UniqueIdentifier>
+      <UniqueIdentifier>{799023AA-5829-47DF-AC85-E4CDB0A3D111}</UniqueIdentifier>
     </Filter>
     <None Include="..\..\Config\SteamVRBindings\gamepad.json">
       <Filter>Config\SteamVRBindings</Filter>
@@ -112,7 +112,7 @@
       <Filter>Config\SteamVRBindings</Filter>
     </None>
     <Filter Include="Source\CS425Project">
-      <UniqueIdentifier>{6341B1B7-C1DC-43E2-882C-3E5B2E197C27}</UniqueIdentifier>
+      <UniqueIdentifier>{EB82E1A9-0876-47C9-8B9F-9C8ED882A9D7}</UniqueIdentifier>
     </Filter>
     <None Include="..\..\Source\CS425Project\CS425Project.Build.cs">
       <Filter>Source\CS425Project</Filter>
@@ -130,7 +130,7 @@
       <Filter>Source\CS425Project</Filter>
     </ClInclude>
     <Filter Include="Source\CS425Project\Private">
-      <UniqueIdentifier>{F31DF1B2-CAA5-4E54-B3CE-26670077D4F6}</UniqueIdentifier>
+      <UniqueIdentifier>{689CB5DD-2BFB-4E94-8AD4-D2D5D84671D8}</UniqueIdentifier>
     </Filter>
     <ClCompile Include="..\..\Source\CS425Project\Private\AConvergence.cpp">
       <Filter>Source\CS425Project\Private</Filter>
@@ -178,7 +178,7 @@
       <Filter>Source\CS425Project\Private</Filter>
     </ClCompile>
     <Filter Include="Source\CS425Project\Public">
-      <UniqueIdentifier>{7A313F8A-C43C-4122-8560-C734D33C24F2}</UniqueIdentifier>
+      <UniqueIdentifier>{F2400134-E616-420E-BA82-392244B004C9}</UniqueIdentifier>
     </Filter>
     <ClInclude Include="..\..\Source\CS425Project\Public\AConvergence.h">
       <Filter>Source\CS425Project\Public</Filter>

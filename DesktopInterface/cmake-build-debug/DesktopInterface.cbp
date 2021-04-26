@@ -377,6 +377,9 @@
 		<Unit filename="E:/CS425Project/VPVR/DesktopInterface/generatePDF.py">
 			<Option virtualFolder="CMake Files\"/>
 		</Unit>
+		<Unit filename="E:/CS425Project/VPVR/DesktopInterface/graph_generator.py">
+			<Option virtualFolder="CMake Files\"/>
+		</Unit>
 		<Unit filename="E:/CS425Project/VPVR/DesktopInterface/Qt/5.15.2/mingw81_64/lib/cmake/Qt5Widgets/Qt5WidgetsConfig.cmake">
 			<Option virtualFolder="CMake Files\Qt\5.15.2\mingw81_64\lib\cmake\Qt5Widgets\"/>
 		</Unit>

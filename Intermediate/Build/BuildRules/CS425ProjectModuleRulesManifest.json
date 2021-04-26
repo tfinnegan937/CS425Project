@@ -1,8 +1,13 @@
 {
 	"SourceFiles": [
-		"C:\\Users\\ohman\\Documents\\Senior Project\\VPVR\\Source\\CS425Project\\CS425Project.Build.cs",
-		"C:\\Users\\ohman\\Documents\\Senior Project\\VPVR\\Source\\CS425Project.Target.cs",
-		"C:\\Users\\ohman\\Documents\\Senior Project\\VPVR\\Source\\CS425ProjectEditor.Target.cs"
+		"E:\\CS425Project\\VPVR\\Source\\CS425Project\\CS425Project.Build.cs",
+		"E:\\CS425Project\\VPVR\\Plugins\\SRanipal\\Source\\SRanipalEye\\SRanipalEye.Build.cs",
+		"E:\\CS425Project\\VPVR\\Plugins\\SRanipal\\Source\\SRanipalEditor\\SRanipalEditor.Build.cs",
+		"E:\\CS425Project\\VPVR\\Plugins\\SRanipal\\Source\\SRanipalEyeTracker\\SRanipalEyeTracker.Build.cs",
+		"E:\\CS425Project\\VPVR\\Plugins\\SRanipal\\Source\\SRanipal\\SRanipal.Build.cs",
+		"E:\\CS425Project\\VPVR\\Plugins\\SRanipal\\Source\\SRanipalLip\\SRanipalLip.Build.cs",
+		"E:\\CS425Project\\VPVR\\Source\\CS425Project.Target.cs",
+		"E:\\CS425Project\\VPVR\\Source\\CS425ProjectEditor.Target.cs"
 	],
-	"EngineVersion": "4.26.1"
+	"EngineVersion": "4.26.0"
 }
