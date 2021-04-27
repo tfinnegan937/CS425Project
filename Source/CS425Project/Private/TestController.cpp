@@ -9,6 +9,7 @@
 #include "AVORHorizontal.h"
 #include "AVORVertical.h"
 #include "AVMS.h"
+#include "AUIController.h"
 #include "Kismet/KismetSystemLibrary.h"
 // Sets default values
 ATestController::ATestController()
@@ -27,12 +28,12 @@ void ATestController::BeginPlay()
 	Super::BeginPlay();
 	//instantiate_shared_mem();
 	FString project_directory = FPaths::ProjectDir();
-	if (GEngine) GEngine->AddOnScreenDebugMessage(-1, 15.0f, FColor::Yellow, FString::Printf(TEXT("Opening physician's interface...")));
+	//if (GEngine) GEngine->AddOnScreenDebugMessage(-1, 15.0f, FColor::Yellow, FString::Printf(TEXT("Opening physician's interface...")));
 	FString binary = project_directory.Append("\\Binaries\\Win64\\DesktopInterface.exe");
 	FProcHandle tempHandle = FPlatformProcess::CreateProc(*binary, nullptr, true, false, false, nullptr, 0, nullptr, nullptr);
 	GEngine->AddOnScreenDebugMessage(-1, 15.0f, FColor::Yellow, binary);
 	if (!tempHandle.IsValid()) {
-		if (GEngine) GEngine->AddOnScreenDebugMessage(-1, 15.0f, FColor::Yellow, FString::Printf(TEXT("Failed to open physician's interface!")));
+		//if (GEngine) GEngine->AddOnScreenDebugMessage(-1, 15.0f, FColor::Yellow, FString::Printf(TEXT("Failed to open physician's interface!")));
 	}
 
 
@@ -128,6 +129,8 @@ AActor* TestQueueManager::getTest(FString testNameContains) {
 	parent->GetAttachedActors(tests);
 	for (int i = 0; i < tests.Num(); i++) {
 		if (tests[i]->GetName().ToLower().Contains(testNameContains)) {
+			if (GEngine) GEngine->AddOnScreenDebugMessage(-1, 15.0f, FColor::Yellow, tests[i]->GetName());
+
 			return tests[i];
 		}
 	}
@@ -138,7 +141,11 @@ void TestQueueManager::queueTests(UINT16 mess_in) {
 	if (!testsStarted) {
 		testsStarted = true;
 		testQueue.Empty();
-		testQueue.Enqueue(getTest("UI")); //Enqueue the baseline symptoms
+		if (getTest("AUI") == nullptr) {
+			//if (GEngine) GEngine->AddOnScreenDebugMessage(-1, 15.0f, FColor::Yellow, TEXT("nullptr"));
+		}
+		testQueue.Enqueue(getTest("AUI"));
+		activeTest = "AUI";
 		if (mess_in & QUEUE_SP) {
 			if (testQueue.IsEmpty()) {
 				activeTest = "smooth";
@@ -200,11 +207,16 @@ void TestQueueManager::stopAllTests() {
 	((AAConvergence*)getTest("convergence"))->StopTest();
 	((AAVMS*)getTest("convergence"))->StopTest();
 	((ATestController*)parent)->SignalUITestsDone();
+	((AAUIController*)getTest("AUI"))->StopTest();
 }
 
 void TestQueueManager::tick() {
 	if (testsStarted) {
+		//if (GEngine) GEngine->AddOnScreenDebugMessage(-1, 15.0f, FColor::Yellow, TEXT("Here1"));
+
 		if (!currentTestStarted && !testQueue.IsEmpty()) {
+			//if (GEngine) GEngine->AddOnScreenDebugMessage(-1, 15.0f, FColor::Yellow, TEXT("Here2"));
+
 			currentTestStarted = true;
 			//Start the test
 			startActiveTest();
@@ -217,6 +229,8 @@ void TestQueueManager::tick() {
 			else {
 				//Check if the current test is completed. If so, dequeue it and signify that it hasnt been started.
 				if (isActiveTestDone()) {
+					//if (GEngine) GEngine->AddOnScreenDebugMessage(-1, 15.0f, FColor::Yellow, TEXT("active done"));
+
 					AActor* dequeuedItem;
 					testQueue.Dequeue(dequeuedItem);
 					if (!testQueue.IsEmpty()) {
@@ -264,6 +278,12 @@ void TestQueueManager::startActiveTest() {
 	else if (activeTest.ToLower().Contains("vms")) {
 		((AAVMS*)getTest("vms"))->StartTest();
 		((ATestController*)parent)->SignalUISingleTestStarted(VMS_STARTED);
+
+	}
+	else if (activeTest.ToLower().Contains("AUI")) {
+		((AAUIController*)getTest("AUI"))->StartTest();
+		if (GEngine) GEngine->AddOnScreenDebugMessage(-1, 15.0f, FColor::Yellow, TEXT("here3"));
+
 
 	}
 	else {
@@ -322,6 +342,9 @@ bool TestQueueManager::isActiveTestDone() {
 			((ATestController*)parent)->SignalUISingleTestDone(VMS_COMPLETED);
 		}
 		return ((AAVMS*)getTest("vms"))->isCompleted;
+	}
+	else if (activeTest.ToLower().Contains("AUI")) {
+		return ((AAUIController*)getTest("UI"))->isCompleted;
 	}
 	else {
 		return false;
