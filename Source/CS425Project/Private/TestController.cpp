@@ -148,7 +148,7 @@ void TestQueueManager::queueTests(UINT16 mess_in) {
 		activeTest = "AUI";
 		if (mess_in & QUEUE_SP) {
 			if (testQueue.IsEmpty()) {
-				activeTest = "smooth";
+				//activeTest = "smooth";
 			}
 			testQueue.Enqueue(getTest("smooth"));
 
@@ -156,39 +156,39 @@ void TestQueueManager::queueTests(UINT16 mess_in) {
 
 		if (mess_in & QUEUE_SH) {
 			if (testQueue.IsEmpty()) {
-				activeTest = "saccadeshorizontal";
+				//activeTest = "saccadeshorizontal";
 			}
 			testQueue.Enqueue(getTest("saccadeshorizontal"));
 		}
 		if (mess_in & QUEUE_SV) {
 
 			if (testQueue.IsEmpty()) {
-				activeTest = "saccadevertical";
+				//activeTest = "saccadevertical";
 			}
 			testQueue.Enqueue(getTest("saccadevertical"));
 		}
 
 		if (mess_in & QUEUE_VORH) {
 			if (testQueue.IsEmpty()) {
-				activeTest = "vorhorizontal";
+				//activeTest = "vorhorizontal";
 			}
 			testQueue.Enqueue(getTest("vorhorizontal"));
 		}
 		if (mess_in & QUEUE_VORV) {
 			if (testQueue.IsEmpty()) {
-				activeTest = "vorvertical";
+				//activeTest = "vorvertical";
 			}
 			testQueue.Enqueue(getTest("vorvertical"));
 		}
 		if (mess_in & QUEUE_CON) {
 			if (testQueue.IsEmpty()) {
-				activeTest = "convergence";
+				//activeTest = "convergence";
 			}
 			testQueue.Enqueue(getTest("convergence"));
 		}
 		if (mess_in & QUEUE_VMS) {
 			if (testQueue.IsEmpty()) {
-				activeTest = "vms";
+				//activeTest = "vms";
 			}
 
 			testQueue.Enqueue(getTest("vms"));
@@ -344,7 +344,7 @@ bool TestQueueManager::isActiveTestDone() {
 		return ((AAVMS*)getTest("vms"))->isCompleted;
 	}
 	else if (activeTest.ToLower().Contains("AUI")) {
-		return ((AAUIController*)getTest("UI"))->isCompleted;
+		return ((AAUIController*)getTest("AUI"))->isCompleted;
 	}
 	else {
 		return false;
