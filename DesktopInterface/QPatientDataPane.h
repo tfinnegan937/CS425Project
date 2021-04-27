@@ -65,7 +65,7 @@ protected:
     QLineEdit * QLineEdt_dateField;
 
     QVBoxLayout * QVBx_selectorLayout;
-    QDate * QDate_selectedDate;
+    QDate  QDate_selectedDate;
     QCalendarWidget * QCalendar_selectorCalendar;
 
     QHBoxLayout * QHbx_mainLayout;

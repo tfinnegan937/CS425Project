@@ -113,8 +113,7 @@ QDatePicker::QDatePicker(QWidget *parent, const QString& label) : QWidget(parent
 
     QWin_datePickerWindow->setLayout(QVBx_selectorLayout);
     QBtn_confirm = new QPushButton("Confirm", QWin_datePickerWindow);
-    QDate_selectedDate = new QDate();
-    *QDate_selectedDate = QCalendar_selectorCalendar->selectedDate();
+    QDate_selectedDate = QCalendar_selectorCalendar->selectedDate();
     QVBx_selectorLayout->addWidget(QCalendar_selectorCalendar);
     QVBx_selectorLayout->addWidget(QBtn_confirm);
     QGrpBx_widgetBox = new QGroupBox(label, this);
@@ -137,7 +136,7 @@ void QDatePicker::passDateSignal() {
 }
 
 void QDatePicker::updateDate(QDate date) {
-    *QDate_selectedDate = date;
+    QDate_selectedDate = date;
     QLineEdt_dateField->setText(getDate());
 }
 
@@ -154,8 +153,8 @@ void QDatePicker::openSelector() {
 }
 
 QString QDatePicker::getDate() const {
-    QString date = (std::to_string(QDate_selectedDate->month()) + "/" + std::to_string(QDate_selectedDate->day()) +
-                    "/" + std::to_string(QDate_selectedDate->year())).c_str();
+    QString date = (std::to_string(QDate_selectedDate.month()) + "/" + std::to_string(QDate_selectedDate.day()) +
+                    "/" + std::to_string(QDate_selectedDate.year())).c_str();
     return date;
 }
 
