@@ -45,8 +45,8 @@ void TestCSVSaveLoad::populateTestPatientData(FullPatientData& test)
     for (size_t i = 0; i < NumOfTests; i++) {
         test.test_data[i].eyeFrames.push_back(test_frame);
         test.tests_with_data[i] = true;
-        test.test_data[i].changeOfSymptoms = 100;
-        test.test_data[i].symptomScore = -100;
+        //test.test_data[i].changeOfSymptoms = 100;
+        //test.test_data[i].symptomScore = -100;
     }
 }
 
@@ -74,9 +74,11 @@ bool TestCSVSaveLoad::areEyeFramesEqual(const EyeFrameData& a, const EyeFrameDat
 
 bool TestCSVSaveLoad::areEyeSessionsEqual(const EyeSessionData& a, const EyeSessionData& b)
 {
-    if (a.eyeFrames.size() != b.eyeFrames.size() ||
-            a.changeOfSymptoms != b.changeOfSymptoms ||
-            a.symptomScore != b.symptomScore) {
+    if (a.eyeFrames.size() != b.eyeFrames.size() //||
+            //a.changeOfSymptoms != b.changeOfSymptoms ||
+            //a.symptomScore != b.symptomScore
+            )
+    {
         return false;
     }
     for (size_t i = 0; i < a.eyeFrames.size(); i++) {
