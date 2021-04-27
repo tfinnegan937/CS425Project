@@ -28,8 +28,6 @@ QHomeWindow::QHomeWindow(QWidget *parent) : QWidget(parent) {
     connectSimPaneSignals();
 
     connect(this, &QHomeWindow::patientDataLoaded, QPane_patientDataPane, &QPatientDataPane::UpdatePatientDataPanes);
-    connect(this, &QHomeWindow::patientDataLoaded, QPane_simResultsPane, &QResultsPane::UpdateCurrentScores);
-    connect(this, &QHomeWindow::patientBaselineDataLoaded, QPane_simResultsPane, &QResultsPane::UpdateBaselineScores);
     connect(&tempCSVLoader, &TempCSVLoader::tempCSVLoaded, this, &QHomeWindow::updateSymptomScores);
 
 }
@@ -69,7 +67,6 @@ bool QHomeWindow::initializeIPC() {
        ipcController->sendMessage(IPC_INITIALIZED);
        std::cout << "Successfully initialized control communications with Unreal." << std::endl;
     } catch(std::runtime_error& generic_error){
-        //TODO: Handle errors
         std::cout << "ERROR! Failed to initialize control communications with Unreal!" << std::endl;
         return false;
     }
@@ -210,7 +207,8 @@ void QHomeWindow::sendMessage(UINT16 mess) {
 
 void QHomeWindow::updateSymptomScores()
 {
-    //TODO
+    std::cout << "Updating symptom scores" << std::endl;
+    QPane_simResultsPane->updateSymptomScores(current_patient_data, comparison_data);
 }
 
 
@@ -239,6 +237,7 @@ void QHomeWindow::loadFile()
             current_patient_data.gender,
             current_patient_data.concussed);
         emit(patientDataLoaded(x));
+        updateSymptomScores();
 
     } catch (const std::exception &exc) {
         QMessageBox errorBox;
@@ -276,6 +275,7 @@ void QHomeWindow::loadComparisonFile()
         comparison_data_loaded = true;
         comparison_data_path = fileName;
         emit(patientBaselineDataLoaded(x));
+        updateSymptomScores();
 
     } catch (const std::exception &exc) {
         QMessageBox errorBox;
@@ -306,6 +306,17 @@ void QHomeWindow::updateCurrentPatientData()
     current_patient_data.date_of_birth[1] = stof(number);
     getline(s, number);
     current_patient_data.date_of_birth[2] = stof(number);
+
+    int temp_age;
+    QDate currentDate = QDate::currentDate();
+    temp_age = currentDate.year() - current_patient_data.date_of_birth[2];
+    if (current_patient_data.date_of_birth[0] > currentDate.month()
+            || (current_patient_data.date_of_birth[0] == currentDate.month()
+                && current_patient_data.date_of_birth[1] > currentDate.day())) {
+        temp_age -= 1;
+    }
+
+    current_patient_data.age = temp_age;
 
     s = stringstream(dov.toStdString());
     getline(s, number, '/');
