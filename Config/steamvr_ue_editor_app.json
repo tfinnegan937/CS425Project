@@ -2,7 +2,7 @@
 	"source": "UE",
 	"applications": [
 		{
-			"app_key": "application.generated.ue.cs425project-14830424.ue4editor.exe",
+			"app_key": "application.generated.ue.cs425project-15973114.ue4editor.exe",
 			"launch_type": "url",
 			"url": "steam://launch/",
 			"action_manifest_path": "E:/CS425Project/VPVR/Config/SteamVRBindings/steamvr_manifest.json",
@@ -10,7 +10,7 @@
 			{
 				"en_us":
 				{
-					"name": "CS425Project-14830424 [UE Editor]"
+					"name": "CS425Project-15973114 [UE Editor]"
 				}
 			}
 		}
