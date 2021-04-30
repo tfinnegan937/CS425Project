@@ -43,6 +43,7 @@ private:
     QString comparison_data_path = "None";
     FullPatientData::Tests current_test;
     TempCSVLoader tempCSVLoader;
+    PDFGenerator pdfgenerator;
 
     //UI panels
     QHBoxLayout * QHBx_panelLayout;

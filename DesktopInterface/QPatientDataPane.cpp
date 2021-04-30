@@ -213,7 +213,7 @@ void QSportPicker::setSport(QString sport) {
 
 void QPatientDataPane::UpdatePatientDataPanes(PatientData current)
 {
-    QDatePckr_daySeenPicker->updateDate(QDate::fromString(current.getDateSeen(), "dd/MM/yyyy"));
+    QDatePckr_daySeenPicker->updateDate(QDate::fromString(current.getDateSeen()));
     QDatePckr_dobPicker->updateDate(QDate().fromString(current.getDateOfBirth()));
     QDatePckr_dateOfInjury->updateDate(QDate().fromString(current.getDateOfInjury()));
 

@@ -97,10 +97,10 @@ configure_file(graph_generator.py ${CMAKE_RUNTIME_OUTPUT_DIRECTORY}/graph_genera
 configure_file(generatePDF.bat ${CMAKE_RUNTIME_OUTPUT_DIRECTORY}/generatePDF.bat COPYONLY)
 
 #Testing
-enable_testing(true)
-find_package(Qt5Test REQUIRED)
-
-add_executable(DesktopInterfaceTest ${SOURCES} ${UNIT_TESTS} ${MAIN_HEADERS} ${EXTRA_HEADERS} ${UI_HEADERS})
-add_test(NAME DesktopInterfaceTest COMMAND DesktopInterfaceTest)
-target_link_libraries(DesktopInterfaceTest PRIVATE Qt5::Test Qt5::Widgets Qt5::Core libUnrealIPCInterface.a
-        ${PYTHON_LIBRARIES})
+#enable_testing(true)
+#find_package(Qt5Test REQUIRED)
+#
+#add_executable(DesktopInterfaceTest ${SOURCES} ${UNIT_TESTS} ${MAIN_HEADERS} ${EXTRA_HEADERS} ${UI_HEADERS})
+#add_test(NAME DesktopInterfaceTest COMMAND DesktopInterfaceTest)
+#target_link_libraries(DesktopInterfaceTest PRIVATE Qt5::Test Qt5::Widgets Qt5::Core libUnrealIPCInterface.a
+#        ${PYTHON_LIBRARIES})

@@ -395,7 +395,7 @@ void QHomeWindow::exportDataToPDF()
 
     if (fileName.isEmpty()) return;
 
-    PDFGenerator pdfgenerator;
+
 
     try {
         if (comparison_data_loaded) {
