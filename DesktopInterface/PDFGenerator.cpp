@@ -1,3 +1,13 @@
+/** @file PDFGenerator.cpp
+*
+*   Implements PDFGenerator.h
+*
+*   @author Isak Ohman
+*   @author Ryan Gorman
+*   @author Timothy Finnegan
+*   @date 2021
+*/
+
 #include "PDFGenerator.h"
 
 PDFGenerator::PDFGenerator(QObject *parent):
@@ -44,6 +54,10 @@ bool PDFGenerator::GeneratePDFFromData(const char* file_location, const char* th
         }
     }
 
+    /*
+     * This *must* be done for every PyObject or else it causes a memory leak.
+     * Delete itself is not enough.
+    */
     Py_XDECREF(pPDFGeneratingFunction);
     Py_XDECREF(python_data_file_location);
     Py_XDECREF(python_things_to_graph);
@@ -86,6 +100,10 @@ bool PDFGenerator::GeneratePDFComparisonFromData(const char* file_location, cons
         }
     }
 
+    /*
+     * This *must* be done for every PyObject or else it causes a memory leak.
+     * Delete itself is not enough.
+    */
     Py_XDECREF(pPDFGeneratingFunction);
     Py_XDECREF(python_data_file_location);
     Py_XDECREF(python_data_comparison_location);

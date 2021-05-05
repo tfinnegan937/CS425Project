@@ -15,7 +15,6 @@
 #include <QMessageBox>
 #include <QAction>
 #include <QDateTimeEdit>
-#include "QVRControlWidget.h"
 #include "QSimulationControlPane.h"
 #include "QPatientDataPane.h"
 #include "QResultsPane.h"

@@ -1,3 +1,13 @@
+/** @file TempCSVLoader.cpp
+*
+*   Implements Temp.h. Functions to load temp CSV files from Unreal.
+*
+*   @author Isak Ohman
+*   @author Ryan Gorman
+*   @author Timothy Finnegan
+*   @date 2021
+*/
+
 #include "TempCSVLoader.h"
 
 TempCSVLoader::TempCSVLoader()

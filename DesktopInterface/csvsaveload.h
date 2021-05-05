@@ -7,7 +7,6 @@
 *   @author Ryan Gorman
 *   @author Timothy Finnegan
 *   @date 2021
-*   @copyright MIT License
 */
 
 #ifndef CSVSAVELOAD_H
@@ -16,7 +15,6 @@
 #include "../shared_include/EyeFrameData.h"
 #include "../shared_include/EyeSessionData.h"
 #include "../shared_include/FullPatientData.h"
-#include <QFile>
 #include <fstream>
 #include <iostream>
 #include <string>
@@ -97,9 +95,39 @@ private:
      */
     void CreateEyeFrameHeader(ofstream& output_file);
 
-    inline void LoadEyeFrameFloat3Value(float* arrayBegin, stringstream& input_line_string, string& number);
-    inline string DateToString(const int* a) const;
-    inline void LoadDateFromCSV(int* arrayBegin, stringstream& input_line_string, string& date);
+    /**
+     * @brief Simple function to get three elements from a CSV and save them in a float array.
+     * @details Effectively uses getline three times, placing each obtained element in spots 0-2 in the array.
+     *
+     * @pre Array must be at least size 3.
+     *
+     * @param arrayBegin Pointer to start of float array to save to.
+     * @param input_line_string Stringstream to read data from.
+     * @param number String to temporary stored obtained values before they are converted to floats.
+     */
+    void LoadEyeFrameFloat3Value(float* arrayBegin, stringstream& input_line_string, string& number);
+
+    /**
+     * @brief Concatenates three integers in an integer array into a string of style "a/b/c".
+     *
+     * @pre Array must be at least size 3.
+     *
+     * @param a Pointer to start of int array to load values from.
+     *
+     * @return string
+     */
+    string DateToString(const int* a) const;
+
+    /**
+     * @brief Seperates three integers from a CSV element of type "a/b/c" and stores them in an integer array.
+     *
+     * @pre Array must be at least size 3.
+     *
+     * @param arrayBegin Pointer to start of int array to store values in.
+     * @param input_line_string Stringstream to read data from.
+     * @param date String to temporary stored obtained date in before it is converted to ints.
+     */
+    void LoadDateFromCSV(int* arrayBegin, stringstream& input_line_string, string& date);
 };
 
 #endif // CSVSAVELOAD_H

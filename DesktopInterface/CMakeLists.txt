@@ -30,7 +30,6 @@ set(CMAKE_RUNTIME_OUTPUT_DIRECTORY ${dir}/../Binaries/Win64/)
 
 link_libraries(${PYTHON_LIBRARIES})
 include_directories(${PYTHON_INCLUDE_DIRS})
-include_directories(unit_tests/)
 
 set ( SOURCES
     DesktopInterface.cpp
@@ -39,7 +38,6 @@ set ( SOURCES
     QPatientDataPane.cpp
     QResultsPane.cpp
     QSimulationControls.cpp
-    QResultsWindow.cpp
     csvsaveload.cpp
     PatientData.cpp
     PatientData.h
@@ -55,7 +53,6 @@ set ( MAIN_HEADERS
     QPatientDataPane.h
     QResultsPane.h
     QSimulationControls.h
-    QResultsWindow.h
     csvsaveload.h
     PDFGenerator.h
     TempCSVLoader.h
@@ -71,18 +68,8 @@ ${PARENT_DIRECTORY}/shared_include/EyeTestEnum.h
 ${PARENT_DIRECTORY}/shared_include/TempCSVFiles.h
 )
 
-set ( UI_HEADERS
-QResultsWindow.ui
-)
 
-set ( UNIT_TESTS
-unit_tests/UnitTestMain.h
-unit_tests/TestRunner.cpp
-unit_tests/TestCSVSaveLoad.cpp
-unit_tests/TestPDFGeneration.cpp
-)
-
-add_executable(DesktopInterface main.cpp ${SOURCES} ${MAIN_HEADERS} ${EXTRA_HEADERS} ${UI_HEADERS})
+add_executable(DesktopInterface main.cpp ${SOURCES} ${MAIN_HEADERS} ${EXTRA_HEADERS})
 target_link_libraries(DesktopInterface Qt5::Widgets Qt5::Core libUnrealIPCInterface.a ${PYTHON_LIBRARIES})
 add_custom_target(
         TARGET DesktopInterface
@@ -91,16 +78,5 @@ add_custom_target(
 )
 
 #Copies python files over to build
-configure_file(eye_chart.py ${CMAKE_RUNTIME_OUTPUT_DIRECTORY}/eye_chart.py COPYONLY)
 configure_file(generatePDF.py ${CMAKE_RUNTIME_OUTPUT_DIRECTORY}/generatePDF.py COPYONLY)
 configure_file(graph_generator.py ${CMAKE_RUNTIME_OUTPUT_DIRECTORY}/graph_generator.bat COPYONLY)
-configure_file(generatePDF.bat ${CMAKE_RUNTIME_OUTPUT_DIRECTORY}/generatePDF.bat COPYONLY)
-
-#Testing
-#enable_testing(true)
-#find_package(Qt5Test REQUIRED)
-#
-#add_executable(DesktopInterfaceTest ${SOURCES} ${UNIT_TESTS} ${MAIN_HEADERS} ${EXTRA_HEADERS} ${UI_HEADERS})
-#add_test(NAME DesktopInterfaceTest COMMAND DesktopInterfaceTest)
-#target_link_libraries(DesktopInterfaceTest PRIVATE Qt5::Test Qt5::Widgets Qt5::Core libUnrealIPCInterface.a
-#        ${PYTHON_LIBRARIES})

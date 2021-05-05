@@ -3,7 +3,6 @@
 //
 
 #include "QHomeWindow.h"
-#include "QResultsWindow.h"
 #include <iostream>
 #include <QCloseEvent>
 QHomeWindow::QHomeWindow(QWidget *parent) : QWidget(parent) {

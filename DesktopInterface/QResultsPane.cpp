@@ -1,6 +1,13 @@
-//
-// Created by plays on 3/5/2021.
-//
+/** @file PDFGenerator.cpp
+*
+*   Implements PDFGenerator.h.
+*
+*   @author Isak Ohman
+*   @author Ryan Gorman
+*   @author Timothy Finnegan
+*   @date 2021
+*   @copyright MIT License
+*/
 
 #include "QResultsPane.h"
 

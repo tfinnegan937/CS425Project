@@ -6,7 +6,6 @@
 *   @author Ryan Gorman
 *   @author Timothy Finnegan
 *   @date 2021
-*   @copyright MIT License
 */
 
 #include "csvsaveload.h"
@@ -15,6 +14,7 @@ CSVSaveLoad::CSVSaveLoad()
 {
 
 }
+
 
 void CSVSaveLoad::CreateEyeFrameHeader(ofstream& output_file)
 {
@@ -40,7 +40,7 @@ void CSVSaveLoad::CreateEyeFrameHeader(ofstream& output_file)
 }
 
 
-inline void CSVSaveLoad::LoadEyeFrameFloat3Value(float* arrayBegin, stringstream& input_line_string, string& number)
+void CSVSaveLoad::LoadEyeFrameFloat3Value(float* arrayBegin, stringstream& input_line_string, string& number)
 {
     getline(input_line_string, number, ',');
     arrayBegin[0] = stof(number);
@@ -51,21 +51,23 @@ inline void CSVSaveLoad::LoadEyeFrameFloat3Value(float* arrayBegin, stringstream
 }
 
 
-inline void CSVSaveLoad::LoadDateFromCSV(int* arrayBegin, stringstream& input_line_string, string& number)
-{
-    getline(input_line_string, number, '/');
-    arrayBegin[0] = stof(number);
-    getline(input_line_string, number, '/');
-    arrayBegin[1] = stof(number);
-    getline(input_line_string, number, ',');
-    arrayBegin[2] = stof(number);
-}
-
-
-inline string CSVSaveLoad::DateToString(const int* a) const
+string CSVSaveLoad::DateToString(const int* a) const
 {
     return to_string(a[0]) + "/" + to_string(a[1]) + "/" + to_string(a[2]);
 }
+
+
+void CSVSaveLoad::LoadDateFromCSV(int* arrayBegin, stringstream& input_line_string, string& number)
+{
+    getline(input_line_string, number, '/');
+    arrayBegin[0] = stof(number);
+    getline(input_line_string, number, '/');
+    arrayBegin[1] = stof(number);
+    getline(input_line_string, number, ',');
+    arrayBegin[2] = stof(number);
+}
+
+
 
 void CSVSaveLoad::SaveEyeSessionData(const FullPatientData& to_save, const int current_test_to_save, ofstream& output_file)
 {
