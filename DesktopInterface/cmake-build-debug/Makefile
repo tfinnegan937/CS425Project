@@ -57,19 +57,19 @@ cmake_force:
 SHELL = cmd.exe
 
 # The CMake executable.
-CMAKE_COMMAND = "C:\Program Files\JetBrains\CLion 2021.1.1\bin\cmake\win\bin\cmake.exe"
+CMAKE_COMMAND = "C:\Program Files\JetBrains\CLion 2021.1.2\bin\cmake\win\bin\cmake.exe"
 
 # The command to remove a file.
-RM = "C:\Program Files\JetBrains\CLion 2021.1.1\bin\cmake\win\bin\cmake.exe" -E rm -f
+RM = "C:\Program Files\JetBrains\CLion 2021.1.2\bin\cmake\win\bin\cmake.exe" -E rm -f
 
 # Escaping for special characters.
 EQUALS = =
 
 # The top-level source directory on which CMake was run.
-CMAKE_SOURCE_DIR = E:\CS425Project\VPVR\DesktopInterface
+CMAKE_SOURCE_DIR = "C:\Users\Neuromechanics Lab\CLionProjects\VPVR\DesktopInterface"
 
 # The top-level build directory on which CMake was run.
-CMAKE_BINARY_DIR = E:\CS425Project\VPVR\DesktopInterface\cmake-build-debug
+CMAKE_BINARY_DIR = "C:\Users\Neuromechanics Lab\CLionProjects\VPVR\DesktopInterface\cmake-build-debug"
 
 #=============================================================================
 # Targets provided globally by CMake.
@@ -77,7 +77,7 @@ CMAKE_BINARY_DIR = E:\CS425Project\VPVR\DesktopInterface\cmake-build-debug
 # Special rule for the target edit_cache
 edit_cache:
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --cyan "No interactive CMake dialog available..."
-	"C:\Program Files\JetBrains\CLion 2021.1.1\bin\cmake\win\bin\cmake.exe" -E echo "No interactive CMake dialog available."
+	"C:\Program Files\JetBrains\CLion 2021.1.2\bin\cmake\win\bin\cmake.exe" -E echo "No interactive CMake dialog available."
 .PHONY : edit_cache
 
 # Special rule for the target edit_cache
@@ -88,7 +88,7 @@ edit_cache/fast: edit_cache
 # Special rule for the target rebuild_cache
 rebuild_cache:
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --cyan "Running CMake to regenerate build system..."
-	"C:\Program Files\JetBrains\CLion 2021.1.1\bin\cmake\win\bin\cmake.exe" --regenerate-during-build -S$(CMAKE_SOURCE_DIR) -B$(CMAKE_BINARY_DIR)
+	"C:\Program Files\JetBrains\CLion 2021.1.2\bin\cmake\win\bin\cmake.exe" --regenerate-during-build -S$(CMAKE_SOURCE_DIR) -B$(CMAKE_BINARY_DIR)
 .PHONY : rebuild_cache
 
 # Special rule for the target rebuild_cache
@@ -96,22 +96,11 @@ rebuild_cache/fast: rebuild_cache
 
 .PHONY : rebuild_cache/fast
 
-# Special rule for the target test
-test:
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --cyan "Running tests..."
-	"C:\Program Files\JetBrains\CLion 2021.1.1\bin\cmake\win\bin\ctest.exe" --force-new-ctest-process $(ARGS)
-.PHONY : test
-
-# Special rule for the target test
-test/fast: test
-
-.PHONY : test/fast
-
 # The main all target
 all: cmake_check_build_system
-	$(CMAKE_COMMAND) -E cmake_progress_start E:\CS425Project\VPVR\DesktopInterface\cmake-build-debug\CMakeFiles E:\CS425Project\VPVR\DesktopInterface\cmake-build-debug\\CMakeFiles\progress.marks
+	$(CMAKE_COMMAND) -E cmake_progress_start "C:\Users\Neuromechanics Lab\CLionProjects\VPVR\DesktopInterface\cmake-build-debug\CMakeFiles" "C:\Users\Neuromechanics Lab\CLionProjects\VPVR\DesktopInterface\cmake-build-debug\\CMakeFiles\progress.marks"
 	$(MAKE) $(MAKESILENT) -f CMakeFiles\Makefile2 all
-	$(CMAKE_COMMAND) -E cmake_progress_start E:\CS425Project\VPVR\DesktopInterface\cmake-build-debug\CMakeFiles 0
+	$(CMAKE_COMMAND) -E cmake_progress_start "C:\Users\Neuromechanics Lab\CLionProjects\VPVR\DesktopInterface\cmake-build-debug\CMakeFiles" 0
 .PHONY : all
 
 # The main clean target
@@ -140,19 +129,6 @@ depend:
 .PHONY : depend
 
 #=============================================================================
-# Target rules for targets named DesktopInterfaceTest
-
-# Build rule for target.
-DesktopInterfaceTest: cmake_check_build_system
-	$(MAKE) $(MAKESILENT) -f CMakeFiles\Makefile2 DesktopInterfaceTest
-.PHONY : DesktopInterfaceTest
-
-# fast build rule for target.
-DesktopInterfaceTest/fast:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles\DesktopInterfaceTest.dir\build.make CMakeFiles/DesktopInterfaceTest.dir/build
-.PHONY : DesktopInterfaceTest/fast
-
-#=============================================================================
 # Target rules for targets named DesktopInterface
 
 # Build rule for target.
@@ -179,19 +155,6 @@ TARGET/fast:
 .PHONY : TARGET/fast
 
 #=============================================================================
-# Target rules for targets named DesktopInterfaceTest_autogen
-
-# Build rule for target.
-DesktopInterfaceTest_autogen: cmake_check_build_system
-	$(MAKE) $(MAKESILENT) -f CMakeFiles\Makefile2 DesktopInterfaceTest_autogen
-.PHONY : DesktopInterfaceTest_autogen
-
-# fast build rule for target.
-DesktopInterfaceTest_autogen/fast:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles\DesktopInterfaceTest_autogen.dir\build.make CMakeFiles/DesktopInterfaceTest_autogen.dir/build
-.PHONY : DesktopInterfaceTest_autogen/fast
-
-#=============================================================================
 # Target rules for targets named DesktopInterface_autogen
 
 # Build rule for target.
@@ -204,13 +167,39 @@ DesktopInterface_autogen/fast:
 	$(MAKE) $(MAKESILENT) -f CMakeFiles\DesktopInterface_autogen.dir\build.make CMakeFiles/DesktopInterface_autogen.dir/build
 .PHONY : DesktopInterface_autogen/fast
 
+C_/Users/Neuromechanics_Lab/CLionProjects/VPVR/shared_include/FullPatientData.obj: C_/Users/Neuromechanics_Lab/CLionProjects/VPVR/shared_include/FullPatientData.cpp.obj
+
+.PHONY : C_/Users/Neuromechanics_Lab/CLionProjects/VPVR/shared_include/FullPatientData.obj
+
+# target to build an object file
+C_/Users/Neuromechanics_Lab/CLionProjects/VPVR/shared_include/FullPatientData.cpp.obj:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles\DesktopInterface.dir\build.make CMakeFiles/DesktopInterface.dir/C_/Users/Neuromechanics_Lab/CLionProjects/VPVR/shared_include/FullPatientData.cpp.obj
+.PHONY : C_/Users/Neuromechanics_Lab/CLionProjects/VPVR/shared_include/FullPatientData.cpp.obj
+
+C_/Users/Neuromechanics_Lab/CLionProjects/VPVR/shared_include/FullPatientData.i: C_/Users/Neuromechanics_Lab/CLionProjects/VPVR/shared_include/FullPatientData.cpp.i
+
+.PHONY : C_/Users/Neuromechanics_Lab/CLionProjects/VPVR/shared_include/FullPatientData.i
+
+# target to preprocess a source file
+C_/Users/Neuromechanics_Lab/CLionProjects/VPVR/shared_include/FullPatientData.cpp.i:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles\DesktopInterface.dir\build.make CMakeFiles/DesktopInterface.dir/C_/Users/Neuromechanics_Lab/CLionProjects/VPVR/shared_include/FullPatientData.cpp.i
+.PHONY : C_/Users/Neuromechanics_Lab/CLionProjects/VPVR/shared_include/FullPatientData.cpp.i
+
+C_/Users/Neuromechanics_Lab/CLionProjects/VPVR/shared_include/FullPatientData.s: C_/Users/Neuromechanics_Lab/CLionProjects/VPVR/shared_include/FullPatientData.cpp.s
+
+.PHONY : C_/Users/Neuromechanics_Lab/CLionProjects/VPVR/shared_include/FullPatientData.s
+
+# target to generate assembly for a file
+C_/Users/Neuromechanics_Lab/CLionProjects/VPVR/shared_include/FullPatientData.cpp.s:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles\DesktopInterface.dir\build.make CMakeFiles/DesktopInterface.dir/C_/Users/Neuromechanics_Lab/CLionProjects/VPVR/shared_include/FullPatientData.cpp.s
+.PHONY : C_/Users/Neuromechanics_Lab/CLionProjects/VPVR/shared_include/FullPatientData.cpp.s
+
 DesktopInterface.obj: DesktopInterface.cpp.obj
 
 .PHONY : DesktopInterface.obj
 
 # target to build an object file
 DesktopInterface.cpp.obj:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles\DesktopInterfaceTest.dir\build.make CMakeFiles/DesktopInterfaceTest.dir/DesktopInterface.cpp.obj
 	$(MAKE) $(MAKESILENT) -f CMakeFiles\DesktopInterface.dir\build.make CMakeFiles/DesktopInterface.dir/DesktopInterface.cpp.obj
 .PHONY : DesktopInterface.cpp.obj
 
@@ -220,7 +209,6 @@ DesktopInterface.i: DesktopInterface.cpp.i
 
 # target to preprocess a source file
 DesktopInterface.cpp.i:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles\DesktopInterfaceTest.dir\build.make CMakeFiles/DesktopInterfaceTest.dir/DesktopInterface.cpp.i
 	$(MAKE) $(MAKESILENT) -f CMakeFiles\DesktopInterface.dir\build.make CMakeFiles/DesktopInterface.dir/DesktopInterface.cpp.i
 .PHONY : DesktopInterface.cpp.i
 
@@ -230,36 +218,8 @@ DesktopInterface.s: DesktopInterface.cpp.s
 
 # target to generate assembly for a file
 DesktopInterface.cpp.s:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles\DesktopInterfaceTest.dir\build.make CMakeFiles/DesktopInterfaceTest.dir/DesktopInterface.cpp.s
 	$(MAKE) $(MAKESILENT) -f CMakeFiles\DesktopInterface.dir\build.make CMakeFiles/DesktopInterface.dir/DesktopInterface.cpp.s
 .PHONY : DesktopInterface.cpp.s
-
-DesktopInterfaceTest_autogen/mocs_compilation.obj: DesktopInterfaceTest_autogen/mocs_compilation.cpp.obj
-
-.PHONY : DesktopInterfaceTest_autogen/mocs_compilation.obj
-
-# target to build an object file
-DesktopInterfaceTest_autogen/mocs_compilation.cpp.obj:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles\DesktopInterfaceTest.dir\build.make CMakeFiles/DesktopInterfaceTest.dir/DesktopInterfaceTest_autogen/mocs_compilation.cpp.obj
-.PHONY : DesktopInterfaceTest_autogen/mocs_compilation.cpp.obj
-
-DesktopInterfaceTest_autogen/mocs_compilation.i: DesktopInterfaceTest_autogen/mocs_compilation.cpp.i
-
-.PHONY : DesktopInterfaceTest_autogen/mocs_compilation.i
-
-# target to preprocess a source file
-DesktopInterfaceTest_autogen/mocs_compilation.cpp.i:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles\DesktopInterfaceTest.dir\build.make CMakeFiles/DesktopInterfaceTest.dir/DesktopInterfaceTest_autogen/mocs_compilation.cpp.i
-.PHONY : DesktopInterfaceTest_autogen/mocs_compilation.cpp.i
-
-DesktopInterfaceTest_autogen/mocs_compilation.s: DesktopInterfaceTest_autogen/mocs_compilation.cpp.s
-
-.PHONY : DesktopInterfaceTest_autogen/mocs_compilation.s
-
-# target to generate assembly for a file
-DesktopInterfaceTest_autogen/mocs_compilation.cpp.s:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles\DesktopInterfaceTest.dir\build.make CMakeFiles/DesktopInterfaceTest.dir/DesktopInterfaceTest_autogen/mocs_compilation.cpp.s
-.PHONY : DesktopInterfaceTest_autogen/mocs_compilation.cpp.s
 
 DesktopInterface_autogen/mocs_compilation.obj: DesktopInterface_autogen/mocs_compilation.cpp.obj
 
@@ -288,43 +248,12 @@ DesktopInterface_autogen/mocs_compilation.cpp.s:
 	$(MAKE) $(MAKESILENT) -f CMakeFiles\DesktopInterface.dir\build.make CMakeFiles/DesktopInterface.dir/DesktopInterface_autogen/mocs_compilation.cpp.s
 .PHONY : DesktopInterface_autogen/mocs_compilation.cpp.s
 
-E_/CS425Project/VPVR/shared_include/FullPatientData.obj: E_/CS425Project/VPVR/shared_include/FullPatientData.cpp.obj
-
-.PHONY : E_/CS425Project/VPVR/shared_include/FullPatientData.obj
-
-# target to build an object file
-E_/CS425Project/VPVR/shared_include/FullPatientData.cpp.obj:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles\DesktopInterfaceTest.dir\build.make CMakeFiles/DesktopInterfaceTest.dir/E_/CS425Project/VPVR/shared_include/FullPatientData.cpp.obj
-	$(MAKE) $(MAKESILENT) -f CMakeFiles\DesktopInterface.dir\build.make CMakeFiles/DesktopInterface.dir/E_/CS425Project/VPVR/shared_include/FullPatientData.cpp.obj
-.PHONY : E_/CS425Project/VPVR/shared_include/FullPatientData.cpp.obj
-
-E_/CS425Project/VPVR/shared_include/FullPatientData.i: E_/CS425Project/VPVR/shared_include/FullPatientData.cpp.i
-
-.PHONY : E_/CS425Project/VPVR/shared_include/FullPatientData.i
-
-# target to preprocess a source file
-E_/CS425Project/VPVR/shared_include/FullPatientData.cpp.i:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles\DesktopInterfaceTest.dir\build.make CMakeFiles/DesktopInterfaceTest.dir/E_/CS425Project/VPVR/shared_include/FullPatientData.cpp.i
-	$(MAKE) $(MAKESILENT) -f CMakeFiles\DesktopInterface.dir\build.make CMakeFiles/DesktopInterface.dir/E_/CS425Project/VPVR/shared_include/FullPatientData.cpp.i
-.PHONY : E_/CS425Project/VPVR/shared_include/FullPatientData.cpp.i
-
-E_/CS425Project/VPVR/shared_include/FullPatientData.s: E_/CS425Project/VPVR/shared_include/FullPatientData.cpp.s
-
-.PHONY : E_/CS425Project/VPVR/shared_include/FullPatientData.s
-
-# target to generate assembly for a file
-E_/CS425Project/VPVR/shared_include/FullPatientData.cpp.s:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles\DesktopInterfaceTest.dir\build.make CMakeFiles/DesktopInterfaceTest.dir/E_/CS425Project/VPVR/shared_include/FullPatientData.cpp.s
-	$(MAKE) $(MAKESILENT) -f CMakeFiles\DesktopInterface.dir\build.make CMakeFiles/DesktopInterface.dir/E_/CS425Project/VPVR/shared_include/FullPatientData.cpp.s
-.PHONY : E_/CS425Project/VPVR/shared_include/FullPatientData.cpp.s
-
 PDFGenerator.obj: PDFGenerator.cpp.obj
 
 .PHONY : PDFGenerator.obj
 
 # target to build an object file
 PDFGenerator.cpp.obj:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles\DesktopInterfaceTest.dir\build.make CMakeFiles/DesktopInterfaceTest.dir/PDFGenerator.cpp.obj
 	$(MAKE) $(MAKESILENT) -f CMakeFiles\DesktopInterface.dir\build.make CMakeFiles/DesktopInterface.dir/PDFGenerator.cpp.obj
 .PHONY : PDFGenerator.cpp.obj
 
@@ -334,7 +263,6 @@ PDFGenerator.i: PDFGenerator.cpp.i
 
 # target to preprocess a source file
 PDFGenerator.cpp.i:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles\DesktopInterfaceTest.dir\build.make CMakeFiles/DesktopInterfaceTest.dir/PDFGenerator.cpp.i
 	$(MAKE) $(MAKESILENT) -f CMakeFiles\DesktopInterface.dir\build.make CMakeFiles/DesktopInterface.dir/PDFGenerator.cpp.i
 .PHONY : PDFGenerator.cpp.i
 
@@ -344,7 +272,6 @@ PDFGenerator.s: PDFGenerator.cpp.s
 
 # target to generate assembly for a file
 PDFGenerator.cpp.s:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles\DesktopInterfaceTest.dir\build.make CMakeFiles/DesktopInterfaceTest.dir/PDFGenerator.cpp.s
 	$(MAKE) $(MAKESILENT) -f CMakeFiles\DesktopInterface.dir\build.make CMakeFiles/DesktopInterface.dir/PDFGenerator.cpp.s
 .PHONY : PDFGenerator.cpp.s
 
@@ -354,7 +281,6 @@ PatientData.obj: PatientData.cpp.obj
 
 # target to build an object file
 PatientData.cpp.obj:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles\DesktopInterfaceTest.dir\build.make CMakeFiles/DesktopInterfaceTest.dir/PatientData.cpp.obj
 	$(MAKE) $(MAKESILENT) -f CMakeFiles\DesktopInterface.dir\build.make CMakeFiles/DesktopInterface.dir/PatientData.cpp.obj
 .PHONY : PatientData.cpp.obj
 
@@ -364,7 +290,6 @@ PatientData.i: PatientData.cpp.i
 
 # target to preprocess a source file
 PatientData.cpp.i:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles\DesktopInterfaceTest.dir\build.make CMakeFiles/DesktopInterfaceTest.dir/PatientData.cpp.i
 	$(MAKE) $(MAKESILENT) -f CMakeFiles\DesktopInterface.dir\build.make CMakeFiles/DesktopInterface.dir/PatientData.cpp.i
 .PHONY : PatientData.cpp.i
 
@@ -374,7 +299,6 @@ PatientData.s: PatientData.cpp.s
 
 # target to generate assembly for a file
 PatientData.cpp.s:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles\DesktopInterfaceTest.dir\build.make CMakeFiles/DesktopInterfaceTest.dir/PatientData.cpp.s
 	$(MAKE) $(MAKESILENT) -f CMakeFiles\DesktopInterface.dir\build.make CMakeFiles/DesktopInterface.dir/PatientData.cpp.s
 .PHONY : PatientData.cpp.s
 
@@ -384,7 +308,6 @@ QHomeWindow.obj: QHomeWindow.cpp.obj
 
 # target to build an object file
 QHomeWindow.cpp.obj:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles\DesktopInterfaceTest.dir\build.make CMakeFiles/DesktopInterfaceTest.dir/QHomeWindow.cpp.obj
 	$(MAKE) $(MAKESILENT) -f CMakeFiles\DesktopInterface.dir\build.make CMakeFiles/DesktopInterface.dir/QHomeWindow.cpp.obj
 .PHONY : QHomeWindow.cpp.obj
 
@@ -394,7 +317,6 @@ QHomeWindow.i: QHomeWindow.cpp.i
 
 # target to preprocess a source file
 QHomeWindow.cpp.i:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles\DesktopInterfaceTest.dir\build.make CMakeFiles/DesktopInterfaceTest.dir/QHomeWindow.cpp.i
 	$(MAKE) $(MAKESILENT) -f CMakeFiles\DesktopInterface.dir\build.make CMakeFiles/DesktopInterface.dir/QHomeWindow.cpp.i
 .PHONY : QHomeWindow.cpp.i
 
@@ -404,7 +326,6 @@ QHomeWindow.s: QHomeWindow.cpp.s
 
 # target to generate assembly for a file
 QHomeWindow.cpp.s:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles\DesktopInterfaceTest.dir\build.make CMakeFiles/DesktopInterfaceTest.dir/QHomeWindow.cpp.s
 	$(MAKE) $(MAKESILENT) -f CMakeFiles\DesktopInterface.dir\build.make CMakeFiles/DesktopInterface.dir/QHomeWindow.cpp.s
 .PHONY : QHomeWindow.cpp.s
 
@@ -414,7 +335,6 @@ QPatientDataPane.obj: QPatientDataPane.cpp.obj
 
 # target to build an object file
 QPatientDataPane.cpp.obj:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles\DesktopInterfaceTest.dir\build.make CMakeFiles/DesktopInterfaceTest.dir/QPatientDataPane.cpp.obj
 	$(MAKE) $(MAKESILENT) -f CMakeFiles\DesktopInterface.dir\build.make CMakeFiles/DesktopInterface.dir/QPatientDataPane.cpp.obj
 .PHONY : QPatientDataPane.cpp.obj
 
@@ -424,7 +344,6 @@ QPatientDataPane.i: QPatientDataPane.cpp.i
 
 # target to preprocess a source file
 QPatientDataPane.cpp.i:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles\DesktopInterfaceTest.dir\build.make CMakeFiles/DesktopInterfaceTest.dir/QPatientDataPane.cpp.i
 	$(MAKE) $(MAKESILENT) -f CMakeFiles\DesktopInterface.dir\build.make CMakeFiles/DesktopInterface.dir/QPatientDataPane.cpp.i
 .PHONY : QPatientDataPane.cpp.i
 
@@ -434,7 +353,6 @@ QPatientDataPane.s: QPatientDataPane.cpp.s
 
 # target to generate assembly for a file
 QPatientDataPane.cpp.s:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles\DesktopInterfaceTest.dir\build.make CMakeFiles/DesktopInterfaceTest.dir/QPatientDataPane.cpp.s
 	$(MAKE) $(MAKESILENT) -f CMakeFiles\DesktopInterface.dir\build.make CMakeFiles/DesktopInterface.dir/QPatientDataPane.cpp.s
 .PHONY : QPatientDataPane.cpp.s
 
@@ -444,7 +362,6 @@ QResultsPane.obj: QResultsPane.cpp.obj
 
 # target to build an object file
 QResultsPane.cpp.obj:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles\DesktopInterfaceTest.dir\build.make CMakeFiles/DesktopInterfaceTest.dir/QResultsPane.cpp.obj
 	$(MAKE) $(MAKESILENT) -f CMakeFiles\DesktopInterface.dir\build.make CMakeFiles/DesktopInterface.dir/QResultsPane.cpp.obj
 .PHONY : QResultsPane.cpp.obj
 
@@ -454,7 +371,6 @@ QResultsPane.i: QResultsPane.cpp.i
 
 # target to preprocess a source file
 QResultsPane.cpp.i:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles\DesktopInterfaceTest.dir\build.make CMakeFiles/DesktopInterfaceTest.dir/QResultsPane.cpp.i
 	$(MAKE) $(MAKESILENT) -f CMakeFiles\DesktopInterface.dir\build.make CMakeFiles/DesktopInterface.dir/QResultsPane.cpp.i
 .PHONY : QResultsPane.cpp.i
 
@@ -464,39 +380,8 @@ QResultsPane.s: QResultsPane.cpp.s
 
 # target to generate assembly for a file
 QResultsPane.cpp.s:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles\DesktopInterfaceTest.dir\build.make CMakeFiles/DesktopInterfaceTest.dir/QResultsPane.cpp.s
 	$(MAKE) $(MAKESILENT) -f CMakeFiles\DesktopInterface.dir\build.make CMakeFiles/DesktopInterface.dir/QResultsPane.cpp.s
 .PHONY : QResultsPane.cpp.s
-
-QResultsWindow.obj: QResultsWindow.cpp.obj
-
-.PHONY : QResultsWindow.obj
-
-# target to build an object file
-QResultsWindow.cpp.obj:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles\DesktopInterfaceTest.dir\build.make CMakeFiles/DesktopInterfaceTest.dir/QResultsWindow.cpp.obj
-	$(MAKE) $(MAKESILENT) -f CMakeFiles\DesktopInterface.dir\build.make CMakeFiles/DesktopInterface.dir/QResultsWindow.cpp.obj
-.PHONY : QResultsWindow.cpp.obj
-
-QResultsWindow.i: QResultsWindow.cpp.i
-
-.PHONY : QResultsWindow.i
-
-# target to preprocess a source file
-QResultsWindow.cpp.i:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles\DesktopInterfaceTest.dir\build.make CMakeFiles/DesktopInterfaceTest.dir/QResultsWindow.cpp.i
-	$(MAKE) $(MAKESILENT) -f CMakeFiles\DesktopInterface.dir\build.make CMakeFiles/DesktopInterface.dir/QResultsWindow.cpp.i
-.PHONY : QResultsWindow.cpp.i
-
-QResultsWindow.s: QResultsWindow.cpp.s
-
-.PHONY : QResultsWindow.s
-
-# target to generate assembly for a file
-QResultsWindow.cpp.s:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles\DesktopInterfaceTest.dir\build.make CMakeFiles/DesktopInterfaceTest.dir/QResultsWindow.cpp.s
-	$(MAKE) $(MAKESILENT) -f CMakeFiles\DesktopInterface.dir\build.make CMakeFiles/DesktopInterface.dir/QResultsWindow.cpp.s
-.PHONY : QResultsWindow.cpp.s
 
 QSimulationControlPane.obj: QSimulationControlPane.cpp.obj
 
@@ -504,7 +389,6 @@ QSimulationControlPane.obj: QSimulationControlPane.cpp.obj
 
 # target to build an object file
 QSimulationControlPane.cpp.obj:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles\DesktopInterfaceTest.dir\build.make CMakeFiles/DesktopInterfaceTest.dir/QSimulationControlPane.cpp.obj
 	$(MAKE) $(MAKESILENT) -f CMakeFiles\DesktopInterface.dir\build.make CMakeFiles/DesktopInterface.dir/QSimulationControlPane.cpp.obj
 .PHONY : QSimulationControlPane.cpp.obj
 
@@ -514,7 +398,6 @@ QSimulationControlPane.i: QSimulationControlPane.cpp.i
 
 # target to preprocess a source file
 QSimulationControlPane.cpp.i:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles\DesktopInterfaceTest.dir\build.make CMakeFiles/DesktopInterfaceTest.dir/QSimulationControlPane.cpp.i
 	$(MAKE) $(MAKESILENT) -f CMakeFiles\DesktopInterface.dir\build.make CMakeFiles/DesktopInterface.dir/QSimulationControlPane.cpp.i
 .PHONY : QSimulationControlPane.cpp.i
 
@@ -524,7 +407,6 @@ QSimulationControlPane.s: QSimulationControlPane.cpp.s
 
 # target to generate assembly for a file
 QSimulationControlPane.cpp.s:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles\DesktopInterfaceTest.dir\build.make CMakeFiles/DesktopInterfaceTest.dir/QSimulationControlPane.cpp.s
 	$(MAKE) $(MAKESILENT) -f CMakeFiles\DesktopInterface.dir\build.make CMakeFiles/DesktopInterface.dir/QSimulationControlPane.cpp.s
 .PHONY : QSimulationControlPane.cpp.s
 
@@ -534,7 +416,6 @@ QSimulationControls.obj: QSimulationControls.cpp.obj
 
 # target to build an object file
 QSimulationControls.cpp.obj:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles\DesktopInterfaceTest.dir\build.make CMakeFiles/DesktopInterfaceTest.dir/QSimulationControls.cpp.obj
 	$(MAKE) $(MAKESILENT) -f CMakeFiles\DesktopInterface.dir\build.make CMakeFiles/DesktopInterface.dir/QSimulationControls.cpp.obj
 .PHONY : QSimulationControls.cpp.obj
 
@@ -544,7 +425,6 @@ QSimulationControls.i: QSimulationControls.cpp.i
 
 # target to preprocess a source file
 QSimulationControls.cpp.i:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles\DesktopInterfaceTest.dir\build.make CMakeFiles/DesktopInterfaceTest.dir/QSimulationControls.cpp.i
 	$(MAKE) $(MAKESILENT) -f CMakeFiles\DesktopInterface.dir\build.make CMakeFiles/DesktopInterface.dir/QSimulationControls.cpp.i
 .PHONY : QSimulationControls.cpp.i
 
@@ -554,7 +434,6 @@ QSimulationControls.s: QSimulationControls.cpp.s
 
 # target to generate assembly for a file
 QSimulationControls.cpp.s:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles\DesktopInterfaceTest.dir\build.make CMakeFiles/DesktopInterfaceTest.dir/QSimulationControls.cpp.s
 	$(MAKE) $(MAKESILENT) -f CMakeFiles\DesktopInterface.dir\build.make CMakeFiles/DesktopInterface.dir/QSimulationControls.cpp.s
 .PHONY : QSimulationControls.cpp.s
 
@@ -564,7 +443,6 @@ TempCSVLoader.obj: TempCSVLoader.cpp.obj
 
 # target to build an object file
 TempCSVLoader.cpp.obj:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles\DesktopInterfaceTest.dir\build.make CMakeFiles/DesktopInterfaceTest.dir/TempCSVLoader.cpp.obj
 	$(MAKE) $(MAKESILENT) -f CMakeFiles\DesktopInterface.dir\build.make CMakeFiles/DesktopInterface.dir/TempCSVLoader.cpp.obj
 .PHONY : TempCSVLoader.cpp.obj
 
@@ -574,7 +452,6 @@ TempCSVLoader.i: TempCSVLoader.cpp.i
 
 # target to preprocess a source file
 TempCSVLoader.cpp.i:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles\DesktopInterfaceTest.dir\build.make CMakeFiles/DesktopInterfaceTest.dir/TempCSVLoader.cpp.i
 	$(MAKE) $(MAKESILENT) -f CMakeFiles\DesktopInterface.dir\build.make CMakeFiles/DesktopInterface.dir/TempCSVLoader.cpp.i
 .PHONY : TempCSVLoader.cpp.i
 
@@ -584,7 +461,6 @@ TempCSVLoader.s: TempCSVLoader.cpp.s
 
 # target to generate assembly for a file
 TempCSVLoader.cpp.s:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles\DesktopInterfaceTest.dir\build.make CMakeFiles/DesktopInterfaceTest.dir/TempCSVLoader.cpp.s
 	$(MAKE) $(MAKESILENT) -f CMakeFiles\DesktopInterface.dir\build.make CMakeFiles/DesktopInterface.dir/TempCSVLoader.cpp.s
 .PHONY : TempCSVLoader.cpp.s
 
@@ -594,7 +470,6 @@ WindowsIPCControls.obj: WindowsIPCControls.cpp.obj
 
 # target to build an object file
 WindowsIPCControls.cpp.obj:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles\DesktopInterfaceTest.dir\build.make CMakeFiles/DesktopInterfaceTest.dir/WindowsIPCControls.cpp.obj
 	$(MAKE) $(MAKESILENT) -f CMakeFiles\DesktopInterface.dir\build.make CMakeFiles/DesktopInterface.dir/WindowsIPCControls.cpp.obj
 .PHONY : WindowsIPCControls.cpp.obj
 
@@ -604,7 +479,6 @@ WindowsIPCControls.i: WindowsIPCControls.cpp.i
 
 # target to preprocess a source file
 WindowsIPCControls.cpp.i:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles\DesktopInterfaceTest.dir\build.make CMakeFiles/DesktopInterfaceTest.dir/WindowsIPCControls.cpp.i
 	$(MAKE) $(MAKESILENT) -f CMakeFiles\DesktopInterface.dir\build.make CMakeFiles/DesktopInterface.dir/WindowsIPCControls.cpp.i
 .PHONY : WindowsIPCControls.cpp.i
 
@@ -614,7 +488,6 @@ WindowsIPCControls.s: WindowsIPCControls.cpp.s
 
 # target to generate assembly for a file
 WindowsIPCControls.cpp.s:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles\DesktopInterfaceTest.dir\build.make CMakeFiles/DesktopInterfaceTest.dir/WindowsIPCControls.cpp.s
 	$(MAKE) $(MAKESILENT) -f CMakeFiles\DesktopInterface.dir\build.make CMakeFiles/DesktopInterface.dir/WindowsIPCControls.cpp.s
 .PHONY : WindowsIPCControls.cpp.s
 
@@ -624,7 +497,6 @@ csvsaveload.obj: csvsaveload.cpp.obj
 
 # target to build an object file
 csvsaveload.cpp.obj:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles\DesktopInterfaceTest.dir\build.make CMakeFiles/DesktopInterfaceTest.dir/csvsaveload.cpp.obj
 	$(MAKE) $(MAKESILENT) -f CMakeFiles\DesktopInterface.dir\build.make CMakeFiles/DesktopInterface.dir/csvsaveload.cpp.obj
 .PHONY : csvsaveload.cpp.obj
 
@@ -634,7 +506,6 @@ csvsaveload.i: csvsaveload.cpp.i
 
 # target to preprocess a source file
 csvsaveload.cpp.i:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles\DesktopInterfaceTest.dir\build.make CMakeFiles/DesktopInterfaceTest.dir/csvsaveload.cpp.i
 	$(MAKE) $(MAKESILENT) -f CMakeFiles\DesktopInterface.dir\build.make CMakeFiles/DesktopInterface.dir/csvsaveload.cpp.i
 .PHONY : csvsaveload.cpp.i
 
@@ -644,7 +515,6 @@ csvsaveload.s: csvsaveload.cpp.s
 
 # target to generate assembly for a file
 csvsaveload.cpp.s:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles\DesktopInterfaceTest.dir\build.make CMakeFiles/DesktopInterfaceTest.dir/csvsaveload.cpp.s
 	$(MAKE) $(MAKESILENT) -f CMakeFiles\DesktopInterface.dir\build.make CMakeFiles/DesktopInterface.dir/csvsaveload.cpp.s
 .PHONY : csvsaveload.cpp.s
 
@@ -675,87 +545,6 @@ main.cpp.s:
 	$(MAKE) $(MAKESILENT) -f CMakeFiles\DesktopInterface.dir\build.make CMakeFiles/DesktopInterface.dir/main.cpp.s
 .PHONY : main.cpp.s
 
-unit_tests/TestCSVSaveLoad.obj: unit_tests/TestCSVSaveLoad.cpp.obj
-
-.PHONY : unit_tests/TestCSVSaveLoad.obj
-
-# target to build an object file
-unit_tests/TestCSVSaveLoad.cpp.obj:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles\DesktopInterfaceTest.dir\build.make CMakeFiles/DesktopInterfaceTest.dir/unit_tests/TestCSVSaveLoad.cpp.obj
-.PHONY : unit_tests/TestCSVSaveLoad.cpp.obj
-
-unit_tests/TestCSVSaveLoad.i: unit_tests/TestCSVSaveLoad.cpp.i
-
-.PHONY : unit_tests/TestCSVSaveLoad.i
-
-# target to preprocess a source file
-unit_tests/TestCSVSaveLoad.cpp.i:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles\DesktopInterfaceTest.dir\build.make CMakeFiles/DesktopInterfaceTest.dir/unit_tests/TestCSVSaveLoad.cpp.i
-.PHONY : unit_tests/TestCSVSaveLoad.cpp.i
-
-unit_tests/TestCSVSaveLoad.s: unit_tests/TestCSVSaveLoad.cpp.s
-
-.PHONY : unit_tests/TestCSVSaveLoad.s
-
-# target to generate assembly for a file
-unit_tests/TestCSVSaveLoad.cpp.s:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles\DesktopInterfaceTest.dir\build.make CMakeFiles/DesktopInterfaceTest.dir/unit_tests/TestCSVSaveLoad.cpp.s
-.PHONY : unit_tests/TestCSVSaveLoad.cpp.s
-
-unit_tests/TestPDFGeneration.obj: unit_tests/TestPDFGeneration.cpp.obj
-
-.PHONY : unit_tests/TestPDFGeneration.obj
-
-# target to build an object file
-unit_tests/TestPDFGeneration.cpp.obj:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles\DesktopInterfaceTest.dir\build.make CMakeFiles/DesktopInterfaceTest.dir/unit_tests/TestPDFGeneration.cpp.obj
-.PHONY : unit_tests/TestPDFGeneration.cpp.obj
-
-unit_tests/TestPDFGeneration.i: unit_tests/TestPDFGeneration.cpp.i
-
-.PHONY : unit_tests/TestPDFGeneration.i
-
-# target to preprocess a source file
-unit_tests/TestPDFGeneration.cpp.i:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles\DesktopInterfaceTest.dir\build.make CMakeFiles/DesktopInterfaceTest.dir/unit_tests/TestPDFGeneration.cpp.i
-.PHONY : unit_tests/TestPDFGeneration.cpp.i
-
-unit_tests/TestPDFGeneration.s: unit_tests/TestPDFGeneration.cpp.s
-
-.PHONY : unit_tests/TestPDFGeneration.s
-
-# target to generate assembly for a file
-unit_tests/TestPDFGeneration.cpp.s:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles\DesktopInterfaceTest.dir\build.make CMakeFiles/DesktopInterfaceTest.dir/unit_tests/TestPDFGeneration.cpp.s
-.PHONY : unit_tests/TestPDFGeneration.cpp.s
-
-unit_tests/TestRunner.obj: unit_tests/TestRunner.cpp.obj
-
-.PHONY : unit_tests/TestRunner.obj
-
-# target to build an object file
-unit_tests/TestRunner.cpp.obj:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles\DesktopInterfaceTest.dir\build.make CMakeFiles/DesktopInterfaceTest.dir/unit_tests/TestRunner.cpp.obj
-.PHONY : unit_tests/TestRunner.cpp.obj
-
-unit_tests/TestRunner.i: unit_tests/TestRunner.cpp.i
-
-.PHONY : unit_tests/TestRunner.i
-
-# target to preprocess a source file
-unit_tests/TestRunner.cpp.i:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles\DesktopInterfaceTest.dir\build.make CMakeFiles/DesktopInterfaceTest.dir/unit_tests/TestRunner.cpp.i
-.PHONY : unit_tests/TestRunner.cpp.i
-
-unit_tests/TestRunner.s: unit_tests/TestRunner.cpp.s
-
-.PHONY : unit_tests/TestRunner.s
-
-# target to generate assembly for a file
-unit_tests/TestRunner.cpp.s:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles\DesktopInterfaceTest.dir\build.make CMakeFiles/DesktopInterfaceTest.dir/unit_tests/TestRunner.cpp.s
-.PHONY : unit_tests/TestRunner.cpp.s
-
 # Help Target
 help:
 	@echo The following are some of the valid targets for this Makefile:
@@ -764,24 +553,18 @@ help:
 	@echo ... depend
 	@echo ... edit_cache
 	@echo ... rebuild_cache
-	@echo ... test
-	@echo ... DesktopInterfaceTest_autogen
 	@echo ... DesktopInterface_autogen
 	@echo ... TARGET
 	@echo ... DesktopInterface
-	@echo ... DesktopInterfaceTest
+	@echo ... C_/Users/Neuromechanics_Lab/CLionProjects/VPVR/shared_include/FullPatientData.obj
+	@echo ... C_/Users/Neuromechanics_Lab/CLionProjects/VPVR/shared_include/FullPatientData.i
+	@echo ... C_/Users/Neuromechanics_Lab/CLionProjects/VPVR/shared_include/FullPatientData.s
 	@echo ... DesktopInterface.obj
 	@echo ... DesktopInterface.i
 	@echo ... DesktopInterface.s
-	@echo ... DesktopInterfaceTest_autogen/mocs_compilation.obj
-	@echo ... DesktopInterfaceTest_autogen/mocs_compilation.i
-	@echo ... DesktopInterfaceTest_autogen/mocs_compilation.s
 	@echo ... DesktopInterface_autogen/mocs_compilation.obj
 	@echo ... DesktopInterface_autogen/mocs_compilation.i
 	@echo ... DesktopInterface_autogen/mocs_compilation.s
-	@echo ... E_/CS425Project/VPVR/shared_include/FullPatientData.obj
-	@echo ... E_/CS425Project/VPVR/shared_include/FullPatientData.i
-	@echo ... E_/CS425Project/VPVR/shared_include/FullPatientData.s
 	@echo ... PDFGenerator.obj
 	@echo ... PDFGenerator.i
 	@echo ... PDFGenerator.s
@@ -797,9 +580,6 @@ help:
 	@echo ... QResultsPane.obj
 	@echo ... QResultsPane.i
 	@echo ... QResultsPane.s
-	@echo ... QResultsWindow.obj
-	@echo ... QResultsWindow.i
-	@echo ... QResultsWindow.s
 	@echo ... QSimulationControlPane.obj
 	@echo ... QSimulationControlPane.i
 	@echo ... QSimulationControlPane.s
@@ -818,15 +598,6 @@ help:
 	@echo ... main.obj
 	@echo ... main.i
 	@echo ... main.s
-	@echo ... unit_tests/TestCSVSaveLoad.obj
-	@echo ... unit_tests/TestCSVSaveLoad.i
-	@echo ... unit_tests/TestCSVSaveLoad.s
-	@echo ... unit_tests/TestPDFGeneration.obj
-	@echo ... unit_tests/TestPDFGeneration.i
-	@echo ... unit_tests/TestPDFGeneration.s
-	@echo ... unit_tests/TestRunner.obj
-	@echo ... unit_tests/TestRunner.i
-	@echo ... unit_tests/TestRunner.s
 .PHONY : help
 
 

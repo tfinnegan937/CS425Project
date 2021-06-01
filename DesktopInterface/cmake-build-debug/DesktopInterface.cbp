@@ -5,95 +5,21 @@
 		<Option title="DesktopInterface"/>
 		<Option makefile_is_custom="1"/>
 		<Option compiler="gcc"/>
-		<Option virtualFolders="CMake Files\;CMake Files\Qt\;CMake Files\Qt\5.15.2\;CMake Files\Qt\5.15.2\mingw81_64\;CMake Files\Qt\5.15.2\mingw81_64\lib\;CMake Files\Qt\5.15.2\mingw81_64\lib\cmake\;CMake Files\Qt\5.15.2\mingw81_64\lib\cmake\Qt5Widgets\;CMake Files\Qt\5.15.2\mingw81_64\lib\cmake\Qt5Gui\;CMake Files\Qt\5.15.2\mingw81_64\lib\cmake\Qt5Core\;CMake Files\Qt\5.15.2\mingw81_64\lib\cmake\Qt5\;CMake Files\Qt\5.15.2\mingw81_64\lib\cmake\Qt5Test\;"/>
+		<Option virtualFolders="CMake Files\;CMake Files\..\;CMake Files\..\..\;CMake Files\..\..\..\;CMake Files\..\..\..\..\;CMake Files\..\..\..\..\..\;CMake Files\..\..\..\..\..\Qt\;CMake Files\..\..\..\..\..\Qt\5.12.11\;CMake Files\..\..\..\..\..\Qt\5.12.11\mingw73_64\;CMake Files\..\..\..\..\..\Qt\5.12.11\mingw73_64\lib\;CMake Files\..\..\..\..\..\Qt\5.12.11\mingw73_64\lib\cmake\;CMake Files\..\..\..\..\..\Qt\5.12.11\mingw73_64\lib\cmake\Qt5Widgets\;CMake Files\..\..\..\..\..\Qt\5.12.11\mingw73_64\lib\cmake\Qt5Gui\;CMake Files\..\..\..\..\..\Qt\5.12.11\mingw73_64\lib\cmake\Qt5Core\;CMake Files\..\..\..\..\..\Qt\5.12.11\mingw73_64\lib\cmake\Qt5\;"/>
 		<Build>
 			<Target title="all">
-				<Option working_dir="E:/CS425Project/VPVR/DesktopInterface/cmake-build-debug"/>
+				<Option working_dir="C:/Users/Neuromechanics Lab/CLionProjects/VPVR/DesktopInterface/cmake-build-debug"/>
 				<Option type="4"/>
 				<MakeCommands>
-					<Build command="C:/mingw-w64/mingw64/bin/mingw32-make.exe -f &quot;E:/CS425Project/VPVR/DesktopInterface/cmake-build-debug/Makefile&quot;  VERBOSE=1 all"/>
-					<CompileFile command="C:/mingw-w64/mingw64/bin/mingw32-make.exe -f &quot;E:/CS425Project/VPVR/DesktopInterface/cmake-build-debug/Makefile&quot;  VERBOSE=1 &quot;$file&quot;"/>
-					<Clean command="C:/mingw-w64/mingw64/bin/mingw32-make.exe -f &quot;E:/CS425Project/VPVR/DesktopInterface/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
-					<DistClean command="C:/mingw-w64/mingw64/bin/mingw32-make.exe -f &quot;E:/CS425Project/VPVR/DesktopInterface/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
-				</MakeCommands>
-			</Target>
-			<Target title="DesktopInterfaceTest">
-				<Option output="E:/CS425Project/VPVR/Binaries/Win64/DesktopInterfaceTest.exe" prefix_auto="0" extension_auto="0"/>
-				<Option working_dir="E:/CS425Project/VPVR/DesktopInterface/../Binaries/Win64/"/>
-				<Option object_output="./"/>
-				<Option type="1"/>
-				<Option compiler="gcc"/>
-				<Compiler>
-					<Add option="-DQT_TESTLIB_LIB"/>
-					<Add option="-DQT_TESTCASE_BUILDDIR=&quot;E:/CS425Project/VPVR/DesktopInterface/cmake-build-debug&quot;"/>
-					<Add option="-DQT_CORE_LIB"/>
-					<Add option="-DQT_WIDGETS_LIB"/>
-					<Add option="-DQT_GUI_LIB"/>
-					<Add directory="E:/CS425Project/VPVR/DesktopInterface/cmake-build-debug/DesktopInterfaceTest_autogen/include"/>
-					<Add directory="E:/CS425Project/VPVR/shared_include"/>
-					<Add directory="C:/Users/plays/AppData/Local/Programs/Python/Python39/include"/>
-					<Add directory="E:/CS425Project/VPVR/DesktopInterface/unit_tests"/>
-					<Add directory="C:/Qt/5.15.2/mingw81_64/include"/>
-					<Add directory="C:/Qt/5.15.2/mingw81_64/include/QtTest"/>
-					<Add directory="C:/Qt/5.15.2/mingw81_64/include/QtCore"/>
-					<Add directory="C:/Qt/5.15.2/mingw81_64/./mkspecs/win32-g++"/>
-					<Add directory="C:/Qt/5.15.2/mingw81_64/include/QtWidgets"/>
-					<Add directory="C:/Qt/5.15.2/mingw81_64/include/QtGui"/>
-					<Add directory="C:/Qt/5.15.2/mingw81_64/include/QtANGLE"/>
-					<Add directory="C:/mingw-w64/mingw64/bin/../lib/gcc/x86_64-w64-mingw32/8.1.0/include/c++"/>
-					<Add directory="C:/mingw-w64/mingw64/bin/../lib/gcc/x86_64-w64-mingw32/8.1.0/include/c++/x86_64-w64-mingw32"/>
-					<Add directory="C:/mingw-w64/mingw64/bin/../lib/gcc/x86_64-w64-mingw32/8.1.0/include/c++/backward"/>
-					<Add directory="C:/mingw-w64/mingw64/bin/../lib/gcc/x86_64-w64-mingw32/8.1.0/include"/>
-					<Add directory="C:/mingw-w64/mingw64/bin/../lib/gcc/x86_64-w64-mingw32/8.1.0/include-fixed"/>
-					<Add directory="C:/mingw-w64/mingw64/bin/../lib/gcc/x86_64-w64-mingw32/8.1.0/../../../../x86_64-w64-mingw32/include"/>
-				</Compiler>
-				<MakeCommands>
-					<Build command="C:/mingw-w64/mingw64/bin/mingw32-make.exe -f &quot;E:/CS425Project/VPVR/DesktopInterface/cmake-build-debug/Makefile&quot;  VERBOSE=1 DesktopInterfaceTest"/>
-					<CompileFile command="C:/mingw-w64/mingw64/bin/mingw32-make.exe -f &quot;E:/CS425Project/VPVR/DesktopInterface/cmake-build-debug/Makefile&quot;  VERBOSE=1 &quot;$file&quot;"/>
-					<Clean command="C:/mingw-w64/mingw64/bin/mingw32-make.exe -f &quot;E:/CS425Project/VPVR/DesktopInterface/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
-					<DistClean command="C:/mingw-w64/mingw64/bin/mingw32-make.exe -f &quot;E:/CS425Project/VPVR/DesktopInterface/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
-				</MakeCommands>
-			</Target>
-			<Target title="DesktopInterfaceTest/fast">
-				<Option output="E:/CS425Project/VPVR/Binaries/Win64/DesktopInterfaceTest.exe" prefix_auto="0" extension_auto="0"/>
-				<Option working_dir="E:/CS425Project/VPVR/DesktopInterface/../Binaries/Win64/"/>
-				<Option object_output="./"/>
-				<Option type="1"/>
-				<Option compiler="gcc"/>
-				<Compiler>
-					<Add option="-DQT_TESTLIB_LIB"/>
-					<Add option="-DQT_TESTCASE_BUILDDIR=&quot;E:/CS425Project/VPVR/DesktopInterface/cmake-build-debug&quot;"/>
-					<Add option="-DQT_CORE_LIB"/>
-					<Add option="-DQT_WIDGETS_LIB"/>
-					<Add option="-DQT_GUI_LIB"/>
-					<Add directory="E:/CS425Project/VPVR/DesktopInterface/cmake-build-debug/DesktopInterfaceTest_autogen/include"/>
-					<Add directory="E:/CS425Project/VPVR/shared_include"/>
-					<Add directory="C:/Users/plays/AppData/Local/Programs/Python/Python39/include"/>
-					<Add directory="E:/CS425Project/VPVR/DesktopInterface/unit_tests"/>
-					<Add directory="C:/Qt/5.15.2/mingw81_64/include"/>
-					<Add directory="C:/Qt/5.15.2/mingw81_64/include/QtTest"/>
-					<Add directory="C:/Qt/5.15.2/mingw81_64/include/QtCore"/>
-					<Add directory="C:/Qt/5.15.2/mingw81_64/./mkspecs/win32-g++"/>
-					<Add directory="C:/Qt/5.15.2/mingw81_64/include/QtWidgets"/>
-					<Add directory="C:/Qt/5.15.2/mingw81_64/include/QtGui"/>
-					<Add directory="C:/Qt/5.15.2/mingw81_64/include/QtANGLE"/>
-					<Add directory="C:/mingw-w64/mingw64/bin/../lib/gcc/x86_64-w64-mingw32/8.1.0/include/c++"/>
-					<Add directory="C:/mingw-w64/mingw64/bin/../lib/gcc/x86_64-w64-mingw32/8.1.0/include/c++/x86_64-w64-mingw32"/>
-					<Add directory="C:/mingw-w64/mingw64/bin/../lib/gcc/x86_64-w64-mingw32/8.1.0/include/c++/backward"/>
-					<Add directory="C:/mingw-w64/mingw64/bin/../lib/gcc/x86_64-w64-mingw32/8.1.0/include"/>
-					<Add directory="C:/mingw-w64/mingw64/bin/../lib/gcc/x86_64-w64-mingw32/8.1.0/include-fixed"/>
-					<Add directory="C:/mingw-w64/mingw64/bin/../lib/gcc/x86_64-w64-mingw32/8.1.0/../../../../x86_64-w64-mingw32/include"/>
-				</Compiler>
-				<MakeCommands>
-					<Build command="C:/mingw-w64/mingw64/bin/mingw32-make.exe -f &quot;E:/CS425Project/VPVR/DesktopInterface/cmake-build-debug/Makefile&quot;  VERBOSE=1 DesktopInterfaceTest/fast"/>
-					<CompileFile command="C:/mingw-w64/mingw64/bin/mingw32-make.exe -f &quot;E:/CS425Project/VPVR/DesktopInterface/cmake-build-debug/Makefile&quot;  VERBOSE=1 &quot;$file&quot;"/>
-					<Clean command="C:/mingw-w64/mingw64/bin/mingw32-make.exe -f &quot;E:/CS425Project/VPVR/DesktopInterface/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
-					<DistClean command="C:/mingw-w64/mingw64/bin/mingw32-make.exe -f &quot;E:/CS425Project/VPVR/DesktopInterface/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
+					<Build command="C:/PROGRA~1/MINGW-~1/X86_64~1.0-P/mingw64/bin/mingw32-make.exe -f &quot;C:/Users/Neuromechanics Lab/CLionProjects/VPVR/DesktopInterface/cmake-build-debug/Makefile&quot;  VERBOSE=1 all"/>
+					<CompileFile command="C:/PROGRA~1/MINGW-~1/X86_64~1.0-P/mingw64/bin/mingw32-make.exe -f &quot;C:/Users/Neuromechanics Lab/CLionProjects/VPVR/DesktopInterface/cmake-build-debug/Makefile&quot;  VERBOSE=1 &quot;$file&quot;"/>
+					<Clean command="C:/PROGRA~1/MINGW-~1/X86_64~1.0-P/mingw64/bin/mingw32-make.exe -f &quot;C:/Users/Neuromechanics Lab/CLionProjects/VPVR/DesktopInterface/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
+					<DistClean command="C:/PROGRA~1/MINGW-~1/X86_64~1.0-P/mingw64/bin/mingw32-make.exe -f &quot;C:/Users/Neuromechanics Lab/CLionProjects/VPVR/DesktopInterface/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
 				</MakeCommands>
 			</Target>
 			<Target title="DesktopInterface">
-				<Option output="E:/CS425Project/VPVR/Binaries/Win64/DesktopInterface.exe" prefix_auto="0" extension_auto="0"/>
-				<Option working_dir="E:/CS425Project/VPVR/DesktopInterface/../Binaries/Win64/"/>
+				<Option output="C:/Users/Neuromechanics Lab/CLionProjects/VPVR/Binaries/Win64/DesktopInterface.exe" prefix_auto="0" extension_auto="0"/>
+				<Option working_dir="C:/Users/Neuromechanics Lab/CLionProjects/VPVR/DesktopInterface/../Binaries/Win64/"/>
 				<Option object_output="./"/>
 				<Option type="1"/>
 				<Option compiler="gcc"/>
@@ -101,33 +27,32 @@
 					<Add option="-DQT_WIDGETS_LIB"/>
 					<Add option="-DQT_GUI_LIB"/>
 					<Add option="-DQT_CORE_LIB"/>
-					<Add directory="E:/CS425Project/VPVR/DesktopInterface/cmake-build-debug/DesktopInterface_autogen/include"/>
-					<Add directory="E:/CS425Project/VPVR/shared_include"/>
-					<Add directory="C:/Users/plays/AppData/Local/Programs/Python/Python39/include"/>
-					<Add directory="E:/CS425Project/VPVR/DesktopInterface/unit_tests"/>
-					<Add directory="C:/Qt/5.15.2/mingw81_64/include"/>
-					<Add directory="C:/Qt/5.15.2/mingw81_64/include/QtWidgets"/>
-					<Add directory="C:/Qt/5.15.2/mingw81_64/include/QtGui"/>
-					<Add directory="C:/Qt/5.15.2/mingw81_64/include/QtANGLE"/>
-					<Add directory="C:/Qt/5.15.2/mingw81_64/include/QtCore"/>
-					<Add directory="C:/Qt/5.15.2/mingw81_64/./mkspecs/win32-g++"/>
-					<Add directory="C:/mingw-w64/mingw64/bin/../lib/gcc/x86_64-w64-mingw32/8.1.0/include/c++"/>
-					<Add directory="C:/mingw-w64/mingw64/bin/../lib/gcc/x86_64-w64-mingw32/8.1.0/include/c++/x86_64-w64-mingw32"/>
-					<Add directory="C:/mingw-w64/mingw64/bin/../lib/gcc/x86_64-w64-mingw32/8.1.0/include/c++/backward"/>
-					<Add directory="C:/mingw-w64/mingw64/bin/../lib/gcc/x86_64-w64-mingw32/8.1.0/include"/>
-					<Add directory="C:/mingw-w64/mingw64/bin/../lib/gcc/x86_64-w64-mingw32/8.1.0/include-fixed"/>
-					<Add directory="C:/mingw-w64/mingw64/bin/../lib/gcc/x86_64-w64-mingw32/8.1.0/../../../../x86_64-w64-mingw32/include"/>
+					<Add directory="C:/Users/Neuromechanics Lab/CLionProjects/VPVR/DesktopInterface/cmake-build-debug/DesktopInterface_autogen/include"/>
+					<Add directory="C:/Users/Neuromechanics Lab/CLionProjects/VPVR/shared_include"/>
+					<Add directory="C:/Users/Neuromechanics Lab/AppData/Local/Programs/Python/Python39/include"/>
+					<Add directory="C:/Qt/5.12.11/mingw73_64/include"/>
+					<Add directory="C:/Qt/5.12.11/mingw73_64/include/QtWidgets"/>
+					<Add directory="C:/Qt/5.12.11/mingw73_64/include/QtGui"/>
+					<Add directory="C:/Qt/5.12.11/mingw73_64/include/QtANGLE"/>
+					<Add directory="C:/Qt/5.12.11/mingw73_64/include/QtCore"/>
+					<Add directory="C:/Qt/5.12.11/mingw73_64/./mkspecs/win32-g++"/>
+					<Add directory="C:/Program Files/mingw-w64/x86_64-8.1.0-posix-seh-rt_v6-rev0/mingw64/bin/../lib/gcc/x86_64-w64-mingw32/8.1.0/include/c++"/>
+					<Add directory="C:/Program Files/mingw-w64/x86_64-8.1.0-posix-seh-rt_v6-rev0/mingw64/bin/../lib/gcc/x86_64-w64-mingw32/8.1.0/include/c++/x86_64-w64-mingw32"/>
+					<Add directory="C:/Program Files/mingw-w64/x86_64-8.1.0-posix-seh-rt_v6-rev0/mingw64/bin/../lib/gcc/x86_64-w64-mingw32/8.1.0/include/c++/backward"/>
+					<Add directory="C:/Program Files/mingw-w64/x86_64-8.1.0-posix-seh-rt_v6-rev0/mingw64/bin/../lib/gcc/x86_64-w64-mingw32/8.1.0/include"/>
+					<Add directory="C:/Program Files/mingw-w64/x86_64-8.1.0-posix-seh-rt_v6-rev0/mingw64/bin/../lib/gcc/x86_64-w64-mingw32/8.1.0/include-fixed"/>
+					<Add directory="C:/Program Files/mingw-w64/x86_64-8.1.0-posix-seh-rt_v6-rev0/mingw64/bin/../lib/gcc/x86_64-w64-mingw32/8.1.0/../../../../x86_64-w64-mingw32/include"/>
 				</Compiler>
 				<MakeCommands>
-					<Build command="C:/mingw-w64/mingw64/bin/mingw32-make.exe -f &quot;E:/CS425Project/VPVR/DesktopInterface/cmake-build-debug/Makefile&quot;  VERBOSE=1 DesktopInterface"/>
-					<CompileFile command="C:/mingw-w64/mingw64/bin/mingw32-make.exe -f &quot;E:/CS425Project/VPVR/DesktopInterface/cmake-build-debug/Makefile&quot;  VERBOSE=1 &quot;$file&quot;"/>
-					<Clean command="C:/mingw-w64/mingw64/bin/mingw32-make.exe -f &quot;E:/CS425Project/VPVR/DesktopInterface/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
-					<DistClean command="C:/mingw-w64/mingw64/bin/mingw32-make.exe -f &quot;E:/CS425Project/VPVR/DesktopInterface/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
+					<Build command="C:/PROGRA~1/MINGW-~1/X86_64~1.0-P/mingw64/bin/mingw32-make.exe -f &quot;C:/Users/Neuromechanics Lab/CLionProjects/VPVR/DesktopInterface/cmake-build-debug/Makefile&quot;  VERBOSE=1 DesktopInterface"/>
+					<CompileFile command="C:/PROGRA~1/MINGW-~1/X86_64~1.0-P/mingw64/bin/mingw32-make.exe -f &quot;C:/Users/Neuromechanics Lab/CLionProjects/VPVR/DesktopInterface/cmake-build-debug/Makefile&quot;  VERBOSE=1 &quot;$file&quot;"/>
+					<Clean command="C:/PROGRA~1/MINGW-~1/X86_64~1.0-P/mingw64/bin/mingw32-make.exe -f &quot;C:/Users/Neuromechanics Lab/CLionProjects/VPVR/DesktopInterface/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
+					<DistClean command="C:/PROGRA~1/MINGW-~1/X86_64~1.0-P/mingw64/bin/mingw32-make.exe -f &quot;C:/Users/Neuromechanics Lab/CLionProjects/VPVR/DesktopInterface/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
 				</MakeCommands>
 			</Target>
 			<Target title="DesktopInterface/fast">
-				<Option output="E:/CS425Project/VPVR/Binaries/Win64/DesktopInterface.exe" prefix_auto="0" extension_auto="0"/>
-				<Option working_dir="E:/CS425Project/VPVR/DesktopInterface/../Binaries/Win64/"/>
+				<Option output="C:/Users/Neuromechanics Lab/CLionProjects/VPVR/Binaries/Win64/DesktopInterface.exe" prefix_auto="0" extension_auto="0"/>
+				<Option working_dir="C:/Users/Neuromechanics Lab/CLionProjects/VPVR/DesktopInterface/../Binaries/Win64/"/>
 				<Option object_output="./"/>
 				<Option type="1"/>
 				<Option compiler="gcc"/>
@@ -135,355 +60,258 @@
 					<Add option="-DQT_WIDGETS_LIB"/>
 					<Add option="-DQT_GUI_LIB"/>
 					<Add option="-DQT_CORE_LIB"/>
-					<Add directory="E:/CS425Project/VPVR/DesktopInterface/cmake-build-debug/DesktopInterface_autogen/include"/>
-					<Add directory="E:/CS425Project/VPVR/shared_include"/>
-					<Add directory="C:/Users/plays/AppData/Local/Programs/Python/Python39/include"/>
-					<Add directory="E:/CS425Project/VPVR/DesktopInterface/unit_tests"/>
-					<Add directory="C:/Qt/5.15.2/mingw81_64/include"/>
-					<Add directory="C:/Qt/5.15.2/mingw81_64/include/QtWidgets"/>
-					<Add directory="C:/Qt/5.15.2/mingw81_64/include/QtGui"/>
-					<Add directory="C:/Qt/5.15.2/mingw81_64/include/QtANGLE"/>
-					<Add directory="C:/Qt/5.15.2/mingw81_64/include/QtCore"/>
-					<Add directory="C:/Qt/5.15.2/mingw81_64/./mkspecs/win32-g++"/>
-					<Add directory="C:/mingw-w64/mingw64/bin/../lib/gcc/x86_64-w64-mingw32/8.1.0/include/c++"/>
-					<Add directory="C:/mingw-w64/mingw64/bin/../lib/gcc/x86_64-w64-mingw32/8.1.0/include/c++/x86_64-w64-mingw32"/>
-					<Add directory="C:/mingw-w64/mingw64/bin/../lib/gcc/x86_64-w64-mingw32/8.1.0/include/c++/backward"/>
-					<Add directory="C:/mingw-w64/mingw64/bin/../lib/gcc/x86_64-w64-mingw32/8.1.0/include"/>
-					<Add directory="C:/mingw-w64/mingw64/bin/../lib/gcc/x86_64-w64-mingw32/8.1.0/include-fixed"/>
-					<Add directory="C:/mingw-w64/mingw64/bin/../lib/gcc/x86_64-w64-mingw32/8.1.0/../../../../x86_64-w64-mingw32/include"/>
+					<Add directory="C:/Users/Neuromechanics Lab/CLionProjects/VPVR/DesktopInterface/cmake-build-debug/DesktopInterface_autogen/include"/>
+					<Add directory="C:/Users/Neuromechanics Lab/CLionProjects/VPVR/shared_include"/>
+					<Add directory="C:/Users/Neuromechanics Lab/AppData/Local/Programs/Python/Python39/include"/>
+					<Add directory="C:/Qt/5.12.11/mingw73_64/include"/>
+					<Add directory="C:/Qt/5.12.11/mingw73_64/include/QtWidgets"/>
+					<Add directory="C:/Qt/5.12.11/mingw73_64/include/QtGui"/>
+					<Add directory="C:/Qt/5.12.11/mingw73_64/include/QtANGLE"/>
+					<Add directory="C:/Qt/5.12.11/mingw73_64/include/QtCore"/>
+					<Add directory="C:/Qt/5.12.11/mingw73_64/./mkspecs/win32-g++"/>
+					<Add directory="C:/Program Files/mingw-w64/x86_64-8.1.0-posix-seh-rt_v6-rev0/mingw64/bin/../lib/gcc/x86_64-w64-mingw32/8.1.0/include/c++"/>
+					<Add directory="C:/Program Files/mingw-w64/x86_64-8.1.0-posix-seh-rt_v6-rev0/mingw64/bin/../lib/gcc/x86_64-w64-mingw32/8.1.0/include/c++/x86_64-w64-mingw32"/>
+					<Add directory="C:/Program Files/mingw-w64/x86_64-8.1.0-posix-seh-rt_v6-rev0/mingw64/bin/../lib/gcc/x86_64-w64-mingw32/8.1.0/include/c++/backward"/>
+					<Add directory="C:/Program Files/mingw-w64/x86_64-8.1.0-posix-seh-rt_v6-rev0/mingw64/bin/../lib/gcc/x86_64-w64-mingw32/8.1.0/include"/>
+					<Add directory="C:/Program Files/mingw-w64/x86_64-8.1.0-posix-seh-rt_v6-rev0/mingw64/bin/../lib/gcc/x86_64-w64-mingw32/8.1.0/include-fixed"/>
+					<Add directory="C:/Program Files/mingw-w64/x86_64-8.1.0-posix-seh-rt_v6-rev0/mingw64/bin/../lib/gcc/x86_64-w64-mingw32/8.1.0/../../../../x86_64-w64-mingw32/include"/>
 				</Compiler>
 				<MakeCommands>
-					<Build command="C:/mingw-w64/mingw64/bin/mingw32-make.exe -f &quot;E:/CS425Project/VPVR/DesktopInterface/cmake-build-debug/Makefile&quot;  VERBOSE=1 DesktopInterface/fast"/>
-					<CompileFile command="C:/mingw-w64/mingw64/bin/mingw32-make.exe -f &quot;E:/CS425Project/VPVR/DesktopInterface/cmake-build-debug/Makefile&quot;  VERBOSE=1 &quot;$file&quot;"/>
-					<Clean command="C:/mingw-w64/mingw64/bin/mingw32-make.exe -f &quot;E:/CS425Project/VPVR/DesktopInterface/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
-					<DistClean command="C:/mingw-w64/mingw64/bin/mingw32-make.exe -f &quot;E:/CS425Project/VPVR/DesktopInterface/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
+					<Build command="C:/PROGRA~1/MINGW-~1/X86_64~1.0-P/mingw64/bin/mingw32-make.exe -f &quot;C:/Users/Neuromechanics Lab/CLionProjects/VPVR/DesktopInterface/cmake-build-debug/Makefile&quot;  VERBOSE=1 DesktopInterface/fast"/>
+					<CompileFile command="C:/PROGRA~1/MINGW-~1/X86_64~1.0-P/mingw64/bin/mingw32-make.exe -f &quot;C:/Users/Neuromechanics Lab/CLionProjects/VPVR/DesktopInterface/cmake-build-debug/Makefile&quot;  VERBOSE=1 &quot;$file&quot;"/>
+					<Clean command="C:/PROGRA~1/MINGW-~1/X86_64~1.0-P/mingw64/bin/mingw32-make.exe -f &quot;C:/Users/Neuromechanics Lab/CLionProjects/VPVR/DesktopInterface/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
+					<DistClean command="C:/PROGRA~1/MINGW-~1/X86_64~1.0-P/mingw64/bin/mingw32-make.exe -f &quot;C:/Users/Neuromechanics Lab/CLionProjects/VPVR/DesktopInterface/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
 				</MakeCommands>
 			</Target>
 			<Target title="edit_cache">
-				<Option working_dir="E:/CS425Project/VPVR/DesktopInterface/cmake-build-debug"/>
+				<Option working_dir="C:/Users/Neuromechanics Lab/CLionProjects/VPVR/DesktopInterface/cmake-build-debug"/>
 				<Option type="4"/>
 				<MakeCommands>
-					<Build command="C:/mingw-w64/mingw64/bin/mingw32-make.exe -f &quot;E:/CS425Project/VPVR/DesktopInterface/cmake-build-debug/Makefile&quot;  VERBOSE=1 edit_cache"/>
-					<CompileFile command="C:/mingw-w64/mingw64/bin/mingw32-make.exe -f &quot;E:/CS425Project/VPVR/DesktopInterface/cmake-build-debug/Makefile&quot;  VERBOSE=1 &quot;$file&quot;"/>
-					<Clean command="C:/mingw-w64/mingw64/bin/mingw32-make.exe -f &quot;E:/CS425Project/VPVR/DesktopInterface/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
-					<DistClean command="C:/mingw-w64/mingw64/bin/mingw32-make.exe -f &quot;E:/CS425Project/VPVR/DesktopInterface/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
+					<Build command="C:/PROGRA~1/MINGW-~1/X86_64~1.0-P/mingw64/bin/mingw32-make.exe -f &quot;C:/Users/Neuromechanics Lab/CLionProjects/VPVR/DesktopInterface/cmake-build-debug/Makefile&quot;  VERBOSE=1 edit_cache"/>
+					<CompileFile command="C:/PROGRA~1/MINGW-~1/X86_64~1.0-P/mingw64/bin/mingw32-make.exe -f &quot;C:/Users/Neuromechanics Lab/CLionProjects/VPVR/DesktopInterface/cmake-build-debug/Makefile&quot;  VERBOSE=1 &quot;$file&quot;"/>
+					<Clean command="C:/PROGRA~1/MINGW-~1/X86_64~1.0-P/mingw64/bin/mingw32-make.exe -f &quot;C:/Users/Neuromechanics Lab/CLionProjects/VPVR/DesktopInterface/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
+					<DistClean command="C:/PROGRA~1/MINGW-~1/X86_64~1.0-P/mingw64/bin/mingw32-make.exe -f &quot;C:/Users/Neuromechanics Lab/CLionProjects/VPVR/DesktopInterface/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
 				</MakeCommands>
 			</Target>
 			<Target title="TARGET">
-				<Option working_dir="E:/CS425Project/VPVR/DesktopInterface/cmake-build-debug"/>
+				<Option working_dir="C:/Users/Neuromechanics Lab/CLionProjects/VPVR/DesktopInterface/cmake-build-debug"/>
 				<Option type="4"/>
 				<MakeCommands>
-					<Build command="C:/mingw-w64/mingw64/bin/mingw32-make.exe -f &quot;E:/CS425Project/VPVR/DesktopInterface/cmake-build-debug/Makefile&quot;  VERBOSE=1 TARGET"/>
-					<CompileFile command="C:/mingw-w64/mingw64/bin/mingw32-make.exe -f &quot;E:/CS425Project/VPVR/DesktopInterface/cmake-build-debug/Makefile&quot;  VERBOSE=1 &quot;$file&quot;"/>
-					<Clean command="C:/mingw-w64/mingw64/bin/mingw32-make.exe -f &quot;E:/CS425Project/VPVR/DesktopInterface/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
-					<DistClean command="C:/mingw-w64/mingw64/bin/mingw32-make.exe -f &quot;E:/CS425Project/VPVR/DesktopInterface/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
+					<Build command="C:/PROGRA~1/MINGW-~1/X86_64~1.0-P/mingw64/bin/mingw32-make.exe -f &quot;C:/Users/Neuromechanics Lab/CLionProjects/VPVR/DesktopInterface/cmake-build-debug/Makefile&quot;  VERBOSE=1 TARGET"/>
+					<CompileFile command="C:/PROGRA~1/MINGW-~1/X86_64~1.0-P/mingw64/bin/mingw32-make.exe -f &quot;C:/Users/Neuromechanics Lab/CLionProjects/VPVR/DesktopInterface/cmake-build-debug/Makefile&quot;  VERBOSE=1 &quot;$file&quot;"/>
+					<Clean command="C:/PROGRA~1/MINGW-~1/X86_64~1.0-P/mingw64/bin/mingw32-make.exe -f &quot;C:/Users/Neuromechanics Lab/CLionProjects/VPVR/DesktopInterface/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
+					<DistClean command="C:/PROGRA~1/MINGW-~1/X86_64~1.0-P/mingw64/bin/mingw32-make.exe -f &quot;C:/Users/Neuromechanics Lab/CLionProjects/VPVR/DesktopInterface/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
 				</MakeCommands>
 			</Target>
 			<Target title="rebuild_cache">
-				<Option working_dir="E:/CS425Project/VPVR/DesktopInterface/cmake-build-debug"/>
+				<Option working_dir="C:/Users/Neuromechanics Lab/CLionProjects/VPVR/DesktopInterface/cmake-build-debug"/>
 				<Option type="4"/>
 				<MakeCommands>
-					<Build command="C:/mingw-w64/mingw64/bin/mingw32-make.exe -f &quot;E:/CS425Project/VPVR/DesktopInterface/cmake-build-debug/Makefile&quot;  VERBOSE=1 rebuild_cache"/>
-					<CompileFile command="C:/mingw-w64/mingw64/bin/mingw32-make.exe -f &quot;E:/CS425Project/VPVR/DesktopInterface/cmake-build-debug/Makefile&quot;  VERBOSE=1 &quot;$file&quot;"/>
-					<Clean command="C:/mingw-w64/mingw64/bin/mingw32-make.exe -f &quot;E:/CS425Project/VPVR/DesktopInterface/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
-					<DistClean command="C:/mingw-w64/mingw64/bin/mingw32-make.exe -f &quot;E:/CS425Project/VPVR/DesktopInterface/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
-				</MakeCommands>
-			</Target>
-			<Target title="test">
-				<Option working_dir="E:/CS425Project/VPVR/DesktopInterface/cmake-build-debug"/>
-				<Option type="4"/>
-				<MakeCommands>
-					<Build command="C:/mingw-w64/mingw64/bin/mingw32-make.exe -f &quot;E:/CS425Project/VPVR/DesktopInterface/cmake-build-debug/Makefile&quot;  VERBOSE=1 test"/>
-					<CompileFile command="C:/mingw-w64/mingw64/bin/mingw32-make.exe -f &quot;E:/CS425Project/VPVR/DesktopInterface/cmake-build-debug/Makefile&quot;  VERBOSE=1 &quot;$file&quot;"/>
-					<Clean command="C:/mingw-w64/mingw64/bin/mingw32-make.exe -f &quot;E:/CS425Project/VPVR/DesktopInterface/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
-					<DistClean command="C:/mingw-w64/mingw64/bin/mingw32-make.exe -f &quot;E:/CS425Project/VPVR/DesktopInterface/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
-				</MakeCommands>
-			</Target>
-			<Target title="DesktopInterfaceTest_autogen">
-				<Option working_dir="E:/CS425Project/VPVR/DesktopInterface/cmake-build-debug"/>
-				<Option type="4"/>
-				<MakeCommands>
-					<Build command="C:/mingw-w64/mingw64/bin/mingw32-make.exe -f &quot;E:/CS425Project/VPVR/DesktopInterface/cmake-build-debug/Makefile&quot;  VERBOSE=1 DesktopInterfaceTest_autogen"/>
-					<CompileFile command="C:/mingw-w64/mingw64/bin/mingw32-make.exe -f &quot;E:/CS425Project/VPVR/DesktopInterface/cmake-build-debug/Makefile&quot;  VERBOSE=1 &quot;$file&quot;"/>
-					<Clean command="C:/mingw-w64/mingw64/bin/mingw32-make.exe -f &quot;E:/CS425Project/VPVR/DesktopInterface/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
-					<DistClean command="C:/mingw-w64/mingw64/bin/mingw32-make.exe -f &quot;E:/CS425Project/VPVR/DesktopInterface/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
+					<Build command="C:/PROGRA~1/MINGW-~1/X86_64~1.0-P/mingw64/bin/mingw32-make.exe -f &quot;C:/Users/Neuromechanics Lab/CLionProjects/VPVR/DesktopInterface/cmake-build-debug/Makefile&quot;  VERBOSE=1 rebuild_cache"/>
+					<CompileFile command="C:/PROGRA~1/MINGW-~1/X86_64~1.0-P/mingw64/bin/mingw32-make.exe -f &quot;C:/Users/Neuromechanics Lab/CLionProjects/VPVR/DesktopInterface/cmake-build-debug/Makefile&quot;  VERBOSE=1 &quot;$file&quot;"/>
+					<Clean command="C:/PROGRA~1/MINGW-~1/X86_64~1.0-P/mingw64/bin/mingw32-make.exe -f &quot;C:/Users/Neuromechanics Lab/CLionProjects/VPVR/DesktopInterface/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
+					<DistClean command="C:/PROGRA~1/MINGW-~1/X86_64~1.0-P/mingw64/bin/mingw32-make.exe -f &quot;C:/Users/Neuromechanics Lab/CLionProjects/VPVR/DesktopInterface/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
 				</MakeCommands>
 			</Target>
 			<Target title="DesktopInterface_autogen">
-				<Option working_dir="E:/CS425Project/VPVR/DesktopInterface/cmake-build-debug"/>
+				<Option working_dir="C:/Users/Neuromechanics Lab/CLionProjects/VPVR/DesktopInterface/cmake-build-debug"/>
 				<Option type="4"/>
 				<MakeCommands>
-					<Build command="C:/mingw-w64/mingw64/bin/mingw32-make.exe -f &quot;E:/CS425Project/VPVR/DesktopInterface/cmake-build-debug/Makefile&quot;  VERBOSE=1 DesktopInterface_autogen"/>
-					<CompileFile command="C:/mingw-w64/mingw64/bin/mingw32-make.exe -f &quot;E:/CS425Project/VPVR/DesktopInterface/cmake-build-debug/Makefile&quot;  VERBOSE=1 &quot;$file&quot;"/>
-					<Clean command="C:/mingw-w64/mingw64/bin/mingw32-make.exe -f &quot;E:/CS425Project/VPVR/DesktopInterface/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
-					<DistClean command="C:/mingw-w64/mingw64/bin/mingw32-make.exe -f &quot;E:/CS425Project/VPVR/DesktopInterface/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
+					<Build command="C:/PROGRA~1/MINGW-~1/X86_64~1.0-P/mingw64/bin/mingw32-make.exe -f &quot;C:/Users/Neuromechanics Lab/CLionProjects/VPVR/DesktopInterface/cmake-build-debug/Makefile&quot;  VERBOSE=1 DesktopInterface_autogen"/>
+					<CompileFile command="C:/PROGRA~1/MINGW-~1/X86_64~1.0-P/mingw64/bin/mingw32-make.exe -f &quot;C:/Users/Neuromechanics Lab/CLionProjects/VPVR/DesktopInterface/cmake-build-debug/Makefile&quot;  VERBOSE=1 &quot;$file&quot;"/>
+					<Clean command="C:/PROGRA~1/MINGW-~1/X86_64~1.0-P/mingw64/bin/mingw32-make.exe -f &quot;C:/Users/Neuromechanics Lab/CLionProjects/VPVR/DesktopInterface/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
+					<DistClean command="C:/PROGRA~1/MINGW-~1/X86_64~1.0-P/mingw64/bin/mingw32-make.exe -f &quot;C:/Users/Neuromechanics Lab/CLionProjects/VPVR/DesktopInterface/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
 				</MakeCommands>
 			</Target>
 		</Build>
-		<Unit filename="E:/CS425Project/VPVR/DesktopInterface/APPLICATION_CONSTANTS.h">
-			<Option target="DesktopInterfaceTest"/>
+		<Unit filename="C:/Users/Neuromechanics Lab/CLionProjects/VPVR/DesktopInterface/APPLICATION_CONSTANTS.h">
 			<Option target="DesktopInterface"/>
 		</Unit>
-		<Unit filename="E:/CS425Project/VPVR/DesktopInterface/DesktopInterface.cpp">
-			<Option target="DesktopInterfaceTest"/>
+		<Unit filename="C:/Users/Neuromechanics Lab/CLionProjects/VPVR/DesktopInterface/DesktopInterface.cpp">
 			<Option target="DesktopInterface"/>
 		</Unit>
-		<Unit filename="E:/CS425Project/VPVR/DesktopInterface/DesktopInterface.h">
-			<Option target="DesktopInterfaceTest"/>
+		<Unit filename="C:/Users/Neuromechanics Lab/CLionProjects/VPVR/DesktopInterface/DesktopInterface.h">
 			<Option target="DesktopInterface"/>
 		</Unit>
-		<Unit filename="E:/CS425Project/VPVR/DesktopInterface/PDFGenerator.cpp">
-			<Option target="DesktopInterfaceTest"/>
+		<Unit filename="C:/Users/Neuromechanics Lab/CLionProjects/VPVR/DesktopInterface/PDFGenerator.cpp">
 			<Option target="DesktopInterface"/>
 		</Unit>
-		<Unit filename="E:/CS425Project/VPVR/DesktopInterface/PDFGenerator.h">
-			<Option target="DesktopInterfaceTest"/>
+		<Unit filename="C:/Users/Neuromechanics Lab/CLionProjects/VPVR/DesktopInterface/PDFGenerator.h">
 			<Option target="DesktopInterface"/>
 		</Unit>
-		<Unit filename="E:/CS425Project/VPVR/DesktopInterface/PatientData.cpp">
-			<Option target="DesktopInterfaceTest"/>
+		<Unit filename="C:/Users/Neuromechanics Lab/CLionProjects/VPVR/DesktopInterface/PatientData.cpp">
 			<Option target="DesktopInterface"/>
 		</Unit>
-		<Unit filename="E:/CS425Project/VPVR/DesktopInterface/PatientData.h">
-			<Option target="DesktopInterfaceTest"/>
+		<Unit filename="C:/Users/Neuromechanics Lab/CLionProjects/VPVR/DesktopInterface/PatientData.h">
 			<Option target="DesktopInterface"/>
 		</Unit>
-		<Unit filename="E:/CS425Project/VPVR/DesktopInterface/QHomeWindow.cpp">
-			<Option target="DesktopInterfaceTest"/>
+		<Unit filename="C:/Users/Neuromechanics Lab/CLionProjects/VPVR/DesktopInterface/QHomeWindow.cpp">
 			<Option target="DesktopInterface"/>
 		</Unit>
-		<Unit filename="E:/CS425Project/VPVR/DesktopInterface/QHomeWindow.h">
-			<Option target="DesktopInterfaceTest"/>
+		<Unit filename="C:/Users/Neuromechanics Lab/CLionProjects/VPVR/DesktopInterface/QHomeWindow.h">
 			<Option target="DesktopInterface"/>
 		</Unit>
-		<Unit filename="E:/CS425Project/VPVR/DesktopInterface/QPatientDataPane.cpp">
-			<Option target="DesktopInterfaceTest"/>
+		<Unit filename="C:/Users/Neuromechanics Lab/CLionProjects/VPVR/DesktopInterface/QPatientDataPane.cpp">
 			<Option target="DesktopInterface"/>
 		</Unit>
-		<Unit filename="E:/CS425Project/VPVR/DesktopInterface/QPatientDataPane.h">
-			<Option target="DesktopInterfaceTest"/>
+		<Unit filename="C:/Users/Neuromechanics Lab/CLionProjects/VPVR/DesktopInterface/QPatientDataPane.h">
 			<Option target="DesktopInterface"/>
 		</Unit>
-		<Unit filename="E:/CS425Project/VPVR/DesktopInterface/QResultsPane.cpp">
-			<Option target="DesktopInterfaceTest"/>
+		<Unit filename="C:/Users/Neuromechanics Lab/CLionProjects/VPVR/DesktopInterface/QResultsPane.cpp">
 			<Option target="DesktopInterface"/>
 		</Unit>
-		<Unit filename="E:/CS425Project/VPVR/DesktopInterface/QResultsPane.h">
-			<Option target="DesktopInterfaceTest"/>
+		<Unit filename="C:/Users/Neuromechanics Lab/CLionProjects/VPVR/DesktopInterface/QResultsPane.h">
 			<Option target="DesktopInterface"/>
 		</Unit>
-		<Unit filename="E:/CS425Project/VPVR/DesktopInterface/QResultsWindow.cpp">
-			<Option target="DesktopInterfaceTest"/>
+		<Unit filename="C:/Users/Neuromechanics Lab/CLionProjects/VPVR/DesktopInterface/QSimulationControlPane.cpp">
 			<Option target="DesktopInterface"/>
 		</Unit>
-		<Unit filename="E:/CS425Project/VPVR/DesktopInterface/QResultsWindow.h">
-			<Option target="DesktopInterfaceTest"/>
+		<Unit filename="C:/Users/Neuromechanics Lab/CLionProjects/VPVR/DesktopInterface/QSimulationControlPane.h">
 			<Option target="DesktopInterface"/>
 		</Unit>
-		<Unit filename="E:/CS425Project/VPVR/DesktopInterface/QResultsWindow.ui">
-			<Option target="DesktopInterfaceTest"/>
+		<Unit filename="C:/Users/Neuromechanics Lab/CLionProjects/VPVR/DesktopInterface/QSimulationControls.cpp">
 			<Option target="DesktopInterface"/>
 		</Unit>
-		<Unit filename="E:/CS425Project/VPVR/DesktopInterface/QSimulationControlPane.cpp">
-			<Option target="DesktopInterfaceTest"/>
+		<Unit filename="C:/Users/Neuromechanics Lab/CLionProjects/VPVR/DesktopInterface/QSimulationControls.h">
 			<Option target="DesktopInterface"/>
 		</Unit>
-		<Unit filename="E:/CS425Project/VPVR/DesktopInterface/QSimulationControlPane.h">
-			<Option target="DesktopInterfaceTest"/>
+		<Unit filename="C:/Users/Neuromechanics Lab/CLionProjects/VPVR/DesktopInterface/TempCSVLoader.cpp">
 			<Option target="DesktopInterface"/>
 		</Unit>
-		<Unit filename="E:/CS425Project/VPVR/DesktopInterface/QSimulationControls.cpp">
-			<Option target="DesktopInterfaceTest"/>
+		<Unit filename="C:/Users/Neuromechanics Lab/CLionProjects/VPVR/DesktopInterface/TempCSVLoader.h">
 			<Option target="DesktopInterface"/>
 		</Unit>
-		<Unit filename="E:/CS425Project/VPVR/DesktopInterface/QSimulationControls.h">
-			<Option target="DesktopInterfaceTest"/>
+		<Unit filename="C:/Users/Neuromechanics Lab/CLionProjects/VPVR/DesktopInterface/WindowsIPCControls.cpp">
 			<Option target="DesktopInterface"/>
 		</Unit>
-		<Unit filename="E:/CS425Project/VPVR/DesktopInterface/TempCSVLoader.cpp">
-			<Option target="DesktopInterfaceTest"/>
+		<Unit filename="C:/Users/Neuromechanics Lab/CLionProjects/VPVR/DesktopInterface/cmake-build-debug/DesktopInterface_autogen/mocs_compilation.cpp">
 			<Option target="DesktopInterface"/>
 		</Unit>
-		<Unit filename="E:/CS425Project/VPVR/DesktopInterface/TempCSVLoader.h">
-			<Option target="DesktopInterfaceTest"/>
+		<Unit filename="C:/Users/Neuromechanics Lab/CLionProjects/VPVR/DesktopInterface/csvsaveload.cpp">
 			<Option target="DesktopInterface"/>
 		</Unit>
-		<Unit filename="E:/CS425Project/VPVR/DesktopInterface/WindowsIPCControls.cpp">
-			<Option target="DesktopInterfaceTest"/>
+		<Unit filename="C:/Users/Neuromechanics Lab/CLionProjects/VPVR/DesktopInterface/csvsaveload.h">
 			<Option target="DesktopInterface"/>
 		</Unit>
-		<Unit filename="E:/CS425Project/VPVR/DesktopInterface/cmake-build-debug/DesktopInterfaceTest_autogen/mocs_compilation.cpp">
-			<Option target="DesktopInterfaceTest"/>
-		</Unit>
-		<Unit filename="E:/CS425Project/VPVR/DesktopInterface/cmake-build-debug/DesktopInterface_autogen/mocs_compilation.cpp">
+		<Unit filename="C:/Users/Neuromechanics Lab/CLionProjects/VPVR/DesktopInterface/main.cpp">
 			<Option target="DesktopInterface"/>
 		</Unit>
-		<Unit filename="E:/CS425Project/VPVR/DesktopInterface/csvsaveload.cpp">
-			<Option target="DesktopInterfaceTest"/>
+		<Unit filename="C:/Users/Neuromechanics Lab/CLionProjects/VPVR/shared_include/EyeFrameData.h">
 			<Option target="DesktopInterface"/>
 		</Unit>
-		<Unit filename="E:/CS425Project/VPVR/DesktopInterface/csvsaveload.h">
-			<Option target="DesktopInterfaceTest"/>
+		<Unit filename="C:/Users/Neuromechanics Lab/CLionProjects/VPVR/shared_include/EyeSessionData.h">
 			<Option target="DesktopInterface"/>
 		</Unit>
-		<Unit filename="E:/CS425Project/VPVR/DesktopInterface/main.cpp">
+		<Unit filename="C:/Users/Neuromechanics Lab/CLionProjects/VPVR/shared_include/EyeTestEnum.h">
 			<Option target="DesktopInterface"/>
 		</Unit>
-		<Unit filename="E:/CS425Project/VPVR/DesktopInterface/unit_tests/TestCSVSaveLoad.cpp">
-			<Option target="DesktopInterfaceTest"/>
-		</Unit>
-		<Unit filename="E:/CS425Project/VPVR/DesktopInterface/unit_tests/TestPDFGeneration.cpp">
-			<Option target="DesktopInterfaceTest"/>
-		</Unit>
-		<Unit filename="E:/CS425Project/VPVR/DesktopInterface/unit_tests/TestRunner.cpp">
-			<Option target="DesktopInterfaceTest"/>
-		</Unit>
-		<Unit filename="E:/CS425Project/VPVR/DesktopInterface/unit_tests/UnitTestMain.h">
-			<Option target="DesktopInterfaceTest"/>
-		</Unit>
-		<Unit filename="E:/CS425Project/VPVR/shared_include/EyeFrameData.h">
-			<Option target="DesktopInterfaceTest"/>
+		<Unit filename="C:/Users/Neuromechanics Lab/CLionProjects/VPVR/shared_include/FullPatientData.cpp">
 			<Option target="DesktopInterface"/>
 		</Unit>
-		<Unit filename="E:/CS425Project/VPVR/shared_include/EyeSessionData.h">
-			<Option target="DesktopInterfaceTest"/>
+		<Unit filename="C:/Users/Neuromechanics Lab/CLionProjects/VPVR/shared_include/FullPatientData.h">
 			<Option target="DesktopInterface"/>
 		</Unit>
-		<Unit filename="E:/CS425Project/VPVR/shared_include/EyeTestEnum.h">
-			<Option target="DesktopInterfaceTest"/>
+		<Unit filename="C:/Users/Neuromechanics Lab/CLionProjects/VPVR/shared_include/TempCSVFiles.h">
 			<Option target="DesktopInterface"/>
 		</Unit>
-		<Unit filename="E:/CS425Project/VPVR/shared_include/FullPatientData.cpp">
-			<Option target="DesktopInterfaceTest"/>
-			<Option target="DesktopInterface"/>
-		</Unit>
-		<Unit filename="E:/CS425Project/VPVR/shared_include/FullPatientData.h">
-			<Option target="DesktopInterfaceTest"/>
-			<Option target="DesktopInterface"/>
-		</Unit>
-		<Unit filename="E:/CS425Project/VPVR/shared_include/TempCSVFiles.h">
-			<Option target="DesktopInterfaceTest"/>
-			<Option target="DesktopInterface"/>
-		</Unit>
-		<Unit filename="E:/CS425Project/VPVR/DesktopInterface/CMakeLists.txt">
+		<Unit filename="C:/Users/Neuromechanics Lab/CLionProjects/VPVR/DesktopInterface/CMakeLists.txt">
 			<Option virtualFolder="CMake Files\"/>
 		</Unit>
-		<Unit filename="E:/CS425Project/VPVR/DesktopInterface/eye_chart.py">
+		<Unit filename="C:/Users/Neuromechanics Lab/CLionProjects/VPVR/DesktopInterface/generatePDF.py">
 			<Option virtualFolder="CMake Files\"/>
 		</Unit>
-		<Unit filename="E:/CS425Project/VPVR/DesktopInterface/generatePDF.bat">
+		<Unit filename="C:/Users/Neuromechanics Lab/CLionProjects/VPVR/DesktopInterface/graph_generator.py">
 			<Option virtualFolder="CMake Files\"/>
 		</Unit>
-		<Unit filename="E:/CS425Project/VPVR/DesktopInterface/generatePDF.py">
-			<Option virtualFolder="CMake Files\"/>
+		<Unit filename="C:/Users/Neuromechanics Lab/CLionProjects/VPVR/DesktopInterface/../../../../../Qt/5.12.11/mingw73_64/lib/cmake/Qt5Widgets/Qt5WidgetsConfig.cmake">
+			<Option virtualFolder="CMake Files\..\..\..\..\..\Qt\5.12.11\mingw73_64\lib\cmake\Qt5Widgets\"/>
 		</Unit>
-		<Unit filename="E:/CS425Project/VPVR/DesktopInterface/graph_generator.py">
-			<Option virtualFolder="CMake Files\"/>
+		<Unit filename="C:/Users/Neuromechanics Lab/CLionProjects/VPVR/DesktopInterface/../../../../../Qt/5.12.11/mingw73_64/lib/cmake/Qt5Widgets/Qt5WidgetsConfigExtras.cmake">
+			<Option virtualFolder="CMake Files\..\..\..\..\..\Qt\5.12.11\mingw73_64\lib\cmake\Qt5Widgets\"/>
 		</Unit>
-		<Unit filename="E:/CS425Project/VPVR/DesktopInterface/Qt/5.15.2/mingw81_64/lib/cmake/Qt5Widgets/Qt5WidgetsConfig.cmake">
-			<Option virtualFolder="CMake Files\Qt\5.15.2\mingw81_64\lib\cmake\Qt5Widgets\"/>
+		<Unit filename="C:/Users/Neuromechanics Lab/CLionProjects/VPVR/DesktopInterface/../../../../../Qt/5.12.11/mingw73_64/lib/cmake/Qt5Widgets/Qt5WidgetsConfigVersion.cmake">
+			<Option virtualFolder="CMake Files\..\..\..\..\..\Qt\5.12.11\mingw73_64\lib\cmake\Qt5Widgets\"/>
 		</Unit>
-		<Unit filename="E:/CS425Project/VPVR/DesktopInterface/Qt/5.15.2/mingw81_64/lib/cmake/Qt5Widgets/Qt5WidgetsConfigExtras.cmake">
-			<Option virtualFolder="CMake Files\Qt\5.15.2\mingw81_64\lib\cmake\Qt5Widgets\"/>
+		<Unit filename="C:/Users/Neuromechanics Lab/CLionProjects/VPVR/DesktopInterface/../../../../../Qt/5.12.11/mingw73_64/lib/cmake/Qt5Widgets/Qt5WidgetsMacros.cmake">
+			<Option virtualFolder="CMake Files\..\..\..\..\..\Qt\5.12.11\mingw73_64\lib\cmake\Qt5Widgets\"/>
 		</Unit>
-		<Unit filename="E:/CS425Project/VPVR/DesktopInterface/Qt/5.15.2/mingw81_64/lib/cmake/Qt5Widgets/Qt5WidgetsConfigVersion.cmake">
-			<Option virtualFolder="CMake Files\Qt\5.15.2\mingw81_64\lib\cmake\Qt5Widgets\"/>
+		<Unit filename="C:/Users/Neuromechanics Lab/CLionProjects/VPVR/DesktopInterface/../../../../../Qt/5.12.11/mingw73_64/lib/cmake/Qt5Widgets/Qt5Widgets_QWindowsVistaStylePlugin.cmake">
+			<Option virtualFolder="CMake Files\..\..\..\..\..\Qt\5.12.11\mingw73_64\lib\cmake\Qt5Widgets\"/>
 		</Unit>
-		<Unit filename="E:/CS425Project/VPVR/DesktopInterface/Qt/5.15.2/mingw81_64/lib/cmake/Qt5Widgets/Qt5WidgetsMacros.cmake">
-			<Option virtualFolder="CMake Files\Qt\5.15.2\mingw81_64\lib\cmake\Qt5Widgets\"/>
+		<Unit filename="C:/Users/Neuromechanics Lab/CLionProjects/VPVR/DesktopInterface/../../../../../Qt/5.12.11/mingw73_64/lib/cmake/Qt5Gui/Qt5GuiConfig.cmake">
+			<Option virtualFolder="CMake Files\..\..\..\..\..\Qt\5.12.11\mingw73_64\lib\cmake\Qt5Gui\"/>
 		</Unit>
-		<Unit filename="E:/CS425Project/VPVR/DesktopInterface/Qt/5.15.2/mingw81_64/lib/cmake/Qt5Widgets/Qt5Widgets_QWindowsVistaStylePlugin.cmake">
-			<Option virtualFolder="CMake Files\Qt\5.15.2\mingw81_64\lib\cmake\Qt5Widgets\"/>
+		<Unit filename="C:/Users/Neuromechanics Lab/CLionProjects/VPVR/DesktopInterface/../../../../../Qt/5.12.11/mingw73_64/lib/cmake/Qt5Gui/Qt5GuiConfigExtras.cmake">
+			<Option virtualFolder="CMake Files\..\..\..\..\..\Qt\5.12.11\mingw73_64\lib\cmake\Qt5Gui\"/>
 		</Unit>
-		<Unit filename="E:/CS425Project/VPVR/DesktopInterface/Qt/5.15.2/mingw81_64/lib/cmake/Qt5Gui/Qt5GuiConfig.cmake">
-			<Option virtualFolder="CMake Files\Qt\5.15.2\mingw81_64\lib\cmake\Qt5Gui\"/>
+		<Unit filename="C:/Users/Neuromechanics Lab/CLionProjects/VPVR/DesktopInterface/../../../../../Qt/5.12.11/mingw73_64/lib/cmake/Qt5Gui/Qt5GuiConfigVersion.cmake">
+			<Option virtualFolder="CMake Files\..\..\..\..\..\Qt\5.12.11\mingw73_64\lib\cmake\Qt5Gui\"/>
 		</Unit>
-		<Unit filename="E:/CS425Project/VPVR/DesktopInterface/Qt/5.15.2/mingw81_64/lib/cmake/Qt5Gui/Qt5GuiConfigExtras.cmake">
-			<Option virtualFolder="CMake Files\Qt\5.15.2\mingw81_64\lib\cmake\Qt5Gui\"/>
+		<Unit filename="C:/Users/Neuromechanics Lab/CLionProjects/VPVR/DesktopInterface/../../../../../Qt/5.12.11/mingw73_64/lib/cmake/Qt5Gui/Qt5Gui_QGifPlugin.cmake">
+			<Option virtualFolder="CMake Files\..\..\..\..\..\Qt\5.12.11\mingw73_64\lib\cmake\Qt5Gui\"/>
 		</Unit>
-		<Unit filename="E:/CS425Project/VPVR/DesktopInterface/Qt/5.15.2/mingw81_64/lib/cmake/Qt5Gui/Qt5GuiConfigVersion.cmake">
-			<Option virtualFolder="CMake Files\Qt\5.15.2\mingw81_64\lib\cmake\Qt5Gui\"/>
+		<Unit filename="C:/Users/Neuromechanics Lab/CLionProjects/VPVR/DesktopInterface/../../../../../Qt/5.12.11/mingw73_64/lib/cmake/Qt5Gui/Qt5Gui_QICNSPlugin.cmake">
+			<Option virtualFolder="CMake Files\..\..\..\..\..\Qt\5.12.11\mingw73_64\lib\cmake\Qt5Gui\"/>
 		</Unit>
-		<Unit filename="E:/CS425Project/VPVR/DesktopInterface/Qt/5.15.2/mingw81_64/lib/cmake/Qt5Gui/Qt5Gui_QGifPlugin.cmake">
-			<Option virtualFolder="CMake Files\Qt\5.15.2\mingw81_64\lib\cmake\Qt5Gui\"/>
+		<Unit filename="C:/Users/Neuromechanics Lab/CLionProjects/VPVR/DesktopInterface/../../../../../Qt/5.12.11/mingw73_64/lib/cmake/Qt5Gui/Qt5Gui_QICOPlugin.cmake">
+			<Option virtualFolder="CMake Files\..\..\..\..\..\Qt\5.12.11\mingw73_64\lib\cmake\Qt5Gui\"/>
 		</Unit>
-		<Unit filename="E:/CS425Project/VPVR/DesktopInterface/Qt/5.15.2/mingw81_64/lib/cmake/Qt5Gui/Qt5Gui_QICNSPlugin.cmake">
-			<Option virtualFolder="CMake Files\Qt\5.15.2\mingw81_64\lib\cmake\Qt5Gui\"/>
+		<Unit filename="C:/Users/Neuromechanics Lab/CLionProjects/VPVR/DesktopInterface/../../../../../Qt/5.12.11/mingw73_64/lib/cmake/Qt5Gui/Qt5Gui_QJpegPlugin.cmake">
+			<Option virtualFolder="CMake Files\..\..\..\..\..\Qt\5.12.11\mingw73_64\lib\cmake\Qt5Gui\"/>
 		</Unit>
-		<Unit filename="E:/CS425Project/VPVR/DesktopInterface/Qt/5.15.2/mingw81_64/lib/cmake/Qt5Gui/Qt5Gui_QICOPlugin.cmake">
-			<Option virtualFolder="CMake Files\Qt\5.15.2\mingw81_64\lib\cmake\Qt5Gui\"/>
+		<Unit filename="C:/Users/Neuromechanics Lab/CLionProjects/VPVR/DesktopInterface/../../../../../Qt/5.12.11/mingw73_64/lib/cmake/Qt5Gui/Qt5Gui_QMinimalIntegrationPlugin.cmake">
+			<Option virtualFolder="CMake Files\..\..\..\..\..\Qt\5.12.11\mingw73_64\lib\cmake\Qt5Gui\"/>
 		</Unit>
-		<Unit filename="E:/CS425Project/VPVR/DesktopInterface/Qt/5.15.2/mingw81_64/lib/cmake/Qt5Gui/Qt5Gui_QJpegPlugin.cmake">
-			<Option virtualFolder="CMake Files\Qt\5.15.2\mingw81_64\lib\cmake\Qt5Gui\"/>
+		<Unit filename="C:/Users/Neuromechanics Lab/CLionProjects/VPVR/DesktopInterface/../../../../../Qt/5.12.11/mingw73_64/lib/cmake/Qt5Gui/Qt5Gui_QOffscreenIntegrationPlugin.cmake">
+			<Option virtualFolder="CMake Files\..\..\..\..\..\Qt\5.12.11\mingw73_64\lib\cmake\Qt5Gui\"/>
 		</Unit>
-		<Unit filename="E:/CS425Project/VPVR/DesktopInterface/Qt/5.15.2/mingw81_64/lib/cmake/Qt5Gui/Qt5Gui_QMinimalIntegrationPlugin.cmake">
-			<Option virtualFolder="CMake Files\Qt\5.15.2\mingw81_64\lib\cmake\Qt5Gui\"/>
+		<Unit filename="C:/Users/Neuromechanics Lab/CLionProjects/VPVR/DesktopInterface/../../../../../Qt/5.12.11/mingw73_64/lib/cmake/Qt5Gui/Qt5Gui_QTgaPlugin.cmake">
+			<Option virtualFolder="CMake Files\..\..\..\..\..\Qt\5.12.11\mingw73_64\lib\cmake\Qt5Gui\"/>
 		</Unit>
-		<Unit filename="E:/CS425Project/VPVR/DesktopInterface/Qt/5.15.2/mingw81_64/lib/cmake/Qt5Gui/Qt5Gui_QOffscreenIntegrationPlugin.cmake">
-			<Option virtualFolder="CMake Files\Qt\5.15.2\mingw81_64\lib\cmake\Qt5Gui\"/>
+		<Unit filename="C:/Users/Neuromechanics Lab/CLionProjects/VPVR/DesktopInterface/../../../../../Qt/5.12.11/mingw73_64/lib/cmake/Qt5Gui/Qt5Gui_QTiffPlugin.cmake">
+			<Option virtualFolder="CMake Files\..\..\..\..\..\Qt\5.12.11\mingw73_64\lib\cmake\Qt5Gui\"/>
 		</Unit>
-		<Unit filename="E:/CS425Project/VPVR/DesktopInterface/Qt/5.15.2/mingw81_64/lib/cmake/Qt5Gui/Qt5Gui_QSvgIconPlugin.cmake">
-			<Option virtualFolder="CMake Files\Qt\5.15.2\mingw81_64\lib\cmake\Qt5Gui\"/>
+		<Unit filename="C:/Users/Neuromechanics Lab/CLionProjects/VPVR/DesktopInterface/../../../../../Qt/5.12.11/mingw73_64/lib/cmake/Qt5Gui/Qt5Gui_QTuioTouchPlugin.cmake">
+			<Option virtualFolder="CMake Files\..\..\..\..\..\Qt\5.12.11\mingw73_64\lib\cmake\Qt5Gui\"/>
 		</Unit>
-		<Unit filename="E:/CS425Project/VPVR/DesktopInterface/Qt/5.15.2/mingw81_64/lib/cmake/Qt5Gui/Qt5Gui_QSvgPlugin.cmake">
-			<Option virtualFolder="CMake Files\Qt\5.15.2\mingw81_64\lib\cmake\Qt5Gui\"/>
+		<Unit filename="C:/Users/Neuromechanics Lab/CLionProjects/VPVR/DesktopInterface/../../../../../Qt/5.12.11/mingw73_64/lib/cmake/Qt5Gui/Qt5Gui_QWbmpPlugin.cmake">
+			<Option virtualFolder="CMake Files\..\..\..\..\..\Qt\5.12.11\mingw73_64\lib\cmake\Qt5Gui\"/>
 		</Unit>
-		<Unit filename="E:/CS425Project/VPVR/DesktopInterface/Qt/5.15.2/mingw81_64/lib/cmake/Qt5Gui/Qt5Gui_QTgaPlugin.cmake">
-			<Option virtualFolder="CMake Files\Qt\5.15.2\mingw81_64\lib\cmake\Qt5Gui\"/>
+		<Unit filename="C:/Users/Neuromechanics Lab/CLionProjects/VPVR/DesktopInterface/../../../../../Qt/5.12.11/mingw73_64/lib/cmake/Qt5Gui/Qt5Gui_QWebpPlugin.cmake">
+			<Option virtualFolder="CMake Files\..\..\..\..\..\Qt\5.12.11\mingw73_64\lib\cmake\Qt5Gui\"/>
 		</Unit>
-		<Unit filename="E:/CS425Project/VPVR/DesktopInterface/Qt/5.15.2/mingw81_64/lib/cmake/Qt5Gui/Qt5Gui_QTiffPlugin.cmake">
-			<Option virtualFolder="CMake Files\Qt\5.15.2\mingw81_64\lib\cmake\Qt5Gui\"/>
+		<Unit filename="C:/Users/Neuromechanics Lab/CLionProjects/VPVR/DesktopInterface/../../../../../Qt/5.12.11/mingw73_64/lib/cmake/Qt5Gui/Qt5Gui_QWindowsDirect2DIntegrationPlugin.cmake">
+			<Option virtualFolder="CMake Files\..\..\..\..\..\Qt\5.12.11\mingw73_64\lib\cmake\Qt5Gui\"/>
 		</Unit>
-		<Unit filename="E:/CS425Project/VPVR/DesktopInterface/Qt/5.15.2/mingw81_64/lib/cmake/Qt5Gui/Qt5Gui_QTuioTouchPlugin.cmake">
-			<Option virtualFolder="CMake Files\Qt\5.15.2\mingw81_64\lib\cmake\Qt5Gui\"/>
+		<Unit filename="C:/Users/Neuromechanics Lab/CLionProjects/VPVR/DesktopInterface/../../../../../Qt/5.12.11/mingw73_64/lib/cmake/Qt5Gui/Qt5Gui_QWindowsIntegrationPlugin.cmake">
+			<Option virtualFolder="CMake Files\..\..\..\..\..\Qt\5.12.11\mingw73_64\lib\cmake\Qt5Gui\"/>
 		</Unit>
-		<Unit filename="E:/CS425Project/VPVR/DesktopInterface/Qt/5.15.2/mingw81_64/lib/cmake/Qt5Gui/Qt5Gui_QWbmpPlugin.cmake">
-			<Option virtualFolder="CMake Files\Qt\5.15.2\mingw81_64\lib\cmake\Qt5Gui\"/>
+		<Unit filename="C:/Users/Neuromechanics Lab/CLionProjects/VPVR/DesktopInterface/../../../../../Qt/5.12.11/mingw73_64/lib/cmake/Qt5Gui/Qt5Gui_QXdgDesktopPortalThemePlugin.cmake">
+			<Option virtualFolder="CMake Files\..\..\..\..\..\Qt\5.12.11\mingw73_64\lib\cmake\Qt5Gui\"/>
 		</Unit>
-		<Unit filename="E:/CS425Project/VPVR/DesktopInterface/Qt/5.15.2/mingw81_64/lib/cmake/Qt5Gui/Qt5Gui_QWebpPlugin.cmake">
-			<Option virtualFolder="CMake Files\Qt\5.15.2\mingw81_64\lib\cmake\Qt5Gui\"/>
+		<Unit filename="C:/Users/Neuromechanics Lab/CLionProjects/VPVR/DesktopInterface/../../../../../Qt/5.12.11/mingw73_64/lib/cmake/Qt5Core/Qt5CoreConfig.cmake">
+			<Option virtualFolder="CMake Files\..\..\..\..\..\Qt\5.12.11\mingw73_64\lib\cmake\Qt5Core\"/>
 		</Unit>
-		<Unit filename="E:/CS425Project/VPVR/DesktopInterface/Qt/5.15.2/mingw81_64/lib/cmake/Qt5Gui/Qt5Gui_QWindowsDirect2DIntegrationPlugin.cmake">
-			<Option virtualFolder="CMake Files\Qt\5.15.2\mingw81_64\lib\cmake\Qt5Gui\"/>
+		<Unit filename="C:/Users/Neuromechanics Lab/CLionProjects/VPVR/DesktopInterface/../../../../../Qt/5.12.11/mingw73_64/lib/cmake/Qt5Core/Qt5CoreConfigExtras.cmake">
+			<Option virtualFolder="CMake Files\..\..\..\..\..\Qt\5.12.11\mingw73_64\lib\cmake\Qt5Core\"/>
 		</Unit>
-		<Unit filename="E:/CS425Project/VPVR/DesktopInterface/Qt/5.15.2/mingw81_64/lib/cmake/Qt5Gui/Qt5Gui_QWindowsIntegrationPlugin.cmake">
-			<Option virtualFolder="CMake Files\Qt\5.15.2\mingw81_64\lib\cmake\Qt5Gui\"/>
+		<Unit filename="C:/Users/Neuromechanics Lab/CLionProjects/VPVR/DesktopInterface/../../../../../Qt/5.12.11/mingw73_64/lib/cmake/Qt5Core/Qt5CoreConfigExtrasMkspecDir.cmake">
+			<Option virtualFolder="CMake Files\..\..\..\..\..\Qt\5.12.11\mingw73_64\lib\cmake\Qt5Core\"/>
 		</Unit>
-		<Unit filename="E:/CS425Project/VPVR/DesktopInterface/Qt/5.15.2/mingw81_64/lib/cmake/Qt5Gui/Qt5Gui_QXdgDesktopPortalThemePlugin.cmake">
-			<Option virtualFolder="CMake Files\Qt\5.15.2\mingw81_64\lib\cmake\Qt5Gui\"/>
+		<Unit filename="C:/Users/Neuromechanics Lab/CLionProjects/VPVR/DesktopInterface/../../../../../Qt/5.12.11/mingw73_64/lib/cmake/Qt5Core/Qt5CoreConfigVersion.cmake">
+			<Option virtualFolder="CMake Files\..\..\..\..\..\Qt\5.12.11\mingw73_64\lib\cmake\Qt5Core\"/>
 		</Unit>
-		<Unit filename="E:/CS425Project/VPVR/DesktopInterface/Qt/5.15.2/mingw81_64/lib/cmake/Qt5Core/Qt5CoreConfig.cmake">
-			<Option virtualFolder="CMake Files\Qt\5.15.2\mingw81_64\lib\cmake\Qt5Core\"/>
+		<Unit filename="C:/Users/Neuromechanics Lab/CLionProjects/VPVR/DesktopInterface/../../../../../Qt/5.12.11/mingw73_64/lib/cmake/Qt5Core/Qt5CoreMacros.cmake">
+			<Option virtualFolder="CMake Files\..\..\..\..\..\Qt\5.12.11\mingw73_64\lib\cmake\Qt5Core\"/>
 		</Unit>
-		<Unit filename="E:/CS425Project/VPVR/DesktopInterface/Qt/5.15.2/mingw81_64/lib/cmake/Qt5Core/Qt5CoreConfigExtras.cmake">
-			<Option virtualFolder="CMake Files\Qt\5.15.2\mingw81_64\lib\cmake\Qt5Core\"/>
+		<Unit filename="C:/Users/Neuromechanics Lab/CLionProjects/VPVR/DesktopInterface/../../../../../Qt/5.12.11/mingw73_64/lib/cmake/Qt5/Qt5Config.cmake">
+			<Option virtualFolder="CMake Files\..\..\..\..\..\Qt\5.12.11\mingw73_64\lib\cmake\Qt5\"/>
 		</Unit>
-		<Unit filename="E:/CS425Project/VPVR/DesktopInterface/Qt/5.15.2/mingw81_64/lib/cmake/Qt5Core/Qt5CoreConfigExtrasMkspecDir.cmake">
-			<Option virtualFolder="CMake Files\Qt\5.15.2\mingw81_64\lib\cmake\Qt5Core\"/>
+		<Unit filename="C:/Users/Neuromechanics Lab/CLionProjects/VPVR/DesktopInterface/../../../../../Qt/5.12.11/mingw73_64/lib/cmake/Qt5/Qt5ConfigVersion.cmake">
+			<Option virtualFolder="CMake Files\..\..\..\..\..\Qt\5.12.11\mingw73_64\lib\cmake\Qt5\"/>
 		</Unit>
-		<Unit filename="E:/CS425Project/VPVR/DesktopInterface/Qt/5.15.2/mingw81_64/lib/cmake/Qt5Core/Qt5CoreConfigVersion.cmake">
-			<Option virtualFolder="CMake Files\Qt\5.15.2\mingw81_64\lib\cmake\Qt5Core\"/>
-		</Unit>
-		<Unit filename="E:/CS425Project/VPVR/DesktopInterface/Qt/5.15.2/mingw81_64/lib/cmake/Qt5Core/Qt5CoreMacros.cmake">
-			<Option virtualFolder="CMake Files\Qt\5.15.2\mingw81_64\lib\cmake\Qt5Core\"/>
-		</Unit>
-		<Unit filename="E:/CS425Project/VPVR/DesktopInterface/Qt/5.15.2/mingw81_64/lib/cmake/Qt5/Qt5Config.cmake">
-			<Option virtualFolder="CMake Files\Qt\5.15.2\mingw81_64\lib\cmake\Qt5\"/>
-		</Unit>
-		<Unit filename="E:/CS425Project/VPVR/DesktopInterface/Qt/5.15.2/mingw81_64/lib/cmake/Qt5/Qt5ConfigVersion.cmake">
-			<Option virtualFolder="CMake Files\Qt\5.15.2\mingw81_64\lib\cmake\Qt5\"/>
-		</Unit>
-		<Unit filename="E:/CS425Project/VPVR/DesktopInterface/Qt/5.15.2/mingw81_64/lib/cmake/Qt5/Qt5ModuleLocation.cmake">
-			<Option virtualFolder="CMake Files\Qt\5.15.2\mingw81_64\lib\cmake\Qt5\"/>
-		</Unit>
-		<Unit filename="E:/CS425Project/VPVR/DesktopInterface/Qt/5.15.2/mingw81_64/lib/cmake/Qt5Test/Qt5TestConfig.cmake">
-			<Option virtualFolder="CMake Files\Qt\5.15.2\mingw81_64\lib\cmake\Qt5Test\"/>
-		</Unit>
-		<Unit filename="E:/CS425Project/VPVR/DesktopInterface/Qt/5.15.2/mingw81_64/lib/cmake/Qt5Test/Qt5TestConfigExtras.cmake">
-			<Option virtualFolder="CMake Files\Qt\5.15.2\mingw81_64\lib\cmake\Qt5Test\"/>
-		</Unit>
-		<Unit filename="E:/CS425Project/VPVR/DesktopInterface/Qt/5.15.2/mingw81_64/lib/cmake/Qt5Test/Qt5TestConfigVersion.cmake">
-			<Option virtualFolder="CMake Files\Qt\5.15.2\mingw81_64\lib\cmake\Qt5Test\"/>
+		<Unit filename="C:/Users/Neuromechanics Lab/CLionProjects/VPVR/DesktopInterface/../../../../../Qt/5.12.11/mingw73_64/lib/cmake/Qt5/Qt5ModuleLocation.cmake">
+			<Option virtualFolder="CMake Files\..\..\..\..\..\Qt\5.12.11\mingw73_64\lib\cmake\Qt5\"/>
 		</Unit>
 	</Project>
 </CodeBlocks_project_file>

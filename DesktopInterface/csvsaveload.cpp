@@ -36,7 +36,7 @@ void CSVSaveLoad::CreateEyeFrameHeader(ofstream& output_file)
                    "FirstConvergence,SecondConvergence,ThirdConvergence,"
                    "ChangeOfHeadache,ChangeOfDizziness,ChangeOfNausea,ChangeOfFogginess,"
                    "HeadacheScore,DizzinessScore,NauseaScore,FogginessScore,"
-                   "FirstName,LastName,DataOfBirth,DateOfInjury,DateSeen,Sport,Age,Gender" << std::endl;
+                   "FirstName,LastName,DateOfInjury,DateSeen,Sport,Age,Gender" << std::endl;
 }
 
 
@@ -106,7 +106,6 @@ void CSVSaveLoad::SaveEyeSessionData(const FullPatientData& to_save, const int c
                     << Serialize3Array(current_test.convergence_measurements) << ','
                     << to_save.first_name.toStdString() << ','
                     << to_save.last_name.toStdString() << ','
-                    << DateToString(to_save.date_of_birth) << ','
                     << DateToString(to_save.date_of_injury) << ','
                     << DateToString(to_save.date_of_visit) << ','
                     << to_save.sport_played.toStdString() << ','
@@ -174,10 +173,10 @@ void CSVSaveLoad::LoadEyeData(FullPatientData& to_load, ifstream& input_file)
         //If first data line, extrapolate baseline symptom scores
         if (first_data_line) {
             to_load.baseline_loaded = true;
-            to_load.symptomHeadacheBaseline = current_test.symptomHeadache - change[0];
-            to_load.symptomDizzinessBaseline = current_test.symptomDizziness - change[1];
-            to_load.symptomNauseaBaseline =  current_test.symptomNausea - change[2];
-            to_load.symptomFogginessBaseline = current_test.symptomFogginess - change[3];
+            to_load.symptomHeadacheBaseline = change[0] - current_test.symptomHeadache;
+            to_load.symptomDizzinessBaseline = change[1] - current_test.symptomDizziness;
+            to_load.symptomNauseaBaseline = change[2] - current_test.symptomNausea;
+            to_load.symptomFogginessBaseline = change[3] - current_test.symptomFogginess;
         }
 
         getline(s, value, ','); // Timestamp
@@ -218,7 +217,6 @@ void CSVSaveLoad::LoadEyeData(FullPatientData& to_load, ifstream& input_file)
             getline(s, value, ',');
             to_load.last_name = QString(value.c_str());
 
-            LoadDateFromCSV(to_load.date_of_birth, s, value);
             LoadDateFromCSV(to_load.date_of_injury, s, value);
             LoadDateFromCSV(to_load.date_of_visit, s, value);
 

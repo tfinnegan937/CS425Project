@@ -65,12 +65,11 @@ class valueID(Enum):
 	# SymptomScore = 50-52
 	FirstName = 53
 	LastName = 54
-	DateOfBirth = 55
-	DateOfInjury = 56
-	DateSeen = 57
-	Sport = 58
-	Age = 59
-	Gender = 60
+	DateOfInjury = 55
+	DateSeen = 56
+	Sport = 57
+	Age = 58
+	Gender = 59
 
 experimentID = {
 	"smooth_pursuits": 0,
@@ -487,4 +486,4 @@ def generateComparisonPDF(file_location, comparison_location, options_for_graphi
 		return False
 	
 	return True
-#print(generateComparisonPDF("D:/Documents/CS425Project/Binaries/Win64/test.csv", "D:/Documents/CS425Project/Binaries/Win64/test.csv", "", "D:/Documents/CS425Project/Binaries/Win64/pdf/s.pdf"))
+#print(generatePDF("D:/Documents/CS425Project/Binaries/Win64/test.csv", "", "D:/Documents/CS425Project/Binaries/Win64/pdf/s.pdf"))
