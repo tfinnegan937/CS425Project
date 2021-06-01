@@ -1,0 +1,5 @@
+C:/Users/Neuromechanics Lab/CLionProjects/VPVR/DesktopInterface/cmake-build-debug/CMakeFiles/DesktopInterface.dir
+C:/Users/Neuromechanics Lab/CLionProjects/VPVR/DesktopInterface/cmake-build-debug/CMakeFiles/edit_cache.dir
+C:/Users/Neuromechanics Lab/CLionProjects/VPVR/DesktopInterface/cmake-build-debug/CMakeFiles/TARGET.dir
+C:/Users/Neuromechanics Lab/CLionProjects/VPVR/DesktopInterface/cmake-build-debug/CMakeFiles/rebuild_cache.dir
+C:/Users/Neuromechanics Lab/CLionProjects/VPVR/DesktopInterface/cmake-build-debug/CMakeFiles/DesktopInterface_autogen.dir
